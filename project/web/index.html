@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLIP + FAISS Video Retrieval</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f4f1ea;
+            --card: #fffaf2;
+            --ink: #1f2933;
+            --accent: #8b5e34;
+            --line: #d8c7b4;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", "PingFang SC", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(139, 94, 52, 0.14), transparent 28%),
+                linear-gradient(135deg, #f9f5ee, var(--bg));
+            color: var(--ink);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: min(880px, 100%);
+            background: rgba(255, 250, 242, 0.92);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(31, 41, 51, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        code {
+            background: rgba(139, 94, 52, 0.08);
+            padding: 2px 8px;
+            border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>CLIP + FAISS 视频自然语言检索系统</h1>
+        <p>系统已初始化完成，支持视频抽帧、OpenCLIP 向量化、FAISS 索引和文本检索。</p>
+        <ul>
+            <li>健康检查：<code>GET /api/health</code></li>
+            <li>索引统计：<code>GET /api/index/stats</code></li>
+            <li>视频入库：<code>POST /api/videos/ingest</code></li>
+            <li>文本检索：<code>POST /api/search</code></li>
+            <li>交互文档：<a href="/docs">/docs</a></li>
+        </ul>
+        <p>后续可在 <code>services/</code> 下扩展 OCR、Whisper、YOLO 多模态取证能力。</p>
+    </main>
+</body>
+</html>

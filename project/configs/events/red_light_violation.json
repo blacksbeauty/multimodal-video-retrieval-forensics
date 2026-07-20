@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "requires": ["traffic_light_state", "stop_line"],
+  "line": [
+    [640.0, 280.0],
+    [640.0, 720.0]
+  ],
+  "allowed_labels": ["car", "truck", "bus", "motorcycle"],
+  "state_window_sec": 2.0,
+  "traffic_light_min_confidence": 0.25,
+  "traffic_light_min_state_score": 0.01
+}

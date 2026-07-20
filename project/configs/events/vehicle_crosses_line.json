@@ -1,0 +1,7 @@
+{
+  "line": [
+    [640.0, 280.0],
+    [640.0, 720.0]
+  ],
+  "allowed_labels": ["car", "truck", "bus", "motorcycle"]
+}

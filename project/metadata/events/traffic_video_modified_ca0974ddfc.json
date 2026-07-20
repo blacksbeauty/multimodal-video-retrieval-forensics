@@ -1,0 +1,79 @@
+{
+  "video_id": "traffic_video_modified_ca0974ddfc",
+  "video_name": "traffic_video_modified.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+  "events": [
+    {
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:2",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "traffic_video_modified_ca0974ddfc",
+      "video_name": "traffic_video_modified.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+      "start_ts": 0.0,
+      "end_ts": 14.8,
+      "track_ids": [
+        "traffic_video_modified_ca0974ddfc:2"
+      ],
+      "confidence": 0.7490410967306658,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 9.1
+      },
+      "description": "car crosses configured line"
+    },
+    {
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:57",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "traffic_video_modified_ca0974ddfc",
+      "video_name": "traffic_video_modified.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+      "start_ts": 14.8,
+      "end_ts": 25.1,
+      "track_ids": [
+        "traffic_video_modified_ca0974ddfc:57"
+      ],
+      "confidence": 0.7970428988337517,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 15.9
+      },
+      "description": "car crosses configured line"
+    }
+  ]
+}

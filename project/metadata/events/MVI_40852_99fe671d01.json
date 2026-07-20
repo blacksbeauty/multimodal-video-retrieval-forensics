@@ -1,0 +1,43 @@
+{
+  "video_id": "MVI_40852_99fe671d01",
+  "video_name": "MVI_40852.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40852.avi",
+  "events": [
+    {
+      "event_id": "MVI_40852_99fe671d01:vehicle_crosses_line:MVI_40852_99fe671d01:752",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40852_99fe671d01",
+      "video_name": "MVI_40852.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40852.avi",
+      "start_ts": 39.6,
+      "end_ts": 45.6,
+      "track_ids": [
+        "MVI_40852_99fe671d01:752"
+      ],
+      "confidence": 0.7427842716375986,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40852_42.0.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_40.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_42.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_43.2.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 42.0
+      },
+      "description": "car crosses configured line"
+    }
+  ]
+}

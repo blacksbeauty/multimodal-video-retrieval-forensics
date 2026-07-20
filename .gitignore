@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 大文件 - 视频
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.mpeg
+*.mpg
+
+# 大文件 - 模型权重
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+*.weights
+*.model
+*.tflite
+*.pb
+
+# 大文件 - 压缩包
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# 中间产物 - 视频帧（可重新提取）
+project/frames/
+
+# 中间产物 - 嵌入向量（可重新生成）
+project/embeddings/
+
+# 中间产物 - FAISS 索引和日志（可重新生成）
+project/index/
+
+# 数据集（超大，不提交，可按 _meta/datasets_manifest.json 重新下载）
+project/datasets/
+
+# 日志
+*.log
+*.log.*
+logs/
+
+# 临时文件
+*.tmp
+*.bak

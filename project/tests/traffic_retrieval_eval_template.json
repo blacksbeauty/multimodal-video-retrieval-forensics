@@ -1,0 +1,322 @@
+{
+  "dataset_name": "traffic_retrieval_eval_v2_bootstrap",
+  "description": "Bootstrap evaluation template aligned to the current Detection + Trajectory + Hybrid system outputs. This file is intended for iterative system tuning and must still be manually confirmed against video evidence before being treated as formal ground truth.",
+  "notes": [
+    "This version replaces the older CLIP-biased demo template.",
+    "Expected segments were refreshed from current hybrid, detection, and trajectory outputs on 2026-06-07.",
+    "Use this file to compare revisions of the same system, not as a final benchmark.",
+    "Before any external reporting, manually review the listed windows against the source videos."
+  ],
+  "queries": [
+    {
+      "query": "car",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40901.mp4",
+          "start_ts": 36.0,
+          "end_ts": 50.4
+        },
+        {
+          "video_name": "MVI_40905.mp4",
+          "start_ts": 33.6,
+          "end_ts": 33.6
+        },
+        {
+          "video_name": "MVI_40891.mp4",
+          "start_ts": 43.2,
+          "end_ts": 44.4
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 18.2,
+          "end_ts": 18.2
+        }
+      ]
+    },
+    {
+      "query": "truck",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40901.avi",
+          "start_ts": 15.6,
+          "end_ts": 30.0
+        },
+        {
+          "video_name": "MVI_40903.mp4",
+          "start_ts": 0.0,
+          "end_ts": 1.2
+        },
+        {
+          "video_name": "MVI_40902.avi",
+          "start_ts": 39.6,
+          "end_ts": 39.6
+        },
+        {
+          "video_name": "MVI_40864.avi",
+          "start_ts": 22.8,
+          "end_ts": 24.0
+        },
+        {
+          "video_name": "MVI_40905.avi",
+          "start_ts": 55.2,
+          "end_ts": 58.8
+        }
+      ]
+    },
+    {
+      "query": "bus",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40892.mp4",
+          "start_ts": 14.4,
+          "end_ts": 14.4
+        },
+        {
+          "video_name": "MVI_40901.mp4",
+          "start_ts": 28.8,
+          "end_ts": 28.8
+        },
+        {
+          "video_name": "MVI_40901.mp4",
+          "start_ts": 32.4,
+          "end_ts": 34.8
+        },
+        {
+          "video_name": "MVI_40863.avi",
+          "start_ts": 55.2,
+          "end_ts": 57.6
+        },
+        {
+          "video_name": "MVI_40855.avi",
+          "start_ts": 15.6,
+          "end_ts": 18.0
+        }
+      ]
+    },
+    {
+      "query": "motorcycle",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40853.avi",
+          "start_ts": 13.2,
+          "end_ts": 18.0
+        },
+        {
+          "video_name": "MVI_40902.avi",
+          "start_ts": 22.8,
+          "end_ts": 24.0
+        },
+        {
+          "video_name": "MVI_40901.mp4",
+          "start_ts": 50.4,
+          "end_ts": 50.4
+        },
+        {
+          "video_name": "MVI_40852.avi",
+          "start_ts": 6.0,
+          "end_ts": 9.6
+        },
+        {
+          "video_name": "MVI_40903.mp4",
+          "start_ts": 9.6,
+          "end_ts": 9.6
+        }
+      ]
+    },
+    {
+      "query": "person",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40792.mp4",
+          "start_ts": 0.0,
+          "end_ts": 3.6
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 30.0,
+          "end_ts": 34.8
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 20.4,
+          "end_ts": 24.0
+        },
+        {
+          "video_name": "MVI_40902.mp4",
+          "start_ts": 12.0,
+          "end_ts": 12.0
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 26.4,
+          "end_ts": 28.8
+        }
+      ]
+    },
+    {
+      "query": "traffic light",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 0.0,
+          "end_ts": 26.2
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 10.3,
+          "end_ts": 14.8
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 5.7,
+          "end_ts": 9.1
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 17.1,
+          "end_ts": 19.4
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 26.2,
+          "end_ts": 26.2
+        }
+      ]
+    },
+    {
+      "query": "??",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40901.mp4",
+          "start_ts": 36.0,
+          "end_ts": 50.4
+        },
+        {
+          "video_name": "MVI_40905.mp4",
+          "start_ts": 33.6,
+          "end_ts": 33.6
+        },
+        {
+          "video_name": "MVI_40891.mp4",
+          "start_ts": 43.2,
+          "end_ts": 44.4
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 18.2,
+          "end_ts": 18.2
+        }
+      ]
+    },
+    {
+      "query": "??",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40901.avi",
+          "start_ts": 15.6,
+          "end_ts": 30.0
+        },
+        {
+          "video_name": "MVI_40903.mp4",
+          "start_ts": 0.0,
+          "end_ts": 1.2
+        },
+        {
+          "video_name": "MVI_40902.avi",
+          "start_ts": 39.6,
+          "end_ts": 39.6
+        },
+        {
+          "video_name": "MVI_40864.avi",
+          "start_ts": 22.8,
+          "end_ts": 24.0
+        },
+        {
+          "video_name": "MVI_40905.avi",
+          "start_ts": 55.2,
+          "end_ts": 58.8
+        }
+      ]
+    },
+    {
+      "query": "???",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 0.0,
+          "end_ts": 26.2
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 10.3,
+          "end_ts": 14.8
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 5.7,
+          "end_ts": 9.1
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 17.1,
+          "end_ts": 19.4
+        },
+        {
+          "video_name": "traffic_video_modified.mp4",
+          "start_ts": 26.2,
+          "end_ts": 26.2
+        }
+      ]
+    },
+    {
+      "query": "??",
+      "mode": "all",
+      "top_k": 5,
+      "expected_segments": [
+        {
+          "video_name": "MVI_40792.mp4",
+          "start_ts": 0.0,
+          "end_ts": 3.6
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 30.0,
+          "end_ts": 34.8
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 20.4,
+          "end_ts": 24.0
+        },
+        {
+          "video_name": "MVI_40902.mp4",
+          "start_ts": 12.0,
+          "end_ts": 12.0
+        },
+        {
+          "video_name": "MVI_40792.avi",
+          "start_ts": 26.4,
+          "end_ts": 28.8
+        }
+      ]
+    }
+  ]
+}

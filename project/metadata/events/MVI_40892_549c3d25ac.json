@@ -1,0 +1,79 @@
+{
+  "video_id": "MVI_40892_549c3d25ac",
+  "video_name": "MVI_40892.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40892.avi",
+  "events": [
+    {
+      "event_id": "MVI_40892_549c3d25ac:vehicle_crosses_line:MVI_40892_549c3d25ac:11",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40892_549c3d25ac",
+      "video_name": "MVI_40892.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40892.avi",
+      "start_ts": 0.0,
+      "end_ts": 70.8,
+      "track_ids": [
+        "MVI_40892_549c3d25ac:11"
+      ],
+      "confidence": 0.43384591887394586,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40892_16.8.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_1.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_2.4.jpg"
+      ],
+      "attributes": {
+        "label": "truck",
+        "direction": "stationary",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 1.2
+      },
+      "description": "truck crosses configured line"
+    },
+    {
+      "event_id": "MVI_40892_549c3d25ac:vehicle_crosses_line:MVI_40892_549c3d25ac:530",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40892_549c3d25ac",
+      "video_name": "MVI_40892.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40892.avi",
+      "start_ts": 63.6,
+      "end_ts": 68.4,
+      "track_ids": [
+        "MVI_40892_549c3d25ac:530"
+      ],
+      "confidence": 0.8738835652669271,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40892_63.6.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_63.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_66.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40892_68.4.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 66.0
+      },
+      "description": "car crosses configured line"
+    }
+  ]
+}

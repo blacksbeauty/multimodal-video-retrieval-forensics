@@ -1,0 +1,4170 @@
+{
+  "video_id": "MVI_40854_4c9b6505f9",
+  "video_name": "MVI_40854.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40854.avi",
+  "tracks": [
+    {
+      "track_id": "MVI_40854_4c9b6505f9:15",
+      "label": "bus",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.3011387288570404,
+      "max_confidence": 0.3011387288570404,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            0.1301116943359375,
+            79.10872650146484,
+            68.89878845214844,
+            125.24517059326172
+          ],
+          "center_x": 34.51445007324219,
+          "center_y": 102.17694854736328,
+          "confidence": 0.3011387288570404
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:19",
+      "label": "bus",
+      "start_ts": 2.4,
+      "end_ts": 4.8,
+      "duration_sec": 2.4,
+      "frame_count": 2,
+      "avg_confidence": 0.8289939761161804,
+      "max_confidence": 0.8843652009963989,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_2.4.jpg",
+      "points": [
+        {
+          "timestamp": 2.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_2.4.jpg",
+          "bbox": [
+            789.2260131835938,
+            147.01055908203125,
+            918.9993286132812,
+            300.41668701171875
+          ],
+          "center_x": 854.1126708984375,
+          "center_y": 223.713623046875,
+          "confidence": 0.8843652009963989
+        },
+        {
+          "timestamp": 4.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_4.8.jpg",
+          "bbox": [
+            840.8400268554688,
+            184.96556091308594,
+            906.8909301757812,
+            261.48419189453125
+          ],
+          "center_x": 873.865478515625,
+          "center_y": 223.2248764038086,
+          "confidence": 0.7736227512359619
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:200",
+      "label": "bus",
+      "start_ts": 12.0,
+      "end_ts": 12.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.8924158215522766,
+      "max_confidence": 0.8924158215522766,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+      "points": [
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            808.0228881835938,
+            134.96804809570312,
+            924.1766967773438,
+            281.1854248046875
+          ],
+          "center_x": 866.0997924804688,
+          "center_y": 208.0767364501953,
+          "confidence": 0.8924158215522766
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:319",
+      "label": "bus",
+      "start_ts": 18.0,
+      "end_ts": 21.6,
+      "duration_sec": 3.6000000000000014,
+      "frame_count": 2,
+      "avg_confidence": 0.8878238499164581,
+      "max_confidence": 0.8945621252059937,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+      "points": [
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            823.9901123046875,
+            140.61488342285156,
+            930.2525634765625,
+            306.49896240234375
+          ],
+          "center_x": 877.121337890625,
+          "center_y": 223.55692291259766,
+          "confidence": 0.8810855746269226
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            827.5557861328125,
+            125.52178192138672,
+            941.334716796875,
+            300.9624328613281
+          ],
+          "center_x": 884.4452514648438,
+          "center_y": 213.24210739135742,
+          "confidence": 0.8945621252059937
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:430",
+      "label": "bus",
+      "start_ts": 25.2,
+      "end_ts": 30.0,
+      "duration_sec": 4.800000000000001,
+      "frame_count": 3,
+      "avg_confidence": 0.8575648665428162,
+      "max_confidence": 0.9432269930839539,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+      "points": [
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            -34.79854202270508,
+            159.6761474609375,
+            209.13616943359375,
+            332.78448486328125
+          ],
+          "center_x": 87.16881370544434,
+          "center_y": 246.23031616210938,
+          "confidence": 0.8622636795043945
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            -24.469270706176758,
+            139.92857360839844,
+            226.42823791503906,
+            319.3553771972656
+          ],
+          "center_x": 100.97948360443115,
+          "center_y": 229.64197540283203,
+          "confidence": 0.9432269930839539
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            -40.898048400878906,
+            161.58648681640625,
+            199.7061767578125,
+            337.0969543457031
+          ],
+          "center_x": 79.4040641784668,
+          "center_y": 249.3417205810547,
+          "confidence": 0.7672039270401001
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:446",
+      "label": "bus",
+      "start_ts": 25.2,
+      "end_ts": 28.8,
+      "duration_sec": 3.6000000000000014,
+      "frame_count": 3,
+      "avg_confidence": 0.43847110867500305,
+      "max_confidence": 0.47441941499710083,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+      "points": [
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            13.031816482543945,
+            103.47061920166016,
+            89.25706481933594,
+            160.82009887695312
+          ],
+          "center_x": 51.14444065093994,
+          "center_y": 132.14535903930664,
+          "confidence": 0.47441941499710083
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            13.327228546142578,
+            101.24898529052734,
+            94.01143646240234,
+            161.36122131347656
+          ],
+          "center_x": 53.66933250427246,
+          "center_y": 131.30510330200195,
+          "confidence": 0.4675673544406891
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            15.331039428710938,
+            103.02423858642578,
+            94.21797943115234,
+            160.8437957763672
+          ],
+          "center_x": 54.77450942993164,
+          "center_y": 131.93401718139648,
+          "confidence": 0.37342655658721924
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:1",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 3.6,
+      "duration_sec": 3.6,
+      "frame_count": 2,
+      "avg_confidence": 0.7975430488586426,
+      "max_confidence": 0.8625859618186951,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_3.6.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            809.9981689453125,
+            375.9473876953125,
+            959.6618041992188,
+            506.7568359375
+          ],
+          "center_x": 884.8299865722656,
+          "center_y": 441.35211181640625,
+          "confidence": 0.7325001358985901
+        },
+        {
+          "timestamp": 3.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_3.6.jpg",
+          "bbox": [
+            829.4841918945312,
+            391.8186340332031,
+            975.0723876953125,
+            520.19873046875
+          ],
+          "center_x": 902.2782897949219,
+          "center_y": 456.00868225097656,
+          "confidence": 0.8625859618186951
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:14",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.30413883924484253,
+      "max_confidence": 0.30413883924484253,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            314.12823486328125,
+            70.00289916992188,
+            363.41729736328125,
+            112.11327362060547
+          ],
+          "center_x": 338.77276611328125,
+          "center_y": 91.05808639526367,
+          "confidence": 0.30413883924484253
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:16",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.30099931359291077,
+      "max_confidence": 0.30099931359291077,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            202.42872619628906,
+            113.44931030273438,
+            220.1796112060547,
+            130.8760986328125
+          ],
+          "center_x": 211.30416870117188,
+          "center_y": 122.16270446777344,
+          "confidence": 0.30099931359291077
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:18",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.2617552876472473,
+      "max_confidence": 0.2617552876472473,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            593.6380615234375,
+            68.35211181640625,
+            620.8978881835938,
+            83.42908477783203
+          ],
+          "center_x": 607.2679748535156,
+          "center_y": 75.89059829711914,
+          "confidence": 0.2617552876472473
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:2",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.6971850991249084,
+      "max_confidence": 0.6971850991249084,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            347.2370910644531,
+            94.56475830078125,
+            374.2684020996094,
+            122.27161407470703
+          ],
+          "center_x": 360.75274658203125,
+          "center_y": 108.41818618774414,
+          "confidence": 0.6971850991249084
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:3",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 46.8,
+      "duration_sec": 46.8,
+      "frame_count": 34,
+      "avg_confidence": 0.43827441247070537,
+      "max_confidence": 0.6190142035484314,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            899.375244140625,
+            89.228759765625,
+            957.226318359375,
+            115.06777954101562
+          ],
+          "center_x": 928.30078125,
+          "center_y": 102.14826965332031,
+          "confidence": 0.6190142035484314
+        },
+        {
+          "timestamp": 1.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_1.2.jpg",
+          "bbox": [
+            899.5331420898438,
+            89.83355712890625,
+            955.8859252929688,
+            114.9966812133789
+          ],
+          "center_x": 927.7095336914062,
+          "center_y": 102.41511917114258,
+          "confidence": 0.2948516309261322
+        },
+        {
+          "timestamp": 2.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_2.4.jpg",
+          "bbox": [
+            898.5961303710938,
+            89.30536651611328,
+            959.1181030273438,
+            116.36251068115234
+          ],
+          "center_x": 928.8571166992188,
+          "center_y": 102.83393859863281,
+          "confidence": 0.41903039813041687
+        },
+        {
+          "timestamp": 3.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_3.6.jpg",
+          "bbox": [
+            900.1134033203125,
+            89.34608459472656,
+            957.6927490234375,
+            115.08689880371094
+          ],
+          "center_x": 928.903076171875,
+          "center_y": 102.21649169921875,
+          "confidence": 0.3110814094543457
+        },
+        {
+          "timestamp": 4.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_4.8.jpg",
+          "bbox": [
+            898.9637451171875,
+            87.93008422851562,
+            957.888671875,
+            114.24562072753906
+          ],
+          "center_x": 928.4262084960938,
+          "center_y": 101.08785247802734,
+          "confidence": 0.5176846981048584
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_6.0.jpg",
+          "bbox": [
+            899.8488159179688,
+            88.11750793457031,
+            958.3009643554688,
+            114.28498840332031
+          ],
+          "center_x": 929.0748901367188,
+          "center_y": 101.20124816894531,
+          "confidence": 0.27089381217956543
+        },
+        {
+          "timestamp": 7.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+          "bbox": [
+            899.1239013671875,
+            87.94818878173828,
+            956.759765625,
+            113.6340103149414
+          ],
+          "center_x": 927.9418334960938,
+          "center_y": 100.79109954833984,
+          "confidence": 0.494091659784317
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            896.6996459960938,
+            87.44720458984375,
+            957.651611328125,
+            114.69417572021484
+          ],
+          "center_x": 927.1756286621094,
+          "center_y": 101.0706901550293,
+          "confidence": 0.4598209261894226
+        },
+        {
+          "timestamp": 10.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+          "bbox": [
+            897.7362060546875,
+            87.74272155761719,
+            956.1235961914062,
+            113.77140045166016
+          ],
+          "center_x": 926.9299011230469,
+          "center_y": 100.75706100463867,
+          "confidence": 0.3847615420818329
+        },
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            895.760986328125,
+            87.45142364501953,
+            956.09521484375,
+            114.33999633789062
+          ],
+          "center_x": 925.9281005859375,
+          "center_y": 100.89570999145508,
+          "confidence": 0.2703361511230469
+        },
+        {
+          "timestamp": 13.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_13.2.jpg",
+          "bbox": [
+            895.5098266601562,
+            87.78502655029297,
+            955.4535522460938,
+            114.43570709228516
+          ],
+          "center_x": 925.481689453125,
+          "center_y": 101.11036682128906,
+          "confidence": 0.5606569647789001
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            898.4308471679688,
+            87.66064453125,
+            953.313720703125,
+            111.75658416748047
+          ],
+          "center_x": 925.8722839355469,
+          "center_y": 99.70861434936523,
+          "confidence": 0.3261970579624176
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            897.269775390625,
+            87.2538070678711,
+            956.8974609375,
+            113.40170288085938
+          ],
+          "center_x": 927.0836181640625,
+          "center_y": 100.32775497436523,
+          "confidence": 0.2927318811416626
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            897.7049560546875,
+            86.52780151367188,
+            955.4318237304688,
+            111.6808853149414
+          ],
+          "center_x": 926.5683898925781,
+          "center_y": 99.10434341430664,
+          "confidence": 0.32018837332725525
+        },
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            896.3618774414062,
+            87.84144592285156,
+            953.1964111328125,
+            112.3394775390625
+          ],
+          "center_x": 924.7791442871094,
+          "center_y": 100.09046173095703,
+          "confidence": 0.5406460165977478
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            897.0573120117188,
+            86.66979217529297,
+            956.802001953125,
+            112.35187530517578
+          ],
+          "center_x": 926.9296569824219,
+          "center_y": 99.51083374023438,
+          "confidence": 0.4852771759033203
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            896.8348999023438,
+            85.5049819946289,
+            956.7844848632812,
+            111.3241195678711
+          ],
+          "center_x": 926.8096923828125,
+          "center_y": 98.41455078125,
+          "confidence": 0.48398247361183167
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            897.0753784179688,
+            86.57390594482422,
+            955.9243774414062,
+            111.9260025024414
+          ],
+          "center_x": 926.4998779296875,
+          "center_y": 99.24995422363281,
+          "confidence": 0.4921092092990875
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            896.8074340820312,
+            86.31827545166016,
+            955.367431640625,
+            111.59205627441406
+          ],
+          "center_x": 926.0874328613281,
+          "center_y": 98.95516586303711,
+          "confidence": 0.5305622816085815
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            897.1509399414062,
+            86.9567642211914,
+            954.936767578125,
+            111.91130828857422
+          ],
+          "center_x": 926.0438537597656,
+          "center_y": 99.43403625488281,
+          "confidence": 0.5603363513946533
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            897.1705932617188,
+            87.74744415283203,
+            953.6168212890625,
+            111.65542602539062
+          ],
+          "center_x": 925.3937072753906,
+          "center_y": 99.70143508911133,
+          "confidence": 0.4160686135292053
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            897.4561157226562,
+            88.39666748046875,
+            954.4253540039062,
+            112.27731323242188
+          ],
+          "center_x": 925.9407348632812,
+          "center_y": 100.33699035644531,
+          "confidence": 0.5079725384712219
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            896.05322265625,
+            87.4883804321289,
+            956.5430297851562,
+            112.88707733154297
+          ],
+          "center_x": 926.2981262207031,
+          "center_y": 100.18772888183594,
+          "confidence": 0.5669406652450562
+        },
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            896.1885986328125,
+            86.63508605957031,
+            956.1450805664062,
+            111.87411499023438
+          ],
+          "center_x": 926.1668395996094,
+          "center_y": 99.25460052490234,
+          "confidence": 0.3536137044429779
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            896.582275390625,
+            86.40737915039062,
+            957.5211181640625,
+            112.30469512939453
+          ],
+          "center_x": 927.0516967773438,
+          "center_y": 99.35603713989258,
+          "confidence": 0.4071367383003235
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            895.9140014648438,
+            87.25263977050781,
+            954.8753051757812,
+            112.37244415283203
+          ],
+          "center_x": 925.3946533203125,
+          "center_y": 99.81254196166992,
+          "confidence": 0.5740222334861755
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            894.6500854492188,
+            86.12897491455078,
+            952.9649658203125,
+            111.05000305175781
+          ],
+          "center_x": 923.8075256347656,
+          "center_y": 98.5894889831543,
+          "confidence": 0.282155841588974
+        },
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            895.5027465820312,
+            86.41712188720703,
+            952.1296997070312,
+            110.5896987915039
+          ],
+          "center_x": 923.8162231445312,
+          "center_y": 98.50341033935547,
+          "confidence": 0.4324853718280792
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            896.1883544921875,
+            88.56841278076172,
+            952.4041748046875,
+            112.61361694335938
+          ],
+          "center_x": 924.2962646484375,
+          "center_y": 100.59101486206055,
+          "confidence": 0.5863641500473022
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            895.2892456054688,
+            88.97793579101562,
+            954.8644409179688,
+            114.3877944946289
+          ],
+          "center_x": 925.0768432617188,
+          "center_y": 101.68286514282227,
+          "confidence": 0.37391120195388794
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            884.0327758789062,
+            89.2956771850586,
+            949.9745483398438,
+            117.12356567382812
+          ],
+          "center_x": 917.003662109375,
+          "center_y": 103.20962142944336,
+          "confidence": 0.30806034803390503
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            886.0000610351562,
+            88.95472717285156,
+            955.6472778320312,
+            118.5000228881836
+          ],
+          "center_x": 920.8236694335938,
+          "center_y": 103.72737503051758,
+          "confidence": 0.3966834545135498
+        },
+        {
+          "timestamp": 45.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_45.6.jpg",
+          "bbox": [
+            892.551025390625,
+            89.83967590332031,
+            955.3508911132812,
+            116.4179458618164
+          ],
+          "center_x": 923.9509582519531,
+          "center_y": 103.12881088256836,
+          "confidence": 0.4939289093017578
+        },
+        {
+          "timestamp": 46.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_46.8.jpg",
+          "bbox": [
+            892.8407592773438,
+            88.76565551757812,
+            952.7124633789062,
+            114.17449188232422
+          ],
+          "center_x": 922.776611328125,
+          "center_y": 101.47007369995117,
+          "confidence": 0.567732036113739
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:4",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.5909404158592224,
+      "max_confidence": 0.5909404158592224,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            926.95751953125,
+            198.1907958984375,
+            959.5870971679688,
+            249.26394653320312
+          ],
+          "center_x": 943.2723083496094,
+          "center_y": 223.7273712158203,
+          "confidence": 0.5909404158592224
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:5",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.4554803967475891,
+      "max_confidence": 0.4554803967475891,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            653.258056640625,
+            71.24398803710938,
+            684.8826293945312,
+            92.10746002197266
+          ],
+          "center_x": 669.0703430175781,
+          "center_y": 81.67572402954102,
+          "confidence": 0.4554803967475891
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:6",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 2.4,
+      "duration_sec": 2.4,
+      "frame_count": 2,
+      "avg_confidence": 0.4187186509370804,
+      "max_confidence": 0.4473345875740051,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            388.1111755371094,
+            89.56887817382812,
+            411.1451110839844,
+            111.92079162597656
+          ],
+          "center_x": 399.6281433105469,
+          "center_y": 100.74483489990234,
+          "confidence": 0.4473345875740051
+        },
+        {
+          "timestamp": 2.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_2.4.jpg",
+          "bbox": [
+            390.921630859375,
+            86.36766815185547,
+            412.88720703125,
+            107.5771255493164
+          ],
+          "center_x": 401.9044189453125,
+          "center_y": 96.97239685058594,
+          "confidence": 0.39010271430015564
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:8",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.3874373137950897,
+      "max_confidence": 0.3874373137950897,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            929.3026123046875,
+            217.505126953125,
+            959.6495971679688,
+            249.35989379882812
+          ],
+          "center_x": 944.4761047363281,
+          "center_y": 233.43251037597656,
+          "confidence": 0.3874373137950897
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:9",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.38515400886535645,
+      "max_confidence": 0.38515400886535645,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            96.19581604003906,
+            105.8912353515625,
+            142.41407775878906,
+            132.75631713867188
+          ],
+          "center_x": 119.30494689941406,
+          "center_y": 119.32377624511719,
+          "confidence": 0.38515400886535645
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:64",
+      "label": "car",
+      "start_ts": 4.8,
+      "end_ts": 4.8,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.7901327013969421,
+      "max_confidence": 0.7901327013969421,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_4.8.jpg",
+      "points": [
+        {
+          "timestamp": 4.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_4.8.jpg",
+          "bbox": [
+            261.40704345703125,
+            146.29531860351562,
+            315.9505310058594,
+            191.83055114746094
+          ],
+          "center_x": 288.6787872314453,
+          "center_y": 169.06293487548828,
+          "confidence": 0.7901327013969421
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:79",
+      "label": "car",
+      "start_ts": 4.8,
+      "end_ts": 45.6,
+      "duration_sec": 40.800000000000004,
+      "frame_count": 35,
+      "avg_confidence": 0.6056217678955623,
+      "max_confidence": 0.7450255751609802,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+      "points": [
+        {
+          "timestamp": 4.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_4.8.jpg",
+          "bbox": [
+            463.94500732421875,
+            95.65007019042969,
+            495.3114013671875,
+            123.16978454589844
+          ],
+          "center_x": 479.6282043457031,
+          "center_y": 109.40992736816406,
+          "confidence": 0.5439864993095398
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_6.0.jpg",
+          "bbox": [
+            465.2406311035156,
+            95.92211151123047,
+            497.98101806640625,
+            124.64026641845703
+          ],
+          "center_x": 481.61082458496094,
+          "center_y": 110.28118896484375,
+          "confidence": 0.47240570187568665
+        },
+        {
+          "timestamp": 7.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+          "bbox": [
+            466.7373962402344,
+            98.546875,
+            497.75152587890625,
+            125.65874481201172
+          ],
+          "center_x": 482.2444610595703,
+          "center_y": 112.10280990600586,
+          "confidence": 0.5983678102493286
+        },
+        {
+          "timestamp": 8.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+          "bbox": [
+            466.2327880859375,
+            99.3955078125,
+            496.9521179199219,
+            126.11295318603516
+          ],
+          "center_x": 481.5924530029297,
+          "center_y": 112.75423049926758,
+          "confidence": 0.5240479111671448
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            467.16558837890625,
+            100.28683471679688,
+            497.17987060546875,
+            126.19068908691406
+          ],
+          "center_x": 482.1727294921875,
+          "center_y": 113.23876190185547,
+          "confidence": 0.5386591553688049
+        },
+        {
+          "timestamp": 10.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+          "bbox": [
+            467.9163513183594,
+            100.60304260253906,
+            497.31982421875,
+            125.72855377197266
+          ],
+          "center_x": 482.6180877685547,
+          "center_y": 113.16579818725586,
+          "confidence": 0.5937156081199646
+        },
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            467.47296142578125,
+            100.10194396972656,
+            497.8049011230469,
+            125.83938598632812
+          ],
+          "center_x": 482.63893127441406,
+          "center_y": 112.97066497802734,
+          "confidence": 0.5061574578285217
+        },
+        {
+          "timestamp": 13.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_13.2.jpg",
+          "bbox": [
+            466.5152282714844,
+            100.21219635009766,
+            497.4576110839844,
+            126.17433166503906
+          ],
+          "center_x": 481.9864196777344,
+          "center_y": 113.19326400756836,
+          "confidence": 0.591625988483429
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            465.63201904296875,
+            98.47962951660156,
+            498.0089416503906,
+            125.45899200439453
+          ],
+          "center_x": 481.8204803466797,
+          "center_y": 111.96931076049805,
+          "confidence": 0.541612982749939
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            465.15521240234375,
+            99.92411804199219,
+            496.7458190917969,
+            126.03956604003906
+          ],
+          "center_x": 480.9505157470703,
+          "center_y": 112.98184204101562,
+          "confidence": 0.6321335434913635
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            465.0892028808594,
+            99.23344421386719,
+            496.9197082519531,
+            125.4126968383789
+          ],
+          "center_x": 481.00445556640625,
+          "center_y": 112.32307052612305,
+          "confidence": 0.6061047911643982
+        },
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            464.4253845214844,
+            99.96762084960938,
+            495.8736877441406,
+            125.68572235107422
+          ],
+          "center_x": 480.1495361328125,
+          "center_y": 112.8266716003418,
+          "confidence": 0.7450255751609802
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            464.9415588378906,
+            99.66535186767578,
+            496.5010986328125,
+            125.35344696044922
+          ],
+          "center_x": 480.72132873535156,
+          "center_y": 112.5093994140625,
+          "confidence": 0.5542478561401367
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            464.708251953125,
+            98.36751556396484,
+            497.1114196777344,
+            124.60733795166016
+          ],
+          "center_x": 480.9098358154297,
+          "center_y": 111.4874267578125,
+          "confidence": 0.587110161781311
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            465.32177734375,
+            99.48448181152344,
+            497.5616455078125,
+            125.40650939941406
+          ],
+          "center_x": 481.44171142578125,
+          "center_y": 112.44549560546875,
+          "confidence": 0.6258364915847778
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            465.70556640625,
+            99.84993743896484,
+            497.8074645996094,
+            125.49366760253906
+          ],
+          "center_x": 481.7565155029297,
+          "center_y": 112.67180252075195,
+          "confidence": 0.6554986238479614
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            464.9460754394531,
+            100.73503875732422,
+            497.0948486328125,
+            126.21525573730469
+          ],
+          "center_x": 481.0204620361328,
+          "center_y": 113.47514724731445,
+          "confidence": 0.645087480545044
+        },
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            465.3470458984375,
+            100.92871856689453,
+            497.42279052734375,
+            126.15687561035156
+          ],
+          "center_x": 481.3849182128906,
+          "center_y": 113.54279708862305,
+          "confidence": 0.6547484397888184
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            465.2604675292969,
+            100.51595306396484,
+            498.0635986328125,
+            126.26002502441406
+          ],
+          "center_x": 481.6620330810547,
+          "center_y": 113.38798904418945,
+          "confidence": 0.6121117472648621
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            464.635986328125,
+            100.20997619628906,
+            498.759521484375,
+            127.01155090332031
+          ],
+          "center_x": 481.69775390625,
+          "center_y": 113.61076354980469,
+          "confidence": 0.6026571393013
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            465.0165100097656,
+            100.2977523803711,
+            498.5484619140625,
+            126.59537506103516
+          ],
+          "center_x": 481.78248596191406,
+          "center_y": 113.44656372070312,
+          "confidence": 0.6062278747558594
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            465.3681335449219,
+            100.05052947998047,
+            498.58746337890625,
+            126.06044006347656
+          ],
+          "center_x": 481.97779846191406,
+          "center_y": 113.05548477172852,
+          "confidence": 0.6278030872344971
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            465.44671630859375,
+            99.62464904785156,
+            498.7293395996094,
+            125.44489288330078
+          ],
+          "center_x": 482.08802795410156,
+          "center_y": 112.53477096557617,
+          "confidence": 0.6097540855407715
+        },
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            465.0425109863281,
+            99.16321563720703,
+            498.7972106933594,
+            125.16142272949219
+          ],
+          "center_x": 481.91986083984375,
+          "center_y": 112.16231918334961,
+          "confidence": 0.6365302801132202
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            465.0481872558594,
+            98.85107421875,
+            499.06402587890625,
+            124.91011810302734
+          ],
+          "center_x": 482.0561065673828,
+          "center_y": 111.88059616088867,
+          "confidence": 0.572957456111908
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            464.9200134277344,
+            99.55670928955078,
+            498.5264587402344,
+            125.25822448730469
+          ],
+          "center_x": 481.7232360839844,
+          "center_y": 112.40746688842773,
+          "confidence": 0.536613404750824
+        },
+        {
+          "timestamp": 36.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_36.0.jpg",
+          "bbox": [
+            465.37518310546875,
+            100.05728912353516,
+            498.3724670410156,
+            125.17935943603516
+          ],
+          "center_x": 481.8738250732422,
+          "center_y": 112.61832427978516,
+          "confidence": 0.611767053604126
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            465.04205322265625,
+            100.10491180419922,
+            498.10687255859375,
+            125.16195678710938
+          ],
+          "center_x": 481.574462890625,
+          "center_y": 112.6334342956543,
+          "confidence": 0.5896496176719666
+        },
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            464.7248229980469,
+            100.46520233154297,
+            497.67041015625,
+            125.3657455444336
+          ],
+          "center_x": 481.19761657714844,
+          "center_y": 112.91547393798828,
+          "confidence": 0.6079617142677307
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            463.8254089355469,
+            100.62275695800781,
+            497.67462158203125,
+            126.18710327148438
+          ],
+          "center_x": 480.75001525878906,
+          "center_y": 113.4049301147461,
+          "confidence": 0.7042364478111267
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            463.91357421875,
+            101.87776947021484,
+            498.1229553222656,
+            127.67536926269531
+          ],
+          "center_x": 481.0182647705078,
+          "center_y": 114.77656936645508,
+          "confidence": 0.6684120893478394
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            463.331787109375,
+            102.36418151855469,
+            499.37835693359375,
+            129.75961303710938
+          ],
+          "center_x": 481.3550720214844,
+          "center_y": 116.06189727783203,
+          "confidence": 0.6918897032737732
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            463.9461364746094,
+            103.60165405273438,
+            499.5657958984375,
+            130.69281005859375
+          ],
+          "center_x": 481.75596618652344,
+          "center_y": 117.14723205566406,
+          "confidence": 0.6412932276725769
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            464.893798828125,
+            103.8724594116211,
+            500.04937744140625,
+            130.57164001464844
+          ],
+          "center_x": 482.4715881347656,
+          "center_y": 117.22204971313477,
+          "confidence": 0.679980993270874
+        },
+        {
+          "timestamp": 45.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_45.6.jpg",
+          "bbox": [
+            467.4117736816406,
+            105.05686950683594,
+            503.3062438964844,
+            132.42933654785156
+          ],
+          "center_x": 485.3590087890625,
+          "center_y": 118.74310302734375,
+          "confidence": 0.5805438756942749
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:97",
+      "label": "car",
+      "start_ts": 6.0,
+      "end_ts": 6.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.6808874607086182,
+      "max_confidence": 0.6808874607086182,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_6.0.jpg",
+      "points": [
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_6.0.jpg",
+          "bbox": [
+            159.4652099609375,
+            195.33554077148438,
+            235.7871551513672,
+            258.40802001953125
+          ],
+          "center_x": 197.62618255615234,
+          "center_y": 226.8717803955078,
+          "confidence": 0.6808874607086182
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:106",
+      "label": "car",
+      "start_ts": 7.2,
+      "end_ts": 9.6,
+      "duration_sec": 2.3999999999999995,
+      "frame_count": 2,
+      "avg_confidence": 0.8147692680358887,
+      "max_confidence": 0.9311509132385254,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+      "points": [
+        {
+          "timestamp": 7.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+          "bbox": [
+            -5.972970485687256,
+            279.39105224609375,
+            115.98882293701172,
+            387.22491455078125
+          ],
+          "center_x": 55.00792622566223,
+          "center_y": 333.3079833984375,
+          "confidence": 0.698387622833252
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            -33.01555252075195,
+            181.24722290039062,
+            205.33457946777344,
+            393.8061218261719
+          ],
+          "center_x": 86.15951347351074,
+          "center_y": 287.52667236328125,
+          "confidence": 0.9311509132385254
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:119",
+      "label": "car",
+      "start_ts": 7.2,
+      "end_ts": 14.4,
+      "duration_sec": 7.2,
+      "frame_count": 5,
+      "avg_confidence": 0.40672765374183656,
+      "max_confidence": 0.43321022391319275,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+      "points": [
+        {
+          "timestamp": 7.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+          "bbox": [
+            420.48333740234375,
+            81.55462646484375,
+            450.53082275390625,
+            106.19551086425781
+          ],
+          "center_x": 435.507080078125,
+          "center_y": 93.87506866455078,
+          "confidence": 0.43321022391319275
+        },
+        {
+          "timestamp": 8.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+          "bbox": [
+            420.628173828125,
+            80.9954833984375,
+            452.35614013671875,
+            107.09234619140625
+          ],
+          "center_x": 436.4921569824219,
+          "center_y": 94.04391479492188,
+          "confidence": 0.4298373758792877
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            421.4372253417969,
+            83.67013549804688,
+            449.7503662109375,
+            107.0510025024414
+          ],
+          "center_x": 435.5937957763672,
+          "center_y": 95.36056900024414,
+          "confidence": 0.4155969023704529
+        },
+        {
+          "timestamp": 10.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+          "bbox": [
+            421.57720947265625,
+            81.54865264892578,
+            451.8370361328125,
+            106.76410675048828
+          ],
+          "center_x": 436.7071228027344,
+          "center_y": 94.15637969970703,
+          "confidence": 0.351080983877182
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            423.013671875,
+            80.17194366455078,
+            460.4434814453125,
+            111.65721893310547
+          ],
+          "center_x": 441.72857666015625,
+          "center_y": 95.91458129882812,
+          "confidence": 0.4039127826690674
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:144",
+      "label": "car",
+      "start_ts": 8.4,
+      "end_ts": 45.6,
+      "duration_sec": 37.2,
+      "frame_count": 31,
+      "avg_confidence": 0.7185429709572946,
+      "max_confidence": 0.798141360282898,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+      "points": [
+        {
+          "timestamp": 8.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+          "bbox": [
+            186.5412139892578,
+            403.1360778808594,
+            345.33587646484375,
+            528.5623779296875
+          ],
+          "center_x": 265.9385452270508,
+          "center_y": 465.84922790527344,
+          "confidence": 0.7532713413238525
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            192.90438842773438,
+            390.2982177734375,
+            350.6582336425781,
+            515.4620971679688
+          ],
+          "center_x": 271.78131103515625,
+          "center_y": 452.8801574707031,
+          "confidence": 0.7164655327796936
+        },
+        {
+          "timestamp": 10.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+          "bbox": [
+            195.22996520996094,
+            385.6452941894531,
+            352.0838317871094,
+            510.9276428222656
+          ],
+          "center_x": 273.65689849853516,
+          "center_y": 448.2864685058594,
+          "confidence": 0.7117729187011719
+        },
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            197.42193603515625,
+            385.56732177734375,
+            350.9129638671875,
+            509.111572265625
+          ],
+          "center_x": 274.1674499511719,
+          "center_y": 447.3394470214844,
+          "confidence": 0.6846883296966553
+        },
+        {
+          "timestamp": 13.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_13.2.jpg",
+          "bbox": [
+            197.55413818359375,
+            385.25531005859375,
+            351.0872497558594,
+            510.04571533203125
+          ],
+          "center_x": 274.32069396972656,
+          "center_y": 447.6505126953125,
+          "confidence": 0.6628097891807556
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            198.56857299804688,
+            385.1021423339844,
+            349.854248046875,
+            509.3559265136719
+          ],
+          "center_x": 274.21141052246094,
+          "center_y": 447.2290344238281,
+          "confidence": 0.7040859460830688
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            198.5137481689453,
+            385.43768310546875,
+            349.2464599609375,
+            510.7093505859375
+          ],
+          "center_x": 273.8801040649414,
+          "center_y": 448.0735168457031,
+          "confidence": 0.6877801418304443
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            199.57623291015625,
+            385.66632080078125,
+            348.06317138671875,
+            510.57568359375
+          ],
+          "center_x": 273.8197021484375,
+          "center_y": 448.1210021972656,
+          "confidence": 0.7584081292152405
+        },
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            199.53993225097656,
+            386.52117919921875,
+            346.8824768066406,
+            511.99609375
+          ],
+          "center_x": 273.2112045288086,
+          "center_y": 449.2586364746094,
+          "confidence": 0.798141360282898
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            200.27578735351562,
+            383.9125671386719,
+            346.7753601074219,
+            510.29278564453125
+          ],
+          "center_x": 273.52557373046875,
+          "center_y": 447.10267639160156,
+          "confidence": 0.7442753911018372
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            201.54776000976562,
+            383.4375305175781,
+            345.9469909667969,
+            509.5318603515625
+          ],
+          "center_x": 273.74737548828125,
+          "center_y": 446.4846954345703,
+          "confidence": 0.7609822154045105
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            202.1477508544922,
+            383.9097595214844,
+            345.4142761230469,
+            510.6018981933594
+          ],
+          "center_x": 273.78101348876953,
+          "center_y": 447.2558288574219,
+          "confidence": 0.733776330947876
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            203.5023956298828,
+            385.3692321777344,
+            344.0182800292969,
+            511.0880432128906
+          ],
+          "center_x": 273.76033782958984,
+          "center_y": 448.2286376953125,
+          "confidence": 0.7251742482185364
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            203.29788208007812,
+            385.9591064453125,
+            342.9314880371094,
+            512.269287109375
+          ],
+          "center_x": 273.11468505859375,
+          "center_y": 449.11419677734375,
+          "confidence": 0.7147216796875
+        },
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            205.03494262695312,
+            386.7965087890625,
+            341.7561340332031,
+            511.67926025390625
+          ],
+          "center_x": 273.3955383300781,
+          "center_y": 449.2378845214844,
+          "confidence": 0.7349121570587158
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            205.39596557617188,
+            386.8401184082031,
+            341.7456359863281,
+            512.6829223632812
+          ],
+          "center_x": 273.57080078125,
+          "center_y": 449.7615203857422,
+          "confidence": 0.7402036190032959
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            206.13978576660156,
+            387.7216491699219,
+            341.0176086425781,
+            513.360107421875
+          ],
+          "center_x": 273.57869720458984,
+          "center_y": 450.54087829589844,
+          "confidence": 0.7518783807754517
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            206.0221710205078,
+            387.1098937988281,
+            340.7531433105469,
+            513.7227172851562
+          ],
+          "center_x": 273.38765716552734,
+          "center_y": 450.4163055419922,
+          "confidence": 0.686211884021759
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            206.40896606445312,
+            385.2414245605469,
+            340.7093200683594,
+            512.6248168945312
+          ],
+          "center_x": 273.55914306640625,
+          "center_y": 448.93312072753906,
+          "confidence": 0.6836237907409668
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            207.00753784179688,
+            384.06732177734375,
+            339.9486389160156,
+            511.1607360839844
+          ],
+          "center_x": 273.47808837890625,
+          "center_y": 447.61402893066406,
+          "confidence": 0.4366239011287689
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            207.8658905029297,
+            383.2943420410156,
+            339.53411865234375,
+            510.1463623046875
+          ],
+          "center_x": 273.7000045776367,
+          "center_y": 446.72035217285156,
+          "confidence": 0.7226378321647644
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            208.33238220214844,
+            384.258056640625,
+            338.6399230957031,
+            510.5821533203125
+          ],
+          "center_x": 273.4861526489258,
+          "center_y": 447.42010498046875,
+          "confidence": 0.7398992776870728
+        },
+        {
+          "timestamp": 36.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_36.0.jpg",
+          "bbox": [
+            208.65577697753906,
+            384.7705383300781,
+            337.7370910644531,
+            510.4968566894531
+          ],
+          "center_x": 273.1964340209961,
+          "center_y": 447.6336975097656,
+          "confidence": 0.7801083922386169
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            209.4448699951172,
+            385.9839782714844,
+            336.8232421875,
+            510.54034423828125
+          ],
+          "center_x": 273.1340560913086,
+          "center_y": 448.2621612548828,
+          "confidence": 0.7640260457992554
+        },
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            209.13522338867188,
+            385.33319091796875,
+            337.05474853515625,
+            511.0184020996094
+          ],
+          "center_x": 273.09498596191406,
+          "center_y": 448.17579650878906,
+          "confidence": 0.7168091535568237
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            210.0725555419922,
+            387.8299865722656,
+            335.92236328125,
+            511.6778259277344
+          ],
+          "center_x": 272.9974594116211,
+          "center_y": 449.75390625,
+          "confidence": 0.7240381836891174
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            210.3856658935547,
+            390.4418029785156,
+            335.92889404296875,
+            514.294677734375
+          ],
+          "center_x": 273.1572799682617,
+          "center_y": 452.3682403564453,
+          "confidence": 0.7160860896110535
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            209.1398468017578,
+            391.15533447265625,
+            336.1081237792969,
+            516.9677124023438
+          ],
+          "center_x": 272.62398529052734,
+          "center_y": 454.0615234375,
+          "confidence": 0.7751316428184509
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            209.39271545410156,
+            391.36279296875,
+            336.32611083984375,
+            517.63623046875
+          ],
+          "center_x": 272.85941314697266,
+          "center_y": 454.49951171875,
+          "confidence": 0.7304050326347351
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            210.37721252441406,
+            385.8682861328125,
+            336.8139343261719,
+            512.3887939453125
+          ],
+          "center_x": 273.59557342529297,
+          "center_y": 449.1285400390625,
+          "confidence": 0.7670410871505737
+        },
+        {
+          "timestamp": 45.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_45.6.jpg",
+          "bbox": [
+            218.4981231689453,
+            372.77972412109375,
+            337.3064880371094,
+            492.8330993652344
+          ],
+          "center_x": 277.90230560302734,
+          "center_y": 432.80641174316406,
+          "confidence": 0.6488422751426697
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:154",
+      "label": "car",
+      "start_ts": 9.6,
+      "end_ts": 9.6,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.6556434631347656,
+      "max_confidence": 0.6556434631347656,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+      "points": [
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            527.7354736328125,
+            451.05120849609375,
+            566.0783081054688,
+            509.6434326171875
+          ],
+          "center_x": 546.9068908691406,
+          "center_y": 480.3473205566406,
+          "confidence": 0.6556434631347656
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:182",
+      "label": "car",
+      "start_ts": 10.8,
+      "end_ts": 10.8,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.554999053478241,
+      "max_confidence": 0.554999053478241,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+      "points": [
+        {
+          "timestamp": 10.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_10.8.jpg",
+          "bbox": [
+            519.7622680664062,
+            405.0111083984375,
+            553.83203125,
+            459.98016357421875
+          ],
+          "center_x": 536.7971496582031,
+          "center_y": 432.4956359863281,
+          "confidence": 0.554999053478241
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:201",
+      "label": "car",
+      "start_ts": 12.0,
+      "end_ts": 15.6,
+      "duration_sec": 3.5999999999999996,
+      "frame_count": 2,
+      "avg_confidence": 0.7419991195201874,
+      "max_confidence": 0.7715879082679749,
+      "direction": "top_to_bottom",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+      "points": [
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            618.9146728515625,
+            225.88973999023438,
+            697.9929809570312,
+            290.4916076660156
+          ],
+          "center_x": 658.4538269042969,
+          "center_y": 258.190673828125,
+          "confidence": 0.7124103307723999
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            606.1593017578125,
+            251.1481475830078,
+            684.2305297851562,
+            315.0356140136719
+          ],
+          "center_x": 645.1949157714844,
+          "center_y": 283.09188079833984,
+          "confidence": 0.7715879082679749
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:226",
+      "label": "car",
+      "start_ts": 13.2,
+      "end_ts": 20.4,
+      "duration_sec": 7.199999999999999,
+      "frame_count": 4,
+      "avg_confidence": 0.7643243372440338,
+      "max_confidence": 0.8352854251861572,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+      "points": [
+        {
+          "timestamp": 13.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_13.2.jpg",
+          "bbox": [
+            590.3024291992188,
+            166.46287536621094,
+            645.2991943359375,
+            211.08677673339844
+          ],
+          "center_x": 617.8008117675781,
+          "center_y": 188.7748260498047,
+          "confidence": 0.7699728608131409
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            589.5318603515625,
+            183.3268585205078,
+            646.2078857421875,
+            229.39268493652344
+          ],
+          "center_x": 617.869873046875,
+          "center_y": 206.35977172851562,
+          "confidence": 0.6861686706542969
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            580.7463989257812,
+            182.1055145263672,
+            635.2506713867188,
+            226.48715209960938
+          ],
+          "center_x": 607.99853515625,
+          "center_y": 204.29633331298828,
+          "confidence": 0.8352854251861572
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            581.404052734375,
+            173.2974395751953,
+            634.7178955078125,
+            216.9610137939453
+          ],
+          "center_x": 608.0609741210938,
+          "center_y": 195.1292266845703,
+          "confidence": 0.7658703923225403
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:248",
+      "label": "car",
+      "start_ts": 14.4,
+      "end_ts": 21.6,
+      "duration_sec": 7.200000000000001,
+      "frame_count": 4,
+      "avg_confidence": 0.7457249015569687,
+      "max_confidence": 0.8265439867973328,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+      "points": [
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            567.7857666015625,
+            128.84910583496094,
+            613.0902099609375,
+            162.19644165039062
+          ],
+          "center_x": 590.43798828125,
+          "center_y": 145.52277374267578,
+          "confidence": 0.6808791160583496
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            565.8142700195312,
+            139.81394958496094,
+            612.6328125,
+            174.38394165039062
+          ],
+          "center_x": 589.2235412597656,
+          "center_y": 157.09894561767578,
+          "confidence": 0.7290652990341187
+        },
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            561.7152709960938,
+            140.25387573242188,
+            607.8407592773438,
+            174.5319061279297
+          ],
+          "center_x": 584.7780151367188,
+          "center_y": 157.39289093017578,
+          "confidence": 0.8265439867973328
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            561.56787109375,
+            134.78021240234375,
+            605.2542724609375,
+            167.54904174804688
+          ],
+          "center_x": 583.4110717773438,
+          "center_y": 151.1646270751953,
+          "confidence": 0.7464112043380737
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:251",
+      "label": "car",
+      "start_ts": 14.4,
+      "end_ts": 14.4,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.4748155474662781,
+      "max_confidence": 0.4748155474662781,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+      "points": [
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            295.140869140625,
+            124.56324005126953,
+            332.86407470703125,
+            157.54611206054688
+          ],
+          "center_x": 314.0024719238281,
+          "center_y": 141.0546760559082,
+          "confidence": 0.4748155474662781
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:262",
+      "label": "car",
+      "start_ts": 14.4,
+      "end_ts": 20.4,
+      "duration_sec": 5.999999999999998,
+      "frame_count": 3,
+      "avg_confidence": 0.6610759794712067,
+      "max_confidence": 0.8291274309158325,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+      "points": [
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            608.9767456054688,
+            103.46247100830078,
+            638.1961669921875,
+            127.95337677001953
+          ],
+          "center_x": 623.5864562988281,
+          "center_y": 115.70792388916016,
+          "confidence": 0.46840253472328186
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            605.17822265625,
+            110.46117401123047,
+            636.5374755859375,
+            136.67005920410156
+          ],
+          "center_x": 620.8578491210938,
+          "center_y": 123.56561660766602,
+          "confidence": 0.6856979727745056
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            591.9111938476562,
+            112.20153045654297,
+            622.9595947265625,
+            138.07911682128906
+          ],
+          "center_x": 607.4353942871094,
+          "center_y": 125.14032363891602,
+          "confidence": 0.8291274309158325
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:274",
+      "label": "car",
+      "start_ts": 15.6,
+      "end_ts": 15.6,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.6687139272689819,
+      "max_confidence": 0.6687139272689819,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+      "points": [
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            255.56285095214844,
+            147.05337524414062,
+            306.1938171386719,
+            188.6415557861328
+          ],
+          "center_x": 280.87833404541016,
+          "center_y": 167.84746551513672,
+          "confidence": 0.6687139272689819
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:281",
+      "label": "car",
+      "start_ts": 15.6,
+      "end_ts": 20.4,
+      "duration_sec": 4.799999999999999,
+      "frame_count": 3,
+      "avg_confidence": 0.4004099766413371,
+      "max_confidence": 0.44993335008621216,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+      "points": [
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            915.7493286132812,
+            146.92572021484375,
+            962.313720703125,
+            199.67349243164062
+          ],
+          "center_x": 939.0315246582031,
+          "center_y": 173.2996063232422,
+          "confidence": 0.38598737120628357
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            909.9508056640625,
+            133.3437042236328,
+            968.6328735351562,
+            200.65020751953125
+          ],
+          "center_x": 939.2918395996094,
+          "center_y": 166.99695587158203,
+          "confidence": 0.44993335008621216
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            911.8325805664062,
+            134.8336944580078,
+            965.742431640625,
+            197.13441467285156
+          ],
+          "center_x": 938.7875061035156,
+          "center_y": 165.9840545654297,
+          "confidence": 0.3653092086315155
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:288",
+      "label": "car",
+      "start_ts": 16.8,
+      "end_ts": 16.8,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.7338667511940002,
+      "max_confidence": 0.7338667511940002,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+      "points": [
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            189.1943817138672,
+            184.54493713378906,
+            257.385498046875,
+            240.59288024902344
+          ],
+          "center_x": 223.2899398803711,
+          "center_y": 212.56890869140625,
+          "confidence": 0.7338667511940002
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:289",
+      "label": "car",
+      "start_ts": 16.8,
+      "end_ts": 24.0,
+      "duration_sec": 7.199999999999999,
+      "frame_count": 4,
+      "avg_confidence": 0.7136232256889343,
+      "max_confidence": 0.7694063782691956,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+      "points": [
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            313.4584655761719,
+            147.43128967285156,
+            360.3646545410156,
+            185.9168243408203
+          ],
+          "center_x": 336.91156005859375,
+          "center_y": 166.67405700683594,
+          "confidence": 0.7694063782691956
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            303.3479919433594,
+            148.97052001953125,
+            350.173095703125,
+            187.44839477539062
+          ],
+          "center_x": 326.7605438232422,
+          "center_y": 168.20945739746094,
+          "confidence": 0.7673237919807434
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            296.31451416015625,
+            135.20260620117188,
+            342.889892578125,
+            173.75404357910156
+          ],
+          "center_x": 319.6022033691406,
+          "center_y": 154.47832489013672,
+          "confidence": 0.653373658657074
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            281.3183288574219,
+            130.24862670898438,
+            327.2169189453125,
+            168.31398010253906
+          ],
+          "center_x": 304.2676239013672,
+          "center_y": 149.28130340576172,
+          "confidence": 0.6643890738487244
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:297",
+      "label": "car",
+      "start_ts": 16.8,
+      "end_ts": 22.8,
+      "duration_sec": 6.0,
+      "frame_count": 3,
+      "avg_confidence": 0.6109036803245544,
+      "max_confidence": 0.6857684850692749,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+      "points": [
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            555.6959838867188,
+            112.15174102783203,
+            587.7422485351562,
+            139.22023010253906
+          ],
+          "center_x": 571.7191162109375,
+          "center_y": 125.68598556518555,
+          "confidence": 0.627871572971344
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            554.1360473632812,
+            111.85506439208984,
+            585.2324829101562,
+            138.13003540039062
+          ],
+          "center_x": 569.6842651367188,
+          "center_y": 124.99254989624023,
+          "confidence": 0.6857684850692749
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            550.84912109375,
+            107.77840423583984,
+            581.2946166992188,
+            133.62005615234375
+          ],
+          "center_x": 566.0718688964844,
+          "center_y": 120.6992301940918,
+          "confidence": 0.5190709829330444
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:310",
+      "label": "car",
+      "start_ts": 18.0,
+      "end_ts": 26.4,
+      "duration_sec": 8.399999999999999,
+      "frame_count": 4,
+      "avg_confidence": 0.7588366568088531,
+      "max_confidence": 0.8466472625732422,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+      "points": [
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            271.9583435058594,
+            178.2854766845703,
+            329.8618469238281,
+            228.38958740234375
+          ],
+          "center_x": 300.91009521484375,
+          "center_y": 203.33753204345703,
+          "confidence": 0.756691575050354
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            264.37237548828125,
+            175.15090942382812,
+            321.8529357910156,
+            224.84808349609375
+          ],
+          "center_x": 293.11265563964844,
+          "center_y": 199.99949645996094,
+          "confidence": 0.740403413772583
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            268.52813720703125,
+            158.81454467773438,
+            323.1960754394531,
+            206.1642303466797
+          ],
+          "center_x": 295.8621063232422,
+          "center_y": 182.48938751220703,
+          "confidence": 0.6916043758392334
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            263.3426513671875,
+            148.41722106933594,
+            310.61212158203125,
+            188.92831420898438
+          ],
+          "center_x": 286.9773864746094,
+          "center_y": 168.67276763916016,
+          "confidence": 0.8466472625732422
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:313",
+      "label": "car",
+      "start_ts": 18.0,
+      "end_ts": 22.8,
+      "duration_sec": 4.800000000000001,
+      "frame_count": 3,
+      "avg_confidence": 0.7004150549570719,
+      "max_confidence": 0.8398998975753784,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+      "points": [
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            50.43038558959961,
+            260.7506103515625,
+            160.33506774902344,
+            350.3676452636719
+          ],
+          "center_x": 105.38272666931152,
+          "center_y": 305.5591278076172,
+          "confidence": 0.8398998975753784
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            36.8621711730957,
+            233.54547119140625,
+            163.32640075683594,
+            336.908203125
+          ],
+          "center_x": 100.09428596496582,
+          "center_y": 285.2268371582031,
+          "confidence": 0.471618115901947
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            64.35185241699219,
+            237.94662475585938,
+            161.54518127441406,
+            316.7549133300781
+          ],
+          "center_x": 112.94851684570312,
+          "center_y": 277.35076904296875,
+          "confidence": 0.7897271513938904
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:364",
+      "label": "car",
+      "start_ts": 20.4,
+      "end_ts": 24.0,
+      "duration_sec": 3.6000000000000014,
+      "frame_count": 4,
+      "avg_confidence": 0.49262481182813644,
+      "max_confidence": 0.6014086604118347,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+      "points": [
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            842.40478515625,
+            72.52446746826172,
+            899.2490234375,
+            100.92991638183594
+          ],
+          "center_x": 870.826904296875,
+          "center_y": 86.72719192504883,
+          "confidence": 0.570500373840332
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            843.15478515625,
+            76.0888900756836,
+            895.3624877929688,
+            102.0766372680664
+          ],
+          "center_x": 869.2586364746094,
+          "center_y": 89.082763671875,
+          "confidence": 0.3490605652332306
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            836.7597045898438,
+            77.58876037597656,
+            884.9042358398438,
+            101.47493743896484
+          ],
+          "center_x": 860.8319702148438,
+          "center_y": 89.5318489074707,
+          "confidence": 0.44952964782714844
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            824.060302734375,
+            79.21270751953125,
+            870.1151123046875,
+            102.0296401977539
+          ],
+          "center_x": 847.0877075195312,
+          "center_y": 90.62117385864258,
+          "confidence": 0.6014086604118347
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:368",
+      "label": "car",
+      "start_ts": 20.4,
+      "end_ts": 20.4,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.33478906750679016,
+      "max_confidence": 0.33478906750679016,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+      "points": [
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            433.4345703125,
+            99.66122436523438,
+            464.6260986328125,
+            129.2986297607422
+          ],
+          "center_x": 449.03033447265625,
+          "center_y": 114.47992706298828,
+          "confidence": 0.33478906750679016
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:423",
+      "label": "car",
+      "start_ts": 24.0,
+      "end_ts": 44.4,
+      "duration_sec": 20.4,
+      "frame_count": 14,
+      "avg_confidence": 0.37126865131514414,
+      "max_confidence": 0.47291430830955505,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+      "points": [
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            918.6472778320312,
+            146.6280975341797,
+            957.4828491210938,
+            200.43455505371094
+          ],
+          "center_x": 938.0650634765625,
+          "center_y": 173.5313262939453,
+          "confidence": 0.47291430830955505
+        },
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            918.4339599609375,
+            144.81663513183594,
+            958.4974365234375,
+            200.272705078125
+          ],
+          "center_x": 938.4656982421875,
+          "center_y": 172.54467010498047,
+          "confidence": 0.4592169523239136
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            921.0718994140625,
+            150.24221801757812,
+            955.4863891601562,
+            197.3633575439453
+          ],
+          "center_x": 938.2791442871094,
+          "center_y": 173.80278778076172,
+          "confidence": 0.35795220732688904
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            919.3984375,
+            146.86109924316406,
+            958.5964965820312,
+            200.43748474121094
+          ],
+          "center_x": 938.9974670410156,
+          "center_y": 173.6492919921875,
+          "confidence": 0.34381359815597534
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            919.3162231445312,
+            145.1625213623047,
+            959.3484497070312,
+            199.797607421875
+          ],
+          "center_x": 939.3323364257812,
+          "center_y": 172.48006439208984,
+          "confidence": 0.4288049042224884
+        },
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            914.76806640625,
+            145.70596313476562,
+            955.492919921875,
+            200.00965881347656
+          ],
+          "center_x": 935.1304931640625,
+          "center_y": 172.8578109741211,
+          "confidence": 0.3486637473106384
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            917.0314331054688,
+            143.0289764404297,
+            957.4248657226562,
+            196.6652374267578
+          ],
+          "center_x": 937.2281494140625,
+          "center_y": 169.84710693359375,
+          "confidence": 0.291762113571167
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            918.529541015625,
+            146.67987060546875,
+            958.1183471679688,
+            198.9213104248047
+          ],
+          "center_x": 938.3239440917969,
+          "center_y": 172.80059051513672,
+          "confidence": 0.4366714060306549
+        },
+        {
+          "timestamp": 36.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_36.0.jpg",
+          "bbox": [
+            920.2776489257812,
+            150.1035614013672,
+            956.0370483398438,
+            196.17274475097656
+          ],
+          "center_x": 938.1573486328125,
+          "center_y": 173.13815307617188,
+          "confidence": 0.3876996338367462
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            916.3562622070312,
+            140.02163696289062,
+            960.4130249023438,
+            197.3863525390625
+          ],
+          "center_x": 938.3846435546875,
+          "center_y": 168.70399475097656,
+          "confidence": 0.3374890089035034
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            917.2891235351562,
+            147.73655700683594,
+            957.9790649414062,
+            199.99134826660156
+          ],
+          "center_x": 937.6340942382812,
+          "center_y": 173.86395263671875,
+          "confidence": 0.2890712022781372
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            916.3392333984375,
+            147.72052001953125,
+            958.2892456054688,
+            201.32135009765625
+          ],
+          "center_x": 937.3142395019531,
+          "center_y": 174.52093505859375,
+          "confidence": 0.36196768283843994
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            914.1162109375,
+            145.34080505371094,
+            960.425537109375,
+            205.0298309326172
+          ],
+          "center_x": 937.2708740234375,
+          "center_y": 175.18531799316406,
+          "confidence": 0.28226321935653687
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            914.0907592773438,
+            144.30079650878906,
+            960.2656860351562,
+            203.93544006347656
+          ],
+          "center_x": 937.17822265625,
+          "center_y": 174.1181182861328,
+          "confidence": 0.39947113394737244
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:424",
+      "label": "car",
+      "start_ts": 24.0,
+      "end_ts": 30.0,
+      "duration_sec": 6.0,
+      "frame_count": 6,
+      "avg_confidence": 0.3231774568557739,
+      "max_confidence": 0.3963365852832794,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+      "points": [
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            403.0899353027344,
+            94.935546875,
+            461.92364501953125,
+            132.2639617919922
+          ],
+          "center_x": 432.5067901611328,
+          "center_y": 113.5997543334961,
+          "confidence": 0.3963365852832794
+        },
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            401.1089172363281,
+            93.82251739501953,
+            460.0772705078125,
+            131.2628936767578
+          ],
+          "center_x": 430.5930938720703,
+          "center_y": 112.54270553588867,
+          "confidence": 0.2863759398460388
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            402.0689392089844,
+            94.95061492919922,
+            459.0063781738281,
+            130.94430541992188
+          ],
+          "center_x": 430.53765869140625,
+          "center_y": 112.94746017456055,
+          "confidence": 0.37782207131385803
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            403.9056701660156,
+            95.27075958251953,
+            460.2815246582031,
+            130.83433532714844
+          ],
+          "center_x": 432.0935974121094,
+          "center_y": 113.05254745483398,
+          "confidence": 0.3098617494106293
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            400.8770446777344,
+            94.4075927734375,
+            458.5879821777344,
+            130.71315002441406
+          ],
+          "center_x": 429.7325134277344,
+          "center_y": 112.56037139892578,
+          "confidence": 0.2867608666419983
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            403.44329833984375,
+            94.71205139160156,
+            460.0545959472656,
+            130.23135375976562
+          ],
+          "center_x": 431.7489471435547,
+          "center_y": 112.4717025756836,
+          "confidence": 0.2819075286388397
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:531",
+      "label": "car",
+      "start_ts": 30.0,
+      "end_ts": 46.8,
+      "duration_sec": 16.799999999999997,
+      "frame_count": 14,
+      "avg_confidence": 0.5420432559081486,
+      "max_confidence": 0.7142954468727112,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+      "points": [
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            375.6241455078125,
+            110.41487121582031,
+            402.5147399902344,
+            136.6409912109375
+          ],
+          "center_x": 389.06944274902344,
+          "center_y": 123.5279312133789,
+          "confidence": 0.45225146412849426
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            376.2699890136719,
+            107.01485443115234,
+            405.71533203125,
+            135.74708557128906
+          ],
+          "center_x": 390.99266052246094,
+          "center_y": 121.3809700012207,
+          "confidence": 0.5119245052337646
+        },
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            377.56365966796875,
+            108.30855560302734,
+            407.7745361328125,
+            137.62863159179688
+          ],
+          "center_x": 392.6690979003906,
+          "center_y": 122.96859359741211,
+          "confidence": 0.6465144753456116
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            382.6044616699219,
+            111.30377960205078,
+            413.7445373535156,
+            141.2012176513672
+          ],
+          "center_x": 398.17449951171875,
+          "center_y": 126.25249862670898,
+          "confidence": 0.6765013337135315
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            386.5775451660156,
+            114.91427612304688,
+            418.11376953125,
+            144.7318878173828
+          ],
+          "center_x": 402.3456573486328,
+          "center_y": 129.82308197021484,
+          "confidence": 0.4624067544937134
+        },
+        {
+          "timestamp": 36.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_36.0.jpg",
+          "bbox": [
+            388.00946044921875,
+            115.02084350585938,
+            420.2064514160156,
+            144.98936462402344
+          ],
+          "center_x": 404.1079559326172,
+          "center_y": 130.0051040649414,
+          "confidence": 0.5262394547462463
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            388.54443359375,
+            115.93655395507812,
+            420.66650390625,
+            145.16612243652344
+          ],
+          "center_x": 404.60546875,
+          "center_y": 130.55133819580078,
+          "confidence": 0.5923647880554199
+        },
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            388.9090270996094,
+            116.88847351074219,
+            421.2110595703125,
+            145.75531005859375
+          ],
+          "center_x": 405.06004333496094,
+          "center_y": 131.32189178466797,
+          "confidence": 0.4936770498752594
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            388.50494384765625,
+            117.01304626464844,
+            422.095458984375,
+            146.52593994140625
+          ],
+          "center_x": 405.3002014160156,
+          "center_y": 131.76949310302734,
+          "confidence": 0.6156785488128662
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            387.62738037109375,
+            118.90333557128906,
+            422.21746826171875,
+            148.80902099609375
+          ],
+          "center_x": 404.92242431640625,
+          "center_y": 133.8561782836914,
+          "confidence": 0.7142954468727112
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            387.46453857421875,
+            121.05765533447266,
+            422.19866943359375,
+            150.60887145996094
+          ],
+          "center_x": 404.83160400390625,
+          "center_y": 135.8332633972168,
+          "confidence": 0.5225297808647156
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            388.590576171875,
+            123.52745056152344,
+            424.0911865234375,
+            153.08419799804688
+          ],
+          "center_x": 406.34088134765625,
+          "center_y": 138.30582427978516,
+          "confidence": 0.4918365478515625
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            392.93572998046875,
+            123.35553741455078,
+            431.0625,
+            154.6603240966797
+          ],
+          "center_x": 411.9991149902344,
+          "center_y": 139.00793075561523,
+          "confidence": 0.35907357931137085
+        },
+        {
+          "timestamp": 46.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_46.8.jpg",
+          "bbox": [
+            387.7462158203125,
+            125.29689025878906,
+            425.1630554199219,
+            155.85943603515625
+          ],
+          "center_x": 406.4546356201172,
+          "center_y": 140.57816314697266,
+          "confidence": 0.5233118534088135
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:554",
+      "label": "car",
+      "start_ts": 32.4,
+      "end_ts": 32.4,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.5697113871574402,
+      "max_confidence": 0.5697113871574402,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+      "points": [
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            727.1835327148438,
+            428.52947998046875,
+            864.1864624023438,
+            539.721435546875
+          ],
+          "center_x": 795.6849975585938,
+          "center_y": 484.1254577636719,
+          "confidence": 0.5697113871574402
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:575",
+      "label": "car",
+      "start_ts": 33.6,
+      "end_ts": 33.6,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.7833687663078308,
+      "max_confidence": 0.7833687663078308,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+      "points": [
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            639.5548706054688,
+            256.01751708984375,
+            717.2747192382812,
+            325.4908142089844
+          ],
+          "center_x": 678.414794921875,
+          "center_y": 290.75416564941406,
+          "confidence": 0.7833687663078308
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:652",
+      "label": "car",
+      "start_ts": 38.4,
+      "end_ts": 45.6,
+      "duration_sec": 7.200000000000003,
+      "frame_count": 7,
+      "avg_confidence": 0.45580356887408663,
+      "max_confidence": 0.5322842597961426,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+      "points": [
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            365.1400146484375,
+            105.74667358398438,
+            393.5935363769531,
+            129.75881958007812
+          ],
+          "center_x": 379.3667755126953,
+          "center_y": 117.75274658203125,
+          "confidence": 0.5322842597961426
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            364.5589904785156,
+            106.47987365722656,
+            393.0450439453125,
+            130.54632568359375
+          ],
+          "center_x": 378.80201721191406,
+          "center_y": 118.51309967041016,
+          "confidence": 0.48892298340797424
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            363.36688232421875,
+            106.00041198730469,
+            394.2127380371094,
+            132.13275146484375
+          ],
+          "center_x": 378.78981018066406,
+          "center_y": 119.06658172607422,
+          "confidence": 0.4018561542034149
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            364.13922119140625,
+            110.64734649658203,
+            392.2650451660156,
+            134.50344848632812
+          ],
+          "center_x": 378.20213317871094,
+          "center_y": 122.57539749145508,
+          "confidence": 0.46064838767051697
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            366.2569274902344,
+            111.80182647705078,
+            395.5585632324219,
+            136.5798797607422
+          ],
+          "center_x": 380.9077453613281,
+          "center_y": 124.19085311889648,
+          "confidence": 0.45599737763404846
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            366.20355224609375,
+            111.88005828857422,
+            398.02520751953125,
+            138.80096435546875
+          ],
+          "center_x": 382.1143798828125,
+          "center_y": 125.34051132202148,
+          "confidence": 0.4633675515651703
+        },
+        {
+          "timestamp": 45.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_45.6.jpg",
+          "bbox": [
+            370.481201171875,
+            115.16637420654297,
+            402.58636474609375,
+            142.1750946044922
+          ],
+          "center_x": 386.5337829589844,
+          "center_y": 128.67073440551758,
+          "confidence": 0.3875482678413391
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:697",
+      "label": "car",
+      "start_ts": 42.0,
+      "end_ts": 44.4,
+      "duration_sec": 2.3999999999999986,
+      "frame_count": 3,
+      "avg_confidence": 0.43286697069803876,
+      "max_confidence": 0.5626665949821472,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+      "points": [
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            430.1496887207031,
+            102.2565689086914,
+            460.6659240722656,
+            133.82058715820312
+          ],
+          "center_x": 445.4078063964844,
+          "center_y": 118.03857803344727,
+          "confidence": 0.4088536500930786
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            430.6747131347656,
+            104.18848419189453,
+            460.1397705078125,
+            134.6630859375
+          ],
+          "center_x": 445.40724182128906,
+          "center_y": 119.42578506469727,
+          "confidence": 0.5626665949821472
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            431.44744873046875,
+            102.94624328613281,
+            460.6661376953125,
+            133.21609497070312
+          ],
+          "center_x": 446.0567932128906,
+          "center_y": 118.08116912841797,
+          "confidence": 0.3270806670188904
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:10",
+      "label": "motorcycle",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.3677240312099457,
+      "max_confidence": 0.3677240312099457,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            836.896484375,
+            167.58792114257812,
+            859.3867797851562,
+            206.60531616210938
+          ],
+          "center_x": 848.1416320800781,
+          "center_y": 187.09661865234375,
+          "confidence": 0.3677240312099457
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:11",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.3205447793006897,
+      "max_confidence": 0.3205447793006897,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            485.607666015625,
+            180.5804901123047,
+            506.9814758300781,
+            212.28785705566406
+          ],
+          "center_x": 496.29457092285156,
+          "center_y": 196.43417358398438,
+          "confidence": 0.3205447793006897
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:12",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.31297069787979126,
+      "max_confidence": 0.31297069787979126,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            695.6293334960938,
+            98.25189971923828,
+            709.7191772460938,
+            120.08553314208984
+          ],
+          "center_x": 702.6742553710938,
+          "center_y": 109.16871643066406,
+          "confidence": 0.31297069787979126
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:13",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.30669867992401123,
+      "max_confidence": 0.30669867992401123,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            836.8740234375,
+            160.2751007080078,
+            861.3369140625,
+            206.13221740722656
+          ],
+          "center_x": 849.10546875,
+          "center_y": 183.2036590576172,
+          "confidence": 0.30669867992401123
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:17",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.2857368290424347,
+      "max_confidence": 0.2857368290424347,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            775.8046875,
+            129.05661010742188,
+            794.063232421875,
+            161.5950469970703
+          ],
+          "center_x": 784.9339599609375,
+          "center_y": 145.3258285522461,
+          "confidence": 0.2857368290424347
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:7",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.39041081070899963,
+      "max_confidence": 0.39041081070899963,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_0.0.jpg",
+          "bbox": [
+            671.4431762695312,
+            104.56329345703125,
+            681.4733276367188,
+            124.2447509765625
+          ],
+          "center_x": 676.458251953125,
+          "center_y": 114.40402221679688,
+          "confidence": 0.39041081070899963
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:120",
+      "label": "truck",
+      "start_ts": 7.2,
+      "end_ts": 45.6,
+      "duration_sec": 38.4,
+      "frame_count": 32,
+      "avg_confidence": 0.5172297116369009,
+      "max_confidence": 0.677391767501831,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+      "points": [
+        {
+          "timestamp": 7.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_7.2.jpg",
+          "bbox": [
+            376.4640197753906,
+            375.9039001464844,
+            465.3184814453125,
+            493.99639892578125
+          ],
+          "center_x": 420.89125061035156,
+          "center_y": 434.9501495361328,
+          "confidence": 0.3828312158584595
+        },
+        {
+          "timestamp": 8.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+          "bbox": [
+            378.1016845703125,
+            377.1563415527344,
+            464.0320739746094,
+            491.3401794433594
+          ],
+          "center_x": 421.06687927246094,
+          "center_y": 434.2482604980469,
+          "confidence": 0.3646961748600006
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            378.97039794921875,
+            377.8991394042969,
+            463.5473327636719,
+            490.1922912597656
+          ],
+          "center_x": 421.2588653564453,
+          "center_y": 434.04571533203125,
+          "confidence": 0.47683873772621155
+        },
+        {
+          "timestamp": 12.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_12.0.jpg",
+          "bbox": [
+            378.0025939941406,
+            375.0058288574219,
+            464.61822509765625,
+            489.96258544921875
+          ],
+          "center_x": 421.31040954589844,
+          "center_y": 432.4842071533203,
+          "confidence": 0.5697392225265503
+        },
+        {
+          "timestamp": 13.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_13.2.jpg",
+          "bbox": [
+            376.4638366699219,
+            372.04022216796875,
+            465.7071838378906,
+            490.5609130859375
+          ],
+          "center_x": 421.08551025390625,
+          "center_y": 431.3005676269531,
+          "confidence": 0.6248446106910706
+        },
+        {
+          "timestamp": 14.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_14.4.jpg",
+          "bbox": [
+            376.2908020019531,
+            370.3314514160156,
+            466.1634216308594,
+            489.7590026855469
+          ],
+          "center_x": 421.22711181640625,
+          "center_y": 430.04522705078125,
+          "confidence": 0.677391767501831
+        },
+        {
+          "timestamp": 15.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_15.6.jpg",
+          "bbox": [
+            375.9161071777344,
+            370.8236083984375,
+            465.89337158203125,
+            490.4993591308594
+          ],
+          "center_x": 420.9047393798828,
+          "center_y": 430.66148376464844,
+          "confidence": 0.6136060357093811
+        },
+        {
+          "timestamp": 16.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_16.8.jpg",
+          "bbox": [
+            376.336669921875,
+            371.1038513183594,
+            465.6389465332031,
+            489.9556579589844
+          ],
+          "center_x": 420.98780822753906,
+          "center_y": 430.5297546386719,
+          "confidence": 0.6276474595069885
+        },
+        {
+          "timestamp": 18.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_18.0.jpg",
+          "bbox": [
+            375.380126953125,
+            372.4123840332031,
+            464.22943115234375,
+            490.7362365722656
+          ],
+          "center_x": 419.8047790527344,
+          "center_y": 431.5743103027344,
+          "confidence": 0.5658875703811646
+        },
+        {
+          "timestamp": 19.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_19.2.jpg",
+          "bbox": [
+            376.7650451660156,
+            372.7271423339844,
+            464.4854431152344,
+            489.5328674316406
+          ],
+          "center_x": 420.625244140625,
+          "center_y": 431.1300048828125,
+          "confidence": 0.5699703097343445
+        },
+        {
+          "timestamp": 20.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_20.4.jpg",
+          "bbox": [
+            377.6170349121094,
+            372.6965637207031,
+            464.61444091796875,
+            488.44329833984375
+          ],
+          "center_x": 421.11573791503906,
+          "center_y": 430.56993103027344,
+          "confidence": 0.5830355286598206
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_21.6.jpg",
+          "bbox": [
+            377.97015380859375,
+            374.6345520019531,
+            464.2859802246094,
+            489.3067321777344
+          ],
+          "center_x": 421.12806701660156,
+          "center_y": 431.97064208984375,
+          "confidence": 0.6135491132736206
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_22.8.jpg",
+          "bbox": [
+            377.614501953125,
+            373.9822998046875,
+            464.4242858886719,
+            489.1998596191406
+          ],
+          "center_x": 421.01939392089844,
+          "center_y": 431.59107971191406,
+          "confidence": 0.5399621725082397
+        },
+        {
+          "timestamp": 24.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_24.0.jpg",
+          "bbox": [
+            376.7807922363281,
+            373.9176330566406,
+            463.9072265625,
+            489.6182556152344
+          ],
+          "center_x": 420.34400939941406,
+          "center_y": 431.7679443359375,
+          "confidence": 0.4207237958908081
+        },
+        {
+          "timestamp": 25.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_25.2.jpg",
+          "bbox": [
+            377.1591491699219,
+            373.75103759765625,
+            464.3409118652344,
+            489.48980712890625
+          ],
+          "center_x": 420.7500305175781,
+          "center_y": 431.62042236328125,
+          "confidence": 0.5628406405448914
+        },
+        {
+          "timestamp": 26.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_26.4.jpg",
+          "bbox": [
+            378.4866638183594,
+            377.8637390136719,
+            463.3680419921875,
+            490.0873718261719
+          ],
+          "center_x": 420.92735290527344,
+          "center_y": 433.9755554199219,
+          "confidence": 0.38599640130996704
+        },
+        {
+          "timestamp": 27.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_27.6.jpg",
+          "bbox": [
+            377.6465759277344,
+            376.37451171875,
+            463.9098205566406,
+            490.3686828613281
+          ],
+          "center_x": 420.7781982421875,
+          "center_y": 433.37159729003906,
+          "confidence": 0.47161146998405457
+        },
+        {
+          "timestamp": 28.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_28.8.jpg",
+          "bbox": [
+            376.8476257324219,
+            374.1749267578125,
+            464.7418212890625,
+            490.5029296875
+          ],
+          "center_x": 420.7947235107422,
+          "center_y": 432.33892822265625,
+          "confidence": 0.3868531882762909
+        },
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            377.3310852050781,
+            374.7028503417969,
+            464.5075378417969,
+            489.95147705078125
+          ],
+          "center_x": 420.9193115234375,
+          "center_y": 432.32716369628906,
+          "confidence": 0.4939156472682953
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            377.5986022949219,
+            374.02294921875,
+            464.2698669433594,
+            488.5826110839844
+          ],
+          "center_x": 420.9342346191406,
+          "center_y": 431.3027801513672,
+          "confidence": 0.4729101061820984
+        },
+        {
+          "timestamp": 32.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_32.4.jpg",
+          "bbox": [
+            378.1881103515625,
+            375.3168029785156,
+            463.4159851074219,
+            487.7008361816406
+          ],
+          "center_x": 420.8020477294922,
+          "center_y": 431.5088195800781,
+          "confidence": 0.6097999811172485
+        },
+        {
+          "timestamp": 33.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_33.6.jpg",
+          "bbox": [
+            378.9794921875,
+            377.35601806640625,
+            462.6795349121094,
+            487.302734375
+          ],
+          "center_x": 420.8295135498047,
+          "center_y": 432.3293762207031,
+          "confidence": 0.4738406836986542
+        },
+        {
+          "timestamp": 34.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_34.8.jpg",
+          "bbox": [
+            376.5325012207031,
+            373.4060363769531,
+            464.03094482421875,
+            488.5704345703125
+          ],
+          "center_x": 420.28172302246094,
+          "center_y": 430.9882354736328,
+          "confidence": 0.4898148775100708
+        },
+        {
+          "timestamp": 36.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_36.0.jpg",
+          "bbox": [
+            378.5458984375,
+            379.2235412597656,
+            461.6966857910156,
+            488.03863525390625
+          ],
+          "center_x": 420.1212921142578,
+          "center_y": 433.63108825683594,
+          "confidence": 0.6189815998077393
+        },
+        {
+          "timestamp": 37.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_37.2.jpg",
+          "bbox": [
+            377.07232666015625,
+            375.94976806640625,
+            463.0971374511719,
+            488.5130920410156
+          ],
+          "center_x": 420.08473205566406,
+          "center_y": 432.23143005371094,
+          "confidence": 0.5485192537307739
+        },
+        {
+          "timestamp": 38.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_38.4.jpg",
+          "bbox": [
+            377.17498779296875,
+            376.05645751953125,
+            463.53179931640625,
+            488.9396667480469
+          ],
+          "center_x": 420.3533935546875,
+          "center_y": 432.49806213378906,
+          "confidence": 0.46621477603912354
+        },
+        {
+          "timestamp": 39.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_39.6.jpg",
+          "bbox": [
+            376.4853210449219,
+            375.27398681640625,
+            464.0888671875,
+            489.7591857910156
+          ],
+          "center_x": 420.28709411621094,
+          "center_y": 432.51658630371094,
+          "confidence": 0.4782577157020569
+        },
+        {
+          "timestamp": 40.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_40.8.jpg",
+          "bbox": [
+            375.8319396972656,
+            375.1355895996094,
+            464.55401611328125,
+            491.2574157714844
+          ],
+          "center_x": 420.19297790527344,
+          "center_y": 433.1965026855469,
+          "confidence": 0.4586082994937897
+        },
+        {
+          "timestamp": 42.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_42.0.jpg",
+          "bbox": [
+            374.8587646484375,
+            374.130615234375,
+            463.9458312988281,
+            490.9506530761719
+          ],
+          "center_x": 419.4022979736328,
+          "center_y": 432.54063415527344,
+          "confidence": 0.5153947472572327
+        },
+        {
+          "timestamp": 43.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_43.2.jpg",
+          "bbox": [
+            374.8206481933594,
+            371.502197265625,
+            462.7824401855469,
+            487.15155029296875
+          ],
+          "center_x": 418.8015441894531,
+          "center_y": 429.3268737792969,
+          "confidence": 0.5154845118522644
+        },
+        {
+          "timestamp": 44.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_44.4.jpg",
+          "bbox": [
+            375.9363098144531,
+            367.34466552734375,
+            462.59423828125,
+            481.4473876953125
+          ],
+          "center_x": 419.26527404785156,
+          "center_y": 424.3960266113281,
+          "confidence": 0.44753119349479675
+        },
+        {
+          "timestamp": 45.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_45.6.jpg",
+          "bbox": [
+            378.4294128417969,
+            349.2139892578125,
+            459.5245056152344,
+            455.6351318359375
+          ],
+          "center_x": 418.9769592285156,
+          "center_y": 402.424560546875,
+          "confidence": 0.5240519642829895
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:150",
+      "label": "truck",
+      "start_ts": 8.4,
+      "end_ts": 9.6,
+      "duration_sec": 1.1999999999999993,
+      "frame_count": 2,
+      "avg_confidence": 0.32098598778247833,
+      "max_confidence": 0.3519522249698639,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+      "points": [
+        {
+          "timestamp": 8.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_8.4.jpg",
+          "bbox": [
+            376.2267150878906,
+            373.86199951171875,
+            465.022216796875,
+            490.3484191894531
+          ],
+          "center_x": 420.6244659423828,
+          "center_y": 432.10520935058594,
+          "confidence": 0.3519522249698639
+        },
+        {
+          "timestamp": 9.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_9.6.jpg",
+          "bbox": [
+            376.1722717285156,
+            374.3998107910156,
+            464.7710266113281,
+            490.6466979980469
+          ],
+          "center_x": 420.4716491699219,
+          "center_y": 432.52325439453125,
+          "confidence": 0.2900197505950928
+        }
+      ]
+    },
+    {
+      "track_id": "MVI_40854_4c9b6505f9:522",
+      "label": "truck",
+      "start_ts": 30.0,
+      "end_ts": 31.2,
+      "duration_sec": 1.1999999999999993,
+      "frame_count": 2,
+      "avg_confidence": 0.5955659449100494,
+      "max_confidence": 0.7070600986480713,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+      "points": [
+        {
+          "timestamp": 30.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_30.0.jpg",
+          "bbox": [
+            212.07427978515625,
+            385.3287048339844,
+            334.4244689941406,
+            512.6771240234375
+          ],
+          "center_x": 273.24937438964844,
+          "center_y": 449.00291442871094,
+          "confidence": 0.4840717911720276
+        },
+        {
+          "timestamp": 31.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/mvi_40854_31.2.jpg",
+          "bbox": [
+            212.25619506835938,
+            383.4501037597656,
+            334.70623779296875,
+            510.8943786621094
+          ],
+          "center_x": 273.48121643066406,
+          "center_y": 447.1722412109375,
+          "confidence": 0.7070600986480713
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1216 @@
+{
+  "video_id": "traffic_video_modified_ca0974ddfc",
+  "video_name": "traffic_video_modified.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+  "tracks": [
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:42",
+      "label": "bus",
+      "start_ts": 10.3,
+      "end_ts": 13.7,
+      "duration_sec": 3.3999999999999986,
+      "frame_count": 4,
+      "avg_confidence": 0.7795906364917755,
+      "max_confidence": 0.8809530735015869,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+      "points": [
+        {
+          "timestamp": 10.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+          "bbox": [
+            619.0569458007812,
+            367.42181396484375,
+            1172.3123779296875,
+            841.983154296875
+          ],
+          "center_x": 895.6846618652344,
+          "center_y": 604.7024841308594,
+          "confidence": 0.8189831972122192
+        },
+        {
+          "timestamp": 11.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg",
+          "bbox": [
+            642.1984252929688,
+            363.0802917480469,
+            1038.1131591796875,
+            699.6978149414062
+          ],
+          "center_x": 840.1557922363281,
+          "center_y": 531.3890533447266,
+          "confidence": 0.6641994118690491
+        },
+        {
+          "timestamp": 12.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+          "bbox": [
+            547.7411499023438,
+            340.8403625488281,
+            979.2660522460938,
+            706.8329467773438
+          ],
+          "center_x": 763.5036010742188,
+          "center_y": 523.8366546630859,
+          "confidence": 0.8809530735015869
+        },
+        {
+          "timestamp": 13.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_13.7.jpg",
+          "bbox": [
+            495.8094787597656,
+            315.016845703125,
+            962.4521484375,
+            712.1488647460938
+          ],
+          "center_x": 729.1308135986328,
+          "center_y": 513.5828552246094,
+          "confidence": 0.7542268633842468
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:1",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.898409903049469,
+      "max_confidence": 0.898409903049469,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            212.156982421875,
+            645.3310546875,
+            945.338623046875,
+            1010.1643676757812
+          ],
+          "center_x": 578.747802734375,
+          "center_y": 827.7477111816406,
+          "confidence": 0.898409903049469
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:2",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 14.8,
+      "duration_sec": 14.8,
+      "frame_count": 11,
+      "avg_confidence": 0.7490410967306658,
+      "max_confidence": 0.9133422374725342,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            1198.506103515625,
+            668.02978515625,
+            1622.6231689453125,
+            985.0596923828125
+          ],
+          "center_x": 1410.5646362304688,
+          "center_y": 826.5447387695312,
+          "confidence": 0.8717314600944519
+        },
+        {
+          "timestamp": 1.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_1.1.jpg",
+          "bbox": [
+            999.7575073242188,
+            636.064208984375,
+            1500.703857421875,
+            1008.2656860351562
+          ],
+          "center_x": 1250.2306823730469,
+          "center_y": 822.1649475097656,
+          "confidence": 0.8372220993041992
+        },
+        {
+          "timestamp": 2.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_2.3.jpg",
+          "bbox": [
+            1133.6146240234375,
+            640.8762817382812,
+            1574.0091552734375,
+            969.5549926757812
+          ],
+          "center_x": 1353.8118896484375,
+          "center_y": 805.2156372070312,
+          "confidence": 0.8192001581192017
+        },
+        {
+          "timestamp": 3.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_3.4.jpg",
+          "bbox": [
+            946.9773559570312,
+            625.1317138671875,
+            1456.855224609375,
+            1000.732666015625
+          ],
+          "center_x": 1201.9162902832031,
+          "center_y": 812.9321899414062,
+          "confidence": 0.8741615414619446
+        },
+        {
+          "timestamp": 4.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_4.6.jpg",
+          "bbox": [
+            938.2040405273438,
+            483.1750183105469,
+            1606.0841064453125,
+            986.5008544921875
+          ],
+          "center_x": 1272.1440734863281,
+          "center_y": 734.8379364013672,
+          "confidence": 0.6707130074501038
+        },
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            695.3975219726562,
+            442.6835021972656,
+            1442.1820068359375,
+            998.750732421875
+          ],
+          "center_x": 1068.7897644042969,
+          "center_y": 720.7171173095703,
+          "confidence": 0.5625466704368591
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+          "bbox": [
+            339.1995849609375,
+            492.7714538574219,
+            1064.06396484375,
+            1002.2496948242188
+          ],
+          "center_x": 701.6317749023438,
+          "center_y": 747.5105743408203,
+          "confidence": 0.5631611943244934
+        },
+        {
+          "timestamp": 9.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+          "bbox": [
+            151.8683319091797,
+            544.1593627929688,
+            819.7510986328125,
+            1001.5247192382812
+          ],
+          "center_x": 485.8097152709961,
+          "center_y": 772.842041015625,
+          "confidence": 0.7531499266624451
+        },
+        {
+          "timestamp": 10.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+          "bbox": [
+            102.35490417480469,
+            551.7503662109375,
+            609.9857177734375,
+            897.7885131835938
+          ],
+          "center_x": 356.1703109741211,
+          "center_y": 724.7694396972656,
+          "confidence": 0.5030374526977539
+        },
+        {
+          "timestamp": 12.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+          "bbox": [
+            -163.27809143066406,
+            502.40350341796875,
+            516.1251831054688,
+            988.049560546875
+          ],
+          "center_x": 176.42354583740234,
+          "center_y": 745.2265319824219,
+          "confidence": 0.8711863160133362
+        },
+        {
+          "timestamp": 14.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+          "bbox": [
+            -133.61045837402344,
+            529.6046752929688,
+            355.64984130859375,
+            889.5118408203125
+          ],
+          "center_x": 111.01969146728516,
+          "center_y": 709.5582580566406,
+          "confidence": 0.9133422374725342
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:4",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 5.7,
+      "duration_sec": 5.7,
+      "frame_count": 4,
+      "avg_confidence": 0.7090425491333008,
+      "max_confidence": 0.8885684013366699,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_1.1.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            126.66427612304688,
+            648.8856811523438,
+            446.1563415527344,
+            924.5989379882812
+          ],
+          "center_x": 286.4103088378906,
+          "center_y": 786.7423095703125,
+          "confidence": 0.7097851634025574
+        },
+        {
+          "timestamp": 1.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_1.1.jpg",
+          "bbox": [
+            -4.4471306800842285,
+            604.8427734375,
+            446.3478698730469,
+            994.6893310546875
+          ],
+          "center_x": 220.95036959648132,
+          "center_y": 799.7660522460938,
+          "confidence": 0.8885684013366699
+        },
+        {
+          "timestamp": 3.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_3.4.jpg",
+          "bbox": [
+            30.30851936340332,
+            573.2264404296875,
+            536.2515869140625,
+            1007.5421142578125
+          ],
+          "center_x": 283.2800531387329,
+          "center_y": 790.38427734375,
+          "confidence": 0.7542237043380737
+        },
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            85.20777893066406,
+            453.4598083496094,
+            592.8296508789062,
+            892.1089477539062
+          ],
+          "center_x": 339.01871490478516,
+          "center_y": 672.7843780517578,
+          "confidence": 0.4835929274559021
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:6",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.504709780216217,
+      "max_confidence": 0.504709780216217,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            988.626708984375,
+            668.966064453125,
+            1262.820068359375,
+            864.1306762695312
+          ],
+          "center_x": 1125.723388671875,
+          "center_y": 766.5483703613281,
+          "confidence": 0.504709780216217
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:18",
+      "label": "car",
+      "start_ts": 4.6,
+      "end_ts": 12.5,
+      "duration_sec": 7.9,
+      "frame_count": 7,
+      "avg_confidence": 0.770808390208653,
+      "max_confidence": 0.8547053933143616,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+      "points": [
+        {
+          "timestamp": 4.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_4.6.jpg",
+          "bbox": [
+            1645.8017578125,
+            678.1844482421875,
+            1744.4490966796875,
+            788.1275024414062
+          ],
+          "center_x": 1695.1254272460938,
+          "center_y": 733.1559753417969,
+          "confidence": 0.610663890838623
+        },
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            1624.11669921875,
+            668.0842895507812,
+            1737.919189453125,
+            794.312744140625
+          ],
+          "center_x": 1681.0179443359375,
+          "center_y": 731.1985168457031,
+          "confidence": 0.8008567690849304
+        },
+        {
+          "timestamp": 6.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_6.8.jpg",
+          "bbox": [
+            1582.1292724609375,
+            655.9410400390625,
+            1720.84375,
+            808.380615234375
+          ],
+          "center_x": 1651.4865112304688,
+          "center_y": 732.1608276367188,
+          "confidence": 0.8184645771980286
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+          "bbox": [
+            1531.2425537109375,
+            642.0756225585938,
+            1702.2071533203125,
+            827.0811157226562
+          ],
+          "center_x": 1616.724853515625,
+          "center_y": 734.578369140625,
+          "confidence": 0.758400559425354
+        },
+        {
+          "timestamp": 9.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+          "bbox": [
+            1439.8511962890625,
+            615.9513549804688,
+            1687.4769287109375,
+            880.0618286132812
+          ],
+          "center_x": 1563.6640625,
+          "center_y": 748.006591796875,
+          "confidence": 0.8547053933143616
+        },
+        {
+          "timestamp": 11.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg",
+          "bbox": [
+            1404.847900390625,
+            604.11865234375,
+            1650.7574462890625,
+            858.8003540039062
+          ],
+          "center_x": 1527.8026733398438,
+          "center_y": 731.4595031738281,
+          "confidence": 0.8271331191062927
+        },
+        {
+          "timestamp": 12.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+          "bbox": [
+            1281.34716796875,
+            614.2049560546875,
+            1576.387451171875,
+            907.6738891601562
+          ],
+          "center_x": 1428.8673095703125,
+          "center_y": 760.9394226074219,
+          "confidence": 0.725434422492981
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:22",
+      "label": "car",
+      "start_ts": 5.7,
+      "end_ts": 9.1,
+      "duration_sec": 3.3999999999999995,
+      "frame_count": 3,
+      "avg_confidence": 0.7003039320309957,
+      "max_confidence": 0.7687766551971436,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+      "points": [
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            -7.371719837188721,
+            626.08642578125,
+            183.74127197265625,
+            841.335205078125
+          ],
+          "center_x": 88.18477606773376,
+          "center_y": 733.7108154296875,
+          "confidence": 0.7290412187576294
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+          "bbox": [
+            14.529979705810547,
+            615.3123168945312,
+            179.4408416748047,
+            799.9005737304688
+          ],
+          "center_x": 96.98541069030762,
+          "center_y": 707.6064453125,
+          "confidence": 0.7687766551971436
+        },
+        {
+          "timestamp": 9.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+          "bbox": [
+            29.07080841064453,
+            607.3567504882812,
+            173.5801544189453,
+            766.3915405273438
+          ],
+          "center_x": 101.32548141479492,
+          "center_y": 686.8741455078125,
+          "confidence": 0.6030939221382141
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:57",
+      "label": "car",
+      "start_ts": 14.8,
+      "end_ts": 25.1,
+      "duration_sec": 10.3,
+      "frame_count": 8,
+      "avg_confidence": 0.7970428988337517,
+      "max_confidence": 0.9445505142211914,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+      "points": [
+        {
+          "timestamp": 14.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+          "bbox": [
+            287.44189453125,
+            538.541015625,
+            1203.40283203125,
+            948.2012939453125
+          ],
+          "center_x": 745.42236328125,
+          "center_y": 743.3711547851562,
+          "confidence": 0.6737698912620544
+        },
+        {
+          "timestamp": 15.9,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg",
+          "bbox": [
+            -71.43338012695312,
+            522.7889404296875,
+            986.9912109375,
+            998.9856567382812
+          ],
+          "center_x": 457.77891540527344,
+          "center_y": 760.8872985839844,
+          "confidence": 0.824938178062439
+        },
+        {
+          "timestamp": 18.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+          "bbox": [
+            -126.74799346923828,
+            532.970947265625,
+            928.6058349609375,
+            1010.896728515625
+          ],
+          "center_x": 400.9289207458496,
+          "center_y": 771.933837890625,
+          "confidence": 0.9445505142211914
+        },
+        {
+          "timestamp": 19.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
+          "bbox": [
+            -214.74020385742188,
+            528.6549072265625,
+            821.091796875,
+            1007.4474487304688
+          ],
+          "center_x": 303.17579650878906,
+          "center_y": 768.0511779785156,
+          "confidence": 0.8860370516777039
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_21.6.jpg",
+          "bbox": [
+            -143.9266357421875,
+            482.6082763671875,
+            928.9049682617188,
+            984.902099609375
+          ],
+          "center_x": 392.4891662597656,
+          "center_y": 733.7551879882812,
+          "confidence": 0.8460781574249268
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_22.8.jpg",
+          "bbox": [
+            -207.60528564453125,
+            460.3733215332031,
+            918.5496826171875,
+            1002.2366943359375
+          ],
+          "center_x": 355.4721984863281,
+          "center_y": 731.3050079345703,
+          "confidence": 0.6522573828697205
+        },
+        {
+          "timestamp": 23.9,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_23.9.jpg",
+          "bbox": [
+            -291.6601257324219,
+            423.6940612792969,
+            869.0284423828125,
+            1005.46484375
+          ],
+          "center_x": 288.6841583251953,
+          "center_y": 714.5794525146484,
+          "confidence": 0.6785441637039185
+        },
+        {
+          "timestamp": 25.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg",
+          "bbox": [
+            -370.0398864746094,
+            411.96612548828125,
+            749.68994140625,
+            1006.0333862304688
+          ],
+          "center_x": 189.8250274658203,
+          "center_y": 708.999755859375,
+          "confidence": 0.8701678514480591
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:61",
+      "label": "car",
+      "start_ts": 17.1,
+      "end_ts": 20.5,
+      "duration_sec": 3.3999999999999986,
+      "frame_count": 3,
+      "avg_confidence": 0.7682068943977356,
+      "max_confidence": 0.8540685176849365,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+      "points": [
+        {
+          "timestamp": 17.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+          "bbox": [
+            608.01318359375,
+            527.6445922851562,
+            1030.0523681640625,
+            896.1882934570312
+          ],
+          "center_x": 819.0327758789062,
+          "center_y": 711.9164428710938,
+          "confidence": 0.8540685176849365
+        },
+        {
+          "timestamp": 19.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
+          "bbox": [
+            701.3548583984375,
+            501.69622802734375,
+            1107.9920654296875,
+            854.7906494140625
+          ],
+          "center_x": 904.6734619140625,
+          "center_y": 678.2434387207031,
+          "confidence": 0.6932415962219238
+        },
+        {
+          "timestamp": 20.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_20.5.jpg",
+          "bbox": [
+            525.6983642578125,
+            482.0091247558594,
+            1003.51513671875,
+            892.1112670898438
+          ],
+          "center_x": 764.6067504882812,
+          "center_y": 687.0601959228516,
+          "confidence": 0.7573105692863464
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:84",
+      "label": "person",
+      "start_ts": 25.1,
+      "end_ts": 26.2,
+      "duration_sec": 1.0999999999999979,
+      "frame_count": 2,
+      "avg_confidence": 0.5314551591873169,
+      "max_confidence": 0.5403286814689636,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
+      "points": [
+        {
+          "timestamp": 25.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg",
+          "bbox": [
+            817.71044921875,
+            464.52178955078125,
+            937.2001953125,
+            579.6720581054688
+          ],
+          "center_x": 877.455322265625,
+          "center_y": 522.096923828125,
+          "confidence": 0.5225816369056702
+        },
+        {
+          "timestamp": 26.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
+          "bbox": [
+            817.1363525390625,
+            469.3748779296875,
+            932.4784545898438,
+            580.9301147460938
+          ],
+          "center_x": 874.8074035644531,
+          "center_y": 525.1524963378906,
+          "confidence": 0.5403286814689636
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:3",
+      "label": "traffic light",
+      "start_ts": 0.0,
+      "end_ts": 26.2,
+      "duration_sec": 26.2,
+      "frame_count": 24,
+      "avg_confidence": 0.7990103562672933,
+      "max_confidence": 0.8396417498588562,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            1744.63916015625,
+            27.895538330078125,
+            1871.5283203125,
+            309.5171813964844
+          ],
+          "center_x": 1808.083740234375,
+          "center_y": 168.70635986328125,
+          "confidence": 0.8030842542648315
+        },
+        {
+          "timestamp": 1.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_1.1.jpg",
+          "bbox": [
+            1745.515869140625,
+            29.531024932861328,
+            1870.8887939453125,
+            307.6774597167969
+          ],
+          "center_x": 1808.2023315429688,
+          "center_y": 168.6042423248291,
+          "confidence": 0.8036445379257202
+        },
+        {
+          "timestamp": 2.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_2.3.jpg",
+          "bbox": [
+            1745.865966796875,
+            30.121461868286133,
+            1870.9998779296875,
+            307.62713623046875
+          ],
+          "center_x": 1808.4329223632812,
+          "center_y": 168.87429904937744,
+          "confidence": 0.7746421098709106
+        },
+        {
+          "timestamp": 3.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_3.4.jpg",
+          "bbox": [
+            1746.0692138671875,
+            29.671417236328125,
+            1871.4244384765625,
+            307.55450439453125
+          ],
+          "center_x": 1808.746826171875,
+          "center_y": 168.6129608154297,
+          "confidence": 0.8152387142181396
+        },
+        {
+          "timestamp": 4.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_4.6.jpg",
+          "bbox": [
+            1745.6904296875,
+            29.478628158569336,
+            1871.36865234375,
+            307.93243408203125
+          ],
+          "center_x": 1808.529541015625,
+          "center_y": 168.7055311203003,
+          "confidence": 0.7919598817825317
+        },
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            1745.822998046875,
+            29.2149715423584,
+            1871.35693359375,
+            307.2116394042969
+          ],
+          "center_x": 1808.5899658203125,
+          "center_y": 168.21330547332764,
+          "confidence": 0.8030743598937988
+        },
+        {
+          "timestamp": 6.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_6.8.jpg",
+          "bbox": [
+            1745.6160888671875,
+            29.460195541381836,
+            1871.1485595703125,
+            307.154296875
+          ],
+          "center_x": 1808.38232421875,
+          "center_y": 168.30724620819092,
+          "confidence": 0.8116571307182312
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+          "bbox": [
+            1746.563720703125,
+            29.820955276489258,
+            1871.501220703125,
+            306.10430908203125
+          ],
+          "center_x": 1809.032470703125,
+          "center_y": 167.96263217926025,
+          "confidence": 0.815453827381134
+        },
+        {
+          "timestamp": 9.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+          "bbox": [
+            1746.5179443359375,
+            29.59933853149414,
+            1871.6187744140625,
+            306.1087951660156
+          ],
+          "center_x": 1809.068359375,
+          "center_y": 167.85406684875488,
+          "confidence": 0.8242313265800476
+        },
+        {
+          "timestamp": 10.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+          "bbox": [
+            1746.9053955078125,
+            29.23328399658203,
+            1872.191162109375,
+            306.00537109375
+          ],
+          "center_x": 1809.5482788085938,
+          "center_y": 167.61932754516602,
+          "confidence": 0.8396417498588562
+        },
+        {
+          "timestamp": 11.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg",
+          "bbox": [
+            1745.997802734375,
+            28.953283309936523,
+            1872.03125,
+            307.2103271484375
+          ],
+          "center_x": 1809.0145263671875,
+          "center_y": 168.081805229187,
+          "confidence": 0.7833738327026367
+        },
+        {
+          "timestamp": 12.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+          "bbox": [
+            1745.6129150390625,
+            30.28929328918457,
+            1871.333984375,
+            307.5201110839844
+          ],
+          "center_x": 1808.4734497070312,
+          "center_y": 168.90470218658447,
+          "confidence": 0.7965108156204224
+        },
+        {
+          "timestamp": 13.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_13.7.jpg",
+          "bbox": [
+            1745.5062255859375,
+            30.325193405151367,
+            1871.3455810546875,
+            307.5495910644531
+          ],
+          "center_x": 1808.4259033203125,
+          "center_y": 168.93739223480225,
+          "confidence": 0.8080642819404602
+        },
+        {
+          "timestamp": 14.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+          "bbox": [
+            1745.5277099609375,
+            30.259990692138672,
+            1871.4913330078125,
+            307.53717041015625
+          ],
+          "center_x": 1808.509521484375,
+          "center_y": 168.89858055114746,
+          "confidence": 0.8040271401405334
+        },
+        {
+          "timestamp": 15.9,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg",
+          "bbox": [
+            1745.094482421875,
+            29.61964225769043,
+            1871.6884765625,
+            308.33685302734375
+          ],
+          "center_x": 1808.3914794921875,
+          "center_y": 168.9782476425171,
+          "confidence": 0.7822631001472473
+        },
+        {
+          "timestamp": 17.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+          "bbox": [
+            1745.0623779296875,
+            29.1512451171875,
+            1871.9571533203125,
+            308.63531494140625
+          ],
+          "center_x": 1808.509765625,
+          "center_y": 168.89328002929688,
+          "confidence": 0.8102192878723145
+        },
+        {
+          "timestamp": 18.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+          "bbox": [
+            1745.400146484375,
+            29.243898391723633,
+            1872.00732421875,
+            308.12451171875
+          ],
+          "center_x": 1808.7037353515625,
+          "center_y": 168.68420505523682,
+          "confidence": 0.8144159317016602
+        },
+        {
+          "timestamp": 19.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
+          "bbox": [
+            1745.53173828125,
+            29.76503562927246,
+            1871.6844482421875,
+            307.6495361328125
+          ],
+          "center_x": 1808.6080932617188,
+          "center_y": 168.70728588104248,
+          "confidence": 0.8004035949707031
+        },
+        {
+          "timestamp": 20.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_20.5.jpg",
+          "bbox": [
+            1745.885498046875,
+            27.63593292236328,
+            1872.419921875,
+            306.6798095703125
+          ],
+          "center_x": 1809.1527099609375,
+          "center_y": 167.1578712463379,
+          "confidence": 0.7967576384544373
+        },
+        {
+          "timestamp": 21.6,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_21.6.jpg",
+          "bbox": [
+            1745.9781494140625,
+            24.348623275756836,
+            1873.48095703125,
+            306.2955322265625
+          ],
+          "center_x": 1809.7295532226562,
+          "center_y": 165.32207775115967,
+          "confidence": 0.7819080948829651
+        },
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_22.8.jpg",
+          "bbox": [
+            1745.3187255859375,
+            25.532175064086914,
+            1872.5809326171875,
+            306.977783203125
+          ],
+          "center_x": 1808.9498291015625,
+          "center_y": 166.25497913360596,
+          "confidence": 0.7415302991867065
+        },
+        {
+          "timestamp": 23.9,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_23.9.jpg",
+          "bbox": [
+            1745.6759033203125,
+            28.11195182800293,
+            1871.6563720703125,
+            306.4631042480469
+          ],
+          "center_x": 1808.6661376953125,
+          "center_y": 167.2875280380249,
+          "confidence": 0.784071683883667
+        },
+        {
+          "timestamp": 25.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg",
+          "bbox": [
+            1745.7010498046875,
+            29.257793426513672,
+            1871.3392333984375,
+            306.55499267578125
+          ],
+          "center_x": 1808.5201416015625,
+          "center_y": 167.90639305114746,
+          "confidence": 0.7869282364845276
+        },
+        {
+          "timestamp": 26.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
+          "bbox": [
+            1745.96875,
+            28.67885971069336,
+            1871.790283203125,
+            306.4038391113281
+          ],
+          "center_x": 1808.8795166015625,
+          "center_y": 167.54134941101074,
+          "confidence": 0.8031467199325562
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:5",
+      "label": "traffic light",
+      "start_ts": 0.0,
+      "end_ts": 9.1,
+      "duration_sec": 9.1,
+      "frame_count": 7,
+      "avg_confidence": 0.42000927669661386,
+      "max_confidence": 0.5996185541152954,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
+          "bbox": [
+            472.81072998046875,
+            290.5296936035156,
+            545.4549560546875,
+            482.6554870605469
+          ],
+          "center_x": 509.1328430175781,
+          "center_y": 386.59259033203125,
+          "confidence": 0.5996185541152954
+        },
+        {
+          "timestamp": 1.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_1.1.jpg",
+          "bbox": [
+            475.9876403808594,
+            284.37908935546875,
+            548.7224731445312,
+            476.5015563964844
+          ],
+          "center_x": 512.3550567626953,
+          "center_y": 380.44032287597656,
+          "confidence": 0.47007158398628235
+        },
+        {
+          "timestamp": 2.3,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_2.3.jpg",
+          "bbox": [
+            476.110107421875,
+            276.17108154296875,
+            547.6532592773438,
+            465.6248474121094
+          ],
+          "center_x": 511.8816833496094,
+          "center_y": 370.89796447753906,
+          "confidence": 0.469399631023407
+        },
+        {
+          "timestamp": 3.4,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_3.4.jpg",
+          "bbox": [
+            484.0689392089844,
+            280.70208740234375,
+            551.1364135742188,
+            457.7634582519531
+          ],
+          "center_x": 517.6026763916016,
+          "center_y": 369.23277282714844,
+          "confidence": 0.3042849600315094
+        },
+        {
+          "timestamp": 5.7,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+          "bbox": [
+            488.71563720703125,
+            249.543701171875,
+            559.77294921875,
+            438.1535339355469
+          ],
+          "center_x": 524.2442932128906,
+          "center_y": 343.84861755371094,
+          "confidence": 0.36770740151405334
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+          "bbox": [
+            493.07586669921875,
+            232.36880493164062,
+            564.8974609375,
+            425.2008056640625
+          ],
+          "center_x": 528.9866638183594,
+          "center_y": 328.78480529785156,
+          "confidence": 0.3328244984149933
+        },
+        {
+          "timestamp": 9.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+          "bbox": [
+            493.84539794921875,
+            224.26939392089844,
+            564.6698608398438,
+            416.07501220703125
+          ],
+          "center_x": 529.2576293945312,
+          "center_y": 320.17220306396484,
+          "confidence": 0.3961583077907562
+        }
+      ]
+    },
+    {
+      "track_id": "traffic_video_modified_ca0974ddfc:76",
+      "label": "truck",
+      "start_ts": 22.8,
+      "end_ts": 26.2,
+      "duration_sec": 3.3999999999999986,
+      "frame_count": 4,
+      "avg_confidence": 0.6773756295442581,
+      "max_confidence": 0.7777813673019409,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
+      "points": [
+        {
+          "timestamp": 22.8,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_22.8.jpg",
+          "bbox": [
+            894.1895141601562,
+            345.712646484375,
+            1398.95849609375,
+            811.3709106445312
+          ],
+          "center_x": 1146.5740051269531,
+          "center_y": 578.5417785644531,
+          "confidence": 0.5313279032707214
+        },
+        {
+          "timestamp": 23.9,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_23.9.jpg",
+          "bbox": [
+            787.030517578125,
+            312.5842590332031,
+            1356.929443359375,
+            837.7816772460938
+          ],
+          "center_x": 1071.97998046875,
+          "center_y": 575.1829681396484,
+          "confidence": 0.6282762289047241
+        },
+        {
+          "timestamp": 25.1,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg",
+          "bbox": [
+            743.6890869140625,
+            296.5832824707031,
+            1350.0040283203125,
+            851.9957275390625
+          ],
+          "center_x": 1046.8465576171875,
+          "center_y": 574.2895050048828,
+          "confidence": 0.772117018699646
+        },
+        {
+          "timestamp": 26.2,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
+          "bbox": [
+            730.7509155273438,
+            292.9959716796875,
+            1353.899658203125,
+            861.7180786132812
+          ],
+          "center_x": 1042.3252868652344,
+          "center_y": 577.3570251464844,
+          "confidence": 0.7777813673019409
+        }
+      ]
+    }
+  ]
+}

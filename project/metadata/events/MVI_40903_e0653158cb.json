@@ -1,0 +1,151 @@
+{
+  "video_id": "MVI_40903_e0653158cb",
+  "video_name": "MVI_40903.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40903.avi",
+  "events": [
+    {
+      "event_id": "MVI_40903_e0653158cb:vehicle_crosses_line:MVI_40903_e0653158cb:100",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40903_e0653158cb",
+      "video_name": "MVI_40903.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40903.avi",
+      "start_ts": 12.0,
+      "end_ts": 21.6,
+      "track_ids": [
+        "MVI_40903_e0653158cb:100"
+      ],
+      "confidence": 0.630628314283159,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40903_12.0.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_16.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_18.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_19.2.jpg"
+      ],
+      "attributes": {
+        "label": "bus",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 18.0
+      },
+      "description": "bus crosses configured line"
+    },
+    {
+      "event_id": "MVI_40903_e0653158cb:vehicle_crosses_line:MVI_40903_e0653158cb:186",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40903_e0653158cb",
+      "video_name": "MVI_40903.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40903.avi",
+      "start_ts": 18.0,
+      "end_ts": 30.0,
+      "track_ids": [
+        "MVI_40903_e0653158cb:186"
+      ],
+      "confidence": 0.6967989504337311,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40903_28.8.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_24.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_25.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_27.6.jpg"
+      ],
+      "attributes": {
+        "label": "bus",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 25.2
+      },
+      "description": "bus crosses configured line"
+    },
+    {
+      "event_id": "MVI_40903_e0653158cb:vehicle_crosses_line:MVI_40903_e0653158cb:421",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40903_e0653158cb",
+      "video_name": "MVI_40903.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40903.avi",
+      "start_ts": 32.4,
+      "end_ts": 42.0,
+      "track_ids": [
+        "MVI_40903_e0653158cb:421"
+      ],
+      "confidence": 0.886697080400255,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40903_33.6.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_32.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_33.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_34.8.jpg"
+      ],
+      "attributes": {
+        "label": "bus",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 33.6
+      },
+      "description": "bus crosses configured line"
+    },
+    {
+      "event_id": "MVI_40903_e0653158cb:vehicle_crosses_line:MVI_40903_e0653158cb:454",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40903_e0653158cb",
+      "video_name": "MVI_40903.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40903.avi",
+      "start_ts": 33.6,
+      "end_ts": 42.0,
+      "track_ids": [
+        "MVI_40903_e0653158cb:454"
+      ],
+      "confidence": 0.6966905295848846,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40903_42.0.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_36.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_37.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40903_38.4.jpg"
+      ],
+      "attributes": {
+        "label": "bus",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 37.2
+      },
+      "description": "bus crosses configured line"
+    }
+  ]
+}
