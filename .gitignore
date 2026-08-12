@@ -72,3 +72,26 @@ logs/
 # 临时文件
 *.tmp
 *.bak
+
+# ===== 个人文档 - 不推送 GitHub（涉密/专利）=====
+.obsidian/
+text/
+type1_subtype1_accident/
+专利*.pdf
+专利*.md
+专利技术交底书*.md
+*方案*.md
+*验证报告.md
+*评测报告.md
+*分析报告.md
+*推荐方案.md
+cnclip_semantic_eval_report.json
+tqum_comparative_eval_report.json
+
+# 仓库根一级的个人文档（已跟踪的除外）
+/*.md
+/*.pdf
+/*.json
+
+# 损坏的旧 git 备份（待删除）
+.git_broken/

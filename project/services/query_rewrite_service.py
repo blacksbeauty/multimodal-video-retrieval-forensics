@@ -3,9 +3,16 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass
-from typing import Any, Dict, Iterable, List
+from typing import Any, Dict, Iterable, List, Tuple
 
 from core.schemas import QueryIntent
+from services.traffic_synonym_dict import (
+    EVENT_CN_DISPLAY,
+    match_all_events,
+    match_event_type,
+    infer_event_types,
+    extract_attributes as extract_tqum_attributes,
+)
 
 
 logger = logging.getLogger(__name__)
@@ -107,16 +114,37 @@ _EXACT_REWRITE_RULES: Dict[str, List[str]] = {
 _PRIMARY_GROUPS = {"vehicle", "person"}
 _SEMANTIC_TERMS = ("white", "black", "\u767d\u8272", "\u9ed1\u8272")
 _EVENT_ALIASES = {
-    "vehicle_crosses_line": ("vehicle_crosses_line", "cross line", "line crossing"),
-    "red_light_violation": ("red_light_violation", "red light violation"),
+    "vehicle_crosses_line": ("vehicle_crosses_line", "cross line", "line crossing", "压线", "车辆压线", "压线行驶", "跨线", "跨线行驶"),
+    "wrong_way_driving": ("wrong_way_driving", "wrong way driving", "wrong way", "逆行", "车辆逆行", "反向行驶", "逆向行驶", "逆方向行驶", "反方向", "opposite direction"),
+    "red_light_violation": ("red_light_violation", "red light violation", "闯红灯", "车辆闯红灯", "冲红灯", "红灯违规", "红灯违章", "红灯违法", "违反红灯", "running red light"),
+}
+
+_EVENT_SYNONYMS: Dict[str, List[str]] = {
+    "逆行": ["车辆逆行", "车辆逆向行驶", "机动车逆行", "车辆反方向行驶", "逆向行驶"],
+    "闯红灯": ["车辆闯红灯", "冲红灯", "红灯违规", "红灯违章"],
+    "压线": ["车辆压线", "压线行驶", "跨线行驶", "车辆越线"],
+}
+
+_ENTITY_CN_DISPLAY: Dict[str, str] = {
+    "car": "汽车",
+    "truck": "货车",
+    "bus": "公交车",
+    "motorcycle": "摩托车",
+    "person": "行人",
+    "traffic_light": "交通信号灯",
+    "stop_line": "停止线",
+    "intersection": "路口",
+    "crosswalk": "斑马线",
+    "lane": "车道",
 }
 
 
 class QueryRewriteService:
     """Parse deterministic multi-entity traffic intents and derive retrieval-friendly rewrites."""
 
-    def __init__(self) -> None:
+    def __init__(self, use_chinese_clip: bool = False) -> None:
         self.ontology = TRAFFIC_ONTOLOGY
+        self.use_chinese_clip = use_chinese_clip
 
     def rewrite_query(self, query: str) -> List[str]:
         """Expand a query into retrieval-friendly variants while preserving backward compatibility."""
@@ -134,12 +162,26 @@ class QueryRewriteService:
         intent = self.parse_query_intent(original_query)
         return list(intent.rewritten_queries)
 
+    def expand_query(self, query: str) -> List[str]:
+        """Expand a Chinese query with traffic-domain synonyms for CN-CLIP retrieval."""
+        expansions = [query]
+        for keyword, synonyms in _EVENT_SYNONYMS.items():
+            if keyword in query:
+                for synonym in synonyms:
+                    if synonym not in expansions:
+                        expansions.append(synonym)
+        return expansions
+
     def normalize_label_query(self, query: str) -> str:
         """Normalize a free-form traffic query fragment for deterministic matching."""
         return re.sub(r"\s+", " ", query.strip().casefold())
 
     def parse_query_intent(self, query: str) -> QueryIntent:
-        """Parse a traffic short query into a multi-entity intent model."""
+        """Parse a traffic short query into a multi-entity intent model.
+
+        TQUM integration: uses expanded synonym matching (Layer 1),
+        implicit event inference (Layer 2), and expanded attribute extraction (Layer 3).
+        """
         normalized_query = self.normalize_label_query(query)
         if not normalized_query:
             return QueryIntent()
@@ -149,12 +191,32 @@ class QueryRewriteService:
         relations = self._detect_named_values(normalized_query, self.ontology["relations"])
         directions = self._detect_named_values(normalized_query, self.ontology["directions"])
         motions = self._detect_named_values(normalized_query, self.ontology["motions"])
-        event_types = self._detect_named_values(normalized_query, _EVENT_ALIASES)
-        attributes = self._detect_attributes(normalized_query)
+
+        # Layer 1: Expanded event synonym matching from TQUM dictionary
+        direct_events = match_all_events(normalized_query)
+        event_types = [et for et, _ in direct_events]
+
+        # Layer 3: Expanded attribute extraction from TQUM
+        tqum_attributes = extract_tqum_attributes(normalized_query)
+
+        # Legacy attribute detection (keep for backward compatibility)
+        legacy_attributes = self._detect_attributes(normalized_query)
+
+        # Merge: TQUM attributes take priority, then legacy
+        attributes = {**legacy_attributes, **tqum_attributes}
 
         if "light_state" in attributes and "traffic_light" not in context_entities and "traffic_light" not in primary_entities:
             context_entities = ["traffic_light", *context_entities]
 
+        # Layer 2: Implicit event inference when no direct match
+        if not event_types:
+            inferred = infer_event_types(
+                normalized_query, primary_entities, context_entities,
+            )
+            event_types = [et for et, _ in inferred]
+            direct_events.extend(inferred)
+
+        # Legacy inference (keep for backward compatibility)
         inferred_event_types = self._infer_event_types(
             primary_entities=primary_entities,
             context_entities=context_entities,
@@ -163,7 +225,13 @@ class QueryRewriteService:
             attributes=attributes,
             normalized_query=normalized_query,
         )
-        event_types = self._dedupe([*event_types, *inferred_event_types])
+        for et in inferred_event_types:
+            if et not in event_types:
+                event_types.append(et)
+                direct_events.append((et, 0.5))
+
+        # Calculate event confidence: highest confidence among matched events
+        event_confidence = max((conf for _, conf in direct_events), default=0.0)
 
         query_type = self._classify_query_type(
             primary_entities=primary_entities,
@@ -175,6 +243,17 @@ class QueryRewriteService:
             attributes=attributes,
         )
 
+        # Phase 3: Build Top-k intent candidates for confidence-based routing
+        intent_candidates = self._build_intent_candidates(
+            event_types=event_types,
+            event_confidence=round(event_confidence, 2),
+            primary_entities=primary_entities,
+            attributes=attributes,
+            query_type=query_type,
+            normalized_query=normalized_query,
+        )
+
+        # Layer 5: Build Chinese query expansions (not English translations)
         rewritten_queries = self._build_rewrites(
             original_query=query.strip(),
             primary_entities=primary_entities,
@@ -194,9 +273,11 @@ class QueryRewriteService:
             directions=directions,
             motions=motions,
             event_types=event_types,
+            event_confidence=round(event_confidence, 2),
             attributes=attributes,
             rewritten_queries=rewritten_queries,
             normalized_query=normalized_query,
+            intent_candidates=intent_candidates,
         )
         logger.info("Parsed query intent query=%s intent=%s", query, intent.model_dump())
         return intent
@@ -275,6 +356,62 @@ class QueryRewriteService:
             return "attribute"
         return "general"
 
+    def _build_intent_candidates(
+        self,
+        event_types: List[str],
+        event_confidence: float,
+        primary_entities: List[str],
+        attributes: Dict[str, Any],
+        query_type: str,
+        normalized_query: str,
+    ) -> List[Dict[str, Any]]:
+        """Build Top-k intent candidates with confidence scores.
+
+        Phase 3 optimization: Replaces single-label query_type classification
+        with Top-k intent candidates, enabling flexible routing for vague queries.
+
+        Generates up to 3 candidates:
+        1. Event intent (if event types detected)
+        2. Object intent (if entities detected)
+        3. Vague violation intent (fallback for fuzzy queries)
+        """
+        candidates = []
+
+        # Candidate 1: Event intent (if event types detected)
+        if event_types:
+            candidates.append({
+                "type": "event",
+                "confidence": event_confidence,
+                "event_types": event_types,
+            })
+
+        # Candidate 2: Object intent (if entities detected)
+        if primary_entities:
+            obj_conf = 0.4
+            if attributes.get("color"):
+                obj_conf += 0.2  # Color attribute increases confidence
+            if attributes.get("vehicle_type"):
+                obj_conf += 0.1
+            candidates.append({
+                "type": "object",
+                "confidence": min(obj_conf, 0.8),
+                "entities": primary_entities,
+            })
+
+        # Candidate 3: Vague violation intent (fallback for fuzzy queries)
+        vague_keywords = ["违规", "违章", "违法", "不正常", "异常", "不合规", "不按规定"]
+        if any(kw in normalized_query for kw in vague_keywords):
+            candidates.append({
+                "type": "event",
+                "confidence": 0.5,
+                "event_types": [],  # No specific event type, search all events
+                "vague": True,
+            })
+
+        # Sort by confidence descending
+        candidates.sort(key=lambda c: c["confidence"], reverse=True)
+        return candidates[:3]  # Keep Top-3
+
     def _build_rewrites(
         self,
         original_query: str,
@@ -286,6 +423,21 @@ class QueryRewriteService:
         event_types: List[str],
         attributes: Dict[str, Any],
     ) -> List[str]:
+        """Build retrieval-friendly query variants.
+
+        When use_chinese_clip is True, generates Chinese expansions for CN-CLIP.
+        Otherwise, falls back to legacy English rewrites for OpenCLIP.
+        """
+        if self.use_chinese_clip:
+            return self._build_chinese_rewrites(
+                original_query=original_query,
+                primary_entities=primary_entities,
+                context_entities=context_entities,
+                event_types=event_types,
+                attributes=attributes,
+            )
+
+        # Legacy English rewrite path (for OpenCLIP backward compatibility)
         rewrites: List[str] = []
         if original_query:
             rewrites.append(original_query)
@@ -331,6 +483,82 @@ class QueryRewriteService:
 
         return rewrites
 
+    def _build_chinese_rewrites(
+        self,
+        original_query: str,
+        primary_entities: List[str],
+        context_entities: List[str],
+        event_types: List[str],
+        attributes: Dict[str, Any],
+    ) -> List[str]:
+        """Generate Chinese query expansions for CN-CLIP (Layer 5).
+
+        Instead of translating to English, produces Chinese variants
+        that preserve the original semantic intent.
+        """
+        rewrites: List[str] = []
+        if original_query:
+            rewrites.append(original_query)
+
+        # Event types → Chinese display names
+        for event_type in event_types:
+            cn_name = EVENT_CN_DISPLAY.get(event_type, event_type)
+            if cn_name not in rewrites:
+                rewrites.append(cn_name)
+
+        # Also add event synonym expansions
+        for event_type in event_types:
+            for expansion in self.expand_query(original_query):
+                if expansion not in rewrites:
+                    rewrites.append(expansion)
+
+        # Attribute + entity combinations in Chinese
+        color = attributes.get("color", "")
+        vehicle_type = attributes.get("vehicle_type", "")
+        light_state = attributes.get("light_state", "")
+
+        # Map English attribute values to Chinese for CN-CLIP
+        COLOR_CN = {"white": "白色", "red": "红色", "black": "黑色",
+                    "blue": "蓝色", "yellow": "黄色"}
+        VEHICLE_CN = {"car": "汽车", "truck": "货车", "bus": "公交车",
+                       "motorcycle": "摩托车"}
+        cn_color = COLOR_CN.get(color, color)
+
+        # Build Chinese entity text
+        if vehicle_type:
+            cn_vehicle = VEHICLE_CN.get(vehicle_type, _ENTITY_CN_DISPLAY.get(vehicle_type, vehicle_type))
+        else:
+            # Use primary_entities if no vehicle_type attribute
+            cn_entities = [_ENTITY_CN_DISPLAY.get(e, e) for e in primary_entities if e in _ENTITY_CN_DISPLAY]
+            cn_vehicle = cn_entities[0] if cn_entities else ""
+
+        # Color + vehicle combinations (in Chinese)
+        if cn_color and cn_vehicle:
+            combos = [
+                f"{cn_color}{cn_vehicle}",
+                f"{cn_color}的{cn_vehicle}",
+                f"{cn_color}车辆",
+                f"{cn_color}车",
+            ]
+            for combo in combos:
+                if combo not in rewrites:
+                    rewrites.append(combo)
+        elif cn_color:
+            if f"{cn_color}车" not in rewrites:
+                rewrites.append(f"{cn_color}车")
+            if f"{cn_color}车辆" not in rewrites:
+                rewrites.append(f"{cn_color}车辆")
+        elif cn_vehicle:
+            if cn_vehicle not in rewrites:
+                rewrites.append(cn_vehicle)
+
+        # Light state context
+        if light_state == "red":
+            if "红灯" not in rewrites:
+                rewrites.append("红灯")
+
+        return rewrites
+
     def _infer_event_types(
         self,
         primary_entities: List[str],
@@ -362,7 +590,7 @@ class QueryRewriteService:
         ):
             event_types.append("red_light_violation")
 
-        if "red light violation" in normalized_query or "red_light_violation" in normalized_query or "\u95ef\u7ea2\u706f" in normalized_query:
+        if "red light violation" in normalized_query or "red_light_violation" in normalized_query or "闯红灯" in normalized_query or "冲红灯" in normalized_query or "红灯违规" in normalized_query or "红灯违章" in normalized_query or "红灯违法" in normalized_query:
             event_types.append("red_light_violation")
 
         if "cross line" in normalized_query or "vehicle_crosses_line" in normalized_query:
@@ -401,6 +629,8 @@ class QueryRewriteService:
         return attributes
 
     def _display_entity(self, entity: str) -> str:
+        if self.use_chinese_clip:
+            return _ENTITY_CN_DISPLAY.get(entity, entity.replace("_", " "))
         return entity.replace("_", " ")
 
     def _find_all(self, haystack: str, needle: str) -> List[int]:

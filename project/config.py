@@ -32,6 +32,10 @@ class Settings(BaseModel):
 
     clip_model_name: str = "ViT-B-32"
     clip_pretrained: str = "laion2b_s34b_b79k"
+    clip_backend: str = "cnclip"
+    cnclip_model_name: str = "ViT-B-16"
+    cnclip_download_root: Path = Field(default=BASE_DIR / "ckpts")
+    cnclip_use_modelscope: bool = True
     device: str = "auto"
 
     default_frame_interval: int = 30
@@ -51,12 +55,25 @@ class Settings(BaseModel):
     tracking_match_thresh: float = 0.8
     tracking_fuse_score: bool = True
     trajectory_direction_min_displacement: float = 20.0
-    event_plugin_names: list[str] = Field(default_factory=lambda: ["vehicle_crosses_line", "red_light_violation"])
+    event_plugin_names: list[str] = Field(
+        default_factory=lambda: ["vehicle_crosses_line", "wrong_way_driving", "red_light_violation"]
+    )
     streetscene_dataset_dir: Path = Field(
         default=BASE_DIR / "datasets" / "streetscene" / "StreetScene" / "StreetScene"
     )
     streetscene_frame_rate: float = 15.0
     streetscene_default_frame_step: int = 1
+
+    accident_dataset_dir: Path = Field(
+        default=BASE_DIR.parent / "type1_subtype1_accident"
+    )
+    accident_frame_rate: float = 20.0
+    accident_default_frame_step: int = 1
+
+    # 交通感知视频预处理层配置
+    enable_traffic_filter: bool = False
+    traffic_sample_interval: int = 30
+    traffic_retain_window: int = 60
 
 
 @lru_cache(maxsize=1)

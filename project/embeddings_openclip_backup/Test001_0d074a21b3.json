@@ -1,0 +1,3125 @@
+[
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_0.000.jpg",
+    "frame_index": 0,
+    "timestamp_seconds": 0.0,
+    "frame_id": "6079457df9cac217b54aa38989a7b830801a020f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_1.000.jpg",
+    "frame_index": 15,
+    "timestamp_seconds": 1.0,
+    "frame_id": "e0277bc70e3ba70268c46a546f12df88a75359e5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_2.000.jpg",
+    "frame_index": 30,
+    "timestamp_seconds": 2.0,
+    "frame_id": "b15608c30624608c85d0f0fdcbbf3c76dd65d1b4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_3.000.jpg",
+    "frame_index": 45,
+    "timestamp_seconds": 3.0,
+    "frame_id": "7598a13fff387035e9a3fdcb58bcfd6c5f6a9fb4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_4.000.jpg",
+    "frame_index": 60,
+    "timestamp_seconds": 4.0,
+    "frame_id": "8ce3f155ee8988c30c74afccf04f7e630a11249e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_5.000.jpg",
+    "frame_index": 75,
+    "timestamp_seconds": 5.0,
+    "frame_id": "affa94a03e127825b82ef1b3b9532320251339e9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_6.000.jpg",
+    "frame_index": 90,
+    "timestamp_seconds": 6.0,
+    "frame_id": "8504c22abb3e4881b74083e92e0e4376828b188f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_7.000.jpg",
+    "frame_index": 105,
+    "timestamp_seconds": 7.0,
+    "frame_id": "805224992bdb0baa13e4ec1a0d9376e466181559"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_8.000.jpg",
+    "frame_index": 120,
+    "timestamp_seconds": 8.0,
+    "frame_id": "073fd96b0782bd27acab958a0798233099bda357"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_9.000.jpg",
+    "frame_index": 135,
+    "timestamp_seconds": 9.0,
+    "frame_id": "d23245c17e60b85609a728d0561181f2ed9b72b2"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_10.000.jpg",
+    "frame_index": 150,
+    "timestamp_seconds": 10.0,
+    "frame_id": "da23ca019c01f36f5719a1bc8e689c131765f192"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_11.000.jpg",
+    "frame_index": 165,
+    "timestamp_seconds": 11.0,
+    "frame_id": "b9738af14dfa5ea26db9ac360ae454e44cef7783"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_12.000.jpg",
+    "frame_index": 180,
+    "timestamp_seconds": 12.0,
+    "frame_id": "938f76490d3c9925236287e8f6d25670dd6de2e3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_13.000.jpg",
+    "frame_index": 195,
+    "timestamp_seconds": 13.0,
+    "frame_id": "03add248aecfbb7e34b9c2105da27e3bfee58c05"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_14.000.jpg",
+    "frame_index": 210,
+    "timestamp_seconds": 14.0,
+    "frame_id": "9d82acc64d832a1f76f3565a288d9eae9870bfeb"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_15.000.jpg",
+    "frame_index": 225,
+    "timestamp_seconds": 15.0,
+    "frame_id": "3cf3ee87edf3753e421454d820cb56ae4466a687"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_16.000.jpg",
+    "frame_index": 240,
+    "timestamp_seconds": 16.0,
+    "frame_id": "010b44b5576cc1b100dc63ab0517ef132d89711e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_17.000.jpg",
+    "frame_index": 255,
+    "timestamp_seconds": 17.0,
+    "frame_id": "cad45369230d49aee2b4e0b16c81156314c700c1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_18.000.jpg",
+    "frame_index": 270,
+    "timestamp_seconds": 18.0,
+    "frame_id": "7a6c19b5ab7973c78a8e9862392abb16155561d9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_19.000.jpg",
+    "frame_index": 285,
+    "timestamp_seconds": 19.0,
+    "frame_id": "edd239cefe6962e573294edeec5aa6a846d620e7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_20.000.jpg",
+    "frame_index": 300,
+    "timestamp_seconds": 20.0,
+    "frame_id": "deeaac5334fed21909ad4333326a9d9d23dd0ff7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_21.000.jpg",
+    "frame_index": 315,
+    "timestamp_seconds": 21.0,
+    "frame_id": "3d664e0f2fb71d5b8357e35dad537380c7ddd6e5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_22.000.jpg",
+    "frame_index": 330,
+    "timestamp_seconds": 22.0,
+    "frame_id": "af90554497be0995c3cd6e2002f450939e2663c5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_23.000.jpg",
+    "frame_index": 345,
+    "timestamp_seconds": 23.0,
+    "frame_id": "dbadd90a36b65d3ea9c128c600ed174c3d8308fe"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_24.000.jpg",
+    "frame_index": 360,
+    "timestamp_seconds": 24.0,
+    "frame_id": "11d61b10e3761a0bb80d05c8358a994cde94d686"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_25.000.jpg",
+    "frame_index": 375,
+    "timestamp_seconds": 25.0,
+    "frame_id": "575a8690de639e78ceaa17c06a9223c03d5b4ca7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_26.000.jpg",
+    "frame_index": 390,
+    "timestamp_seconds": 26.0,
+    "frame_id": "6d303044d35f995d0b5278ae31e2af1999b9fb60"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_27.000.jpg",
+    "frame_index": 405,
+    "timestamp_seconds": 27.0,
+    "frame_id": "9ce75e31c4cd250d38635c57ed0d5d57f11b54ce"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_28.000.jpg",
+    "frame_index": 420,
+    "timestamp_seconds": 28.0,
+    "frame_id": "e402e152aa1f43c07d8cb4d926bf58a4c81e5f06"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_29.000.jpg",
+    "frame_index": 435,
+    "timestamp_seconds": 29.0,
+    "frame_id": "aea5035e50801097504c86fcf68b8e7cf013e72e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_30.000.jpg",
+    "frame_index": 450,
+    "timestamp_seconds": 30.0,
+    "frame_id": "0031afb8315240e4cce45b7bc820d39af9ed3fe6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_31.000.jpg",
+    "frame_index": 465,
+    "timestamp_seconds": 31.0,
+    "frame_id": "56738bf5e6ea3eb54c050e2f877ebc593f3a5e86"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_32.000.jpg",
+    "frame_index": 480,
+    "timestamp_seconds": 32.0,
+    "frame_id": "d5796923bc4ecf158a5e5e6923aa601ffa620ed5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_33.000.jpg",
+    "frame_index": 495,
+    "timestamp_seconds": 33.0,
+    "frame_id": "2b6e062d86440e027d31074a7d69168558108be3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_34.000.jpg",
+    "frame_index": 510,
+    "timestamp_seconds": 34.0,
+    "frame_id": "6fc987f7ef5be293a41f7efd886adc369c9bed35"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_35.000.jpg",
+    "frame_index": 525,
+    "timestamp_seconds": 35.0,
+    "frame_id": "49db1dd6d4c091846b28644c340661453de860f7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_36.000.jpg",
+    "frame_index": 540,
+    "timestamp_seconds": 36.0,
+    "frame_id": "4632c36720010a0ccebd6e162a46115942ab1e19"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_37.000.jpg",
+    "frame_index": 555,
+    "timestamp_seconds": 37.0,
+    "frame_id": "6c70ef1dcaa034800bbb60c300b3f4b4809188e2"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_38.000.jpg",
+    "frame_index": 570,
+    "timestamp_seconds": 38.0,
+    "frame_id": "f016b3b35784711fdf03d4891ca399de2915791c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_39.000.jpg",
+    "frame_index": 585,
+    "timestamp_seconds": 39.0,
+    "frame_id": "5c3f0dcda628588acfcc445c2201ff52aac304ed"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_40.000.jpg",
+    "frame_index": 600,
+    "timestamp_seconds": 40.0,
+    "frame_id": "3b05c5ad1388b2d0256056100187c349e72df091"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_41.000.jpg",
+    "frame_index": 615,
+    "timestamp_seconds": 41.0,
+    "frame_id": "c0a76d09020bce54e57d3d69661b10f069aacc88"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_42.000.jpg",
+    "frame_index": 630,
+    "timestamp_seconds": 42.0,
+    "frame_id": "48a3a409cdf487e81ae751394f366deffc50c3b0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_43.000.jpg",
+    "frame_index": 645,
+    "timestamp_seconds": 43.0,
+    "frame_id": "83aaef37b5c7577a7157bf52cf0ff3b3b6bd6854"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_44.000.jpg",
+    "frame_index": 660,
+    "timestamp_seconds": 44.0,
+    "frame_id": "4e9482f2b06bad49502f74cf92921d9b8a51fab7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_45.000.jpg",
+    "frame_index": 675,
+    "timestamp_seconds": 45.0,
+    "frame_id": "0499fc496160e4c706f2260efc3a427e81429b69"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_46.000.jpg",
+    "frame_index": 690,
+    "timestamp_seconds": 46.0,
+    "frame_id": "d5e8f7ca29e3410377bc5ce338961687966cbabb"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_47.000.jpg",
+    "frame_index": 705,
+    "timestamp_seconds": 47.0,
+    "frame_id": "72448f6707e4f759ccf07fd482feb89869a141c8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_48.000.jpg",
+    "frame_index": 720,
+    "timestamp_seconds": 48.0,
+    "frame_id": "59584289df0a3c7c4bb1928435ce712b6ab37b7e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_49.000.jpg",
+    "frame_index": 735,
+    "timestamp_seconds": 49.0,
+    "frame_id": "c8513d7e7a809ef1aa51bd1a5c350c7a8ba1c3c6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_50.000.jpg",
+    "frame_index": 750,
+    "timestamp_seconds": 50.0,
+    "frame_id": "e19c4d183786172e3986e474920d8477dff19ce9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_51.000.jpg",
+    "frame_index": 765,
+    "timestamp_seconds": 51.0,
+    "frame_id": "3edc24af71096fdecc0922b06a5a10871dbdbd43"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_52.000.jpg",
+    "frame_index": 780,
+    "timestamp_seconds": 52.0,
+    "frame_id": "0eae45b5b61e3d4ff001cd11ade1943f0e7c2430"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_53.000.jpg",
+    "frame_index": 795,
+    "timestamp_seconds": 53.0,
+    "frame_id": "60ca2144f9d923784095d365892fdc92fccf23f7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_54.000.jpg",
+    "frame_index": 810,
+    "timestamp_seconds": 54.0,
+    "frame_id": "0fd943a25e2ed461c6c99813309e7465f99429e9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_55.000.jpg",
+    "frame_index": 825,
+    "timestamp_seconds": 55.0,
+    "frame_id": "ca2f6b84f8847893220c84365d89055191a97e52"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_56.000.jpg",
+    "frame_index": 840,
+    "timestamp_seconds": 56.0,
+    "frame_id": "3a168a2ddd24a7c3172deded60af6ce05c25291d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_57.000.jpg",
+    "frame_index": 855,
+    "timestamp_seconds": 57.0,
+    "frame_id": "fe340bcc376a88d174eb82e1099423cf51bf9ec8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_58.000.jpg",
+    "frame_index": 870,
+    "timestamp_seconds": 58.0,
+    "frame_id": "2e7a545773e5308549767d131f4a8de6fc6d8d4a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_59.000.jpg",
+    "frame_index": 885,
+    "timestamp_seconds": 59.0,
+    "frame_id": "a5a5afa57bd951be98556216d7863e83b8fcfc73"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_60.000.jpg",
+    "frame_index": 900,
+    "timestamp_seconds": 60.0,
+    "frame_id": "d5df991ad9d8542f68cef343ddec35e2d7b00ba0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_61.000.jpg",
+    "frame_index": 915,
+    "timestamp_seconds": 61.0,
+    "frame_id": "7fd0ed3d53706a66d51646060d48d6ca02f200a6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_62.000.jpg",
+    "frame_index": 930,
+    "timestamp_seconds": 62.0,
+    "frame_id": "26fd50af2a6b571875858dadbe7cc90ad036a374"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_63.000.jpg",
+    "frame_index": 945,
+    "timestamp_seconds": 63.0,
+    "frame_id": "fd636662be501468a1676da38ed61045e5cd90bd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_64.000.jpg",
+    "frame_index": 960,
+    "timestamp_seconds": 64.0,
+    "frame_id": "fa7783255cd6c265d99b4803998bcd62b2ffee66"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_65.000.jpg",
+    "frame_index": 975,
+    "timestamp_seconds": 65.0,
+    "frame_id": "d305b1a9de98c8ec0f240b22f6f5529636a94e15"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_66.000.jpg",
+    "frame_index": 990,
+    "timestamp_seconds": 66.0,
+    "frame_id": "d8ac228ed98f59c17e238f0c7a9e16c6221e8fbd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_67.000.jpg",
+    "frame_index": 1005,
+    "timestamp_seconds": 67.0,
+    "frame_id": "bd825dd5f289d0ece1b3e072a1218c5ab87f69a5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_68.000.jpg",
+    "frame_index": 1020,
+    "timestamp_seconds": 68.0,
+    "frame_id": "3f29db1215c936842544afd851a8d18e5eaa91d5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_69.000.jpg",
+    "frame_index": 1035,
+    "timestamp_seconds": 69.0,
+    "frame_id": "00ebce873a2b908948bf3f2ffb517592d6081743"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_70.000.jpg",
+    "frame_index": 1050,
+    "timestamp_seconds": 70.0,
+    "frame_id": "845f8b3d7c61d80d12017f96abcc231d8fbc4fc4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_71.000.jpg",
+    "frame_index": 1065,
+    "timestamp_seconds": 71.0,
+    "frame_id": "7ff52e9ec13e6e4d944eae5643a86ec53ccbf8f9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_72.000.jpg",
+    "frame_index": 1080,
+    "timestamp_seconds": 72.0,
+    "frame_id": "0f522c7d3fbb04aa10126dd2bfd74d0220a5e070"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_73.000.jpg",
+    "frame_index": 1095,
+    "timestamp_seconds": 73.0,
+    "frame_id": "b42d8587d11a4abe5fdbcb674e52b0526abad359"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_74.000.jpg",
+    "frame_index": 1110,
+    "timestamp_seconds": 74.0,
+    "frame_id": "21423ccc1da2597b6e2796301a5e6975f0b60c4d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_75.000.jpg",
+    "frame_index": 1125,
+    "timestamp_seconds": 75.0,
+    "frame_id": "74f93c3b1301885a2b7ab8060770347f3abe0bf6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_76.000.jpg",
+    "frame_index": 1140,
+    "timestamp_seconds": 76.0,
+    "frame_id": "3022ec7298f976e7574b2c53d0ea98678942ecab"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_77.000.jpg",
+    "frame_index": 1155,
+    "timestamp_seconds": 77.0,
+    "frame_id": "8877f4529b559f6acb55bf4f67fb0e495669df66"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_78.000.jpg",
+    "frame_index": 1170,
+    "timestamp_seconds": 78.0,
+    "frame_id": "48e5057c6ee56236ac84c20677917104c5bfdc6d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_79.000.jpg",
+    "frame_index": 1185,
+    "timestamp_seconds": 79.0,
+    "frame_id": "1939fb65f3dab7e8c4b900e90109be6935482672"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_80.000.jpg",
+    "frame_index": 1200,
+    "timestamp_seconds": 80.0,
+    "frame_id": "7c9bacc06fc51f06e7b90cd3e06c5cf0fdb84ef7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_81.000.jpg",
+    "frame_index": 1215,
+    "timestamp_seconds": 81.0,
+    "frame_id": "ae0d3d6579508ac6da1495b402f54b74897233b4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_82.000.jpg",
+    "frame_index": 1230,
+    "timestamp_seconds": 82.0,
+    "frame_id": "1893676a7f3abf07fb28bff64f5ad53d326a5a3d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_83.000.jpg",
+    "frame_index": 1245,
+    "timestamp_seconds": 83.0,
+    "frame_id": "04d41958d43fabf9333de0e5fa576c4871bd1184"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_84.000.jpg",
+    "frame_index": 1260,
+    "timestamp_seconds": 84.0,
+    "frame_id": "3b2daab28baeff660673d4ca5c223af5e4452052"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_85.000.jpg",
+    "frame_index": 1275,
+    "timestamp_seconds": 85.0,
+    "frame_id": "3e8c37fa2a62fab418e767bd41388bde1d1b8c45"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_86.000.jpg",
+    "frame_index": 1290,
+    "timestamp_seconds": 86.0,
+    "frame_id": "9061258cb07a478fbbde3b996484fd74fd3253bc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_87.000.jpg",
+    "frame_index": 1305,
+    "timestamp_seconds": 87.0,
+    "frame_id": "2d6fa1e1b873c292790c9a0a2cab86464e82d87e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_88.000.jpg",
+    "frame_index": 1320,
+    "timestamp_seconds": 88.0,
+    "frame_id": "430cc72a83eb7e2bb6d8e517b8e87754e27a4fb4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_89.000.jpg",
+    "frame_index": 1335,
+    "timestamp_seconds": 89.0,
+    "frame_id": "2a22056c565d74d9f15c9569d8186374d3f2b160"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_90.000.jpg",
+    "frame_index": 1350,
+    "timestamp_seconds": 90.0,
+    "frame_id": "48a6a75f5e65c9832f77acb07381dd17c45f7e25"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_91.000.jpg",
+    "frame_index": 1365,
+    "timestamp_seconds": 91.0,
+    "frame_id": "4b1066c87e465a774cfdd06e2f097f2e57f13a34"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_92.000.jpg",
+    "frame_index": 1380,
+    "timestamp_seconds": 92.0,
+    "frame_id": "77d8aadd49049a6f8fc6b98f79e722f34304d082"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_93.000.jpg",
+    "frame_index": 1395,
+    "timestamp_seconds": 93.0,
+    "frame_id": "13d9d4cb6a9bf65a8697aec10cb84c42fc08b3d3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_94.000.jpg",
+    "frame_index": 1410,
+    "timestamp_seconds": 94.0,
+    "frame_id": "32e65f96e6aa255a851ab38376eb366758216344"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_95.000.jpg",
+    "frame_index": 1425,
+    "timestamp_seconds": 95.0,
+    "frame_id": "81b09c0125a746bb521629cb14fdc5a4db013cee"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_96.000.jpg",
+    "frame_index": 1440,
+    "timestamp_seconds": 96.0,
+    "frame_id": "a9beb1f4087f453d3d4eaeb69c151e386e9c551f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_97.000.jpg",
+    "frame_index": 1455,
+    "timestamp_seconds": 97.0,
+    "frame_id": "c4ab9927684fd105edc5b55035614f3e7b901768"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_98.000.jpg",
+    "frame_index": 1470,
+    "timestamp_seconds": 98.0,
+    "frame_id": "8a1becda4bf6a9c6dd2df0791a595e4a8d2d0940"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_99.000.jpg",
+    "frame_index": 1485,
+    "timestamp_seconds": 99.0,
+    "frame_id": "fa85218b381dc787d48653ebf1f1ead70afbccbd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_100.000.jpg",
+    "frame_index": 1500,
+    "timestamp_seconds": 100.0,
+    "frame_id": "b99e9a7f55b45a2164ede2d34b0e9d2cbdde6646"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_101.000.jpg",
+    "frame_index": 1515,
+    "timestamp_seconds": 101.0,
+    "frame_id": "db835038de9c1afa4044d0823385dcb409984e14"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_102.000.jpg",
+    "frame_index": 1530,
+    "timestamp_seconds": 102.0,
+    "frame_id": "edb96728714ce6cf459445d6b50078b888f40a53"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_103.000.jpg",
+    "frame_index": 1545,
+    "timestamp_seconds": 103.0,
+    "frame_id": "d2e2a48dd235636acc7de1a571c670dc3351cae7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_104.000.jpg",
+    "frame_index": 1560,
+    "timestamp_seconds": 104.0,
+    "frame_id": "df4aff10a96b276ecf41998d10f7d4a06cbc4c2a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_105.000.jpg",
+    "frame_index": 1575,
+    "timestamp_seconds": 105.0,
+    "frame_id": "0aac6af20c965ce652136374c952c3d3862660de"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_106.000.jpg",
+    "frame_index": 1590,
+    "timestamp_seconds": 106.0,
+    "frame_id": "c475596e364f7938470661e6c3ae69c5a15ee956"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_107.000.jpg",
+    "frame_index": 1605,
+    "timestamp_seconds": 107.0,
+    "frame_id": "6f9369c03d1ef519f3c63b4af743831cb2bd0733"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_108.000.jpg",
+    "frame_index": 1620,
+    "timestamp_seconds": 108.0,
+    "frame_id": "f2ccbf3709a3bac34f0713e97fcd15e59e9c24a0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_109.000.jpg",
+    "frame_index": 1635,
+    "timestamp_seconds": 109.0,
+    "frame_id": "76f9f3a8421428b1fdd432a3fbb0d57b000f02b3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_110.000.jpg",
+    "frame_index": 1650,
+    "timestamp_seconds": 110.0,
+    "frame_id": "55f163fdc4b704415f1c1deccc34a72a29adeb5e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_111.000.jpg",
+    "frame_index": 1665,
+    "timestamp_seconds": 111.0,
+    "frame_id": "ebe8f813e13e2c8d2a69f6e252e4a172d69bad54"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_112.000.jpg",
+    "frame_index": 1680,
+    "timestamp_seconds": 112.0,
+    "frame_id": "b340394b2e3f46500bbe366b4a7d397f006f56a5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_113.000.jpg",
+    "frame_index": 1695,
+    "timestamp_seconds": 113.0,
+    "frame_id": "57a04a8711957294cf3e20254f8ecf9439a4d6fd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_114.000.jpg",
+    "frame_index": 1710,
+    "timestamp_seconds": 114.0,
+    "frame_id": "0f76d5750bc37348ed419668c592edd23353230c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_115.000.jpg",
+    "frame_index": 1725,
+    "timestamp_seconds": 115.0,
+    "frame_id": "2511bccedd0a9ec525314a79179cf03259b2667b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_116.000.jpg",
+    "frame_index": 1740,
+    "timestamp_seconds": 116.0,
+    "frame_id": "bf3ba293373631ecf336365c416f93832a176216"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_117.000.jpg",
+    "frame_index": 1755,
+    "timestamp_seconds": 117.0,
+    "frame_id": "d469cacfde74e0f1b26efa633607abb039721133"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_118.000.jpg",
+    "frame_index": 1770,
+    "timestamp_seconds": 118.0,
+    "frame_id": "b095346c943a8b957ea307ecc50b91d335030d1c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_119.000.jpg",
+    "frame_index": 1785,
+    "timestamp_seconds": 119.0,
+    "frame_id": "7c1c1d369afdb0bc3f4eae8a78f20b0856a00b15"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_120.000.jpg",
+    "frame_index": 1800,
+    "timestamp_seconds": 120.0,
+    "frame_id": "89ecf6bb7f9b32f5f84a558833b2101c61912e05"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_121.000.jpg",
+    "frame_index": 1815,
+    "timestamp_seconds": 121.0,
+    "frame_id": "e9295cf55161801fd2eea32a472b715aa5b0f945"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_122.000.jpg",
+    "frame_index": 1830,
+    "timestamp_seconds": 122.0,
+    "frame_id": "7c8d5db03b59853e177a888ed94af1ec11b7ecd7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_123.000.jpg",
+    "frame_index": 1845,
+    "timestamp_seconds": 123.0,
+    "frame_id": "42eeddd104413c5f437f10b94bd357a0a660cf8f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_124.000.jpg",
+    "frame_index": 1860,
+    "timestamp_seconds": 124.0,
+    "frame_id": "cf3e5ba759d982ebe13897569833b8889e04e5d1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_125.000.jpg",
+    "frame_index": 1875,
+    "timestamp_seconds": 125.0,
+    "frame_id": "b75fe2fd51cdc1c7b8d7637c2e6e2efd016e4be5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_126.000.jpg",
+    "frame_index": 1890,
+    "timestamp_seconds": 126.0,
+    "frame_id": "75aa5135402c5cf8dbc3c003f9b8fd7011483a92"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_127.000.jpg",
+    "frame_index": 1905,
+    "timestamp_seconds": 127.0,
+    "frame_id": "0d3d3ec63e5d7eb198f08f5a5a69a85cfdf15e3c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_128.000.jpg",
+    "frame_index": 1920,
+    "timestamp_seconds": 128.0,
+    "frame_id": "3ce15e9259e3374283eacf69fa9ac77261d3ad56"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_129.000.jpg",
+    "frame_index": 1935,
+    "timestamp_seconds": 129.0,
+    "frame_id": "70d6db433ff3879c25f0081529b46251757370e5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_130.000.jpg",
+    "frame_index": 1950,
+    "timestamp_seconds": 130.0,
+    "frame_id": "404f165e64de10e75ea5c6198323337757dc74ea"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_131.000.jpg",
+    "frame_index": 1965,
+    "timestamp_seconds": 131.0,
+    "frame_id": "277f2529110dda6620b6e954ef3cdb83a329deb9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_132.000.jpg",
+    "frame_index": 1980,
+    "timestamp_seconds": 132.0,
+    "frame_id": "e1b3bb3a560a6cec5c36266880853b81e2d88c2f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_133.000.jpg",
+    "frame_index": 1995,
+    "timestamp_seconds": 133.0,
+    "frame_id": "579343ebbd504773710eed4fa525e948b6687653"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_134.000.jpg",
+    "frame_index": 2010,
+    "timestamp_seconds": 134.0,
+    "frame_id": "ec1332fcc05914a38718fdd4b2b5e7ad91cc3a53"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_135.000.jpg",
+    "frame_index": 2025,
+    "timestamp_seconds": 135.0,
+    "frame_id": "c25d93d85e6b909ee3c84b8ae8fb3f19fa12e3b1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_136.000.jpg",
+    "frame_index": 2040,
+    "timestamp_seconds": 136.0,
+    "frame_id": "95a40dd2c32e59cbc98c1a1ee0d1f4bf802efbf0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_137.000.jpg",
+    "frame_index": 2055,
+    "timestamp_seconds": 137.0,
+    "frame_id": "d9eb4a25591cf70a42a6f99eb39bf95eb4f17894"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_138.000.jpg",
+    "frame_index": 2070,
+    "timestamp_seconds": 138.0,
+    "frame_id": "1f4e1e8992d7c5955746804c3cca1babeda0bdd0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_139.000.jpg",
+    "frame_index": 2085,
+    "timestamp_seconds": 139.0,
+    "frame_id": "6dc48f83ffeecdba527bb8322926a40c2545e3df"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_140.000.jpg",
+    "frame_index": 2100,
+    "timestamp_seconds": 140.0,
+    "frame_id": "e54c36165d1206987a229e5f87589d413296070e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_141.000.jpg",
+    "frame_index": 2115,
+    "timestamp_seconds": 141.0,
+    "frame_id": "b20f1957c954fbbe9c240dcd7803d0d5a77ed45b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_142.000.jpg",
+    "frame_index": 2130,
+    "timestamp_seconds": 142.0,
+    "frame_id": "8a655b7f133ce10f51da4a3110271c6174b82510"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_143.000.jpg",
+    "frame_index": 2145,
+    "timestamp_seconds": 143.0,
+    "frame_id": "3a347879d2dba9366082ca86bc259feb12ace0cc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_144.000.jpg",
+    "frame_index": 2160,
+    "timestamp_seconds": 144.0,
+    "frame_id": "9d33ea3733884745f003c67b7d3986eed40f5ed9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_145.000.jpg",
+    "frame_index": 2175,
+    "timestamp_seconds": 145.0,
+    "frame_id": "d75d06ccb8627bb9eefdf3a9f05604ccd3cefdd1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_146.000.jpg",
+    "frame_index": 2190,
+    "timestamp_seconds": 146.0,
+    "frame_id": "96b86e6184b004c870c9242c77847bdcd49e75fc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_147.000.jpg",
+    "frame_index": 2205,
+    "timestamp_seconds": 147.0,
+    "frame_id": "a4b262753924d6544567078df82a770df1ef754b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_148.000.jpg",
+    "frame_index": 2220,
+    "timestamp_seconds": 148.0,
+    "frame_id": "37b560ecaaec8a5d63213eeb3a938f5ed8148e83"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_149.000.jpg",
+    "frame_index": 2235,
+    "timestamp_seconds": 149.0,
+    "frame_id": "b5acc205805c481a5afe4129371cb81c56a3ffb8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_150.000.jpg",
+    "frame_index": 2250,
+    "timestamp_seconds": 150.0,
+    "frame_id": "b8a5aa615af7dc394ad1025576a83120b40ac23a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_151.000.jpg",
+    "frame_index": 2265,
+    "timestamp_seconds": 151.0,
+    "frame_id": "977331c9e8d7787a34e0897f52c9eb4bf44278ac"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_152.000.jpg",
+    "frame_index": 2280,
+    "timestamp_seconds": 152.0,
+    "frame_id": "4877566acec5c194972947261d3e4eedde95c6f1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_153.000.jpg",
+    "frame_index": 2295,
+    "timestamp_seconds": 153.0,
+    "frame_id": "772d3a6cca9671e1b270fdcb1f4c34e7176f69da"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_154.000.jpg",
+    "frame_index": 2310,
+    "timestamp_seconds": 154.0,
+    "frame_id": "0d946062de9d38b415660313ed1c5f6a509f946c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_155.000.jpg",
+    "frame_index": 2325,
+    "timestamp_seconds": 155.0,
+    "frame_id": "c3898c78330cdb63bd28ccc61e26746a00e0d84f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_156.000.jpg",
+    "frame_index": 2340,
+    "timestamp_seconds": 156.0,
+    "frame_id": "7b3d6b28d8dc787062e50d66afdd99fb3a5ba4c3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_157.000.jpg",
+    "frame_index": 2355,
+    "timestamp_seconds": 157.0,
+    "frame_id": "83573a86dc7d35fd164e2d354b4925a810d50489"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_158.000.jpg",
+    "frame_index": 2370,
+    "timestamp_seconds": 158.0,
+    "frame_id": "137fcfc61dd5e6f63e1311ef8f6a06d7ddc4cf03"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_159.000.jpg",
+    "frame_index": 2385,
+    "timestamp_seconds": 159.0,
+    "frame_id": "ee62f1a5171130de0a25afa574475e5f1cf51235"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_160.000.jpg",
+    "frame_index": 2400,
+    "timestamp_seconds": 160.0,
+    "frame_id": "3221d0ecec3f70ea9df6f8aa860e322da9df2adc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_161.000.jpg",
+    "frame_index": 2415,
+    "timestamp_seconds": 161.0,
+    "frame_id": "fbe4b94f05b438ac1bdafcdabb5ce3454fc26abf"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_162.000.jpg",
+    "frame_index": 2430,
+    "timestamp_seconds": 162.0,
+    "frame_id": "3563a21860807ff60d913bea61480f52914a131f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_163.000.jpg",
+    "frame_index": 2445,
+    "timestamp_seconds": 163.0,
+    "frame_id": "71ed298a0de5c874b796ccfc7e5a8e32ec5c537c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_164.000.jpg",
+    "frame_index": 2460,
+    "timestamp_seconds": 164.0,
+    "frame_id": "27f4bc6979b659223f48679d088b2b57763e651d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_165.000.jpg",
+    "frame_index": 2475,
+    "timestamp_seconds": 165.0,
+    "frame_id": "4b1d9c5f68d871c50f9ac16bedc7d2272b6336fd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_166.000.jpg",
+    "frame_index": 2490,
+    "timestamp_seconds": 166.0,
+    "frame_id": "a2dd7bcc12066750b1854cafb078d153ed8d30d9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_167.000.jpg",
+    "frame_index": 2505,
+    "timestamp_seconds": 167.0,
+    "frame_id": "e02ad0684d417b932804be6e784e8758155a083e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_168.000.jpg",
+    "frame_index": 2520,
+    "timestamp_seconds": 168.0,
+    "frame_id": "01bf6306ef35b0dfad50a6c8cdcfd5023673bc1e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_169.000.jpg",
+    "frame_index": 2535,
+    "timestamp_seconds": 169.0,
+    "frame_id": "babe3dc920fa58caebdfdb2f6228507589e769b1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_170.000.jpg",
+    "frame_index": 2550,
+    "timestamp_seconds": 170.0,
+    "frame_id": "8e38c3ce22d18f8230218292f161f1bc6b3ba6c5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_171.000.jpg",
+    "frame_index": 2565,
+    "timestamp_seconds": 171.0,
+    "frame_id": "c08d17e0a3bb0b1eb65ffd6b2f46d1d20007cd0d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_172.000.jpg",
+    "frame_index": 2580,
+    "timestamp_seconds": 172.0,
+    "frame_id": "3d9986e473db423a8fead9f5bb6cac736a020e3e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_173.000.jpg",
+    "frame_index": 2595,
+    "timestamp_seconds": 173.0,
+    "frame_id": "86ab33e410c2e5cc92fe498c2de144273d04b6d2"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_174.000.jpg",
+    "frame_index": 2610,
+    "timestamp_seconds": 174.0,
+    "frame_id": "51a137f302f71ab4e94d318389506271e01757b9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_175.000.jpg",
+    "frame_index": 2625,
+    "timestamp_seconds": 175.0,
+    "frame_id": "6876a81951dbbb1be5a9f027269f4490817f787d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_176.000.jpg",
+    "frame_index": 2640,
+    "timestamp_seconds": 176.0,
+    "frame_id": "9f745a43cee222899e7cf8d94bc6a06fb72dab2a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_177.000.jpg",
+    "frame_index": 2655,
+    "timestamp_seconds": 177.0,
+    "frame_id": "ab2995dd241b1b606943978e6bf917f588fa0a38"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_178.000.jpg",
+    "frame_index": 2670,
+    "timestamp_seconds": 178.0,
+    "frame_id": "a49890a7571fe68755bda917e8a8e7fb746a8e11"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_179.000.jpg",
+    "frame_index": 2685,
+    "timestamp_seconds": 179.0,
+    "frame_id": "bb92df7b1b32c48bb4ddb29b5b3d2d2afc9b3eb9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_180.000.jpg",
+    "frame_index": 2700,
+    "timestamp_seconds": 180.0,
+    "frame_id": "18dec56781ae4f9fa46cb9f52999c3240a28fdf7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_181.000.jpg",
+    "frame_index": 2715,
+    "timestamp_seconds": 181.0,
+    "frame_id": "fcd51d6b2f1eb91b61ab097c4979b6c0db30bd7b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_182.000.jpg",
+    "frame_index": 2730,
+    "timestamp_seconds": 182.0,
+    "frame_id": "def3693310c5649cf1f933dc6d373513017c9b0e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_183.000.jpg",
+    "frame_index": 2745,
+    "timestamp_seconds": 183.0,
+    "frame_id": "875657a2e81bafbfb82213d46b7ee6e0fe12a720"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_184.000.jpg",
+    "frame_index": 2760,
+    "timestamp_seconds": 184.0,
+    "frame_id": "a18a562a716b0e78a22137835ed80933aba35c34"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_185.000.jpg",
+    "frame_index": 2775,
+    "timestamp_seconds": 185.0,
+    "frame_id": "0dcdd87d3ba157f091542308a7256ca85fa32e7f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_186.000.jpg",
+    "frame_index": 2790,
+    "timestamp_seconds": 186.0,
+    "frame_id": "8ae02b26f949f2bd0f29617d1f2039c35a30d4af"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_187.000.jpg",
+    "frame_index": 2805,
+    "timestamp_seconds": 187.0,
+    "frame_id": "b4214010fd2b7cc334553dae885998d64237430b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_188.000.jpg",
+    "frame_index": 2820,
+    "timestamp_seconds": 188.0,
+    "frame_id": "d7d02bc250908cdaf345b29bd8973e5a8b75c590"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_189.000.jpg",
+    "frame_index": 2835,
+    "timestamp_seconds": 189.0,
+    "frame_id": "d7dbed0db7ef9f269ca0ed29707d8e3181d6c9dd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_190.000.jpg",
+    "frame_index": 2850,
+    "timestamp_seconds": 190.0,
+    "frame_id": "4980a4160fde8be88de32deece17804d70a4b02a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_191.000.jpg",
+    "frame_index": 2865,
+    "timestamp_seconds": 191.0,
+    "frame_id": "1430e4831fec9d5178e5fa4f43f0b31085a54f7a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_192.000.jpg",
+    "frame_index": 2880,
+    "timestamp_seconds": 192.0,
+    "frame_id": "1ecc772098f4a69ee2231c9910a33e7996a78903"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_193.000.jpg",
+    "frame_index": 2895,
+    "timestamp_seconds": 193.0,
+    "frame_id": "928623a03c67e8940191d0a5cd4e57c217d88bee"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_194.000.jpg",
+    "frame_index": 2910,
+    "timestamp_seconds": 194.0,
+    "frame_id": "6e11b9a4f690c5fe3096765c1697a3e899129d2c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_195.000.jpg",
+    "frame_index": 2925,
+    "timestamp_seconds": 195.0,
+    "frame_id": "2b6b2127e79d0f4c870025e69d0bdd99a0402193"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_196.000.jpg",
+    "frame_index": 2940,
+    "timestamp_seconds": 196.0,
+    "frame_id": "0b5f234859e0af040e78d36eb1aee0826f4104fe"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_197.000.jpg",
+    "frame_index": 2955,
+    "timestamp_seconds": 197.0,
+    "frame_id": "b13fd918e404adeb08aa517dc3b5c4cfb44671a4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_198.000.jpg",
+    "frame_index": 2970,
+    "timestamp_seconds": 198.0,
+    "frame_id": "2d5d9e336333455b4e0e8adfec8fe229c61baecf"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_199.000.jpg",
+    "frame_index": 2985,
+    "timestamp_seconds": 199.0,
+    "frame_id": "4b8dcfdeea0c73c3955a6413ff13ea058ed497c0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_200.000.jpg",
+    "frame_index": 3000,
+    "timestamp_seconds": 200.0,
+    "frame_id": "dd94250e088607e20c034dc4250e0171166549ae"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_201.000.jpg",
+    "frame_index": 3015,
+    "timestamp_seconds": 201.0,
+    "frame_id": "d88c3bffb23c514215455ae6612bd8b1969a5f26"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_202.000.jpg",
+    "frame_index": 3030,
+    "timestamp_seconds": 202.0,
+    "frame_id": "e0335f3b087ee0f8de898f86ecba82e62209d03d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_203.000.jpg",
+    "frame_index": 3045,
+    "timestamp_seconds": 203.0,
+    "frame_id": "06b3b593db307cfcdeab579fdc7343f18247f392"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_204.000.jpg",
+    "frame_index": 3060,
+    "timestamp_seconds": 204.0,
+    "frame_id": "ac98e4207b228941a2dc8f54c9914fd70893c3ab"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_205.000.jpg",
+    "frame_index": 3075,
+    "timestamp_seconds": 205.0,
+    "frame_id": "5947e05c43fd9edaaa394c457197b0fe72b892fd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_206.000.jpg",
+    "frame_index": 3090,
+    "timestamp_seconds": 206.0,
+    "frame_id": "f51ea28e46a33c205e62de24cf0ae9558e45148e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_207.000.jpg",
+    "frame_index": 3105,
+    "timestamp_seconds": 207.0,
+    "frame_id": "bfd92ea3a42892ec08e4221f2014d6839bbca932"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_208.000.jpg",
+    "frame_index": 3120,
+    "timestamp_seconds": 208.0,
+    "frame_id": "39cfa00ae2af0305b9b21e728d1f4d1927c4b42d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_209.000.jpg",
+    "frame_index": 3135,
+    "timestamp_seconds": 209.0,
+    "frame_id": "0c52309a96ae1d7781b287118265823d5da2dd6b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_210.000.jpg",
+    "frame_index": 3150,
+    "timestamp_seconds": 210.0,
+    "frame_id": "7f4c16461a00dd2c03d89d460eec51b5f6940c62"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_211.000.jpg",
+    "frame_index": 3165,
+    "timestamp_seconds": 211.0,
+    "frame_id": "2edec8b6eae41c9dd31c7138db54c9f927a3b88a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_212.000.jpg",
+    "frame_index": 3180,
+    "timestamp_seconds": 212.0,
+    "frame_id": "b49a0f4a4fb3caf93e8532b0f2b998a0106a2c7d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_213.000.jpg",
+    "frame_index": 3195,
+    "timestamp_seconds": 213.0,
+    "frame_id": "83e0c8c3a457b06996bd0c1d9a18827ca962f399"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_214.000.jpg",
+    "frame_index": 3210,
+    "timestamp_seconds": 214.0,
+    "frame_id": "adf471b05db6938aba94fb7c2cff35e41b1cc706"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_215.000.jpg",
+    "frame_index": 3225,
+    "timestamp_seconds": 215.0,
+    "frame_id": "3ef208d520e9e2493ed3e96d2692e1321eaf4fc0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_216.000.jpg",
+    "frame_index": 3240,
+    "timestamp_seconds": 216.0,
+    "frame_id": "6a2d55a6950686f486a6891f9654fd987fb67a4d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_217.000.jpg",
+    "frame_index": 3255,
+    "timestamp_seconds": 217.0,
+    "frame_id": "c11aebd56ee06dfbd4e27fdb4e1ccb894b0fecab"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_218.000.jpg",
+    "frame_index": 3270,
+    "timestamp_seconds": 218.0,
+    "frame_id": "6adea75258bcc9879d33b958506db882f01e5226"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_219.000.jpg",
+    "frame_index": 3285,
+    "timestamp_seconds": 219.0,
+    "frame_id": "5e4d87a6d0d4efba964961a6b406a94b5ee3609c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_220.000.jpg",
+    "frame_index": 3300,
+    "timestamp_seconds": 220.0,
+    "frame_id": "6e60e6632f34271f6019971ea3b112584765bea9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_221.000.jpg",
+    "frame_index": 3315,
+    "timestamp_seconds": 221.0,
+    "frame_id": "e3f1eaacffbedcbcafaf128f899f58148489eb05"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_222.000.jpg",
+    "frame_index": 3330,
+    "timestamp_seconds": 222.0,
+    "frame_id": "12e83d8f20a64be89bd420a3d40d17b31e80372e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_223.000.jpg",
+    "frame_index": 3345,
+    "timestamp_seconds": 223.0,
+    "frame_id": "941420f70e72f8ab1e2b2deb4bb80722daf8d01c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_224.000.jpg",
+    "frame_index": 3360,
+    "timestamp_seconds": 224.0,
+    "frame_id": "b1d99cb37a5d557a7a1250c9776bda1dbea47de2"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_225.000.jpg",
+    "frame_index": 3375,
+    "timestamp_seconds": 225.0,
+    "frame_id": "9b4e7d5b1ccb02f481b86655cd8b42d82a57a5af"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_226.000.jpg",
+    "frame_index": 3390,
+    "timestamp_seconds": 226.0,
+    "frame_id": "e78a9a858a333925bc2a3b066d6fe9c7cc053140"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_227.000.jpg",
+    "frame_index": 3405,
+    "timestamp_seconds": 227.0,
+    "frame_id": "cfb9e01dd5289cd6b253822ef13a7c5e90fa353b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_228.000.jpg",
+    "frame_index": 3420,
+    "timestamp_seconds": 228.0,
+    "frame_id": "5e7b50271eb2d0ab8c78fba5332cfea4d30f8a59"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_229.000.jpg",
+    "frame_index": 3435,
+    "timestamp_seconds": 229.0,
+    "frame_id": "8464cbac6b5ac9269f1ed5fa0568f48b966070f9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_230.000.jpg",
+    "frame_index": 3450,
+    "timestamp_seconds": 230.0,
+    "frame_id": "7c5ae0ca7ee54b1b3cabd68d124505aa05255dc2"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_231.000.jpg",
+    "frame_index": 3465,
+    "timestamp_seconds": 231.0,
+    "frame_id": "ce24138728e8d5197030ab5b60cc03098a299cf0"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_232.000.jpg",
+    "frame_index": 3480,
+    "timestamp_seconds": 232.0,
+    "frame_id": "92fd279be1cb0e71ff58d75cc1c1da5e89a2a868"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_233.000.jpg",
+    "frame_index": 3495,
+    "timestamp_seconds": 233.0,
+    "frame_id": "ca0656036384168009b2b99b3221ec3a7550aa68"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_234.000.jpg",
+    "frame_index": 3510,
+    "timestamp_seconds": 234.0,
+    "frame_id": "479f72320357fdfd525ce8e031d315ffd4150f9c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_235.000.jpg",
+    "frame_index": 3525,
+    "timestamp_seconds": 235.0,
+    "frame_id": "448cf8ef88ed52ba65087f7b9ed2b21d82805c73"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_236.000.jpg",
+    "frame_index": 3540,
+    "timestamp_seconds": 236.0,
+    "frame_id": "a07ffd52006ecc36e6387bc9eeb525636c04357b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_237.000.jpg",
+    "frame_index": 3555,
+    "timestamp_seconds": 237.0,
+    "frame_id": "cf6a0d8f27bdb97634c5ca283f86e34975abbf51"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_238.000.jpg",
+    "frame_index": 3570,
+    "timestamp_seconds": 238.0,
+    "frame_id": "d89935706e08313e457e9e568a6e60aea37af876"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_239.000.jpg",
+    "frame_index": 3585,
+    "timestamp_seconds": 239.0,
+    "frame_id": "0660361b504d3a90994903a19a428d25978115da"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_240.000.jpg",
+    "frame_index": 3600,
+    "timestamp_seconds": 240.0,
+    "frame_id": "982cb97418e816e7a4cc6e43697c9806a1219189"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_241.000.jpg",
+    "frame_index": 3615,
+    "timestamp_seconds": 241.0,
+    "frame_id": "82934db2fba763b61ed1170287894669ae02242f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_242.000.jpg",
+    "frame_index": 3630,
+    "timestamp_seconds": 242.0,
+    "frame_id": "1ef061b878a19226b0fa8d94d6491e1919f053be"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_243.000.jpg",
+    "frame_index": 3645,
+    "timestamp_seconds": 243.0,
+    "frame_id": "f3d8d5e30e651429d88c3d080871f4a974c4f26c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_244.000.jpg",
+    "frame_index": 3660,
+    "timestamp_seconds": 244.0,
+    "frame_id": "ed412608564f7e05e190124d50f5885283d832df"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_245.000.jpg",
+    "frame_index": 3675,
+    "timestamp_seconds": 245.0,
+    "frame_id": "25661d395713800e4d2ff6c3ac9392562c9d2d19"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_246.000.jpg",
+    "frame_index": 3690,
+    "timestamp_seconds": 246.0,
+    "frame_id": "98e09faf9f98550719098d1a66d23bd0afeb591f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_247.000.jpg",
+    "frame_index": 3705,
+    "timestamp_seconds": 247.0,
+    "frame_id": "9f2601e7d619bed1a93a791d8a266ae0f10b5851"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_248.000.jpg",
+    "frame_index": 3720,
+    "timestamp_seconds": 248.0,
+    "frame_id": "7e6563242df55fa9b1110454df942f4ccc4607a6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_249.000.jpg",
+    "frame_index": 3735,
+    "timestamp_seconds": 249.0,
+    "frame_id": "02df33f49c2d6ccb342a6885accb3294967b35ab"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_250.000.jpg",
+    "frame_index": 3750,
+    "timestamp_seconds": 250.0,
+    "frame_id": "e4b9491b5b38f2e823fcce8476f4d62deeff3a8b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_251.000.jpg",
+    "frame_index": 3765,
+    "timestamp_seconds": 251.0,
+    "frame_id": "fe60590960427ccb2efba3ab6ae4fce3aa3c5987"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_252.000.jpg",
+    "frame_index": 3780,
+    "timestamp_seconds": 252.0,
+    "frame_id": "5929f80134e56f16a640066135170800c60d7444"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_253.000.jpg",
+    "frame_index": 3795,
+    "timestamp_seconds": 253.0,
+    "frame_id": "dd0e76d1ebb0c34ea7fd8c4427f2e1dc62b819a7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_254.000.jpg",
+    "frame_index": 3810,
+    "timestamp_seconds": 254.0,
+    "frame_id": "bad5f230a85111c94efed83746d6d7252881a008"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_255.000.jpg",
+    "frame_index": 3825,
+    "timestamp_seconds": 255.0,
+    "frame_id": "fef0770bfb8fe28db8aefbaa244746e7e77778f7"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_256.000.jpg",
+    "frame_index": 3840,
+    "timestamp_seconds": 256.0,
+    "frame_id": "6ea514b8f81837149962263d2e5f416315c6c194"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_257.000.jpg",
+    "frame_index": 3855,
+    "timestamp_seconds": 257.0,
+    "frame_id": "d183c6504078294c572e23aa3f6134eebeb8a010"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_258.000.jpg",
+    "frame_index": 3870,
+    "timestamp_seconds": 258.0,
+    "frame_id": "7adb4279183bcf2ce086c35ed498272e003bcd65"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_259.000.jpg",
+    "frame_index": 3885,
+    "timestamp_seconds": 259.0,
+    "frame_id": "d96f56e39042e0264be2283d2c474a9597832231"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_260.000.jpg",
+    "frame_index": 3900,
+    "timestamp_seconds": 260.0,
+    "frame_id": "768b296d0b5f095fd352d4e471d8ee6e309f39ac"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_261.000.jpg",
+    "frame_index": 3915,
+    "timestamp_seconds": 261.0,
+    "frame_id": "c4153522852863ae0b5caba98f3a7d8e6f8f1682"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_262.000.jpg",
+    "frame_index": 3930,
+    "timestamp_seconds": 262.0,
+    "frame_id": "a13190d0db9d6e27ce1c1514d76ee48b5b6fa8a8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_263.000.jpg",
+    "frame_index": 3945,
+    "timestamp_seconds": 263.0,
+    "frame_id": "6f92da29376b55e4e750f5ecbdfd5d8a0264d1c4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_264.000.jpg",
+    "frame_index": 3960,
+    "timestamp_seconds": 264.0,
+    "frame_id": "29778d89403882ed924cf759586eb46b07373023"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_265.000.jpg",
+    "frame_index": 3975,
+    "timestamp_seconds": 265.0,
+    "frame_id": "cfc014a54eba081add6440b578e55b75b5cadf53"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_266.000.jpg",
+    "frame_index": 3990,
+    "timestamp_seconds": 266.0,
+    "frame_id": "bbdb60629becb2777a0fc7fd086ed215e5e1a684"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_267.000.jpg",
+    "frame_index": 4005,
+    "timestamp_seconds": 267.0,
+    "frame_id": "1e0d854f6470dc6bfc92380cb190e5c2c92d371b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_268.000.jpg",
+    "frame_index": 4020,
+    "timestamp_seconds": 268.0,
+    "frame_id": "92366af4f985cc5181c73c684776a5a7396202bb"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_269.000.jpg",
+    "frame_index": 4035,
+    "timestamp_seconds": 269.0,
+    "frame_id": "eafb9c40c5485b16e78ba68aa40a7ef89a92cc97"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_270.000.jpg",
+    "frame_index": 4050,
+    "timestamp_seconds": 270.0,
+    "frame_id": "cbb22201a82512860c062f0654afccddcbe34dcd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_271.000.jpg",
+    "frame_index": 4065,
+    "timestamp_seconds": 271.0,
+    "frame_id": "3c7c99f000b18d126482187b42b315230c4c6c9d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_272.000.jpg",
+    "frame_index": 4080,
+    "timestamp_seconds": 272.0,
+    "frame_id": "7f0a2fb841cafb21411924af0daf4f6be4e77fab"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_273.000.jpg",
+    "frame_index": 4095,
+    "timestamp_seconds": 273.0,
+    "frame_id": "13a0004b0dd3a10153853ae016f5062f4500bc2d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_274.000.jpg",
+    "frame_index": 4110,
+    "timestamp_seconds": 274.0,
+    "frame_id": "858bc4580c8197743452989d5f67b260a3e28270"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_275.000.jpg",
+    "frame_index": 4125,
+    "timestamp_seconds": 275.0,
+    "frame_id": "327b4767ff1c73b2d74d76f5a5b6beb7ae311975"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_276.000.jpg",
+    "frame_index": 4140,
+    "timestamp_seconds": 276.0,
+    "frame_id": "df9fd988b9bb18bd5f9bd2f2cb9dc0168218e80f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_277.000.jpg",
+    "frame_index": 4155,
+    "timestamp_seconds": 277.0,
+    "frame_id": "955bb7d5b77c1274aeab2859e9b8c142012b06aa"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_278.000.jpg",
+    "frame_index": 4170,
+    "timestamp_seconds": 278.0,
+    "frame_id": "be3b2c44eb9fd344af919823382a85f53653539a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_279.000.jpg",
+    "frame_index": 4185,
+    "timestamp_seconds": 279.0,
+    "frame_id": "99c18c3f7eca0f4ada109249cc6eacb99c62ac32"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_280.000.jpg",
+    "frame_index": 4200,
+    "timestamp_seconds": 280.0,
+    "frame_id": "b2ffa96e7e6184cb5a621bb93f465bdb545953be"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_281.000.jpg",
+    "frame_index": 4215,
+    "timestamp_seconds": 281.0,
+    "frame_id": "2044efe9f13f8941bc94d2112fcd5b9ca581d0ef"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_282.000.jpg",
+    "frame_index": 4230,
+    "timestamp_seconds": 282.0,
+    "frame_id": "4591bea3378991a08c5726b0dd89b7cfbd098bc6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_283.000.jpg",
+    "frame_index": 4245,
+    "timestamp_seconds": 283.0,
+    "frame_id": "86559d1c7ce154629083626616615ac1d6d27242"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_284.000.jpg",
+    "frame_index": 4260,
+    "timestamp_seconds": 284.0,
+    "frame_id": "f2219acd543b9968aa389a0f2a4cbaac531144d6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_285.000.jpg",
+    "frame_index": 4275,
+    "timestamp_seconds": 285.0,
+    "frame_id": "dbb4ad34116f1587cd708b4c6cb6eeb3b1d09415"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_286.000.jpg",
+    "frame_index": 4290,
+    "timestamp_seconds": 286.0,
+    "frame_id": "c3d40093844b816b48af6d0353ceb389b7089372"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_287.000.jpg",
+    "frame_index": 4305,
+    "timestamp_seconds": 287.0,
+    "frame_id": "467441ae93384debf589c15cae35c4f686651630"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_288.000.jpg",
+    "frame_index": 4320,
+    "timestamp_seconds": 288.0,
+    "frame_id": "01f482c3a56554eed0754220f919ef3a6a0361f5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_289.000.jpg",
+    "frame_index": 4335,
+    "timestamp_seconds": 289.0,
+    "frame_id": "0283c5ba67fe6b4c1811e01197d536fdc097ae04"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_290.000.jpg",
+    "frame_index": 4350,
+    "timestamp_seconds": 290.0,
+    "frame_id": "122d4d22d201758717af97503e8b8e83764debe4"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_291.000.jpg",
+    "frame_index": 4365,
+    "timestamp_seconds": 291.0,
+    "frame_id": "e67ab966d37e017aa95de7f98b1512f7e22a902e"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_292.000.jpg",
+    "frame_index": 4380,
+    "timestamp_seconds": 292.0,
+    "frame_id": "83e66a6ea690bf6e3e4b449dd719ffdde943abd8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_293.000.jpg",
+    "frame_index": 4395,
+    "timestamp_seconds": 293.0,
+    "frame_id": "98e771fc6332a588c42cd6f1efeac3ffe931a0e9"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_294.000.jpg",
+    "frame_index": 4410,
+    "timestamp_seconds": 294.0,
+    "frame_id": "f0b20c8cf9e73fe2f143924e3c5b0b0c912304c1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_295.000.jpg",
+    "frame_index": 4425,
+    "timestamp_seconds": 295.0,
+    "frame_id": "67b0ddb9dd53cda1805f9286a5c54705f4db9297"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_296.000.jpg",
+    "frame_index": 4440,
+    "timestamp_seconds": 296.0,
+    "frame_id": "e82747462117ea0ac2ced357ea4f9dc8b46f2003"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_297.000.jpg",
+    "frame_index": 4455,
+    "timestamp_seconds": 297.0,
+    "frame_id": "90fcfb1867ce11677f9aab6a8366097654adb895"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_298.000.jpg",
+    "frame_index": 4470,
+    "timestamp_seconds": 298.0,
+    "frame_id": "3b4c9ee9abf69d49a104b180b1c60499c37190ff"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_299.000.jpg",
+    "frame_index": 4485,
+    "timestamp_seconds": 299.0,
+    "frame_id": "11b62b6a0291e96d8bfadb96f07f2dd4d90188c5"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_300.000.jpg",
+    "frame_index": 4500,
+    "timestamp_seconds": 300.0,
+    "frame_id": "8fcfab62aef8bf415d4f5de9a187998ef3eb4b98"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_301.000.jpg",
+    "frame_index": 4515,
+    "timestamp_seconds": 301.0,
+    "frame_id": "36d93d190fbf7b090a610f3b45daf4c06dc03e74"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_302.000.jpg",
+    "frame_index": 4530,
+    "timestamp_seconds": 302.0,
+    "frame_id": "f0e992f89a622caca8c942c021597279f30f9b7a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_303.000.jpg",
+    "frame_index": 4545,
+    "timestamp_seconds": 303.0,
+    "frame_id": "742dffc759b851f943111932e99f4d78bc001664"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_304.000.jpg",
+    "frame_index": 4560,
+    "timestamp_seconds": 304.0,
+    "frame_id": "399c2f706d3a33f25a77790ff64dbe666976c185"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_305.000.jpg",
+    "frame_index": 4575,
+    "timestamp_seconds": 305.0,
+    "frame_id": "6ef41bea601fe7d5ee7b6876f63cabe19b759f68"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_306.000.jpg",
+    "frame_index": 4590,
+    "timestamp_seconds": 306.0,
+    "frame_id": "73819ece2e802e38afae95ad53e4243512be9157"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_307.000.jpg",
+    "frame_index": 4605,
+    "timestamp_seconds": 307.0,
+    "frame_id": "4c4b83e3868eeffe1f77d371566a6ded91a289a3"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_308.000.jpg",
+    "frame_index": 4620,
+    "timestamp_seconds": 308.0,
+    "frame_id": "5a44f3643f98837a1a8ec0de08da8bb456e62838"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_309.000.jpg",
+    "frame_index": 4635,
+    "timestamp_seconds": 309.0,
+    "frame_id": "5fb8bb1475db073a42ba90a102827bdc4933e7de"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_310.000.jpg",
+    "frame_index": 4650,
+    "timestamp_seconds": 310.0,
+    "frame_id": "1c1d538ca1ad439cbdb9df2193342d42d48cdceb"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_311.000.jpg",
+    "frame_index": 4665,
+    "timestamp_seconds": 311.0,
+    "frame_id": "6aef49380abcd342a1ca8aad0bc0368d605961b8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_312.000.jpg",
+    "frame_index": 4680,
+    "timestamp_seconds": 312.0,
+    "frame_id": "3cd5199d60784fc0477c1bc5377fbc3d85a3ba0d"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_313.000.jpg",
+    "frame_index": 4695,
+    "timestamp_seconds": 313.0,
+    "frame_id": "a1be7eb02d14ded12afd161ada6d43c0b89c51ea"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_314.000.jpg",
+    "frame_index": 4710,
+    "timestamp_seconds": 314.0,
+    "frame_id": "9a29d2c25eb2075acdd96e8605923bd002c50299"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_315.000.jpg",
+    "frame_index": 4725,
+    "timestamp_seconds": 315.0,
+    "frame_id": "ec06baeff17be803ce67294c8d2751b12f22a0bb"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_316.000.jpg",
+    "frame_index": 4740,
+    "timestamp_seconds": 316.0,
+    "frame_id": "08879507ebbfa8731066a0c64d0982acde2de1d1"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_317.000.jpg",
+    "frame_index": 4755,
+    "timestamp_seconds": 317.0,
+    "frame_id": "911f9d2b1326d2efe4378b9d1b593914799bc5fc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_318.000.jpg",
+    "frame_index": 4770,
+    "timestamp_seconds": 318.0,
+    "frame_id": "8a2b77981499cbc16cfc8984330c472a920a72b6"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_319.000.jpg",
+    "frame_index": 4785,
+    "timestamp_seconds": 319.0,
+    "frame_id": "16c5dda9a976c70e2e88edfb0a59d9cf69725e92"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_320.000.jpg",
+    "frame_index": 4800,
+    "timestamp_seconds": 320.0,
+    "frame_id": "f4ba99c4a8ae235eb21a8c1b24ef8cd2a404263f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_321.000.jpg",
+    "frame_index": 4815,
+    "timestamp_seconds": 321.0,
+    "frame_id": "dba6b6ee80f7bef68f658e3b0299fb9e819740ce"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_322.000.jpg",
+    "frame_index": 4830,
+    "timestamp_seconds": 322.0,
+    "frame_id": "434e65f7495425cfd94743429963885450d09516"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_323.000.jpg",
+    "frame_index": 4845,
+    "timestamp_seconds": 323.0,
+    "frame_id": "13ebadc1b78d20bd4a1177a3c92bfa38b9ce089c"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_324.000.jpg",
+    "frame_index": 4860,
+    "timestamp_seconds": 324.0,
+    "frame_id": "425f4179cf50a2cd14fc4be6231c2dd7b38a47bd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_325.000.jpg",
+    "frame_index": 4875,
+    "timestamp_seconds": 325.0,
+    "frame_id": "d73472228d10081d700cf20908a29c409c0dab41"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_326.000.jpg",
+    "frame_index": 4890,
+    "timestamp_seconds": 326.0,
+    "frame_id": "05c990c5f492eb8e000cb5079bc600656326e667"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_327.000.jpg",
+    "frame_index": 4905,
+    "timestamp_seconds": 327.0,
+    "frame_id": "4ff8e003c5deda65198ab15365ae6b2c269fa264"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_328.000.jpg",
+    "frame_index": 4920,
+    "timestamp_seconds": 328.0,
+    "frame_id": "fe2b48e8d03698e901dea86237fa0543769d5e01"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_329.000.jpg",
+    "frame_index": 4935,
+    "timestamp_seconds": 329.0,
+    "frame_id": "aaa7416b85a93584797e45c13ee75945bb88dbfa"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_330.000.jpg",
+    "frame_index": 4950,
+    "timestamp_seconds": 330.0,
+    "frame_id": "a2045b542f8e0c58a7f6510025ba7575bab059ad"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_331.000.jpg",
+    "frame_index": 4965,
+    "timestamp_seconds": 331.0,
+    "frame_id": "e45ca03872aa344f9162357043bf62f24d8dfc52"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_332.000.jpg",
+    "frame_index": 4980,
+    "timestamp_seconds": 332.0,
+    "frame_id": "e8506664efab112bbad118017612cab907a57b57"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_333.000.jpg",
+    "frame_index": 4995,
+    "timestamp_seconds": 333.0,
+    "frame_id": "b18b8a20d2d8884ba81f4e4e4a580dffac3ccdcc"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_334.000.jpg",
+    "frame_index": 5010,
+    "timestamp_seconds": 334.0,
+    "frame_id": "f416308ca8c3dd1fb0c49d57c1cdde8490931b8b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_335.000.jpg",
+    "frame_index": 5025,
+    "timestamp_seconds": 335.0,
+    "frame_id": "c11407a31cf1bf4c974b0a10f374b6e2e3edc31b"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_336.000.jpg",
+    "frame_index": 5040,
+    "timestamp_seconds": 336.0,
+    "frame_id": "e54f0a95c015a648a570a1f73da9c55ebfa1e18f"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_337.000.jpg",
+    "frame_index": 5055,
+    "timestamp_seconds": 337.0,
+    "frame_id": "9086d728ce7c8fd8fb863610700b5cf512cb602a"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_338.000.jpg",
+    "frame_index": 5070,
+    "timestamp_seconds": 338.0,
+    "frame_id": "b59c82bae832a02b5db81a98a0c358e965481038"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_339.000.jpg",
+    "frame_index": 5085,
+    "timestamp_seconds": 339.0,
+    "frame_id": "bd56cbde03ba1f6ab3d52d4026d93fc830155893"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_340.000.jpg",
+    "frame_index": 5100,
+    "timestamp_seconds": 340.0,
+    "frame_id": "33a36eb30add4f12e1c57ea315f7d432b12f8584"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_341.000.jpg",
+    "frame_index": 5115,
+    "timestamp_seconds": 341.0,
+    "frame_id": "8e536199e2312c0f5b9d898f5ad94db52a178aaf"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_342.000.jpg",
+    "frame_index": 5130,
+    "timestamp_seconds": 342.0,
+    "frame_id": "577e1c202687792e0baf40064b7650d4726d0ffd"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_343.000.jpg",
+    "frame_index": 5145,
+    "timestamp_seconds": 343.0,
+    "frame_id": "30804040913bfcfc0a1709c74f68302669dc7437"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_344.000.jpg",
+    "frame_index": 5160,
+    "timestamp_seconds": 344.0,
+    "frame_id": "6d98f8db15f999fd6ab9fe2afea2a8b25c9345d8"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_345.000.jpg",
+    "frame_index": 5175,
+    "timestamp_seconds": 345.0,
+    "frame_id": "431a795654a197a6c9a61c21f71ce89dbaae26ad"
+  },
+  {
+    "video_id": "test001_0d074a21b3",
+    "video_name": "StreetScene_Test_Test001.mp4",
+    "video_path": "d:/all-seeing vision/rag/project/datasets/streetscene/streetscene/streetscene/test/test001",
+    "frame_path": "d:/all-seeing vision/rag/project/frames/streetscene_test_test001_346.000.jpg",
+    "frame_index": 5190,
+    "timestamp_seconds": 346.0,
+    "frame_id": "5a68dde9b0e36202dc3d21e1c243eebe2f7300e9"
+  }
+]

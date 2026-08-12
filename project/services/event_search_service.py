@@ -13,8 +13,9 @@ from core.schemas import EventSearchResult, EventVideoMetadata
 logger = logging.getLogger(__name__)
 
 EVENT_TYPE_ALIASES = {
-    "vehicle_crosses_line": ("vehicle_crosses_line", "cross line", "line crossing"),
-    "red_light_violation": ("red_light_violation", "red light violation", "red light"),
+    "vehicle_crosses_line": ("vehicle_crosses_line", "cross line", "line crossing", "压线", "车辆压线", "压线行驶", "跨线", "跨线行驶"),
+    "wrong_way_driving": ("wrong_way_driving", "wrong way driving", "wrong way", "逆行", "车辆逆行", "反向行驶", "逆向行驶", "逆方向行驶", "反方向", "opposite direction"),
+    "red_light_violation": ("red_light_violation", "red light violation", "red light", "闯红灯", "车辆闯红灯", "冲红灯", "红灯违规", "红灯违章", "红灯违法", "违反红灯", "running red light"),
 }
 
 

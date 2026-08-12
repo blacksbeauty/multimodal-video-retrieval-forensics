@@ -1,0 +1,450 @@
+[
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_0.0.jpg",
+    "frame_index": 0,
+    "timestamp_seconds": 0.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_1.2.jpg",
+    "frame_index": 30,
+    "timestamp_seconds": 1.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_2.4.jpg",
+    "frame_index": 60,
+    "timestamp_seconds": 2.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_3.6.jpg",
+    "frame_index": 90,
+    "timestamp_seconds": 3.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_4.8.jpg",
+    "frame_index": 120,
+    "timestamp_seconds": 4.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_6.0.jpg",
+    "frame_index": 150,
+    "timestamp_seconds": 6.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_7.2.jpg",
+    "frame_index": 180,
+    "timestamp_seconds": 7.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_8.4.jpg",
+    "frame_index": 210,
+    "timestamp_seconds": 8.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_9.6.jpg",
+    "frame_index": 240,
+    "timestamp_seconds": 9.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_10.8.jpg",
+    "frame_index": 270,
+    "timestamp_seconds": 10.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_12.0.jpg",
+    "frame_index": 300,
+    "timestamp_seconds": 12.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_13.2.jpg",
+    "frame_index": 330,
+    "timestamp_seconds": 13.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_14.4.jpg",
+    "frame_index": 360,
+    "timestamp_seconds": 14.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_15.6.jpg",
+    "frame_index": 390,
+    "timestamp_seconds": 15.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_16.8.jpg",
+    "frame_index": 420,
+    "timestamp_seconds": 16.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_18.0.jpg",
+    "frame_index": 450,
+    "timestamp_seconds": 18.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_19.2.jpg",
+    "frame_index": 480,
+    "timestamp_seconds": 19.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_20.4.jpg",
+    "frame_index": 510,
+    "timestamp_seconds": 20.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_21.6.jpg",
+    "frame_index": 540,
+    "timestamp_seconds": 21.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_22.8.jpg",
+    "frame_index": 570,
+    "timestamp_seconds": 22.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_24.0.jpg",
+    "frame_index": 600,
+    "timestamp_seconds": 24.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_25.2.jpg",
+    "frame_index": 630,
+    "timestamp_seconds": 25.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_26.4.jpg",
+    "frame_index": 660,
+    "timestamp_seconds": 26.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_27.6.jpg",
+    "frame_index": 690,
+    "timestamp_seconds": 27.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_28.8.jpg",
+    "frame_index": 720,
+    "timestamp_seconds": 28.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_30.0.jpg",
+    "frame_index": 750,
+    "timestamp_seconds": 30.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_31.2.jpg",
+    "frame_index": 780,
+    "timestamp_seconds": 31.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_32.4.jpg",
+    "frame_index": 810,
+    "timestamp_seconds": 32.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_33.6.jpg",
+    "frame_index": 840,
+    "timestamp_seconds": 33.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_34.8.jpg",
+    "frame_index": 870,
+    "timestamp_seconds": 34.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_36.0.jpg",
+    "frame_index": 900,
+    "timestamp_seconds": 36.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_37.2.jpg",
+    "frame_index": 930,
+    "timestamp_seconds": 37.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_38.4.jpg",
+    "frame_index": 960,
+    "timestamp_seconds": 38.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_39.6.jpg",
+    "frame_index": 990,
+    "timestamp_seconds": 39.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_40.8.jpg",
+    "frame_index": 1020,
+    "timestamp_seconds": 40.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_42.0.jpg",
+    "frame_index": 1050,
+    "timestamp_seconds": 42.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_43.2.jpg",
+    "frame_index": 1080,
+    "timestamp_seconds": 43.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_44.4.jpg",
+    "frame_index": 1110,
+    "timestamp_seconds": 44.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_45.6.jpg",
+    "frame_index": 1140,
+    "timestamp_seconds": 45.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_46.8.jpg",
+    "frame_index": 1170,
+    "timestamp_seconds": 46.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_48.0.jpg",
+    "frame_index": 1200,
+    "timestamp_seconds": 48.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_49.2.jpg",
+    "frame_index": 1230,
+    "timestamp_seconds": 49.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_50.4.jpg",
+    "frame_index": 1260,
+    "timestamp_seconds": 50.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_51.6.jpg",
+    "frame_index": 1290,
+    "timestamp_seconds": 51.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_52.8.jpg",
+    "frame_index": 1320,
+    "timestamp_seconds": 52.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_54.0.jpg",
+    "frame_index": 1350,
+    "timestamp_seconds": 54.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_55.2.jpg",
+    "frame_index": 1380,
+    "timestamp_seconds": 55.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_56.4.jpg",
+    "frame_index": 1410,
+    "timestamp_seconds": 56.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_57.6.jpg",
+    "frame_index": 1440,
+    "timestamp_seconds": 57.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_58.8.jpg",
+    "frame_index": 1470,
+    "timestamp_seconds": 58.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_60.0.jpg",
+    "frame_index": 1500,
+    "timestamp_seconds": 60.0
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_61.2.jpg",
+    "frame_index": 1530,
+    "timestamp_seconds": 61.2
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_62.4.jpg",
+    "frame_index": 1560,
+    "timestamp_seconds": 62.4
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_63.6.jpg",
+    "frame_index": 1590,
+    "timestamp_seconds": 63.6
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_64.8.jpg",
+    "frame_index": 1620,
+    "timestamp_seconds": 64.8
+  },
+  {
+    "video_id": "MVI_40863_a133093a85",
+    "video_name": "MVI_40863.avi",
+    "video_path": "D:\\all-seeing vision\\RAG\\project\\videos\\MVI_40863.avi",
+    "frame_path": "D:\\all-seeing vision\\RAG\\project\\frames\\MVI_40863_66.0.jpg",
+    "frame_index": 1650,
+    "timestamp_seconds": 66.0
+  }
+]

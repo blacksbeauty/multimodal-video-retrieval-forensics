@@ -1,0 +1,7600 @@
+{
+  "total_queries": 200,
+  "overall": {
+    "count": 200,
+    "recall_at_1": 0.735,
+    "recall_at_5": 0.99,
+    "mrr": 0.8545,
+    "hit1": 147,
+    "hit5": 198
+  },
+  "categories": {
+    "object": {
+      "overall": {
+        "count": 70,
+        "recall_at_1": 0.9429,
+        "recall_at_5": 0.9857,
+        "mrr": 0.9643,
+        "hit1": 66,
+        "hit5": 69
+      },
+      "subcategories": {
+        "bus": {
+          "count": 25,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "mrr": 1.0,
+          "hit1": 25,
+          "hit5": 25
+        },
+        "car": {
+          "count": 25,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "mrr": 1.0,
+          "hit1": 25,
+          "hit5": 25
+        },
+        "truck": {
+          "count": 20,
+          "recall_at_1": 0.8,
+          "recall_at_5": 0.95,
+          "mrr": 0.875,
+          "hit1": 16,
+          "hit5": 19
+        }
+      }
+    },
+    "event": {
+      "overall": {
+        "count": 70,
+        "recall_at_1": 0.6571,
+        "recall_at_5": 1.0,
+        "mrr": 0.8164,
+        "hit1": 46,
+        "hit5": 70
+      },
+      "subcategories": {
+        "cross_line": {
+          "count": 25,
+          "recall_at_1": 0.92,
+          "recall_at_5": 1.0,
+          "mrr": 0.96,
+          "hit1": 23,
+          "hit5": 25
+        },
+        "red_light": {
+          "count": 20,
+          "recall_at_1": 0.0,
+          "recall_at_5": 1.0,
+          "mrr": 0.47,
+          "hit1": 0,
+          "hit5": 20
+        },
+        "wrong_way": {
+          "count": 25,
+          "recall_at_1": 0.92,
+          "recall_at_5": 1.0,
+          "mrr": 0.95,
+          "hit1": 23,
+          "hit5": 25
+        }
+      }
+    },
+    "combo": {
+      "overall": {
+        "count": 60,
+        "recall_at_1": 0.5833,
+        "recall_at_5": 0.9833,
+        "mrr": 0.7708,
+        "hit1": 35,
+        "hit5": 59
+      },
+      "subcategories": {
+        "bus_cl": {
+          "count": 10,
+          "recall_at_1": 0.0,
+          "recall_at_5": 1.0,
+          "mrr": 0.5,
+          "hit1": 0,
+          "hit5": 10
+        },
+        "bus_ww": {
+          "count": 15,
+          "recall_at_1": 0.8,
+          "recall_at_5": 1.0,
+          "mrr": 0.8722,
+          "hit1": 12,
+          "hit5": 15
+        },
+        "car_rl": {
+          "count": 10,
+          "recall_at_1": 0.0,
+          "recall_at_5": 0.9,
+          "mrr": 0.45,
+          "hit1": 0,
+          "hit5": 9
+        },
+        "truck_cl": {
+          "count": 15,
+          "recall_at_1": 0.8667,
+          "recall_at_5": 1.0,
+          "mrr": 0.9111,
+          "hit1": 13,
+          "hit5": 15
+        },
+        "truck_ww": {
+          "count": 5,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "mrr": 1.0,
+          "hit1": 5,
+          "hit5": 5
+        },
+        "vague": {
+          "count": 5,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "mrr": 1.0,
+          "hit1": 5,
+          "hit5": 5
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "Object Recall R@1": {
+      "value": 0.9429,
+      "target": 0.6,
+      "passed": true
+    },
+    "Object Recall R@5": {
+      "value": 0.9857,
+      "target": 0.8,
+      "passed": true
+    },
+    "Event Accuracy R@1": {
+      "value": 0.6571,
+      "target": 0.5,
+      "passed": true
+    },
+    "Event Accuracy R@5": {
+      "value": 1.0,
+      "target": 0.75,
+      "passed": true
+    },
+    "Combo Recall R@1": {
+      "value": 0.5833,
+      "target": 0.45,
+      "passed": true
+    },
+    "Combo Recall R@5": {
+      "value": 0.9833,
+      "target": 0.7,
+      "passed": true
+    }
+  },
+  "all_pass": true,
+  "query_reports": [
+    {
+      "query": "公交车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "巴士",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "大客车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "公共汽车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4442
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4388
+        }
+      ]
+    },
+    {
+      "query": "大型客车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "一辆公交车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.462
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4609
+        }
+      ]
+    },
+    {
+      "query": "大巴车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "客车行驶",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4242
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        }
+      ]
+    },
+    {
+      "query": "公交车在道路上",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4713
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4656
+        }
+      ]
+    },
+    {
+      "query": "巴士经过路口",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4698
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4639
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40892.avi",
+          "score": 0.4639
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40891.avi",
+          "score": 0.4622
+        }
+      ]
+    },
+    {
+      "query": "找一辆公交车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "有巴士的画面",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "公交车的视频",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4664
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "大型公交车辆",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4581
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        }
+      ]
+    },
+    {
+      "query": "道路上的巴士",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "公共汽车行驶中",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4512
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4423
+        }
+      ]
+    },
+    {
+      "query": "找一下公交车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "有没有大巴车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "客运车辆",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.424
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4217
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40863.avi",
+          "score": 0.421
+        }
+      ]
+    },
+    {
+      "query": "公交大巴",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.462
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4592
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        }
+      ]
+    },
+    {
+      "query": "大巴士",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "城市公交车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4752
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4718
+        }
+      ]
+    },
+    {
+      "query": "看到一辆大巴",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40901.avi",
+          "score": 0.4526
+        }
+      ]
+    },
+    {
+      "query": "长途客车",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4308
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4279
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        }
+      ]
+    },
+    {
+      "query": "大型巴士",
+      "category": "object",
+      "subcategory": "bus",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        }
+      ]
+    },
+    {
+      "query": "货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "大货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "重型卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "一辆货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "卡车在道路上",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "货车经过",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": false,
+      "first_relevant_rank": 0,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40852.avi",
+          "score": 0.4344
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.4333
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40892.avi",
+          "score": 0.4312
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40863.avi",
+          "score": 0.43
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.4298
+        }
+      ]
+    },
+    {
+      "query": "大卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "运货车辆",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "找一辆货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40863.avi",
+          "score": 0.408
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        }
+      ]
+    },
+    {
+      "query": "有卡车的画面",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "货车的视频",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40863.avi",
+          "score": 0.4226
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40901.avi",
+          "score": 0.4209
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.4193
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.4186
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.4168
+        }
+      ]
+    },
+    {
+      "query": "大型货运车辆",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "道路上的卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "找一下货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40863.avi",
+          "score": 0.4128
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40901.avi",
+          "score": 0.4036
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        }
+      ]
+    },
+    {
+      "query": "大卡车行驶",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "载货汽车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "货运卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4103
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.41
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4026
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4023
+        }
+      ]
+    },
+    {
+      "query": "有没有大货车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40863.avi",
+          "score": 0.4236
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40901.avi",
+          "score": 0.421
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4165
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40904.avi",
+          "score": 0.4157
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40902.avi",
+          "score": 0.4141
+        }
+      ]
+    },
+    {
+      "query": "看到一辆卡车",
+      "category": "object",
+      "subcategory": "truck",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.4176
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40892.avi",
+          "score": 0.4153
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40904.avi",
+          "score": 0.4141
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40905.avi",
+          "score": 0.4128
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.4127
+        }
+      ]
+    },
+    {
+      "query": "汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "轿车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "小汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4308
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.4295
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4237
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.4225
+        }
+      ]
+    },
+    {
+      "query": "机动车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4568
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40854.avi",
+          "score": 0.4512
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4511
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40864.avi",
+          "score": 0.4502
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40852.avi",
+          "score": 0.4488
+        }
+      ]
+    },
+    {
+      "query": "车辆",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4347
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.4342
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4328
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4289
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        }
+      ]
+    },
+    {
+      "query": "一辆汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4176
+        }
+      ]
+    },
+    {
+      "query": "道路上的汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.446
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4449
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40891.avi",
+          "score": 0.4436
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40892.avi",
+          "score": 0.4413
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.441
+        }
+      ]
+    },
+    {
+      "query": "小轿车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "机动车辆",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4557
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.455
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4521
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4521
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4502
+        }
+      ]
+    },
+    {
+      "query": "行驶中的车辆",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40853.avi",
+          "score": 0.4699
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40851.avi",
+          "score": 0.4695
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4688
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4678
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40855.avi",
+          "score": 0.4628
+        }
+      ]
+    },
+    {
+      "query": "路上的车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4287
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40892.avi",
+          "score": 0.4282
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4265
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.424
+        }
+      ]
+    },
+    {
+      "query": "找一辆汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "有车辆的画面",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40853.avi",
+          "score": 0.4313
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4292
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.4284
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.428
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4278
+        }
+      ]
+    },
+    {
+      "query": "小型客车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "机动车行驶",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4734
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40852.avi",
+          "score": 0.4717
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.47
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4685
+        }
+      ]
+    },
+    {
+      "query": "一辆轿车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4169
+        }
+      ]
+    },
+    {
+      "query": "小汽车在道路上",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40892.avi",
+          "score": 0.4353
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4307
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40891.avi",
+          "score": 0.4303
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4272
+        }
+      ]
+    },
+    {
+      "query": "汽车经过",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40852.avi",
+          "score": 0.4505
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40854.avi",
+          "score": 0.446
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.4455
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40892.avi",
+          "score": 0.4435
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4421
+        }
+      ]
+    },
+    {
+      "query": "看看有没有车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40863.avi",
+          "score": 0.4255
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4234
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.4225
+        }
+      ]
+    },
+    {
+      "query": "路上的机动车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40852.avi",
+          "score": 0.456
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40854.avi",
+          "score": 0.4556
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4549
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40851.avi",
+          "score": 0.4525
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40855.avi",
+          "score": 0.4522
+        }
+      ]
+    },
+    {
+      "query": "行驶的轿车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4456
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.4434
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4431
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40851.avi",
+          "score": 0.4427
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.441
+        }
+      ]
+    },
+    {
+      "query": "路面上的小汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4448
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4395
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40903.avi",
+          "score": 0.4363
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40892.avi",
+          "score": 0.4359
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40901.avi",
+          "score": 0.4335
+        }
+      ]
+    },
+    {
+      "query": "机动汽车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40855.avi",
+          "score": 0.4362
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4332
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4312
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40891.avi",
+          "score": 0.4302
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40852.avi",
+          "score": 0.4258
+        }
+      ]
+    },
+    {
+      "query": "道路上的小轿车",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40892.avi",
+          "score": 0.4364
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40864.avi",
+          "score": 0.4334
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40891.avi",
+          "score": 0.4327
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4286
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        }
+      ]
+    },
+    {
+      "query": "汽车行驶中",
+      "category": "object",
+      "subcategory": "car",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4454
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40851.avi",
+          "score": 0.4444
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4439
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40855.avi",
+          "score": 0.4425
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40852.avi",
+          "score": 0.4411
+        }
+      ]
+    },
+    {
+      "query": "车辆逆行",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "逆向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "机动车逆向驾驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40903.avi",
+          "score": 0.4544
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40901.avi",
+          "score": 0.4447
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4438
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40905.avi",
+          "score": 0.4412
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.4402
+        }
+      ]
+    },
+    {
+      "query": "车辆方向与道路规定相反",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "机动车违规反向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆驶入对向车道",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "反方向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆朝相反方向移动",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆错误方向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "汽车逆着车流行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆进入反向道路",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "逆行车辆",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "反向驾驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆反向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "违法逆行",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "机动车逆向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "违章逆行车辆",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆违反方向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "逆向通行",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 4,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4577
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40851.avi",
+          "score": 0.4572
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4566
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4504
+        }
+      ]
+    },
+    {
+      "query": "车辆不走正确方向",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40852.avi",
+          "score": 0.4492
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.4477
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4447
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40855.avi",
+          "score": 0.4445
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4433
+        }
+      ]
+    },
+    {
+      "query": "有车逆向行驶",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "逆行违章",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆驶向相反方向",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "机动车反方向通行",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "逆向行驶的车辆",
+      "category": "event",
+      "subcategory": "wrong_way",
+      "expected_count": 7,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "车辆压线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "压线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆跨越道路标线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆驶过车道边界",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "机动车压道路实线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆跨线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大型车辆越过车道线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆没有保持车道",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "货车偏离正常车道",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "机动车压道路标线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆压着标线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "跨越车道线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆越过道路标线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "压线违章",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆压线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "不按规定车道行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "vague_event",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆偏离车道",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "机动车跨越标线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "压线车辆",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆越线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4505
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40852.avi",
+          "score": 0.4503
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.4493
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.448
+        }
+      ]
+    },
+    {
+      "query": "跨线违章",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆不保持车道",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40854.avi",
+          "score": 0.4546
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40852.avi",
+          "score": 0.4545
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.4518
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4518
+        }
+      ]
+    },
+    {
+      "query": "压道路实线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆越过车道分隔线",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "机动车越线行驶",
+      "category": "event",
+      "subcategory": "cross_line",
+      "expected_count": 11,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "车辆闯红灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "闯红灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "汽车违反交通信号灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "红灯亮时车辆通过路口",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4735
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4684
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40853.avi",
+          "score": 0.468
+        }
+      ]
+    },
+    {
+      "query": "车辆无视红灯继续行驶",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40903.avi",
+          "score": 0.4618
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        }
+      ]
+    },
+    {
+      "query": "机动车闯信号灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.4597
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        }
+      ]
+    },
+    {
+      "query": "小车冲过红灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40892.avi",
+          "score": 0.4645
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40904.avi",
+          "score": 0.4615
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40903.avi",
+          "score": 0.4609
+        }
+      ]
+    },
+    {
+      "query": "车辆抢红灯通过路口",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.4687
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4679
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40901.avi",
+          "score": 0.4647
+        }
+      ]
+    },
+    {
+      "query": "车辆未遵守红绿灯规则",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40903.avi",
+          "score": 0.4625
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4623
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.4616
+        }
+      ]
+    },
+    {
+      "query": "车辆不按交通信号通行",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "红灯时通过路口",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 5,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40854.avi",
+          "score": 0.486
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.483
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4825
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        }
+      ]
+    },
+    {
+      "query": "闯信号灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4634
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40851.avi",
+          "score": 0.4612
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        }
+      ]
+    },
+    {
+      "query": "车辆在红灯时通过",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4751
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4733
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4698
+        }
+      ]
+    },
+    {
+      "query": "抢红灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40905.avi",
+          "score": 0.4591
+        }
+      ]
+    },
+    {
+      "query": "违章闯红灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "红灯期间通过路口",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 5,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40854.avi",
+          "score": 0.486
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40851.avi",
+          "score": 0.483
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4825
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        }
+      ]
+    },
+    {
+      "query": "机动车违反信号灯",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "车辆闯红灯通过",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40903.avi",
+          "score": 0.4616
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40902.avi",
+          "score": 0.4601
+        }
+      ]
+    },
+    {
+      "query": "无视红灯通过",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "红灯时强行通过",
+      "category": "event",
+      "subcategory": "red_light",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4599
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "公交车逆行",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "巴士逆向行驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "大客车反向行驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "公共汽车逆向驾驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4293
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.4278
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40891.avi",
+          "score": 0.4263
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40863.avi",
+          "score": 0.4232
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40902.avi",
+          "score": 0.4214
+        }
+      ]
+    },
+    {
+      "query": "公交车驶入对向车道",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "巴士反方向行驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "大客车走错方向",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "公共汽车错误方向行驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "公交车违规逆行",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "客车逆向通过道路",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "大巴车反方向开",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "公交车方向错误",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 4,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.4595
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4578
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40902.avi",
+          "score": 0.4551
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4535
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40892.avi",
+          "score": 0.4531
+        }
+      ]
+    },
+    {
+      "query": "巴士违章逆行",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "大客车逆向通行",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 3,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40864.avi",
+          "score": 0.439
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40902.avi",
+          "score": 0.4385
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4384
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.437
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40891.avi",
+          "score": 0.4369
+        }
+      ]
+    },
+    {
+      "query": "公共汽车反向驾驶",
+      "category": "combo",
+      "subcategory": "bus_ww",
+      "expected_count": 9,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "货车压线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "卡车跨越道路标线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大货车压道路实线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "重型卡车越过车道线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "货车没有保持车道",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "卡车偏离正常车道",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大货车压道路标线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "货车跨越车道线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "卡车压线行驶",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大货车越线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 3,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40902.avi",
+          "score": 0.4299
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4286
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40903.avi",
+          "score": 0.4282
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40905.avi",
+          "score": 0.4252
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40901.avi",
+          "score": 0.4248
+        }
+      ]
+    },
+    {
+      "query": "重型货车压标线",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "卡车不保持车道",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 3,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40892.avi",
+          "score": 0.428
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.4226
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40864.avi",
+          "score": 0.4193
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4187
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40853.avi",
+          "score": 0.417
+        }
+      ]
+    },
+    {
+      "query": "货车偏离车道",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大卡车跨线行驶",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "货车压着标线开",
+      "category": "combo",
+      "subcategory": "truck_cl",
+      "expected_count": 5,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "汽车闯红灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "轿车闯红灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "小汽车违反信号灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "机动车红灯时通过",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4636
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4608
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40853.avi",
+          "score": 0.4595
+        }
+      ]
+    },
+    {
+      "query": "车辆在路口闯红灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4671
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4666
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4641
+        }
+      ]
+    },
+    {
+      "query": "汽车抢红灯通过",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "轿车无视红灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40853.avi",
+          "score": 0.4629
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.459
+        }
+      ]
+    },
+    {
+      "query": "小汽车闯信号灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "汽车红灯期间通过",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "traffic_video_modified.avi",
+          "score": 0.5269
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40891.avi",
+          "score": 0.4809
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4606
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40853.avi",
+          "score": 0.4591
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4588
+        }
+      ]
+    },
+    {
+      "query": "轿车不遵守红灯",
+      "category": "combo",
+      "subcategory": "car_rl",
+      "expected_count": 1,
+      "hit_at_1": false,
+      "hit_at_5": false,
+      "first_relevant_rank": 0,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40853.avi",
+          "score": 0.4672
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40852.avi",
+          "score": 0.4627
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40854.avi",
+          "score": 0.4625
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.4614
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.4613
+        }
+      ]
+    },
+    {
+      "query": "货车逆行",
+      "category": "combo",
+      "subcategory": "truck_ww",
+      "expected_count": 1,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "卡车逆向行驶",
+      "category": "combo",
+      "subcategory": "truck_ww",
+      "expected_count": 1,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "大货车反向行驶",
+      "category": "combo",
+      "subcategory": "truck_ww",
+      "expected_count": 1,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "卡车走错方向",
+      "category": "combo",
+      "subcategory": "truck_ww",
+      "expected_count": 1,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "货车驶入对向车道",
+      "category": "combo",
+      "subcategory": "truck_ww",
+      "expected_count": 1,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40855.avi",
+          "score": 0.5301
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40905.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40903.avi",
+          "score": 0.5281
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40904.avi",
+          "score": 0.5276
+        }
+      ]
+    },
+    {
+      "query": "公交车压线",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "巴士跨越标线",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大客车越过车道线",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "公共汽车压线行驶",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "公交车没有保持车道",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.7,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "客车偏离车道",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "巴士压道路标线",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 0.8,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "大客车越线行驶",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "公共汽车跨线",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "event_primary",
+      "event_conf": 1.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "公交车偏离车道",
+      "category": "combo",
+      "subcategory": "bus_cl",
+      "expected_count": 4,
+      "hit_at_1": false,
+      "hit_at_5": true,
+      "first_relevant_rank": 2,
+      "route": "clip_primary",
+      "event_conf": 0.6,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "有车辆违反交通规则",
+      "category": "combo",
+      "subcategory": "vague",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40853.avi",
+          "score": 0.4542
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40851.avi",
+          "score": 0.4535
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4527
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40904.avi",
+          "score": 0.4511
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40854.avi",
+          "score": 0.451
+        }
+      ]
+    },
+    {
+      "query": "道路上存在异常驾驶行为",
+      "category": "combo",
+      "subcategory": "vague",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "vague_event",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "寻找违规车辆",
+      "category": "combo",
+      "subcategory": "vague",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "vague_event",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    },
+    {
+      "query": "驾驶行为存在安全隐患",
+      "category": "combo",
+      "subcategory": "vague",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "clip_only",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40903.avi",
+          "score": 0.4365
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40853.avi",
+          "score": 0.4363
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40852.avi",
+          "score": 0.4352
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40854.avi",
+          "score": 0.4346
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40851.avi",
+          "score": 0.4342
+        }
+      ]
+    },
+    {
+      "query": "交通违法事件",
+      "category": "combo",
+      "subcategory": "vague",
+      "expected_count": 14,
+      "hit_at_1": true,
+      "hit_at_5": true,
+      "first_relevant_rank": 1,
+      "route": "vague_event",
+      "event_conf": 0.0,
+      "top5_results": [
+        {
+          "rank": 1,
+          "video": "MVI_40901.avi",
+          "score": 0.5509
+        },
+        {
+          "rank": 2,
+          "video": "MVI_40863.avi",
+          "score": 0.5381
+        },
+        {
+          "rank": 3,
+          "video": "MVI_40855.avi",
+          "score": 0.5375
+        },
+        {
+          "rank": 4,
+          "video": "MVI_40792.avi",
+          "score": 0.5357
+        },
+        {
+          "rank": 5,
+          "video": "MVI_40864.avi",
+          "score": 0.5302
+        }
+      ]
+    }
+  ]
+}

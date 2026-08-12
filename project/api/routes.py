@@ -8,6 +8,8 @@ from fastapi.templating import Jinja2Templates
 from config import Settings
 from core.app_state import AppState
 from core.schemas import (
+    AccidentDatasetIngestRequest,
+    AccidentDatasetIngestResponse,
     BatchIngestRequest,
     BatchIngestResponse,
     DetectionIngestRequest,
@@ -185,6 +187,31 @@ async def ingest_streetscene(
         raise HTTPException(status_code=500, detail="Failed to ingest StreetScene dataset.") from exc
 
     return StreetSceneIngestResponse(**result)
+
+
+@router.post("/datasets/accident/ingest", response_model=AccidentDatasetIngestResponse)
+async def ingest_accident_dataset(
+    payload: AccidentDatasetIngestRequest,
+    services: AppState = Depends(get_services),
+) -> AccidentDatasetIngestResponse:
+    try:
+        result = services.accident_import_service.ingest_directory(
+            dataset_root=payload.dataset_root,
+            scenario_names=payload.scenario_names,
+            max_scenarios=payload.max_scenarios,
+            frame_step=payload.frame_step,
+            clip_service=services.clip_service,
+            index_service=services.index_service,
+        )
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except Exception as exc:  # pragma: no cover - safety net for API layer
+        logger.exception("Failed to ingest accident dataset")
+        raise HTTPException(status_code=500, detail="Failed to ingest accident dataset.") from exc
+
+    return AccidentDatasetIngestResponse(**result)
 
 
 @router.post("/search", response_model=SearchResponse)
@@ -455,7 +482,7 @@ async def ocr_search(
 ) -> OCRSearchResponse:
     try:
         results = services.ocr_search_service.search(
-            query_text=payload.query,
+            query=payload.query,
             top_k=payload.top_k,
         )
     except ValueError as exc:

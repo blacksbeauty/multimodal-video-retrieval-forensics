@@ -31,7 +31,15 @@ class EmbeddingService:
 
         self._prepare_download_environment()
 
-        import open_clip
+        device = self._select_device()
+        backend = self.settings.clip_backend.lower()
+
+        if backend == "cnclip":
+            self._load_cnclip_model(device)
+        else:
+            self._load_openclip_model(device)
+
+    def _select_device(self) -> str:
         import torch
 
         preferred_device = self.settings.device.lower()
@@ -46,6 +54,12 @@ class EmbeddingService:
 
         if preferred_device.startswith("cuda") and device != "cuda":
             logger.warning("CUDA requested but unavailable. Falling back to CPU.")
+
+        return device
+
+    def _load_openclip_model(self, device: str) -> None:
+        import open_clip
+        import torch
 
         logger.info(
             "Loading OpenCLIP model=%s pretrained=%s device=%s",
@@ -70,6 +84,39 @@ class EmbeddingService:
         self._model = model
         self._preprocess = preprocess
         self._tokenizer = tokenizer
+        self._torch = torch
+        self._device = device
+        self._embedding_dim = self._infer_embedding_dim()
+
+    def _load_cnclip_model(self, device: str) -> None:
+        import torch
+
+        import cn_clip.clip as clip
+        from cn_clip.clip import load_from_name
+
+        logger.info(
+            "Loading CN-CLIP model=%s device=%s use_modelscope=%s",
+            self.settings.cnclip_model_name,
+            device,
+            self.settings.cnclip_use_modelscope,
+        )
+        try:
+            model, preprocess = load_from_name(
+                self.settings.cnclip_model_name,
+                device=device,
+                download_root=str(self.settings.cnclip_download_root),
+                use_modelscope=self.settings.cnclip_use_modelscope,
+            )
+        except Exception as exc:
+            logger.exception("Failed to load CN-CLIP weights.")
+            raise RuntimeError(
+                "Failed to load CN-CLIP weights. Check network access and modelscope installation, then restart the service."
+            ) from exc
+        model.eval()
+
+        self._model = model
+        self._preprocess = preprocess
+        self._tokenizer = clip.tokenize
         self._torch = torch
         self._device = device
         self._embedding_dim = self._infer_embedding_dim()

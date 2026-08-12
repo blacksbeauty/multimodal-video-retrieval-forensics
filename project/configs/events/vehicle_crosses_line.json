@@ -3,5 +3,6 @@
     [640.0, 280.0],
     [640.0, 720.0]
   ],
-  "allowed_labels": ["car", "truck", "bus", "motorcycle"]
+  "allowed_labels": ["car", "truck", "bus", "motorcycle"],
+  "min_displacement_px": 10.0
 }

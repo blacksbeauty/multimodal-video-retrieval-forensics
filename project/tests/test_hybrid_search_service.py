@@ -22,9 +22,11 @@ class _FakeQueryRewriteService:
                 "directions": [],
                 "motions": [],
                 "event_types": ["vehicle_crosses_line"],
+                "event_confidence": 1.0,
                 "attributes": {},
                 "rewritten_queries": [query],
                 "normalized_query": query,
+                "intent_candidates": [],
             }
         return {
             "kind": "object",
@@ -37,9 +39,11 @@ class _FakeQueryRewriteService:
             "directions": [],
             "motions": [],
             "event_types": [],
+            "event_confidence": 0.0,
             "attributes": {},
             "rewritten_queries": [query],
             "normalized_query": query,
+            "intent_candidates": [],
         }
 
 
@@ -175,11 +179,13 @@ class HybridSearchServiceTests(unittest.TestCase):
 
         self.assertEqual(len(response["results"]), 1)
         result = response["results"][0]
+        # Phase 3: event queries always run CLIP (no skip_non_event)
         self.assertIn("event", result["matched_by"])
+        self.assertIn("clip", result["matched_by"])
         self.assertEqual(result["matched_event_type"], "vehicle_crosses_line")
         self.assertEqual(result["event_score"], 0.88)
-        self.assertEqual(sorted(result["matched_by"]), ["event"])
-        self.assertEqual(clip_service.calls, 0)
+        # CLIP is always called now (skip_non_event removed)
+        self.assertEqual(clip_service.calls, 1)
 
 
 if __name__ == "__main__":

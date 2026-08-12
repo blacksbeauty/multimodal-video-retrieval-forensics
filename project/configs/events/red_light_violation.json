@@ -6,6 +6,7 @@
     [640.0, 720.0]
   ],
   "allowed_labels": ["car", "truck", "bus", "motorcycle"],
+  "min_displacement_px": 10.0,
   "state_window_sec": 2.0,
   "traffic_light_min_confidence": 0.25,
   "traffic_light_min_state_score": 0.01

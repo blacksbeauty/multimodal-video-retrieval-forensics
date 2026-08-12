@@ -4,27 +4,27 @@
   "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
   "events": [
     {
-      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:21",
+      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:10",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40864_93577ee40a",
       "video_name": "MVI_40864.mp4",
       "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
       "start_ts": 0.0,
-      "end_ts": 56.4,
+      "end_ts": 7.2,
       "track_ids": [
-        "MVI_40864_93577ee40a:21"
+        "MVI_40864_93577ee40a:10"
       ],
-      "confidence": 0.682247965259755,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_56.4.jpg",
+      "confidence": 0.7663587927818298,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_7.2.jpg",
       "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_52.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_54.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_55.2.jpg"
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_1.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_3.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_7.2.jpg"
       ],
       "attributes": {
-        "label": "bus",
-        "direction": "left_to_right",
+        "label": "car",
+        "direction": "top_to_bottom",
         "line": [
           [
             640.0,
@@ -35,9 +35,74 @@
             720.0
           ]
         ],
-        "cross_timestamp": 54.0
+        "cross_timestamp": 3.6,
+        "crossing_mode": "vehicle_bbox"
       },
-      "description": "bus crosses configured line"
+      "description": "car crosses configured line"
+    },
+    {
+      "event_id": "MVI_40864_93577ee40a:wrong_way_driving:MVI_40864_93577ee40a:12",
+      "event_type": "wrong_way_driving",
+      "plugin_name": "wrong_way_driving",
+      "video_id": "MVI_40864_93577ee40a",
+      "video_name": "MVI_40864.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
+      "start_ts": 0.0,
+      "end_ts": 7.2,
+      "track_ids": [
+        "MVI_40864_93577ee40a:12"
+      ],
+      "confidence": 0.5324632518753402,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_4.8.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_4.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_7.2.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "bottom_to_top",
+        "allowed_direction": [
+          1.0,
+          0.0
+        ],
+        "direction_dot": -0.32337577538930745,
+        "roi_ratio": 1.0,
+        "min_displacement_px": 20.0
+      },
+      "description": "car moves opposite to configured lane direction"
+    },
+    {
+      "event_id": "MVI_40864_93577ee40a:wrong_way_driving:MVI_40864_93577ee40a:16",
+      "event_type": "wrong_way_driving",
+      "plugin_name": "wrong_way_driving",
+      "video_id": "MVI_40864_93577ee40a",
+      "video_name": "MVI_40864.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
+      "start_ts": 0.0,
+      "end_ts": 14.4,
+      "track_ids": [
+        "MVI_40864_93577ee40a:16"
+      ],
+      "confidence": 0.5130647856598289,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_9.6.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_8.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_14.4.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "top_to_bottom",
+        "allowed_direction": [
+          1.0,
+          0.0
+        ],
+        "direction_dot": -0.36038792892602123,
+        "roi_ratio": 1.0,
+        "min_displacement_px": 20.0
+      },
+      "description": "car moves opposite to configured lane direction"
     },
     {
       "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:79",
@@ -54,9 +119,9 @@
       "confidence": 0.6609268310742501,
       "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_54.0.jpg",
       "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_55.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_56.4.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_57.6.jpg"
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_52.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_54.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_55.2.jpg"
       ],
       "attributes": {
         "label": "car",
@@ -71,9 +136,46 @@
             720.0
           ]
         ],
-        "cross_timestamp": 56.4
+        "cross_timestamp": 54.0,
+        "crossing_mode": "vehicle_bbox"
       },
       "description": "car crosses configured line"
+    },
+    {
+      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:160",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40864_93577ee40a",
+      "video_name": "MVI_40864.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
+      "start_ts": 14.4,
+      "end_ts": 21.6,
+      "track_ids": [
+        "MVI_40864_93577ee40a:160"
+      ],
+      "confidence": 0.504059910774231,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_21.6.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_20.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_21.6.jpg"
+      ],
+      "attributes": {
+        "label": "truck",
+        "direction": "top_to_bottom",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 21.6,
+        "crossing_mode": "vehicle_bbox"
+      },
+      "description": "truck crosses configured line"
     },
     {
       "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:181",
@@ -106,27 +208,29 @@
             720.0
           ]
         ],
-        "cross_timestamp": 20.4
+        "cross_timestamp": 16.8,
+        "crossing_mode": "vehicle_bbox"
       },
       "description": "bus crosses configured line"
     },
     {
-      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:409",
+      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:233",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40864_93577ee40a",
       "video_name": "MVI_40864.mp4",
       "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
-      "start_ts": 48.0,
-      "end_ts": 49.2,
+      "start_ts": 22.8,
+      "end_ts": 45.6,
       "track_ids": [
-        "MVI_40864_93577ee40a:409"
+        "MVI_40864_93577ee40a:233"
       ],
-      "confidence": 0.6797578036785126,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_49.2.jpg",
+      "confidence": 0.7514825794431899,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_25.2.jpg",
       "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_48.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40864_49.2.jpg"
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_40.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_42.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_45.6.jpg"
       ],
       "attributes": {
         "label": "car",
@@ -141,9 +245,46 @@
             720.0
           ]
         ],
-        "cross_timestamp": 49.2
+        "cross_timestamp": 42.0,
+        "crossing_mode": "vehicle_bbox"
       },
       "description": "car crosses configured line"
+    },
+    {
+      "event_id": "MVI_40864_93577ee40a:vehicle_crosses_line:MVI_40864_93577ee40a:339",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "MVI_40864_93577ee40a",
+      "video_name": "MVI_40864.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40864.avi",
+      "start_ts": 39.6,
+      "end_ts": 43.2,
+      "track_ids": [
+        "MVI_40864_93577ee40a:339"
+      ],
+      "confidence": 0.6155892014503479,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40864_43.2.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_39.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40864_43.2.jpg"
+      ],
+      "attributes": {
+        "label": "truck",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 43.2,
+        "crossing_mode": "vehicle_bbox"
+      },
+      "description": "truck crosses configured line"
     }
   ]
 }

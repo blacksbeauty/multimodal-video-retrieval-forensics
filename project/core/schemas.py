@@ -1,4 +1,4 @@
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -97,6 +97,10 @@ class QueryIntent(BaseModel):
         default_factory=list,
         description="Explicit event types requested by the query, such as red_light_violation.",
     )
+    event_confidence: float = Field(
+        default=0.0,
+        description="Confidence of the event type detection (0.0-1.0). Higher values indicate stronger event routing signal.",
+    )
     attributes: dict[str, Any] = Field(
         default_factory=dict,
         description="Additional parsed attributes such as light_state or duration qualifiers.",
@@ -108,6 +112,10 @@ class QueryIntent(BaseModel):
     normalized_query: str = Field(
         default="",
         description="Normalized text used internally by the parser.",
+    )
+    intent_candidates: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="Top-k intent candidates with confidence scores for confidence-based routing.",
     )
 
     @property
@@ -450,6 +458,59 @@ class StreetSceneIngestResponse(BaseModel):
     errors: List[str] = Field(
         default_factory=list,
         description="Human-readable per-sequence errors.",
+    )
+
+
+class AccidentDatasetIngestRequest(BaseModel):
+    """Request payload for importing CARLA accident BEV sequences into ForeSea assets."""
+
+    dataset_root: Optional[str] = Field(
+        default=None,
+        description="Optional accident dataset root. Defaults to the configured dataset path.",
+    )
+    scenario_names: List[str] = Field(
+        default_factory=list,
+        description="Optional explicit scenario directory names to import.",
+    )
+    max_scenarios: Optional[int] = Field(
+        default=None,
+        ge=1,
+        description="Optional cap on number of scenarios to import.",
+    )
+    frame_step: int = Field(
+        default=1,
+        ge=1,
+        description="Import one frame every N frames from the scenario sequence.",
+    )
+
+
+class AccidentDatasetIngestResult(BaseModel):
+    """Per-scenario result for accident dataset import."""
+
+    video_id: str = Field(..., description="Stable imported video identifier.")
+    video_name: str = Field(..., description="Logical imported video name.")
+    source_scenario_dir: str = Field(..., description="Original scenario directory path.")
+    imported_frames: int = Field(..., description="Number of frames imported into ForeSea assets.")
+    indexed_frames: int = Field(..., description="Number of frames embedded and indexed for CLIP retrieval.")
+    scenario_meta: dict[str, Any] = Field(
+        default_factory=dict,
+        description="Parsed accident scenario metadata from the meta file.",
+    )
+
+
+class AccidentDatasetIngestResponse(BaseModel):
+    """Response payload for accident dataset import."""
+
+    total_scenarios: int = Field(..., description="Total number of scenarios selected for import.")
+    succeeded_scenarios: int = Field(..., description="Number of scenarios imported successfully.")
+    failed_scenarios: int = Field(..., description="Number of scenarios that failed during import.")
+    results: List[AccidentDatasetIngestResult] = Field(
+        default_factory=list,
+        description="Detailed per-scenario import results.",
+    )
+    errors: List[str] = Field(
+        default_factory=list,
+        description="Human-readable per-scenario errors.",
     )
 
 

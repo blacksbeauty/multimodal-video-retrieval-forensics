@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from config import Settings
+from services.accident_dataset_import_service import AccidentDatasetImportService
 from services.clip_service import ClipService
 from services.detection_search_service import DetectionSearchService
 from services.detection_service import DetectionService
@@ -34,6 +35,7 @@ class AppState:
     index_service: IndexService
     search_service: SearchService
     streetscene_import_service: StreetSceneImportService
+    accident_import_service: AccidentDatasetImportService
     ocr_service: OCRService
     ocr_search_service: OCRSearchService
     detection_service: DetectionService
@@ -54,10 +56,13 @@ class AppState:
         video_service = VideoService(settings)
         search_service = SearchService(settings, clip_service, index_service)
         streetscene_import_service = StreetSceneImportService(settings)
+        accident_import_service = AccidentDatasetImportService(settings)
         ocr_service = OCRService(settings)
         ocr_search_service = OCRSearchService(settings)
         detection_service = DetectionService(settings)
-        query_rewrite_service = QueryRewriteService()
+        query_rewrite_service = QueryRewriteService(
+            use_chinese_clip=settings.clip_backend.lower() == "cnclip"
+        )
         detection_search_service = DetectionSearchService(settings, query_rewrite_service)
         event_service = EventService(settings)
         event_search_service = EventSearchService(settings, query_rewrite_service)
@@ -81,6 +86,7 @@ class AppState:
             index_service=index_service,
             search_service=search_service,
             streetscene_import_service=streetscene_import_service,
+            accident_import_service=accident_import_service,
             ocr_service=ocr_service,
             ocr_search_service=ocr_search_service,
             detection_service=detection_service,

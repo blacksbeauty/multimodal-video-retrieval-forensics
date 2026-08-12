@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Sequence
 
 from core.schemas import DetectionVideoMetadata, EventMetadata, TrajectoryPoint, TrajectoryVideoMetadata
 from services.event_plugins.base import EventPluginBase
+from services.event_plugins.geometry import find_line_contact
 from services.event_plugins.registry import register
 
 
@@ -30,7 +31,11 @@ class VehicleCrossesLine(EventPluginBase):
             if track.label not in allowed_labels:
                 continue
 
-            crossing = self._crossing_point(track.points, line)
+            crossing = find_line_contact(
+                track.points,
+                line,
+                min_displacement_px=float(config.get("min_displacement_px", 10.0)),
+            )
             if crossing is None:
                 continue
 
@@ -54,28 +59,12 @@ class VehicleCrossesLine(EventPluginBase):
                         "direction": track.direction,
                         "line": line,
                         "cross_timestamp": crossing["timestamp"],
+                        "crossing_mode": crossing["mode"],
                     },
                     description=f"{track.label} crosses configured line",
                 )
             )
         return events
-
-    def _crossing_point(self, points: Sequence[TrajectoryPoint], line: Sequence[Sequence[float]]) -> Dict[str, float] | None:
-        if len(points) < 2:
-            return None
-
-        previous_side = None
-        for index, point in enumerate(points):
-            side = self._signed_distance(point.center_x, point.center_y, line)
-            if previous_side is not None and side * previous_side < 0:
-                return {"index": float(index), "timestamp": point.timestamp}
-            if side != 0:
-                previous_side = side
-        return None
-
-    def _signed_distance(self, x: float, y: float, line: Sequence[Sequence[float]]) -> float:
-        (x1, y1), (x2, y2) = line
-        return (x - x1) * (y2 - y1) - (y - y1) * (x2 - x1)
 
     def _evidence_frames(self, points: Sequence[TrajectoryPoint], crossing_index: float) -> List[str]:
         index = int(crossing_index)

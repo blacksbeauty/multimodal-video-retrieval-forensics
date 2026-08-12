@@ -6,6 +6,7 @@ import cv2
 
 from core.schemas import DetectionFrameMetadata, DetectionVideoMetadata, EventMetadata, TrajectoryPoint, TrajectoryVideoMetadata
 from services.event_plugins.base import EventPluginBase
+from services.event_plugins.geometry import find_line_contact
 from services.event_plugins.registry import register
 
 
@@ -44,7 +45,11 @@ class RedLightViolation(EventPluginBase):
             if track.label not in allowed_labels:
                 continue
 
-            crossing = self._crossing_point(track.points, stop_line)
+            crossing = find_line_contact(
+                track.points,
+                stop_line,
+                min_displacement_px=float(config.get("min_displacement_px", 10.0)),
+            )
             if crossing is None:
                 continue
 
@@ -83,6 +88,7 @@ class RedLightViolation(EventPluginBase):
                         "direction": track.direction,
                         "line": stop_line,
                         "cross_timestamp": crossing["timestamp"],
+                        "crossing_mode": crossing["mode"],
                         "light_state": light_state["state"],
                         "light_state_confidence": light_state["confidence"],
                         "light_frame": light_state["frame_path"],
@@ -215,23 +221,6 @@ class RedLightViolation(EventPluginBase):
 
         candidates.sort(key=lambda item: (abs(float(item["timestamp"]) - timestamp), -float(item["confidence"])))
         return candidates[0]
-
-    def _crossing_point(self, points: Sequence[TrajectoryPoint], line: Sequence[Sequence[float]]) -> Dict[str, float] | None:
-        if len(points) < 2:
-            return None
-
-        previous_side = None
-        for index, point in enumerate(points):
-            side = self._signed_distance(point.center_x, point.center_y, line)
-            if previous_side is not None and side * previous_side < 0:
-                return {"index": float(index), "timestamp": point.timestamp}
-            if side != 0:
-                previous_side = side
-        return None
-
-    def _signed_distance(self, x: float, y: float, line: Sequence[Sequence[float]]) -> float:
-        (x1, y1), (x2, y2) = line
-        return (x - x1) * (y2 - y1) - (y - y1) * (x2 - x1)
 
     def _evidence_frames(self, points: Sequence[TrajectoryPoint], crossing_index: float) -> List[str]:
         index = int(crossing_index)

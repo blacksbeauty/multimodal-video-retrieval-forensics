@@ -22,9 +22,9 @@ class OCRSearchService:
         self.settings = settings
         self.metadata_store = OCRMetadataStore(settings)
 
-    def search(self, query_text: str, top_k: int = 10) -> List[OCRSearchResult]:
+    def search(self, query: str, top_k: int = 10) -> List[OCRSearchResult]:
         """Search OCR metadata and return ranked OCR search results."""
-        normalized_query = self.normalize_text(query_text)
+        normalized_query = self.normalize_text(query)
         if not normalized_query:
             raise ValueError("OCR search query cannot be empty.")
         if top_k < 1:
@@ -36,7 +36,7 @@ class OCRSearchService:
             logger.warning("No OCR metadata files available for OCR search.")
             return []
 
-        logger.info("Starting OCR search query=%s top_k=%s files=%s", query_text, top_k, len(metadata_files))
+        logger.info("Starting OCR search query=%s top_k=%s files=%s", query, top_k, len(metadata_files))
         for metadata_path in metadata_files:
             metadata = self.metadata_store.load_metadata(metadata_path.stem)
             if metadata is None:
@@ -45,12 +45,12 @@ class OCRSearchService:
             results.extend(self._search_video_metadata(metadata, normalized_query))
 
         ranked = self.rank_results(results)
-        logger.info("Completed OCR search query=%s results=%s", query_text, len(ranked))
+        logger.info("Completed OCR search query=%s results=%s", query, len(ranked))
         return ranked[:top_k]
 
-    def search_as_frames(self, query_text: str, top_k: int = 10) -> List[dict]:
+    def search_as_frames(self, query: str, top_k: int = 10) -> List[dict]:
         """Search OCR metadata and return frame-like records for hybrid fusion."""
-        raw_results = self.search(query_text=query_text, top_k=top_k)
+        raw_results = self.search(query=query, top_k=top_k)
         return [
             {
                 "video_id": self._build_video_id(result.video_name),
@@ -73,9 +73,9 @@ class OCRSearchService:
         collapsed = re.sub(r"\s+", "", lowered)
         return collapsed
 
-    def fuzzy_match(self, query_text: str, candidate_text: str) -> float:
+    def fuzzy_match(self, query: str, candidate_text: str) -> float:
         """Compute a fuzzy similarity score between normalized query and OCR text."""
-        normalized_query = self.normalize_text(query_text)
+        normalized_query = self.normalize_text(query)
         normalized_candidate = self.normalize_text(candidate_text)
         if not normalized_query or not normalized_candidate:
             return 0.0

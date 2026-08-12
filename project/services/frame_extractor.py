@@ -28,6 +28,7 @@ class FrameExtractor:
     def __init__(self, settings: Settings) -> None:
         self.settings = settings
         self.settings.frames_dir.mkdir(parents=True, exist_ok=True)
+        self._traffic_filter = None
 
     def extract_frames_from_video(
         self,
@@ -62,6 +63,13 @@ class FrameExtractor:
             effective_frame_step,
         )
 
+        traffic_filter = self._get_traffic_filter()
+        if traffic_filter is not None:
+            traffic_filter.reset()
+        total_sampled = 0
+        total_detected = 0
+        filtered_count = 0
+
         frame_index = 0
         metadata: List[dict] = []
 
@@ -71,6 +79,20 @@ class FrameExtractor:
                 break
 
             if frame_index % effective_frame_step == 0:
+                total_sampled += 1
+
+                # Traffic-aware filtering: skip frames with no traffic objects.
+                if traffic_filter is not None:
+                    should_retain, did_detect, _ = (
+                        traffic_filter.should_retain(frame, total_sampled - 1)
+                    )
+                    if did_detect:
+                        total_detected += 1
+                    if not should_retain:
+                        filtered_count += 1
+                        frame_index += 1
+                        continue
+
                 timestamp = round(float(frame_index / fps), 1) if fps else float(frame_index)
                 frame_path = output_dir / self._build_frame_filename(
                     video_name=resolved_video_path.stem,
@@ -93,11 +115,22 @@ class FrameExtractor:
 
         capture.release()
 
-        logger.info(
-            "Finished extracting %s frames from %s",
-            len(metadata),
-            resolved_video_path.name,
-        )
+        if traffic_filter is not None:
+            retained = len(metadata)
+            logger.info(
+                "Traffic-aware filter: video=%s total_sampled=%s detected=%s retained=%s filtered=%s",
+                resolved_video_path.name,
+                total_sampled,
+                total_detected,
+                retained,
+                filtered_count,
+            )
+        else:
+            logger.info(
+                "Finished extracting %s frames from %s",
+                len(metadata),
+                resolved_video_path.name,
+            )
         return metadata
 
     def extract_frames_from_videos(
@@ -221,3 +254,15 @@ class FrameExtractor:
             return False
 
         return True
+
+    def _get_traffic_filter(self):
+        """Lazily create a TrafficActivityFilter when the feature is enabled."""
+        if self._traffic_filter is not None:
+            return self._traffic_filter
+        if not self.settings.enable_traffic_filter:
+            return None
+        from services.traffic_activity_filter import TrafficActivityFilter
+
+        self._traffic_filter = TrafficActivityFilter(self.settings)
+        logger.info("Traffic-aware video preprocessing layer enabled")
+        return self._traffic_filter

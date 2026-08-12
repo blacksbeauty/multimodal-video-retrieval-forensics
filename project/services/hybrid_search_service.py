@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 import math
-from typing import Dict, List, Protocol
+from typing import Any, Dict, List, Protocol
 
 from config import Settings
 
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 class OptionalRetriever(Protocol):
     """Interface placeholder for future modality retrievers."""
 
-    def search(self, query_text: str, top_k: int) -> List[Dict]:
+    def search(self, query: str, top_k: int) -> List[Dict]:
         """Return frame- or segment-like search results."""
 
     def search_as_frames(self, query: str, top_k: int) -> List[Dict]:
@@ -55,22 +55,24 @@ class HybridSearchService:
         intent = self.query_rewrite_service.parse_query_intent(query)
         rewritten_queries = intent["rewritten_queries"]
         candidate_top_k = max(top_k, top_k * self.settings.hybrid_candidate_multiplier)
-        intent_query_type = self._intent_value(intent, "query_type") or self._intent_value(intent, "kind") or "general"
 
-        clip_results = []
-        if intent_query_type != "event":
-            clip_results = self.clip_search_service.search_text_variants(
-                rewritten_queries,
-                top_k=candidate_top_k,
-            )
+        # Phase 3: Confidence-based routing replaces skip_non_event.
+        # All modalities always run; fusion strategy is determined by route_info.
+        route_info = self.route_by_confidence(intent)
+
+        # CLIP always runs (optimization 1: no more skip_non_event)
+        clip_results = self.clip_search_service.search_text_variants(
+            rewritten_queries,
+            top_k=candidate_top_k,
+        )
         detection_results = []
-        if self.detection_retriever is not None and intent_query_type != "event":
+        if self.detection_retriever is not None:
             detection_results = self.detection_retriever.search_as_frames(
                 query=query,
                 top_k=candidate_top_k,
             )
         trajectory_results = []
-        if self.trajectory_retriever is not None and intent_query_type != "event":
+        if self.trajectory_retriever is not None:
             trajectory_results = self.trajectory_retriever.search_as_frames(
                 query=query,
                 top_k=candidate_top_k,
@@ -82,27 +84,40 @@ class HybridSearchService:
                 top_k=candidate_top_k,
             )
 
+        ocr_results = []
+        if self.ocr_search_service is not None:
+            ocr_results = self.ocr_search_service.search_as_frames(
+                query=query,
+                top_k=candidate_top_k,
+            )
+
         fused_results = self._fuse_results(
             clip_results=clip_results,
             detection_results=detection_results,
             trajectory_results=trajectory_results,
             event_results=event_results,
+            ocr_results=ocr_results,
             intent=intent,
+            route_info=route_info,
         )
         aggregated_results = self.result_aggregation_service.aggregate_results(
             fused_results,
             top_k=top_k,
             score_threshold=self.settings.hybrid_score_threshold,
         )
+        event_conf = float(self._intent_value(intent, "event_confidence") or 0.0)
         logger.info(
-            "Hybrid search completed query=%s kind=%s variants=%s clip_results=%s detection_results=%s trajectory_results=%s event_results=%s aggregated=%s",
+            "Hybrid search completed query=%s kind=%s event_conf=%.2f route=%s variants=%s clip_results=%s detection_results=%s trajectory_results=%s event_results=%s ocr_results=%s aggregated=%s",
             query,
             intent["kind"],
+            event_conf,
+            route_info["route"],
             len(rewritten_queries),
             len(clip_results),
             len(detection_results),
             len(trajectory_results),
             len(event_results),
+            len(ocr_results),
             len(aggregated_results),
         )
         return {
@@ -117,7 +132,9 @@ class HybridSearchService:
         detection_results: List[Dict],
         trajectory_results: List[Dict],
         event_results: List[Dict],
+        ocr_results: List[Dict],
         intent: Dict[str, object],
+        route_info: Dict[str, Any] | None = None,
     ) -> List[Dict]:
         """Fuse modality results by video-time windows and intent-aware scoring."""
         fused: Dict[str, Dict] = {}
@@ -205,7 +222,30 @@ class HybridSearchService:
                 if item.get(field_name) and not existing.get(field_name):
                     existing[field_name] = item[field_name]
 
-        return [self._finalize_fused_item(item, intent) for item in fused.values()]
+        for item in ocr_results:
+            key = self._result_key(item)
+            existing = fused.get(key)
+            if existing is None:
+                fused[key] = {
+                    **item,
+                    "best_score": float(item.get("score", 0.0)),
+                    "ocr_score": float(item.get("ocr_score", item.get("score", 0.0))),
+                    "start_ts": float(item.get("start_ts", item.get("timestamp_seconds", item.get("timestamp", 0.0)))),
+                    "end_ts": float(item.get("end_ts", item.get("timestamp_seconds", item.get("timestamp", 0.0)))),
+                    "timestamp_seconds": float(item.get("timestamp_seconds", item.get("timestamp", 0.0))),
+                }
+                continue
+
+            self._merge_temporal_bounds(existing, item)
+            self._merge_evidence(existing, item, "ocr_score")
+            existing["ocr_score"] = max(
+                float(existing.get("ocr_score", 0.0)),
+                float(item.get("ocr_score", item.get("score", 0.0))),
+            )
+            if item.get("matched_text") and not existing.get("matched_text"):
+                existing["matched_text"] = item["matched_text"]
+
+        return [self._finalize_fused_item(item, intent, route_info) for item in fused.values()]
 
     def _result_key(self, item: Dict) -> str:
         """Build a stable fusion key for multimodal results."""
@@ -250,31 +290,62 @@ class HybridSearchService:
         if score_field not in existing:
             existing[score_field] = float(item.get(score_field, item.get("score", 0.0)))
 
-    def _finalize_fused_item(self, item: Dict, intent: Dict[str, object]) -> Dict:
-        weights = self._weights_for_intent(str(intent.get("kind", "general")))
+    def _finalize_fused_item(
+        self,
+        item: Dict,
+        intent: Dict[str, object],
+        route_info: Dict[str, Any] | None = None,
+    ) -> Dict:
+        """Fuse multimodal scores using routing-aware strategy.
+
+        Phase 3 optimization: Uses route_by_confidence to determine fusion:
+        - event_primary: CLIP base + event boost(0.12)
+        - hybrid_balanced: weighted average across modalities
+        - clip_primary: CLIP base + event boost(0.04)
+        - vague_event: CLIP base + event boost(0.06)
+        - clip_only: CLIP dominant weighted average
+        """
+        if route_info is None:
+            route_info = {"route": "clip_only", "fusion": "weighted_average"}
+        route = route_info.get("route", "clip_only")
+
         clip_score = self._normalize_clip_score(float(item.get("clip_score", 0.0)))
         detection_score = min(float(item.get("detection_score", 0.0)), 1.0)
         trajectory_score = min(float(item.get("trajectory_score", 0.0)), 1.0)
         event_score = min(float(item.get("event_score", 0.0)), 1.0)
+        ocr_score = min(float(item.get("ocr_score", 0.0)), 1.0)
 
-        components = []
-        if clip_score > 0:
-            components.append(("clip", weights["clip"], clip_score))
-        if detection_score > 0:
-            components.append(("detection", weights["detection"], detection_score))
-        if trajectory_score > 0:
-            components.append(("trajectory", weights["trajectory"], trajectory_score))
-        if event_score > 0:
-            components.append(("event", weights["event"], event_score))
+        if route in ("event_primary", "clip_primary", "vague_event"):
+            # CLIP-primary base + event dynamic boost
+            final_score = clip_score
 
-        if components:
-            weighted_sum = sum(weight * value for _, weight, value in components)
-            total_weight = sum(weight for _, weight, _ in components)
-            final_score = weighted_sum / total_weight if total_weight > 0 else 0.0
+            if event_score > 0:
+                event_boost = route_info.get("event_boost", 0.02)
+                final_score += event_boost * event_score
+            if detection_score > 0:
+                final_score += 0.03 * detection_score
+            if trajectory_score > 0:
+                final_score += 0.03 * trajectory_score
+            if ocr_score > 0:
+                final_score += 0.02 * ocr_score
         else:
-            final_score = float(item.get("best_score", item.get("score", 0.0)))
+            # clip_only: CLIP dominant weighted average
+            weights = route_info.get("weights", {
+                "clip": 0.50, "detection": 0.25, "ocr": 0.15, "trajectory": 0.10,
+            })
+            final_score = (
+                weights["clip"] * clip_score
+                + weights["detection"] * detection_score
+                + weights["ocr"] * ocr_score
+                + weights["trajectory"] * trajectory_score
+            )
 
-        consensus_bonus = max(len({name for name, _, _ in components}) - 1, 0) * 0.05
+        # Cap at 1.0
+        final_score = min(final_score, 1.0)
+
+        # Consensus bonus: reward items matched by multiple modalities
+        active_modalities = sum(1 for s in [clip_score, detection_score, trajectory_score, event_score, ocr_score] if s > 0)
+        consensus_bonus = max(active_modalities - 1, 0) * 0.05
         if intent.get("label_candidates") and item.get("matched_label") in intent.get("label_candidates"):
             consensus_bonus += 0.03
         if intent.get("direction") and item.get("matched_direction") == intent.get("direction"):
@@ -288,18 +359,149 @@ class HybridSearchService:
 
     def _weights_for_intent(self, kind: str) -> Dict[str, float]:
         if kind == "event":
-            return {"clip": 0.05, "detection": 0.10, "trajectory": 0.15, "event": 0.70}
+            return {"clip": 0.10, "detection": 0.10, "trajectory": 0.15, "event": 0.60, "ocr": 0.05}
         if kind == "motion":
-            return {"clip": 0.10, "detection": 0.20, "trajectory": 0.55, "event": 0.15}
+            return {"clip": 0.10, "detection": 0.20, "trajectory": 0.55, "event": 0.10, "ocr": 0.05}
         if kind == "relational":
-            return {"clip": 0.10, "detection": 0.55, "trajectory": 0.20, "event": 0.15}
+            return {"clip": 0.10, "detection": 0.50, "trajectory": 0.20, "event": 0.10, "ocr": 0.10}
         if kind == "composite":
-            return {"clip": 0.05, "detection": 0.30, "trajectory": 0.35, "event": 0.30}
+            return {"clip": 0.05, "detection": 0.30, "trajectory": 0.30, "event": 0.25, "ocr": 0.10}
         if kind == "object":
-            return {"clip": 0.15, "detection": 0.50, "trajectory": 0.20, "event": 0.15}
+            return {"clip": 0.15, "detection": 0.45, "trajectory": 0.15, "event": 0.10, "ocr": 0.15}
+        if kind == "attribute":
+            return {"clip": 0.15, "detection": 0.40, "trajectory": 0.15, "event": 0.15, "ocr": 0.15}
         if kind == "semantic":
-            return {"clip": 0.70, "detection": 0.15, "trajectory": 0.10, "event": 0.05}
-        return {"clip": 0.40, "detection": 0.25, "trajectory": 0.20, "event": 0.15}
+            return {"clip": 0.65, "detection": 0.15, "trajectory": 0.10, "event": 0.05, "ocr": 0.05}
+        return {"clip": 0.35, "detection": 0.25, "trajectory": 0.20, "event": 0.10, "ocr": 0.10}
+
+    def generate_dynamic_weights(self, intent) -> Dict[str, float]:
+        """Generate dynamic channel weights based on intent parsing results.
+
+        Layer 4 of TQUM: Routes retrieval channels based on event confidence
+        and attribute richness instead of static query_type mapping.
+
+        Routing logic:
+        - event_confidence >= 0.8, no visual attr → event channel dominant (0.65)
+        - event_confidence >= 0.8, has visual attr → CLIP + event balanced (0.35/0.40)
+        - event_confidence 0.6-0.8 → event weighted (0.35) + detection support
+        - attribute + entity query → CLIP dominant (0.50)
+        - vague query → balanced multi-channel
+
+        Color attribute boosts CLIP weight (CLIP excels at color matching).
+        """
+        event_conf = float(self._intent_value(intent, "event_confidence") or 0.0)
+        attributes = self._intent_value(intent, "attributes") or {}
+        primary_entities = self._intent_value(intent, "primary_entities") or []
+
+        has_attributes = bool(attributes)
+        has_entities = bool(primary_entities)
+        has_visual_attr = bool(
+            attributes.get("color") or attributes.get("vehicle_type")
+        )
+
+        if event_conf >= 0.8 and not has_visual_attr:
+            # High confidence event, no visual attributes → event dominant
+            base = {"clip": 0.05, "detection": 0.10, "trajectory": 0.15,
+                    "event": 0.65, "ocr": 0.05}
+        elif event_conf >= 0.8 and has_visual_attr:
+            # High confidence event + visual attributes → balanced CLIP + event
+            # CLIP needs enough weight to differentiate between videos with same event type
+            base = {"clip": 0.35, "detection": 0.10, "trajectory": 0.10,
+                    "event": 0.35, "ocr": 0.10}
+        elif event_conf >= 0.6:
+            # Medium confidence event → event + detection dual path
+            base = {"clip": 0.10, "detection": 0.25, "trajectory": 0.20,
+                    "event": 0.35, "ocr": 0.10}
+        elif has_attributes and has_entities:
+            # Attribute + entity → CLIP dominant
+            base = {"clip": 0.50, "detection": 0.25, "trajectory": 0.10,
+                    "event": 0.05, "ocr": 0.10}
+        else:
+            # Vague query → balanced
+            base = {"clip": 0.30, "detection": 0.20, "trajectory": 0.15,
+                    "event": 0.25, "ocr": 0.10}
+
+        # Color attribute boosts CLIP (CLIP is good at color matching)
+        if attributes.get("color"):
+            base["clip"] = min(base["clip"] + 0.10, 0.60)
+            total = sum(base.values())
+            base = {k: v / total for k, v in base.items()}
+
+        logger.debug(
+            "Dynamic weights event_conf=%.2f has_attr=%s has_visual=%s has_entities=%s weights=%s",
+            event_conf, has_attributes, has_visual_attr, has_entities, base,
+        )
+        return base
+
+    def route_by_confidence(self, intent) -> Dict[str, Any]:
+        """Route retrieval based on confidence levels.
+
+        Phase 4 optimization: Event-type-specific boost values.
+
+        Rare events (red_light_violation) get a higher boost to surface
+        the few videos that contain them. Common events (wrong_way_driving)
+        keep a low boost since CLIP already ranks them well.
+
+        Boost values:
+        - red_light_violation: 0.08 (rare, only 1-2 videos)
+        - vehicle_crosses_line: 0.05 (common but discriminative)
+        - wrong_way_driving: 0.03 (very common, CLIP handles well)
+        - vague: 0.03 (all events, low priority)
+
+        Routing logic:
+        - event_conf >= 0.8 → event_primary (type-specific boost)
+        - event_conf 0-0.8 → clip_primary (type-specific boost * 0.7)
+        - no event + vague keywords → vague_event (boost 0.03, all events)
+        - otherwise → clip_only
+        """
+        event_conf = float(self._intent_value(intent, "event_confidence") or 0.0)
+        event_types = self._intent_value(intent, "event_types") or []
+        has_event = bool(event_types)
+
+        # Check for vague violation intent from intent_candidates
+        intent_candidates = self._intent_value(intent, "intent_candidates") or []
+        has_vague = any(c.get("vague") for c in intent_candidates)
+
+        # Event-type-specific boost: rare events need stronger signal
+        EVENT_BOOST_MAP = {
+            "red_light_violation": 0.15,
+            "vehicle_crosses_line": 0.05,
+            "wrong_way_driving": 0.03,
+        }
+        primary_event_boost = max(
+            (EVENT_BOOST_MAP.get(et, 0.03) for et in event_types),
+            default=0.03,
+        )
+
+        if has_event and event_conf >= 0.8:
+            return {
+                "route": "event_primary",
+                "fusion": "clip_base + event_boost",
+                "event_boost": primary_event_boost,
+                "skip_clip": False,
+            }
+        elif has_event and event_conf > 0:
+            return {
+                "route": "clip_primary",
+                "fusion": "clip_base + event_boost",
+                "event_boost": primary_event_boost * 0.7,
+                "skip_clip": False,
+            }
+        elif has_vague:
+            return {
+                "route": "vague_event",
+                "fusion": "clip_base + event_boost",
+                "event_boost": 0.03,
+                "skip_clip": False,
+            }
+        else:
+            return {
+                "route": "clip_only",
+                "fusion": "weighted_average",
+                "weights": {
+                    "clip": 0.50, "detection": 0.25, "ocr": 0.15, "trajectory": 0.10,
+                },
+            }
 
     def _normalize_clip_score(self, score: float) -> float:
         return min(max(score, 0.0) / 0.35, 1.0)

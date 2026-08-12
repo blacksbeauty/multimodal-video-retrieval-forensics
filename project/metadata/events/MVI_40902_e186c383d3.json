@@ -4,27 +4,26 @@
   "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40902.avi",
   "events": [
     {
-      "event_id": "MVI_40902_e186c383d3:vehicle_crosses_line:MVI_40902_e186c383d3:189",
+      "event_id": "MVI_40902_e186c383d3:vehicle_crosses_line:MVI_40902_e186c383d3:4",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40902_e186c383d3",
       "video_name": "MVI_40902.mp4",
       "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40902.avi",
-      "start_ts": 19.2,
-      "end_ts": 28.8,
+      "start_ts": 0.0,
+      "end_ts": 3.6,
       "track_ids": [
-        "MVI_40902_e186c383d3:189"
+        "MVI_40902_e186c383d3:4"
       ],
-      "confidence": 0.7150161763032278,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40902_19.2.jpg",
+      "confidence": 0.8563465774059296,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40902_3.6.jpg",
       "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40902_25.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40902_27.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40902_28.8.jpg"
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_1.2.jpg"
       ],
       "attributes": {
         "label": "car",
-        "direction": "left_to_right",
+        "direction": "right_to_left",
         "line": [
           [
             640.0,
@@ -35,9 +34,106 @@
             720.0
           ]
         ],
-        "cross_timestamp": 27.6
+        "cross_timestamp": 0.0,
+        "crossing_mode": "vehicle_bbox"
       },
       "description": "car crosses configured line"
+    },
+    {
+      "event_id": "MVI_40902_e186c383d3:wrong_way_driving:MVI_40902_e186c383d3:4",
+      "event_type": "wrong_way_driving",
+      "plugin_name": "wrong_way_driving",
+      "video_id": "MVI_40902_e186c383d3",
+      "video_name": "MVI_40902.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40902.avi",
+      "start_ts": 0.0,
+      "end_ts": 3.6,
+      "track_ids": [
+        "MVI_40902_e186c383d3:4"
+      ],
+      "confidence": 0.8563226136092722,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40902_3.6.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_2.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_3.6.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "allowed_direction": [
+          1.0,
+          0.0
+        ],
+        "direction_dot": -0.9999440324810314,
+        "roi_ratio": 1.0,
+        "min_displacement_px": 20.0
+      },
+      "description": "car moves opposite to configured lane direction"
+    },
+    {
+      "event_id": "MVI_40902_e186c383d3:wrong_way_driving:MVI_40902_e186c383d3:2",
+      "event_type": "wrong_way_driving",
+      "plugin_name": "wrong_way_driving",
+      "video_id": "MVI_40902_e186c383d3",
+      "video_name": "MVI_40902.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40902.avi",
+      "start_ts": 0.0,
+      "end_ts": 4.8,
+      "track_ids": [
+        "MVI_40902_e186c383d3:2"
+      ],
+      "confidence": 0.774605223262542,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40902_4.8.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_1.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_4.8.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "allowed_direction": [
+          1.0,
+          0.0
+        ],
+        "direction_dot": -0.9877992759738777,
+        "roi_ratio": 1.0,
+        "min_displacement_px": 20.0
+      },
+      "description": "car moves opposite to configured lane direction"
+    },
+    {
+      "event_id": "MVI_40902_e186c383d3:wrong_way_driving:MVI_40902_e186c383d3:97",
+      "event_type": "wrong_way_driving",
+      "plugin_name": "wrong_way_driving",
+      "video_id": "MVI_40902_e186c383d3",
+      "video_name": "MVI_40902.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40902.avi",
+      "start_ts": 9.6,
+      "end_ts": 39.6,
+      "track_ids": [
+        "MVI_40902_e186c383d3:97"
+      ],
+      "confidence": 0.7477797545640243,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40902_38.4.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_9.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_25.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40902_39.6.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "allowed_direction": [
+          1.0,
+          0.0
+        ],
+        "direction_dot": -0.961137959553134,
+        "roi_ratio": 1.0,
+        "min_displacement_px": 20.0
+      },
+      "description": "car moves opposite to configured lane direction"
     }
   ]
 }
