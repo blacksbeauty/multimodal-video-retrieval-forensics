@@ -132,6 +132,30 @@ class ResultAggregationServiceTests(unittest.TestCase):
         aggregated = self.service.aggregate_results(results, top_k=10)
         self.assertEqual(aggregated, [])
 
+    def test_aggregate_zero_length_segment_gets_min_span(self) -> None:
+        """Segments whose start_ts == end_ts (single-frame/track results) must
+        get at least a 1s span, otherwise the clip download URL would be a
+        0-second video that players cannot play."""
+        results = [
+            {
+                "video_id": "video-1",
+                "video_name": "a.mp4",
+                "video_path": "/tmp/a.mp4",
+                "frame_id": "frame-1",
+                "frame_path": "/tmp/a_1.jpg",
+                "timestamp_seconds": 22.8,
+                "start_ts": 22.8,
+                "end_ts": 22.8,
+                "score": 0.5,
+                "matched_by": ["trajectory"],
+            }
+        ]
+
+        aggregated = self.service.aggregate_results(results, top_k=10)
+        self.assertEqual(len(aggregated), 1)
+        self.assertGreater(aggregated[0]["end_ts"], aggregated[0]["start_ts"])
+        self.assertEqual(aggregated[0]["end_ts"], aggregated[0]["start_ts"] + 1.0)
+
 
 if __name__ == "__main__":
     unittest.main()

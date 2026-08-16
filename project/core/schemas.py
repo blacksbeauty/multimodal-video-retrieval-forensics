@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class HealthResponse(BaseModel):
@@ -8,6 +8,18 @@ class HealthResponse(BaseModel):
 
     status: str = Field(default="ok", description="Health status of the service.")
     service: str = Field(..., description="Human-readable service name.")
+    clip_available: bool = Field(
+        default=True,
+        description="Whether the CLIP semantic channel is usable (false when disabled or model failed to load).",
+    )
+    faiss_available: bool = Field(
+        default=True,
+        description="Whether the FAISS vector index is loaded (false when disabled, missing or corrupted).",
+    )
+    indexed_frames: int = Field(
+        default=0,
+        description="Number of frame vectors currently in the index (0 when unavailable).",
+    )
 
 
 class IngestRequest(BaseModel):
@@ -192,6 +204,17 @@ class HybridSegmentResult(BaseModel):
     )
     thumbnail_frame: str = Field(..., description="Representative frame path for the segment.")
     frame_id: str = Field(..., description="Stable frame identifier for the representative frame.")
+    clip_url: str = Field(
+        default="",
+        description="Endpoint URL to download the playable MP4 clip for this segment "
+        "(lossless cut from the source video via FFmpeg).",
+    )
+    clip_available: bool = Field(
+        default=True,
+        description="Whether the source video file exists locally; when false the "
+        "clip_url cannot be generated (e.g. datasets that only ship perception "
+        "npz/frames, not playable video).",
+    )
 
 
 class HybridSearchResponse(BaseModel):
@@ -211,7 +234,20 @@ class HybridSearchResponse(BaseModel):
 class DetectionItem(BaseModel):
     """Single object detection result extracted from a frame."""
 
-    label: str = Field(..., description="Normalized object class label.")
+    # S5: label/class 双写迁移。class_ 为规范标准字段（JSON 键 class），
+    # label 为旧字段别名，过渡期双写同值。
+    # 废弃时间表：[DEPRECATED in next major] v2.0 移除 label，检索服务切换 class。
+    model_config = ConfigDict(populate_by_name=True, serialize_by_alias=True)
+
+    label: str = Field(
+        ...,
+        description="[DEPRECATED in next major] Legacy label field; use class.",
+    )
+    class_: str = Field(
+        default="",
+        alias="class",
+        description="Normalized object class label (S5 canonical field).",
+    )
     confidence: float = Field(..., description="Detection confidence score.")
     bbox: List[float] = Field(
         default_factory=list,
@@ -552,6 +588,12 @@ class EventVideoMetadata(BaseModel):
         default_factory=list,
         description="Traffic events generated for this video.",
     )
+    # S7: 段级构建状态标记（评审 #4 异步触发 + 状态标记）。
+    # False: 段级索引未构建；True: 已构建。由 /api/ingest/segments/{video_id} 更新。
+    segment_built: bool = Field(
+        default=False,
+        description="Whether segment-level index has been built for this video (S7).",
+    )
 
 
 class EventIngestRequest(BaseModel):
@@ -766,4 +808,113 @@ class OCRSearchResponse(BaseModel):
     results: List[OCRSearchResult] = Field(
         default_factory=list,
         description="Ordered OCR search results matched from video frames.",
+    )
+
+
+# --------------------------------------------------------------------------- #
+# S7 / 数据规范 v1.1 §3.2/§3.3/§3.8 —— 段级索引协议新增类
+# 此前在 metadata/schema.json 中标注为 [PLANNED]，现补齐定义并接入 layers。
+# --------------------------------------------------------------------------- #
+
+
+class VideoMetadata(BaseModel):
+    """One video record (数据规范 v1.1 §3.2 02_video 视频层)."""
+
+    video_id: str = Field(..., description="Stable video identifier (global).")
+    video_name: str = Field(..., description="Logical video name (may differ from source file name).")
+    video_path: str = Field(..., description="Normalized source video path.")
+    source: str = Field(..., description="Dataset name: StreetScene / CARLA / AIDE / CUSTOM.")
+    fps: float = Field(..., description="Frame rate; configured value for image sequences.")
+    duration: float = Field(..., description="Video duration in seconds.")
+    resolution: dict[str, int] = Field(
+        default_factory=lambda: {"width": 0, "height": 0},
+        description="Video resolution as {width, height}.",
+    )
+    scene: dict[str, str] = Field(
+        default_factory=dict,
+        description="Scene attributes: {type, camera}. type: intersection/highway/urban/parking/other; camera: fixed/moving/bev.",
+    )
+    ingested_at: str = Field(default="", description="ISO 8601 ingestion timestamp for provenance.")
+
+
+class FrameRecord(BaseModel):
+    """One persisted frame record inside FrameMetadata."""
+
+    timestamp: float = Field(..., description="Primary index; seconds, round(,2).")
+    frame_index: int = Field(..., description="Frame index for read positioning.")
+    path: str = Field(..., description="Frame image path relative to project root.")
+    type: str = Field(default="key_frame", description="key_frame / event_frame / thumbnail.")
+
+
+class FrameMetadata(BaseModel):
+    """Frame layer metadata bundle per video (数据规范 v1.1 §3.3 帧层).
+
+    只登记被保留的帧（关键帧/事件帧/封面），全量帧不持久化。
+    """
+
+    video_id: str = Field(..., description="Source video identifier.")
+    frames: List[FrameRecord] = Field(
+        default_factory=list,
+        description="Persisted frame records (key/event/thumbnail frames only).",
+    )
+
+
+class SegmentRecord(BaseModel):
+    """One semantic segment inside SegmentVideoMetadata (数据规范 v1.1 §3.8 段层)."""
+
+    segment_id: str = Field(..., description="Global unique segment identifier.")
+    video_id: str = Field(..., description="Source video identifier.")
+    time_range: dict[str, float] = Field(
+        ...,
+        description="Segment time window as {start, end} in seconds.",
+    )
+    frame_paths: List[str] = Field(
+        default_factory=list,
+        description="Frames inside the segment (evidence frames for event segments).",
+    )
+    events: List[str] = Field(
+        default_factory=list,
+        description="Associated event types (multiple events may merge into one segment).",
+    )
+    event_ids: List[str] = Field(
+        default_factory=list,
+        description="Associated event identifiers.",
+    )
+    tracks: List[str] = Field(
+        default_factory=list,
+        description="Track identifiers inside the segment.",
+    )
+    text: str = Field(default="", description="Retrieval text (never empty at runtime).")
+    matched_by: List[str] = Field(
+        default_factory=list,
+        description="Modalities that matched: clip / ocr / detection / trajectory / event.",
+    )
+
+
+class SegmentEmbeddingMeta(BaseModel):
+    """Embedding metadata of one segment (数据规范 v1.1 §3.9)."""
+
+    segment_id: str = Field(..., description="Corresponding segment identifier.")
+    model: str = Field(..., description="Encoding model: CN-CLIP / OpenCLIP.")
+    dimension: int = Field(..., description="Embedding dimension.")
+    path: str = Field(..., description=".npy file path.")
+    text_source: str = Field(default="事件描述模板", description="Text source used for encoding.")
+    created_at: str = Field(default="", description="ISO 8601 generation timestamp.")
+
+
+class SegmentVideoMetadata(BaseModel):
+    """Segment layer metadata bundle per video (数据规范 v1.1 §3.8/§3.9).
+
+    FAISS 索引的原子单位是 segment 而非 frame；段向量 meta 聚合在此文件内，
+    不另设文件（S4 决策）。
+    """
+
+    video_id: str = Field(..., description="Source video identifier.")
+    segments: List[SegmentRecord] = Field(
+        default_factory=list,
+        description="Semantic segments of the video (event-merged + time-window fallback).",
+    )
+    embeddings: List[SegmentEmbeddingMeta] = Field(
+        default_factory=list,
+        description="Segment embedding metadata (one per segment).",
     )

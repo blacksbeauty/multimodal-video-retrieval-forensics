@@ -23,21 +23,41 @@ class EmbeddingService:
         self._torch = None
         self._device = None
         self._embedding_dim = None
+        self._load_attempted = False
+        self._load_error: str | None = None
         self.settings.embeddings_dir.mkdir(parents=True, exist_ok=True)
 
     def load_model(self) -> None:
+        """Load the CLIP model; a failure marks the service unavailable
+        instead of raising, so callers can degrade to other channels."""
         if self._model is not None:
             return
+        if self._load_attempted:
+            return
+        self._load_attempted = True
 
-        self._prepare_download_environment()
+        try:
+            self._prepare_download_environment()
+            device = self._select_device()
+            backend = self.settings.clip_backend.lower()
 
-        device = self._select_device()
-        backend = self.settings.clip_backend.lower()
+            if backend == "cnclip":
+                self._load_cnclip_model(device)
+            else:
+                self._load_openclip_model(device)
+        except Exception as exc:  # pragma: no cover - depends on environment
+            logger.exception("CLIP model loading failed; semantic channel marked unavailable")
+            self._model = None
+            self._load_error = str(exc)
 
-        if backend == "cnclip":
-            self._load_cnclip_model(device)
-        else:
-            self._load_openclip_model(device)
+    def is_available(self) -> bool:
+        """Whether the CLIP semantic channel is usable."""
+        return self._model is not None
+
+    def _raise_if_unavailable(self) -> None:
+        if self._model is None:
+            detail = self._load_error or "CLIP model failed to load"
+            raise RuntimeError(f"CLIP semantic channel unavailable: {detail}")
 
     def _select_device(self) -> str:
         import torch
@@ -123,6 +143,7 @@ class EmbeddingService:
 
     def encode_image(self, frame_path: str | Path, timestamp: float | str | None = None) -> dict:
         self.load_model()
+        self._raise_if_unavailable()
         resolved_path = self._resolve_image_path(frame_path)
 
         from PIL import Image
@@ -156,6 +177,7 @@ class EmbeddingService:
             raise ValueError("batch_size must be greater than or equal to 1.")
 
         self.load_model()
+        self._raise_if_unavailable()
 
         resolved_paths = [self._resolve_image_path(path) for path in frame_paths]
         normalized_timestamps = self._prepare_timestamps(resolved_paths, timestamps)
@@ -207,6 +229,7 @@ class EmbeddingService:
             raise ValueError("Search query cannot be empty.")
 
         self.load_model()
+        self._raise_if_unavailable()
         tokens = self._tokenizer([text]).to(self._device)
 
         with self._torch.no_grad():
@@ -247,7 +270,47 @@ class EmbeddingService:
 
     def get_embedding_dim(self) -> int:
         self.load_model()
+        self._raise_if_unavailable()
         return int(self._embedding_dim or 0)
+
+    def save_segment_embeddings(
+        self,
+        segments: Sequence[dict],
+        vectors: np.ndarray,
+        model_name: str,
+    ) -> List[dict]:
+        """S4: 每 segment 存一个 .npy（embeddings/{segment_id}.npy），
+        返回 embeddings meta 列表，由调用方聚合进 metadata/segments/{video_id}.json
+        （数据规范 v1.1 §3.9，段向量 meta 不另设文件）。
+
+        参数:
+          segments: 段记录列表，每项必须含 segment_id（可选 text_source / created_at）。
+          vectors:  形状 (N, dim) 的向量矩阵，N == len(segments)。
+          model_name: 编码模型名（如 "CN-CLIP" / "OpenCLIP"），写入 meta 供溯源。
+        """
+        if len(segments) != len(vectors):
+            raise ValueError("Segments count must match vectors count.")
+        if vectors.ndim != 2:
+            raise ValueError("vectors must be a 2D numpy array.")
+
+        self.settings.embeddings_dir.mkdir(parents=True, exist_ok=True)
+        metas: List[dict] = []
+        for segment, vector in zip(segments, vectors):
+            segment_id = segment["segment_id"]
+            npy_path = self.settings.embeddings_dir / f"{segment_id}.npy"
+            np.save(npy_path, np.asarray(vector, dtype=np.float32))
+            metas.append(
+                {
+                    "segment_id": segment_id,
+                    "model": model_name,
+                    "dimension": int(np.asarray(vector).shape[0]),
+                    "path": f"embeddings/{segment_id}.npy",
+                    "text_source": segment.get("text_source", "事件描述模板"),
+                    "created_at": segment.get("created_at", ""),
+                }
+            )
+        logger.info("Saved %s segment embeddings (model=%s)", len(metas), model_name)
+        return metas
 
     def _infer_embedding_dim(self) -> int:
         if hasattr(self._model, "visual") and hasattr(self._model.visual, "output_dim"):
@@ -274,11 +337,18 @@ class EmbeddingService:
 
     def _normalize_timestamp(self, timestamp: float | str | None, frame_path: Path) -> str:
         if timestamp is not None:
-            return str(timestamp)
+            # S3: 统一两位小数，保证跨层 timestamp 一致（数据规范 v1.1 §0）。
+            return str(round(float(timestamp), 2))
 
         stem_parts = frame_path.stem.rsplit("_", 1)
         if len(stem_parts) == 2:
-            return stem_parts[1]
+            try:
+                # S3: 统一两位小数
+                return str(round(float(stem_parts[1]), 2))
+            except ValueError:
+                # 帧名末段不是时间戳（如自定义命名），兜底为 0.0
+                logger.warning("Frame name has no parseable timestamp, defaulting to 0.0: %s", frame_path)
+                return "0.0"
 
         return "0.0"
 

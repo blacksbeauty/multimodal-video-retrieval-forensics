@@ -123,12 +123,21 @@ class EventService:
 
             plugin = plugin_cls()
             config = self._load_plugin_config(plugin_name)
-            produced = plugin.execute(
-                video_id=video_id,
-                detections=detections,
-                trajectories=trajectories,
-                config=config,
-            )
+            try:
+                produced = plugin.execute(
+                    video_id=video_id,
+                    detections=detections,
+                    trajectories=trajectories,
+                    config=config,
+                )
+            except Exception:
+                # Code Review Must Fix #7：单个插件异常只跳过该插件，不中断整批事件生成。
+                logger.exception(
+                    "Event plugin %s failed for video_id=%s; skipping plugin",
+                    plugin_name,
+                    video_id,
+                )
+                continue
             events.extend(produced)
 
         events.sort(key=lambda item: (item.start_ts, item.end_ts, item.event_type, item.event_id))

@@ -6,6 +6,13 @@
   "min_duration_sec": 1.0,
   "min_displacement_px": 20.0,
   "max_direction_dot": -0.3,
-  "roi_polygon": [],
+  "direction_start_frac": 0.25,
+  "direction_end_frac": 0.75,
+  "roi_polygon": [
+    [320.0, 240.0],
+    [960.0, 240.0],
+    [960.0, 720.0],
+    [320.0, 720.0]
+  ],
   "min_roi_ratio": 0.5
 }

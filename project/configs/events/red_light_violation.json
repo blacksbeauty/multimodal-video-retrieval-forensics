@@ -8,6 +8,10 @@
   "allowed_labels": ["car", "truck", "bus", "motorcycle"],
   "min_displacement_px": 10.0,
   "state_window_sec": 2.0,
+  "min_red_duration_sec": 1.5,
+  "red_merge_gap_sec": 2.0,
+  "min_after_crossing_points": 2,
+  "min_after_crossing_displacement_px": 15.0,
   "traffic_light_min_confidence": 0.25,
   "traffic_light_min_state_score": 0.01
 }

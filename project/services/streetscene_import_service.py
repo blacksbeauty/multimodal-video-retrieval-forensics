@@ -143,6 +143,9 @@ class StreetSceneImportService:
 
     def build_frame_metadata(self, sequence_dir: Path, video_name: str, frame_step: int) -> List[Dict]:
         """Copy StreetScene frames into ForeSea assets and build CLIP frame metadata."""
+        # Code Review Must Fix #5：frame_step 必须 >= 1，否则下方取模除零崩溃。
+        if frame_step < 1:
+            raise ValueError("frame_step must be greater than or equal to 1.")
         video_id = build_asset_id(sequence_dir)
         safe_video_stem = Path(video_name).stem
         metadata: List[Dict] = []
@@ -152,7 +155,10 @@ class StreetSceneImportService:
             if (index - 1) % frame_step != 0:
                 continue
 
-            timestamp_seconds = self._frame_timestamp(source_frame)
+            # 帧名非数字（_frame_index 返回 0）时回退到枚举位置，避免多帧时间戳
+            # 同为 0、目标文件名相同而互相覆盖（Code Review Must Fix #5）。
+            frame_index = self._frame_index(source_frame) or (index - 1)
+            timestamp_seconds = round(frame_index / self.settings.streetscene_frame_rate, 3)
             target_name = f"{safe_video_stem}_{timestamp_seconds:.3f}.jpg"
             target_frame = self.settings.frames_dir / target_name
             self.copy_or_link_frame(source_frame, target_frame)
@@ -163,7 +169,7 @@ class StreetSceneImportService:
                     "video_name": video_name,
                     "video_path": normalize_path(sequence_dir),
                     "frame_path": normalize_path(target_frame),
-                    "frame_index": self._frame_index(source_frame),
+                    "frame_index": frame_index,
                     "timestamp_seconds": timestamp_seconds,
                 }
             )

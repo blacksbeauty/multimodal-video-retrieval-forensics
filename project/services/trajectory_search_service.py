@@ -30,6 +30,8 @@ class TrajectorySearchService:
         self.query_rewrite_service = query_rewrite_service
         self.base_dir = self.settings.trajectory_metadata_dir
         self.base_dir.mkdir(parents=True, exist_ok=True)
+        # 元数据 mtime 缓存（Code Review Nice to Have）：避免每次检索全量重读 JSON。
+        self._cache: Dict[str, tuple[float, TrajectoryVideoMetadata]] = {}
 
     def search_tracks(
         self,
@@ -136,17 +138,34 @@ class TrajectorySearchService:
         return sorted(self.base_dir.glob("*.json"))
 
     def load_metadata(self, metadata_path: str | Path) -> TrajectoryVideoMetadata | None:
-        """Load one trajectory metadata file and validate its payload."""
+        """Load one trajectory metadata file and validate its payload.
+
+        带 mtime 校验缓存：文件未变化时直接复用内存对象，避免检索路径重复全量读盘。
+        """
         path = Path(metadata_path)
         if not path.exists():
             return None
 
+        cache_key = str(path)
+        try:
+            current_mtime = path.stat().st_mtime
+        except OSError:
+            return None
+        cached = self._cache.get(cache_key)
+        if cached is not None and cached[0] == current_mtime:
+            return cached[1]
+
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
-            return TrajectoryVideoMetadata.model_validate(payload)
+            metadata = TrajectoryVideoMetadata.model_validate(payload)
         except Exception:
             logger.exception("Failed to load trajectory metadata: %s", path)
             return None
+
+        if len(self._cache) > 1024:
+            self._cache.clear()
+        self._cache[cache_key] = (current_mtime, metadata)
+        return metadata
 
     def normalize_label(self, label: str | None) -> str:
         """Normalize labels and queries for stable comparison."""

@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Sequence
 
 from core.schemas import DetectionVideoMetadata, EventMetadata, TrajectoryPoint, TrajectoryVideoMetadata
-from services.event_plugins.base import EventPluginBase
+from services.event_plugins.base import EventPluginBase, label_to_chinese
 from services.event_plugins.geometry import find_line_contact
 from services.event_plugins.registry import register
 
@@ -42,7 +42,8 @@ class VehicleCrossesLine(EventPluginBase):
             evidence_frames = self._evidence_frames(track.points, crossing["index"])
             events.append(
                 EventMetadata(
-                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id}",
+                    # S7: 新格式 event_id = {video_id}:{event_type}:{n}（n 取 track 序号）
+                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id.rsplit(':', 1)[-1]}",
                     event_type=self.event_type,
                     plugin_name=self.plugin_name,
                     video_id=video_id,
@@ -61,7 +62,8 @@ class VehicleCrossesLine(EventPluginBase):
                         "cross_timestamp": crossing["timestamp"],
                         "crossing_mode": crossing["mode"],
                     },
-                    description=f"{track.label} crosses configured line",
+                    # S7: 中文 description
+                    description=f"{label_to_chinese(track.label)}越过车道线（压线）",
                 )
             )
         return events

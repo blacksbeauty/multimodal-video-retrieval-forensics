@@ -13,3 +13,13 @@ paddleocr>=2.8.1,<3.0.0
 paddlepaddle>=3.0.0,<4.0.0
 rapidfuzz>=3.9.6,<4.0.0
 ultralytics>=8.3.0,<9.0.0
+
+# ===== CN-CLIP 依赖 =====
+# ⚠️ PyPI 的 cn-clip 包在 Windows 上因依赖 lmdb==1.3.0 源码构建失败而无法安装，
+#    需手动部署官方源码（方法见 README「CN-CLIP 依赖安装」）。以下为其运行时依赖：
+ftfy
+regex
+tqdm
+requests
+six
+timm

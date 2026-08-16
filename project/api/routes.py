@@ -2,11 +2,19 @@ import logging
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
+from starlette.background import BackgroundTask
 
 from config import Settings
 from core.app_state import AppState
+from services.clip_service import (
+    ClipError,
+    ClipInvalidRangeError,
+    ClipNotFoundError,
+    ClipTimeoutError,
+    ClipTooLongError,
+)
 from core.schemas import (
     AccidentDatasetIngestRequest,
     AccidentDatasetIngestResponse,
@@ -98,9 +106,33 @@ async def search_page(request: Request) -> HTMLResponse:
     )
 
 
+@page_router.get("/video-probe", response_class=HTMLResponse, include_in_schema=False)
+def video_probe_page() -> HTMLResponse:
+    """Diagnostic page for verifying clip playback in a real browser.
+
+    Must be served from the same origin as /api/search/download_clip so the
+    browser can stream the clip without CORS/network-isolation interference
+    (e.g. the IDE's built-in preview webview cannot reach localhost:8000).
+    """
+    probe_path = Path(__file__).resolve().parent.parent / "video_probe.html"
+    return HTMLResponse(probe_path.read_text(encoding="utf-8"))
+
+
 @router.get("/health", response_model=HealthResponse)
-async def health(settings: Settings = Depends(get_settings_dependency)) -> HealthResponse:
-    return HealthResponse(service=settings.project_name)
+async def health(
+    services: AppState = Depends(get_services),
+    settings: Settings = Depends(get_settings_dependency),
+) -> HealthResponse:
+    """Report service liveness plus per-channel availability (P5 degradation
+    observability). Note: CLIP is lazily loaded; before the first encode call
+    ``clip_available`` reflects the last load attempt state."""
+    faiss_metadata = services.index_service.faiss_service.metadata
+    return HealthResponse(
+        service=settings.project_name,
+        clip_available=services.clip_service.is_available(),
+        faiss_available=services.index_service.faiss_service.index is not None,
+        indexed_frames=len(faiss_metadata or []),
+    )
 
 
 @router.get("/index/stats", response_model=IndexStatsResponse)
@@ -214,19 +246,25 @@ async def ingest_accident_dataset(
     return AccidentDatasetIngestResponse(**result)
 
 
-@router.post("/search", response_model=SearchResponse)
+@router.post("/search", response_model=SearchResponse, deprecated=True)
 async def search(
     payload: SearchRequest,
     services: AppState = Depends(get_services),
 ) -> SearchResponse:
+    """[DEPRECATED] 纯 CLIP 语义检索，已收敛至 POST /api/search/hybrid。
+
+    保留本端点仅为兼容既有调用方；新调用请统一走 /api/search/hybrid。
+    """
+    logger.warning("Deprecated endpoint called: POST /api/search (use /api/search/hybrid)")
     return await _search_impl(payload, services)
 
 
-@page_router.post("/search", response_model=SearchResponse, include_in_schema=False)
+@page_router.post("/search", response_model=SearchResponse, include_in_schema=False, deprecated=True)
 async def search_compat(
     payload: SearchRequest,
     services: AppState = Depends(get_services),
 ) -> SearchResponse:
+    logger.warning("Deprecated endpoint called: POST /search (use /api/search/hybrid)")
     return await _search_impl(payload, services)
 
 
@@ -240,6 +278,65 @@ async def _search_impl(payload: SearchRequest, services: AppState) -> SearchResp
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     return SearchResponse(query=payload.query, results=results)
+
+
+@router.get("/search/download_clip", response_class=FileResponse)
+def download_clip(
+    video_path: str,
+    start_ts: float,
+    end_ts: float,
+    output_name: str | None = None,
+    services: AppState = Depends(get_services),
+) -> FileResponse:
+    """Losslessly cut a playable MP4 clip from a source video via FFmpeg.
+
+    * ``-ss`` is placed before ``-i`` (fast seek) and ``-c copy`` performs a
+      stream copy (no re-encode).
+    * Duration is capped at ``clip_max_duration_sec`` (60s default).
+    * At most ``clip_max_concurrent`` ffmpeg cuts run at once; requests beyond
+      that are answered with ``429`` instead of saturating the CPU.
+    * The temporary clip lives under ``/dev/shm`` (or OS temp) and is removed
+      asynchronously right after the response is sent.
+
+    Sync ``def`` (not ``async``): ffmpeg is a blocking subprocess, so the
+    endpoint runs in FastAPI's thread pool and never blocks the event loop.
+    """
+    if not services.video_clip_service.try_acquire_slot():
+        raise HTTPException(
+            status_code=429,
+            detail="Too many concurrent clip requests; please retry later.",
+        )
+    try:
+        clip_path = services.video_clip_service.cut_clip(
+            video_path=video_path,
+            start_ts=start_ts,
+            end_ts=end_ts,
+            output_name=output_name,
+        )
+    except ClipNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except (ClipInvalidRangeError, ClipTooLongError) as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except ClipTimeoutError as exc:
+        raise HTTPException(status_code=504, detail=str(exc)) from exc
+    except ClipError as exc:
+        logger.error("Clip generation failed: %s", exc)
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+    finally:
+        # The ffmpeg slot is only needed for the cut itself; streaming the
+        # response does not consume one.
+        services.video_clip_service.release_slot()
+
+    download_name = Path(clip_path).name
+    return FileResponse(
+        path=str(clip_path),
+        media_type="video/mp4",
+        filename=download_name,
+        # inline (not attachment) so the browser's <video> element can stream
+        # the clip; attachment would force a download and break in-page playback.
+        content_disposition_type="inline",
+        background=BackgroundTask(services.video_clip_service.cleanup, clip_path),
+    )
 
 
 @router.post("/search/hybrid", response_model=HybridSearchResponse)
@@ -300,11 +397,16 @@ async def detection_ingest_directory(
     )
 
 
-@router.post("/detection/search", response_model=DetectionSearchResponse)
+@router.post("/detection/search", response_model=DetectionSearchResponse, deprecated=True)
 async def detection_search(
     payload: DetectionSearchRequest,
     services: AppState = Depends(get_services),
 ) -> DetectionSearchResponse:
+    """[DEPRECATED] 目标检测单通道检索，已收敛至 POST /api/search/hybrid。
+
+    保留本端点仅为兼容既有调用方；新调用请统一走 /api/search/hybrid。
+    """
+    logger.warning("Deprecated endpoint called: POST /api/detection/search (use /api/search/hybrid)")
     try:
         results = services.detection_search_service.search_objects(
             query=payload.query,
@@ -355,11 +457,16 @@ async def tracking_ingest_directory(
     )
 
 
-@router.post("/trajectory/search", response_model=TrajectorySearchResponse)
+@router.post("/trajectory/search", response_model=TrajectorySearchResponse, deprecated=True)
 async def trajectory_search(
     payload: TrajectorySearchRequest,
     services: AppState = Depends(get_services),
 ) -> TrajectorySearchResponse:
+    """[DEPRECATED] 轨迹单通道检索，已收敛至 POST /api/search/hybrid。
+
+    保留本端点仅为兼容既有调用方；新调用请统一走 /api/search/hybrid。
+    """
+    logger.warning("Deprecated endpoint called: POST /api/trajectory/search (use /api/search/hybrid)")
     try:
         results = services.trajectory_search_service.search_tracks(
             query=payload.query,
@@ -417,11 +524,16 @@ async def event_ingest_directory(
     )
 
 
-@router.post("/event/search", response_model=EventSearchResponse)
+@router.post("/event/search", response_model=EventSearchResponse, deprecated=True)
 async def event_search(
     payload: EventSearchRequest,
     services: AppState = Depends(get_services),
 ) -> EventSearchResponse:
+    """[DEPRECATED] 事件单通道检索，已收敛至 POST /api/search/hybrid。
+
+    保留本端点仅为兼容既有调用方；新调用请统一走 /api/search/hybrid。
+    """
+    logger.warning("Deprecated endpoint called: POST /api/event/search (use /api/search/hybrid)")
     try:
         results = services.event_search_service.search(
             query=payload.query,
@@ -434,6 +546,33 @@ async def event_search(
         raise HTTPException(status_code=500, detail="Failed to search event metadata.") from exc
 
     return EventSearchResponse(query=payload.query, results=results)
+
+
+@router.post("/ingest/segments/{video_id}")
+async def ingest_segments(
+    video_id: str,
+    services: AppState = Depends(get_services),
+) -> dict:
+    """S7: 独立触发某视频的段级构建（评审 #4 异步 + 状态标记）。
+
+    失败不影响帧级索引/检索；重试即重新调用。结果写 segment_built 标记。
+    """
+    try:
+        result = services.segment_build_service.ingest_segment_pipeline(
+            video_id=video_id,
+            clip_service=services.clip_service,
+            index_service=services.index_service,
+        )
+    except Exception as exc:  # pragma: no cover - safety net for API layer
+        logger.exception("Failed to build segments for video_id=%s", video_id)
+        raise HTTPException(status_code=500, detail=f"Failed to build segments: {exc}") from exc
+
+    if not result.get("built"):
+        raise HTTPException(
+            status_code=422,
+            detail=result.get("reason", "segment build skipped"),
+        )
+    return result
 
 
 @router.post("/ocr/ingest-directory", response_model=BatchIngestResponse)
@@ -475,11 +614,16 @@ async def ocr_ingest_directory(
     )
 
 
-@router.post("/ocr/search", response_model=OCRSearchResponse)
+@router.post("/ocr/search", response_model=OCRSearchResponse, deprecated=True)
 async def ocr_search(
     payload: OCRSearchRequest,
     services: AppState = Depends(get_services),
 ) -> OCRSearchResponse:
+    """[DEPRECATED] OCR 单通道检索，已收敛至 POST /api/search/hybrid。
+
+    保留本端点仅为兼容既有调用方；新调用请统一走 /api/search/hybrid。
+    """
+    logger.warning("Deprecated endpoint called: POST /api/ocr/search (use /api/search/hybrid)")
     try:
         results = services.ocr_search_service.search(
             query=payload.query,

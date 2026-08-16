@@ -183,6 +183,9 @@ class AccidentDatasetImportService:
         frame_step: int,
     ) -> List[Dict[str, Any]]:
         """Extract BEV frames from ``.npz`` files and build CLIP frame metadata."""
+        # Code Review Must Fix #5：frame_step 必须 >= 1，否则下方取模除零崩溃。
+        if frame_step < 1:
+            raise ValueError("frame_step must be greater than or equal to 1.")
         video_id = build_asset_id(scenario_dir)
         safe_video_stem = Path(video_name).stem
         metadata: List[Dict[str, Any]] = []

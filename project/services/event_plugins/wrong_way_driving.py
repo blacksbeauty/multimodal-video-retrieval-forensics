@@ -4,8 +4,13 @@ from math import hypot
 from typing import Any, Dict, List
 
 from core.schemas import DetectionVideoMetadata, EventMetadata, TrajectoryVideoMetadata
-from services.event_plugins.base import EventPluginBase
-from services.event_plugins.geometry import normalize_vector, point_in_polygon, trajectory_displacement
+from services.event_plugins.base import EventPluginBase, label_to_chinese
+from services.event_plugins.geometry import (
+    normalize_vector,
+    point_in_polygon,
+    trajectory_displacement,
+    trajectory_main_direction,
+)
 from services.event_plugins.registry import register
 
 
@@ -44,7 +49,15 @@ class WrongWayDriving(EventPluginBase):
                 continue
 
             first, last = track.points[0], track.points[-1]
-            motion = normalize_vector((last.center_x - first.center_x, last.center_y - first.center_y))
+            # Robust main direction: middle-segment displacement resists
+            # head/tail jitter and mid-track U-turns (M2 fix).
+            motion = trajectory_main_direction(
+                track.points,
+                start_frac=float(config.get("direction_start_frac", 0.25)),
+                end_frac=float(config.get("direction_end_frac", 0.75)),
+            )
+            if motion is None:
+                motion = normalize_vector((last.center_x - first.center_x, last.center_y - first.center_y))
             if motion is None:
                 continue
             direction_dot = motion[0] * allowed_direction[0] + motion[1] * allowed_direction[1]
@@ -66,7 +79,8 @@ class WrongWayDriving(EventPluginBase):
             evidence_frames = self._evidence_frames(track.points)
             events.append(
                 EventMetadata(
-                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id}",
+                    # S7: 新格式 event_id = {video_id}:{event_type}:{n}（n 取 track 序号）
+                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id.rsplit(':', 1)[-1]}",
                     event_type=self.event_type,
                     plugin_name=self.plugin_name,
                     video_id=video_id,
@@ -86,7 +100,8 @@ class WrongWayDriving(EventPluginBase):
                         "roi_ratio": roi_ratio,
                         "min_displacement_px": min_displacement_px,
                     },
-                    description=f"{track.label} moves opposite to configured lane direction",
+                    # S7: 中文 description
+                    description=f"{label_to_chinese(track.label)}沿车道反向行驶（逆行）",
                 )
             )
         return events

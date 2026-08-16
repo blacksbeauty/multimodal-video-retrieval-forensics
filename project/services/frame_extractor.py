@@ -93,7 +93,9 @@ class FrameExtractor:
                         frame_index += 1
                         continue
 
-                timestamp = round(float(frame_index / fps), 1) if fps else float(frame_index)
+                # 时间戳保留 2 位小数（与检测/轨迹/OCR 层 S3 精度一致），
+                # 避免 0.1s 截断导致相邻采样帧时间戳碰撞、帧文件名互相覆盖丢帧。
+                timestamp = round(float(frame_index / fps), 2) if fps else float(frame_index)
                 frame_path = output_dir / self._build_frame_filename(
                     video_name=resolved_video_path.stem,
                     timestamp=timestamp,
@@ -233,7 +235,8 @@ class FrameExtractor:
 
     def _build_frame_filename(self, video_name: str, timestamp: float) -> str:
         safe_name = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in video_name)
-        return f"{safe_name}_{timestamp:.1f}.jpg"
+        # 文件名精度与 timestamp 一致（2 位小数），保证同一视频内帧名唯一。
+        return f"{safe_name}_{timestamp:.2f}.jpg"
 
     def _clear_existing_frames_for_video(self, video_name: str) -> None:
         safe_name = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in video_name)

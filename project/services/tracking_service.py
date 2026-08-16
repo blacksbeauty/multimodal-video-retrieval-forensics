@@ -90,10 +90,22 @@ class TrackingService:
                 if len(row) < 7:
                     continue
 
-                bbox = [float(value) for value in row[:4]]
-                track_identifier = f"{detection_metadata.video_id}:{int(row[4])}"
-                confidence = float(row[5])
-                class_id = int(row[6])
+                # Code Review Must Fix #6：track 行来自 BYTETracker 输出，
+                # 个别字段（如 class_id）可能是 NaN/非数值；脏行跳过，不让
+                # 单个坏行中止整个视频的轨迹构建。
+                try:
+                    bbox = [float(value) for value in row[:4]]
+                    track_id_int = int(row[4])
+                    confidence = float(row[5])
+                    class_id = int(row[6])
+                except (TypeError, ValueError):
+                    logger.warning(
+                        "Skipping malformed track row in %s: %s",
+                        detection_metadata.video_name,
+                        row,
+                    )
+                    continue
+                track_identifier = f"{detection_metadata.video_id}:{track_id_int}"
                 label = class_id_to_label.get(class_id, f"class_{class_id}")
                 center_x, center_y = self._bbox_center(bbox)
                 point = TrajectoryPoint(
@@ -113,7 +125,13 @@ class TrackingService:
                     },
                 )
                 points: List[TrajectoryPoint] = buffer["points"]  # type: ignore[assignment]
-                if points and points[-1].timestamp == point.timestamp:
+                # 去重仅当时间戳与 bbox 完全相同（同帧重复检测）；仅时间戳相同而
+                # bbox 不同时仍保留，避免与帧抽取的时间戳精度问题叠加导致丢轨迹点。
+                if (
+                    points
+                    and points[-1].timestamp == point.timestamp
+                    and points[-1].bbox == point.bbox
+                ):
                     continue
                 points.append(point)
 

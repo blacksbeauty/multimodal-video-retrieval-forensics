@@ -62,6 +62,31 @@ def trajectory_displacement(points: Sequence[Any]) -> float:
     return hypot(float(points[-1].center_x) - float(points[0].center_x), float(points[-1].center_y) - float(points[0].center_y))
 
 
+def trajectory_main_direction(
+    points: Sequence[Any],
+    start_frac: float = 0.25,
+    end_frac: float = 0.75,
+) -> tuple[float, float] | None:
+    """Robust trajectory direction using the middle segment of the track.
+
+    Uses the displacement between the ``start_frac`` and ``end_frac``
+    percentile points instead of the raw first/last points, which makes the
+    direction estimate resistant to jitter at the track head/tail and to
+    mid-track U-turns (the overall motion vector stays representative).
+    """
+    if len(points) < 2:
+        return None
+    last_index = len(points) - 1
+    start_index = int(round(last_index * max(min(start_frac, 1.0), 0.0)))
+    end_index = int(round(last_index * max(min(end_frac, 1.0), 0.0)))
+    start_index = max(min(start_index, last_index), 0)
+    end_index = max(min(end_index, last_index), 0)
+    if end_index <= start_index:
+        end_index = min(start_index + 1, last_index)
+    start, end = points[start_index], points[end_index]
+    return normalize_vector((float(end.center_x) - float(start.center_x), float(end.center_y) - float(start.center_y)))
+
+
 def find_line_contact(points: Sequence[Any], line: Line, min_displacement_px: float = 1.0) -> dict[str, float | str] | None:
     """Find the first finite-line contact using vehicle boxes or center motion."""
     if len(points) < 2 or trajectory_displacement(points) < max(float(min_displacement_px), 0.0):

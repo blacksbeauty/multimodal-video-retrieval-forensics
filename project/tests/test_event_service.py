@@ -149,7 +149,12 @@ class EventServiceTests(unittest.TestCase):
             config_dir.mkdir(parents=True, exist_ok=True)
             frames_dir.mkdir(parents=True, exist_ok=True)
 
-            for index in (1, 2):
+            # Four frames: the H2 anti-false-positive fix in the plugin
+            # requires >= min_after_crossing_points trajectory points AFTER
+            # the crossing, proving the vehicle kept moving past the stop line
+            # (a track whose crossing lands on the last point is deliberately
+            # treated as "stopping on the line", not a violation).
+            for index in (1, 2, 3, 4):
                 image = Image.new("RGB", (120, 120), "black")
                 draw = ImageDraw.Draw(image)
                 draw.rectangle((10, 10, 40, 40), fill=(255, 0, 0))
@@ -200,6 +205,44 @@ class EventServiceTests(unittest.TestCase):
                           "class_id": 2
                         }}
                       ]
+                    }},
+                    {{
+                      "video_name": "traffic.mp4",
+                      "frame_path": "{(frames_dir / 'traffic_3.jpg').as_posix()}",
+                      "timestamp": 3.0,
+                      "detections": [
+                        {{
+                          "label": "traffic light",
+                          "confidence": 0.95,
+                          "bbox": [10.0, 10.0, 40.0, 40.0],
+                          "class_id": 9
+                        }},
+                        {{
+                          "label": "car",
+                          "confidence": 0.9,
+                          "bbox": [70.0, 60.0, 90.0, 80.0],
+                          "class_id": 2
+                        }}
+                      ]
+                    }},
+                    {{
+                      "video_name": "traffic.mp4",
+                      "frame_path": "{(frames_dir / 'traffic_4.jpg').as_posix()}",
+                      "timestamp": 4.0,
+                      "detections": [
+                        {{
+                          "label": "traffic light",
+                          "confidence": 0.95,
+                          "bbox": [10.0, 10.0, 40.0, 40.0],
+                          "class_id": 9
+                        }},
+                        {{
+                          "label": "car",
+                          "confidence": 0.9,
+                          "bbox": [95.0, 60.0, 115.0, 80.0],
+                          "class_id": 2
+                        }}
+                      ]
                     }}
                   ]
                 }}
@@ -218,13 +261,13 @@ class EventServiceTests(unittest.TestCase):
                       "track_id": "video-1:1",
                       "label": "car",
                       "start_ts": 1.0,
-                      "end_ts": 2.0,
-                      "duration_sec": 1.0,
-                      "frame_count": 2,
+                      "end_ts": 4.0,
+                      "duration_sec": 3.0,
+                      "frame_count": 4,
                       "avg_confidence": 0.9,
                       "max_confidence": 0.9,
                       "direction": "left_to_right",
-                      "representative_frame": "{(frames_dir / 'traffic_2.jpg').as_posix()}",
+                      "representative_frame": "{(frames_dir / 'traffic_4.jpg').as_posix()}",
                       "points": [
                         {{
                           "timestamp": 1.0,
@@ -239,6 +282,22 @@ class EventServiceTests(unittest.TestCase):
                           "frame_path": "{(frames_dir / 'traffic_2.jpg').as_posix()}",
                           "bbox": [60.0, 60.0, 80.0, 80.0],
                           "center_x": 70.0,
+                          "center_y": 70.0,
+                          "confidence": 0.9
+                        }},
+                        {{
+                          "timestamp": 3.0,
+                          "frame_path": "{(frames_dir / 'traffic_3.jpg').as_posix()}",
+                          "bbox": [70.0, 60.0, 90.0, 80.0],
+                          "center_x": 90.0,
+                          "center_y": 70.0,
+                          "confidence": 0.9
+                        }},
+                        {{
+                          "timestamp": 4.0,
+                          "frame_path": "{(frames_dir / 'traffic_4.jpg').as_posix()}",
+                          "bbox": [95.0, 60.0, 115.0, 80.0],
+                          "center_x": 115.0,
                           "center_y": 70.0,
                           "confidence": 0.9
                         }}

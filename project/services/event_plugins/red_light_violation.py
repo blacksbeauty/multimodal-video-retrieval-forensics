@@ -5,8 +5,8 @@ from typing import Any, Dict, List, Sequence
 import cv2
 
 from core.schemas import DetectionFrameMetadata, DetectionVideoMetadata, EventMetadata, TrajectoryPoint, TrajectoryVideoMetadata
-from services.event_plugins.base import EventPluginBase
-from services.event_plugins.geometry import find_line_contact
+from services.event_plugins.base import EventPluginBase, label_to_chinese
+from services.event_plugins.geometry import find_line_contact, trajectory_displacement
 from services.event_plugins.registry import register
 
 
@@ -32,6 +32,9 @@ class RedLightViolation(EventPluginBase):
 
         allowed_labels = set(config.get("allowed_labels", ["car", "truck", "bus", "motorcycle"]))
         state_window_sec = float(config.get("state_window_sec", 2.0))
+        min_red_duration_sec = float(config.get("min_red_duration_sec", 0.0))
+        min_after_crossing_points = max(int(config.get("min_after_crossing_points", 2)), 1)
+        min_after_crossing_displacement_px = float(config.get("min_after_crossing_displacement_px", 15.0))
         traffic_light_states = self._extract_traffic_light_states(
             detections.frames,
             min_confidence=float(config.get("traffic_light_min_confidence", 0.25)),
@@ -53,12 +56,32 @@ class RedLightViolation(EventPluginBase):
             if crossing is None:
                 continue
 
+            # H2 fix: verify the vehicle actually keeps moving after crossing
+            # the stop line, so red-light *stopping on the line* (legal) is
+            # not mistaken for running a red light.
+            crossing_index = int(crossing["index"])
+            after_points = track.points[crossing_index + 1 :]
+            if len(after_points) < min_after_crossing_points:
+                continue
+            crossing_point = track.points[crossing_index]
+            if trajectory_displacement([crossing_point] + after_points) < min_after_crossing_displacement_px:
+                continue
+
             light_state = self._state_at_timestamp(
                 traffic_light_states,
                 crossing["timestamp"],
                 max_delta_sec=state_window_sec,
             )
             if light_state is None or light_state["state"] != "red":
+                continue
+            # M3 fix: the light must have been steadily red around the
+            # crossing moment; a single red-frame blip is not enough.
+            if not self._in_sustained_red(
+                traffic_light_states,
+                crossing["timestamp"],
+                min_red_duration_sec,
+                merge_gap_sec=float(config.get("red_merge_gap_sec", 2.0)),
+            ):
                 continue
 
             evidence_frames = self._evidence_frames(track.points, crossing["index"])
@@ -71,7 +94,9 @@ class RedLightViolation(EventPluginBase):
             )
             events.append(
                 EventMetadata(
-                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id}",
+                    # S7: 新格式 event_id = {video_id}:{event_type}:{n}（n 取 track 序号，
+                    # 与迁移脚本产出格式一致，数据规范 v1.1 §2）
+                    event_id=f"{video_id}:{self.plugin_name}:{track.track_id.rsplit(':', 1)[-1]}",
                     event_type=self.event_type,
                     plugin_name=self.plugin_name,
                     video_id=video_id,
@@ -93,7 +118,8 @@ class RedLightViolation(EventPluginBase):
                         "light_state_confidence": light_state["confidence"],
                         "light_frame": light_state["frame_path"],
                     },
-                    description=f"{track.label} crossed stop line during red light",
+                    # S7: 中文 description（供 segment.text 模板直接用，提升中文检索语义）
+                    description=f"{label_to_chinese(track.label)}在红灯状态下越过停止线",
                 )
             )
 
@@ -221,6 +247,50 @@ class RedLightViolation(EventPluginBase):
 
         candidates.sort(key=lambda item: (abs(float(item["timestamp"]) - timestamp), -float(item["confidence"])))
         return candidates[0]
+
+    def _red_phase_intervals(
+        self,
+        states: Sequence[Dict[str, Any]],
+        merge_gap_sec: float = 2.0,
+    ) -> List[tuple[float, float]]:
+        """Merge consecutive red-light states into continuous red intervals.
+
+        ``merge_gap_sec`` must tolerate the frame-sampling interval (e.g. 1s
+        when sampling at 1 fps), otherwise a steadily red light would be split
+        into isolated single-frame intervals.
+        """
+        red_times = sorted(float(state["timestamp"]) for state in states if state["state"] == "red")
+        if not red_times:
+            return []
+        intervals: List[tuple[float, float]] = []
+        interval_start = previous = red_times[0]
+        for current in red_times[1:]:
+            if current - previous > merge_gap_sec:
+                intervals.append((interval_start, previous))
+                interval_start = current
+            previous = current
+        intervals.append((interval_start, previous))
+        return intervals
+
+    def _in_sustained_red(
+        self,
+        states: Sequence[Dict[str, Any]],
+        timestamp: float,
+        min_red_duration_sec: float,
+        merge_gap_sec: float = 2.0,
+    ) -> bool:
+        """Return whether *timestamp* falls inside a continuous red interval
+        whose duration is at least ``min_red_duration_sec``.
+
+        A value <= 0 disables the sustained-red check (legacy single-point
+        matching behaviour).
+        """
+        if min_red_duration_sec <= 0:
+            return True
+        for start, end in self._red_phase_intervals(states, merge_gap_sec):
+            if start <= timestamp <= end + 1e-6 and (end - start) >= min_red_duration_sec:
+                return True
+        return False
 
     def _evidence_frames(self, points: Sequence[TrajectoryPoint], crossing_index: float) -> List[str]:
         index = int(crossing_index)

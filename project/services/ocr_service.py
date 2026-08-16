@@ -103,9 +103,20 @@ class OCRService:
                 continue
 
             bbox_raw, text_info = item
+            # 防御（Code Review Must Fix #3）：PaddleOCR 可能返回 [None, score]
+            # （未识别到有效文本），str(None)="None" 会被误当真实文本入库。
+            if not text_info or len(text_info) < 1 or text_info[0] is None:
+                continue
             text = str(text_info[0]).strip()
             score = float(text_info[1]) if len(text_info) > 1 else 0.0
-            bbox = [[int(round(point[0])), int(round(point[1]))] for point in bbox_raw]
+            # 防御：bbox 结构异常（点数不足 / 坐标缺失）时跳过该条，避免 IndexError。
+            try:
+                bbox = [[int(round(point[0])), int(round(point[1]))] for point in bbox_raw]
+            except (IndexError, TypeError, ValueError):
+                logger.warning(
+                    "Skipping OCR region with malformed bbox on frame %s", resolved_frame_path.name
+                )
+                continue
 
             if not text:
                 continue
@@ -143,6 +154,8 @@ class OCRService:
             return None
 
         timestamp_sec = self._extract_timestamp_from_frame_name(resolved_frame_path)
+        # S3: 统一两位小数，保证与检测/轨迹/事件层 timestamp 可跨层对齐（数据规范 v1.1 §0）。
+        timestamp_sec = round(timestamp_sec, 2)
         return OCRFrameMetadata(
             frame_path=str(resolved_frame_path),
             timestamp_sec=timestamp_sec,

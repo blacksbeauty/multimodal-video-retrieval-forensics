@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import logging
 import math
+from pathlib import Path
 from typing import Any, Dict, List, Protocol
+from urllib.parse import quote
 
 from config import Settings
 
@@ -21,7 +23,17 @@ class OptionalRetriever(Protocol):
 
 
 class HybridSearchService:
-    """Coordinate query rewriting, multimodal retrieval, fusion, and aggregation."""
+    """多模态混合检索协调器（检索统一入口 /api/search/hybrid 的后端实现）。
+
+    职责链（TQUM 分层）：
+      1. 意图解析：QueryRewriteService 将自然语言拆成实体/事件/属性/方向；
+      2. 多通道召回：CLIP(语义) + Detection(目标) + Trajectory(轨迹) + Event(事件) + OCR(文字)
+         各通道独立运行，任一通道失败自动降级（P5 降级），不影响整体结果；
+      3. 融合打分：按意图动态加权（事件意图 → 事件通道权重最高 0.6~0.65），
+         多通道命中给予共识加成（最多 +0.10）；
+      4. 段级聚合：ResultAggregationService 按 segment_id / 视频时间窗去重聚合成段，
+         并为每段附带可播放片段下载地址（clip_url）。
+    """
 
     def __init__(
         self,
@@ -46,7 +58,13 @@ class HybridSearchService:
         self.event_retriever = event_retriever
 
     def search(self, query: str, top_k: int = 20) -> Dict[str, object]:
-        """Run hybrid retrieval and return segment-level results."""
+        """执行混合检索并返回段级结果（/api/search/hybrid 唯一检索入口）。
+
+        流程：意图解析 → 各通道召回（独立 try/except 降级）→ 意图感知融合打分
+              → 段级聚合 → 附加 clip_url。
+        注意：candidate_top_k = top_k × hybrid_candidate_multiplier(默认3)，
+        先取 3 倍候选再聚合裁到 top_k，保证融合后仍有足够结果。
+        """
         if not query or not query.strip():
             raise ValueError("Search query cannot be empty.")
         if top_k < 1:
@@ -60,36 +78,58 @@ class HybridSearchService:
         # All modalities always run; fusion strategy is determined by route_info.
         route_info = self.route_by_confidence(intent)
 
-        # CLIP always runs (optimization 1: no more skip_non_event)
-        clip_results = self.clip_search_service.search_text_variants(
-            rewritten_queries,
-            top_k=candidate_top_k,
-        )
+        # CLIP always runs when enabled (optimization 1: no more skip_non_event).
+        # Channel-level degradation: if a channel is disabled via the enable_*
+        # switches or fails at runtime, it is skipped instead of failing search.
+        clip_results = []
+        if self.settings.enable_clip:
+            try:
+                clip_results = self.clip_search_service.search_text_variants(
+                    rewritten_queries,
+                    top_k=candidate_top_k,
+                )
+            except Exception:
+                logger.exception("CLIP channel unavailable; degrading to remaining channels")
+        else:
+            logger.debug("CLIP channel disabled via enable_clip")
+
         detection_results = []
-        if self.detection_retriever is not None:
-            detection_results = self.detection_retriever.search_as_frames(
-                query=query,
-                top_k=candidate_top_k,
-            )
+        if self.settings.enable_detection and self.detection_retriever is not None:
+            try:
+                detection_results = self.detection_retriever.search_as_frames(
+                    query=query,
+                    top_k=candidate_top_k,
+                )
+            except Exception:
+                logger.exception("Detection channel unavailable; degrading")
         trajectory_results = []
-        if self.trajectory_retriever is not None:
-            trajectory_results = self.trajectory_retriever.search_as_frames(
-                query=query,
-                top_k=candidate_top_k,
-            )
+        if self.settings.enable_trajectory and self.trajectory_retriever is not None:
+            try:
+                trajectory_results = self.trajectory_retriever.search_as_frames(
+                    query=query,
+                    top_k=candidate_top_k,
+                )
+            except Exception:
+                logger.exception("Trajectory channel unavailable; degrading")
         event_results = []
-        if self.event_retriever is not None:
-            event_results = self.event_retriever.search_as_frames(
-                query=query,
-                top_k=candidate_top_k,
-            )
+        if self.settings.enable_event and self.event_retriever is not None:
+            try:
+                event_results = self.event_retriever.search_as_frames(
+                    query=query,
+                    top_k=candidate_top_k,
+                )
+            except Exception:
+                logger.exception("Event channel unavailable; degrading")
 
         ocr_results = []
-        if self.ocr_search_service is not None:
-            ocr_results = self.ocr_search_service.search_as_frames(
-                query=query,
-                top_k=candidate_top_k,
-            )
+        if self.settings.enable_ocr and self.ocr_search_service is not None:
+            try:
+                ocr_results = self.ocr_search_service.search_as_frames(
+                    query=query,
+                    top_k=candidate_top_k,
+                )
+            except Exception:
+                logger.exception("OCR channel unavailable; degrading")
 
         fused_results = self._fuse_results(
             clip_results=clip_results,
@@ -105,6 +145,11 @@ class HybridSearchService:
             top_k=top_k,
             score_threshold=self.settings.hybrid_score_threshold,
         )
+        # Attach a playable-clip download URL to every segment result.
+        for item in aggregated_results:
+            item["clip_url"] = self._build_clip_url(item)
+            item["clip_available"] = self._clip_available(item)
+
         event_conf = float(self._intent_value(intent, "event_confidence") or 0.0)
         logger.info(
             "Hybrid search completed query=%s kind=%s event_conf=%.2f route=%s variants=%s clip_results=%s detection_results=%s trajectory_results=%s event_results=%s ocr_results=%s aggregated=%s",
@@ -248,7 +293,16 @@ class HybridSearchService:
         return [self._finalize_fused_item(item, intent, route_info) for item in fused.values()]
 
     def _result_key(self, item: Dict) -> str:
-        """Build a stable fusion key for multimodal results."""
+        """构造融合用的稳定 key（决定哪些结果会被合并为同一条）。
+
+        - 段级结果（含 segment_id）：直接用 segment_id 作 key，避免时间桶拆段；
+        - 帧级结果：video_id + 5s 时间桶 → 同一视频同一时间窗内的多通道命中合并为一条，
+          并在 _fuse_results 中合并时间边界与各通道得分。
+        """
+        segment_id = item.get("segment_id")
+        if segment_id:
+            return f"seg:{segment_id}"
+
         video_id = str(item.get("video_id", ""))
         if not video_id:
             return str(item.get("frame_path") or item.get("frame_id") or "")
@@ -256,6 +310,38 @@ class HybridSearchService:
         anchor = self._anchor_timestamp(item)
         bucket = int(math.floor(anchor / self.settings.segment_window_seconds))
         return f"{video_id}:{bucket}"
+
+    def _build_clip_url(self, item: Dict) -> str:
+        """Build the lossless MP4 clip download URL for a segment result.
+
+        ``video_path`` is URL-encoded so special characters (slashes, Chinese
+        text, spaces) in the path cannot break the query string.
+        """
+        video_path = str(item.get("video_path", ""))
+        start_ts = float(item.get("start_ts", 0.0))
+        # Defensive: never build a zero-length clip URL (players cannot play
+        # 0s segments). Guarantee at least a 1s window past start_ts.
+        end_ts = max(float(item.get("end_ts", start_ts)), start_ts + 1.0)
+        event_type = str(item.get("matched_event_type", "") or "clip")
+        encoded_path = quote(video_path, safe="")
+        output_name = quote(f"{event_type}_{start_ts}s", safe="")
+        return (
+            "/api/search/download_clip"
+            f"?video_path={encoded_path}"
+            f"&start_ts={start_ts}"
+            f"&end_ts={end_ts}"
+            f"&output_name={output_name}"
+        )
+
+    def _clip_available(self, item: Dict) -> bool:
+        """Whether the source video file actually exists locally.
+
+        Datasets like CARLA accidents store only perception npz + rendered
+        frames (no playable video), so clip generation would 404. Flagging
+        this lets the UI show a hint instead of a broken player.
+        """
+        video_path = str(item.get("video_path", ""))
+        return bool(video_path) and Path(video_path).is_file()
 
     def _anchor_timestamp(self, item: Dict) -> float:
         if "timestamp_seconds" in item:
@@ -296,54 +382,41 @@ class HybridSearchService:
         intent: Dict[str, object],
         route_info: Dict[str, Any] | None = None,
     ) -> Dict:
-        """Fuse multimodal scores using routing-aware strategy.
+        """Fuse multimodal scores using intent-aware channel weights.
 
-        Phase 3 optimization: Uses route_by_confidence to determine fusion:
-        - event_primary: CLIP base + event boost(0.12)
-        - hybrid_balanced: weighted average across modalities
-        - clip_primary: CLIP base + event boost(0.04)
-        - vague_event: CLIP base + event boost(0.06)
-        - clip_only: CLIP dominant weighted average
+        Phase 4/5 optimization: routing-aware fusion now uses the dynamic
+        channel weights produced by ``generate_dynamic_weights`` so that an
+        Event intent gives the event channel the highest weight (0.6-0.65),
+        instead of the legacy "CLIP base + tiny event boost" formula.
+
+        Routing semantics (kept from ``route_by_confidence`` for diagnostics):
+        - event_primary: event channel dominant (event >= 0.6)
+        - clip_primary: CLIP base + event support
+        - vague_event: balanced multi-channel with event participation
+        - clip_only: CLIP/detection dominant weighted average
         """
-        if route_info is None:
-            route_info = {"route": "clip_only", "fusion": "weighted_average"}
-        route = route_info.get("route", "clip_only")
-
         clip_score = self._normalize_clip_score(float(item.get("clip_score", 0.0)))
         detection_score = min(float(item.get("detection_score", 0.0)), 1.0)
         trajectory_score = min(float(item.get("trajectory_score", 0.0)), 1.0)
         event_score = min(float(item.get("event_score", 0.0)), 1.0)
         ocr_score = min(float(item.get("ocr_score", 0.0)), 1.0)
 
-        if route in ("event_primary", "clip_primary", "vague_event"):
-            # CLIP-primary base + event dynamic boost
-            final_score = clip_score
-
-            if event_score > 0:
-                event_boost = route_info.get("event_boost", 0.02)
-                final_score += event_boost * event_score
-            if detection_score > 0:
-                final_score += 0.03 * detection_score
-            if trajectory_score > 0:
-                final_score += 0.03 * trajectory_score
-            if ocr_score > 0:
-                final_score += 0.02 * ocr_score
-        else:
-            # clip_only: CLIP dominant weighted average
-            weights = route_info.get("weights", {
-                "clip": 0.50, "detection": 0.25, "ocr": 0.15, "trajectory": 0.10,
-            })
-            final_score = (
-                weights["clip"] * clip_score
-                + weights["detection"] * detection_score
-                + weights["ocr"] * ocr_score
-                + weights["trajectory"] * trajectory_score
-            )
+        # Intent-aware dynamic weights (TQUM Layer 4) — event channel becomes
+        # dominant (0.6-0.65) for high-confidence event intents.
+        weights = self.generate_dynamic_weights(intent)
+        final_score = (
+            weights["clip"] * clip_score
+            + weights["detection"] * detection_score
+            + weights["trajectory"] * trajectory_score
+            + weights["event"] * event_score
+            + weights["ocr"] * ocr_score
+        )
 
         # Cap at 1.0
         final_score = min(final_score, 1.0)
 
-        # Consensus bonus: reward items matched by multiple modalities
+        # Consensus bonus: reward items matched by multiple modalities.
+        # Capped at 0.10 so it can never dominate the channel-weighted score.
         active_modalities = sum(1 for s in [clip_score, detection_score, trajectory_score, event_score, ocr_score] if s > 0)
         consensus_bonus = max(active_modalities - 1, 0) * 0.05
         if intent.get("label_candidates") and item.get("matched_label") in intent.get("label_candidates"):
@@ -352,6 +425,7 @@ class HybridSearchService:
             consensus_bonus += 0.03
         if intent.get("attributes", {}).get("light_state") and item.get("matched_event_type"):
             consensus_bonus += 0.04
+        consensus_bonus = min(consensus_bonus, 0.10)
 
         item["score"] = min(final_score + consensus_bonus, 1.0)
         item["best_score"] = item["score"]
@@ -417,9 +491,10 @@ class HybridSearchService:
             base = {"clip": 0.50, "detection": 0.25, "trajectory": 0.10,
                     "event": 0.05, "ocr": 0.10}
         else:
-            # Vague query → balanced
-            base = {"clip": 0.30, "detection": 0.20, "trajectory": 0.15,
-                    "event": 0.25, "ocr": 0.10}
+            # Vague / no-event query → CLIP + detection dominant,
+            # event still participates but with low weight.
+            base = {"clip": 0.35, "detection": 0.20, "trajectory": 0.15,
+                    "event": 0.15, "ocr": 0.15}
 
         # Color attribute boosts CLIP (CLIP is good at color matching)
         if attributes.get("color"):

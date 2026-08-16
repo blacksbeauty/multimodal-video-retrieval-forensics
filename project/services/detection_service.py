@@ -129,7 +129,13 @@ class DetectionService:
             if not frames:
                 continue
 
-            video_path = self._resolve_video_path_from_frame_group(video_name)
+            try:
+                video_path = self._resolve_video_path_from_frame_group(video_name)
+            except FileNotFoundError as exc:
+                # Code Review Must Fix #4：源视频缺失时跳过该视频并记录日志，
+                # 不写假路径、不中断整批处理。
+                logger.warning("Skipping detection metadata for missing video: %s", exc)
+                continue
             video_id = build_asset_id(video_path)
             canonical_video_name = video_path.name
             ordered_frames = sorted(frames, key=lambda item: item.timestamp)
@@ -199,7 +205,8 @@ class DetectionService:
 
             detections.append(
                 DetectionItem(
-                    label=label,
+                    label=label,      # S5: 双写别名（过渡期，v2.0 移除）
+                    class_=label,     # S5: 规范标准字段，值相同
                     confidence=float(confidence),
                     bbox=[float(value) for value in bbox],
                     class_id=normalized_class_id,
@@ -257,7 +264,12 @@ class DetectionService:
         for candidate in candidates:
             if candidate.exists() and candidate.is_file():
                 return candidate.resolve()
-        return candidates[0].resolve()
+        # Code Review Must Fix #4：找不到源视频时抛异常，而不是返回一个
+        # 不存在的假路径写入元数据（会导致 clip_available 误判、片段下载 404）。
+        raise FileNotFoundError(
+            f"Source video not found for {video_name!r}; searched: "
+            f"{[str(c) for c in candidates]}"
+        )
 
     def _lookup_imported_video_path(self, video_name: str) -> Path | None:
         """Resolve a logical imported sequence name back to its original dataset directory."""

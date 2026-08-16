@@ -22,6 +22,9 @@ class DetectionSearchService:
         self.base_dir = self.settings.detection_metadata_dir
         self.query_rewrite_service = query_rewrite_service
         self.base_dir.mkdir(parents=True, exist_ok=True)
+        # 元数据 mtime 缓存（Code Review Nice to Have）：检索时避免对每个结果帧
+        # 全量重读 JSON（原实现 search_as_frames 存在 N+1 重复 I/O）。
+        self._cache: Dict[str, tuple[float, DetectionVideoMetadata]] = {}
 
     def search_objects(self, query: str, top_k: int = 10) -> List[DetectionSearchResult]:
         """Search detection metadata by normalized object label."""
@@ -107,17 +110,35 @@ class DetectionSearchService:
         return sorted(self.base_dir.glob("*.json"))
 
     def load_metadata(self, metadata_path: str | Path) -> DetectionVideoMetadata | None:
-        """Load one detection metadata file and validate its payload."""
+        """Load one detection metadata file and validate its payload.
+
+        带 mtime 校验缓存：文件未变化时直接复用内存对象，避免检索路径重复
+        全量读盘（文件更新后 mtime 变化自动失效重读）。
+        """
         path = Path(metadata_path)
         if not path.exists():
             return None
 
+        cache_key = str(path)
+        try:
+            current_mtime = path.stat().st_mtime
+        except OSError:
+            return None
+        cached = self._cache.get(cache_key)
+        if cached is not None and cached[0] == current_mtime:
+            return cached[1]
+
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
-            return DetectionVideoMetadata.model_validate(payload)
+            metadata = DetectionVideoMetadata.model_validate(payload)
         except Exception:
             logger.exception("Failed to load detection metadata: %s", path)
             return None
+
+        if len(self._cache) > 1024:
+            self._cache.clear()
+        self._cache[cache_key] = (current_mtime, metadata)
+        return metadata
 
     def _find_video_id_for_frame(self, frame_path: str) -> str:
         metadata = self._lookup_metadata_by_frame(frame_path)
