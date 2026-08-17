@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交通事件取证 · 三帧关键帧提取</title>
+<style>
+/* ================= 设计令牌（深色安防风） ================= */
+:root {
+  --bg: #0F141C; --card: #181E29; --card-hover: #1F2733; --divider: #2A3342;
+  --field: #222B38; --accent: #1677FF; --accent-strong: #3B8CFF; --accent-press: #0E5FD8;
+  --danger: #D93025; --ok: #27AE60; --warn: #F5A623;
+  --text: #E5E7EB; --muted: #9CA3AF; --placeholder: #6B7280;
+  --radius: 4px; --radius-card: 6px; --radius-video: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 13px; font-weight: 400; overflow: hidden; -webkit-font-smoothing: antialiased;
+}
+.mono { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace; font-weight: 400; }
+.h-light { font-weight: 300; } .h-med { font-weight: 500; } .h-bold { font-weight: 600; }
+
+/* ================= 布局 ================= */
+.app { display: grid; grid-template-columns: 280px 1fr 320px; height: 100vh; overflow: hidden; }
+.panel { background: var(--card); border: 1px solid var(--divider); border-radius: var(--radius-card); }
+.panel:hover { background: var(--card-hover); }
+
+/* ================= 按钮四态 ================= */
+.btn {
+  border: 1px solid var(--divider); background: var(--field); color: var(--text);
+  font-family: inherit; font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
+  padding: 9px 14px; border-radius: var(--radius); cursor: pointer;
+}
+.btn:hover { background: #2A3646; border-color: #3A4A5E; }
+.btn:active { background: #1B2431; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.btn.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+.btn.primary:active { background: var(--accent-press); }
+.btn.primary:disabled { opacity: 0.45; }
+
+/* ================= 输入控件 ================= */
+.field-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 7px; display: block; }
+input[type="text"], input[type="time"], select {
+  width: 100%; background: var(--field); border: 1px solid var(--divider); color: var(--text);
+  font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; padding: 8px 10px;
+  border-radius: var(--radius); outline: none; font-weight: 400;
+}
+input::placeholder { color: var(--placeholder); font-weight: 300; }
+input:hover, select:hover { background: #273240; }
+input:focus, select:focus { border-color: var(--accent); }
+select { appearance: none; cursor: pointer; }
+.group-title {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); padding: 13px 16px 9px; border-bottom: 1px solid var(--divider);
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+/* ================= 左栏 ================= */
+.left { border-right: 1px solid var(--divider); display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.nl-search { padding: 14px 16px; border-bottom: 1px solid var(--divider); }
+.nl-box { display: flex; gap: 8px; }
+.nl-box input { flex: 1; }
+.params { padding: 14px 16px; display: flex; flex-direction: column; gap: 16px; }
+.param-group { display: flex; flex-direction: column; gap: 7px; }
+.param-group + .param-group { border-top: 1px solid var(--divider); padding-top: 14px; }
+.time-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.search-actions { padding: 14px 16px; border-top: 1px solid var(--divider); }
+.result-count {
+  padding: 11px 16px; border-top: 1px solid var(--divider);
+  font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: var(--muted);
+  display: flex; justify-content: space-between;
+}
+.result-count b { color: var(--accent); font-weight: 600; }
+.result-list { flex: 1; min-height: 0; overflow-y: auto; border-top: 1px solid var(--divider); padding: 6px; scrollbar-width: thin; scrollbar-color: var(--divider) transparent; }
+.result-item {
+  padding: 9px 10px; margin: 4px; cursor: pointer;
+  border: 1px solid transparent; border-radius: var(--radius);
+}
+.result-item:hover { background: var(--card-hover); border-color: var(--divider); }
+.result-item.selected { background: var(--card-hover); border-color: var(--accent); }
+.result-item .ri-name { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+.result-item .ri-score { color: var(--accent); font-size: 11px; white-space: nowrap; }
+.result-item .ri-meta { margin-top: 5px; font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; gap: 6px; }
+.result-empty { padding: 24px 16px; text-align: center; font-size: 12px; color: var(--placeholder); font-weight: 300; }
+
+/* 胶囊 */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+}
+.pill .dot { width: 6px; height: 6px; border-radius: 50%; }
+.pill.danger { background: rgba(217,48,37,0.12); color: #E5534A; border: 1px solid rgba(217,48,37,0.35); }
+.pill.danger .dot { background: var(--danger); }
+.pill.ok { background: rgba(39,174,96,0.10); color: var(--ok); border: 1px solid rgba(39,174,96,0.30); }
+.pill.ok .dot { background: var(--ok); }
+.pill.warn { background: rgba(245,166,35,0.10); color: var(--warn); border: 1px solid rgba(245,166,35,0.30); }
+.pill.warn .dot { background: var(--warn); }
+.pill.neutral { background: var(--field); color: var(--muted); border: 1px solid var(--divider); }
+.pill.neutral .dot { background: var(--muted); }
+
+/* ================= 中栏 ================= */
+.center { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.center-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 13px 18px; background: var(--card); border-bottom: 1px solid var(--divider);
+}
+.video-name { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.duration { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: var(--muted); }
+.video-zone { flex: 1; margin: 16px 18px 0; display: flex; flex-direction: column; min-height: 0; }
+.video-card {
+  background: var(--card); border: 1px solid var(--divider); border-radius: var(--radius-video);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45); display: flex; flex-direction: column; flex: 1; min-height: 0; overflow: hidden;
+}
+.video-canvas { flex: 1; background: #000; display: flex; align-items: center; justify-content: center; position: relative; min-height: 0; }
+.video-canvas img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.video-canvas video { width: 100%; height: 100%; object-fit: contain; background: #000; }
+.video-canvas .empty-hint { color: var(--placeholder); font-size: 13px; font-weight: 300; letter-spacing: 0.06em; }
+.video-statusbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 8px 12px; background: var(--card); border-top: 1px solid var(--divider);
+}
+.status-desc { font-size: 12px; color: var(--muted); font-weight: 400; }
+.status-desc b { color: var(--accent); font-weight: 600; }
+.status-meta { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+.status-meta .ts { color: var(--text); }
+
+/* 时间轴 */
+.timeline-zone { margin: 14px 18px 16px; }
+.timeline-card { background: var(--card); border: 1px solid var(--divider); border-radius: var(--radius-card); padding: 12px 16px 14px; }
+.timeline-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.time-code { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: var(--muted); }
+.frame-count { font-size: 11px; font-weight: 400; color: var(--muted); background: var(--field); border: 1px solid var(--divider); border-radius: 999px; padding: 2px 9px; }
+.timeline { position: relative; height: 24px; cursor: ew-resize; }
+.track-line { position: absolute; top: 11px; left: 0; right: 0; height: 3px; background: var(--divider); border-radius: 2px; }
+.track-fill { position: absolute; top: 11px; left: 0; height: 3px; background: var(--accent); border-radius: 2px; }
+.marker { position: absolute; top: 3px; width: 2px; height: 18px; transform: translateX(-1px); cursor: pointer; z-index: 2; border-radius: 1px; }
+.marker.off { background: var(--accent); opacity: 0.45; }
+.marker.on { background: var(--danger); box-shadow: 0 0 0 1px var(--danger); }
+.marker .m-label { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 9px; font-weight: 500; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; }
+.marker.on .m-label { color: var(--danger); }
+.playhead { position: absolute; top: 2px; width: 12px; height: 20px; background: var(--accent); border-radius: 4px; transform: translateX(-6px); z-index: 3; pointer-events: none; box-shadow: 0 0 0 2px rgba(22,119,255,0.25); }
+
+/* ================= 右栏 ================= */
+.right { border-left: 1px solid var(--divider); display: flex; flex-direction: column; min-height: 0; overflow-y: auto; }
+.event-block { padding: 14px 16px; border-bottom: 1px solid var(--divider); }
+.event-block .et-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: var(--muted); }
+.event-block .et-value { font-size: 19px; font-weight: 600; color: var(--danger); margin-top: 5px; }
+.event-block .et-sub { font-size: 11px; font-family: 'JetBrains Mono', Consolas, monospace; color: var(--muted); margin-top: 3px; }
+.frames-block { padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+.thumb {
+  position: relative; width: 100%; aspect-ratio: 3 / 2;
+  border: 1px solid var(--divider); border-radius: var(--radius); cursor: pointer;
+  background: #000; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+.thumb:hover { border-color: #3E4A5E; }
+.thumb.selected { border: 2px solid var(--accent); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb-tag { position: absolute; left: 6px; top: 6px; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; color: var(--accent); background: rgba(15,20,28,0.82); border: 1px solid var(--accent); border-radius: 3px; padding: 2px 7px; }
+.thumb.selected .thumb-tag { background: var(--accent); color: #fff; }
+.thumb-ts { position: absolute; right: 6px; bottom: 6px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #E5E7EB; background: rgba(15,20,28,0.85); border: 1px solid var(--divider); border-radius: 3px; padding: 2px 6px; letter-spacing: 0.05em; }
+.thumb .thumb-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--placeholder); font-size: 12px; font-weight: 300; }
+.right-actions { margin-top: auto; padding: 14px 16px; border-top: 1px solid var(--divider); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.right-actions .span2 { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ 左侧检索区 ============ -->
+  <aside class="left">
+    <div class="group-title">自然语言检索 <span class="mono h-light" style="font-size:10px;color:var(--accent)">NL QUERY</span></div>
+    <div class="nl-search">
+      <div class="nl-box">
+        <input type="text" id="nlQuery" value="闯红灯" placeholder="输入自然语言查询，例如：红灯路口闯红灯的白色轿车" style="font-family:'Inter',sans-serif">
+        <button class="btn primary" id="nlBtn">检索</button>
+      </div>
+    </div>
+
+    <div class="group-title">检索参数 <span class="mono h-light" style="font-size:10px;color:var(--accent)">/api/search/hybrid</span></div>
+    <div class="params">
+      <div class="param-group">
+        <label class="field-label">事件类型</label>
+        <select id="evType">
+          <option value="">全部事件</option>
+          <option value="red_light_violation">闯红灯 red_light_violation</option>
+          <option value="vehicle_crosses_line">压线 vehicle_crosses_line</option>
+          <option value="wrong_way_driving">逆行 wrong_way_driving</option>
+        </select>
+      </div>
+      <div class="param-group">
+        <label class="field-label">Top-K</label>
+        <select id="topK">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-actions">
+      <button class="btn primary" id="searchBtn" style="width:100%">检索</button>
+    </div>
+
+    <div class="result-count">
+      <span>检索结果</span>
+      <span>共 <b id="resultTotal">0</b> 条</span>
+    </div>
+    <div class="result-list" id="resultList">
+      <div class="result-empty">输入查询后点击检索</div>
+    </div>
+  </aside>
+
+  <!-- ============ 中央主视区 ============ -->
+  <main class="center">
+    <div class="center-top">
+      <div class="video-name mono">
+        <span id="videoName">—</span>
+        <span class="pill neutral" id="videoEvTag"><span class="dot"></span><span>未选择结果</span></span>
+      </div>
+      <div class="duration mono" id="videoDuration">—</div>
+    </div>
+
+    <div class="video-zone">
+      <div class="video-card">
+        <div class="video-canvas" id="stage"><div class="empty-hint">等待检索结果…</div></div>
+        <div class="video-statusbar">
+          <span class="status-desc" id="stageDesc">—</span>
+          <span class="status-meta mono">
+            <span id="stageTs">00:00:00</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-zone">
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <span class="time-code mono" id="tlTime">00:00:00 / 00:00:00</span>
+          <span class="frame-count" id="tlMarkers">关键帧 · 0</span>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="track-line"></div>
+          <div class="track-fill" id="trackFill"></div>
+          <div class="playhead" id="playhead"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ 右侧详情区 ============ -->
+  <aside class="right">
+    <div class="event-block">
+      <div class="et-label">事件类型 / EVENT TYPE</div>
+      <div class="et-value" id="eventTypeValue">—</div>
+      <div class="et-sub" id="eventTypeSub">—</div>
+    </div>
+
+    <div class="frames-block" id="framesBlock">
+      <div class="thumb selected" data-idx="0"><div class="thumb-empty">FRAME A · 无快照</div></div>
+      <div class="thumb" data-idx="1"><div class="thumb-empty">FRAME B · 无快照</div></div>
+      <div class="thumb" data-idx="2"><div class="thumb-empty">FRAME C · 无快照</div></div>
+    </div>
+
+    <div class="right-actions">
+      <button class="btn" id="prevBtn" disabled>上一帧</button>
+      <button class="btn" id="nextBtn" disabled>下一帧</button>
+      <button class="btn primary span2" id="playBtn" disabled>播放视频</button>
+    </div>
+  </aside>
+</div>
+
+<script>
+"use strict";
+/* ================= 工具 ================= */
+const EVENT_CN = {
+  red_light_violation: "闯红灯",
+  vehicle_crosses_line: "压线",
+  wrong_way_driving: "逆行",
+};
+const EVENT_PILL = {
+  red_light_violation: "danger",
+  vehicle_crosses_line: "warn",
+  wrong_way_driving: "danger",
+};
+function fmt(sec) {
+  const s = Math.max(0, Math.floor(Number(sec) || 0));
+  const h = String(Math.floor(s / 3600)).padStart(2, "0");
+  const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+  const ss = String(s % 60).padStart(2, "0");
+  return `${h}:${m}:${ss}`;
+}
+function baseName(path) {
+  if (!path) return "";
+  return String(path).split(/[\\/]/).pop();
+}
+function frameUrl(path) {
+  if (!path) return "";
+  return "/frames/" + encodeURIComponent(baseName(path));
+}
+function frameTs(path) {
+  const name = baseName(path).replace(/\.\w+$/, "");
+  const parts = name.split("_");
+  const t = parseFloat(parts[parts.length - 1]);
+  return Number.isFinite(t) ? t : 0;
+}
+
+/* ================= 状态 ================= */
+const state = {
+  results: [],
+  current: null,
+  snapshots: [],   // 三帧路径
+  snapTs: [],      // 三帧时间
+  frameIdx: 0,
+  playhead: 0,
+  duration: 0,
+  playing: false,
+  playTimer: null,
+};
+
+const els = {
+  nlQuery: document.getElementById("nlQuery"),
+  nlBtn: document.getElementById("nlBtn"),
+  searchBtn: document.getElementById("searchBtn"),
+  resultTotal: document.getElementById("resultTotal"),
+  resultList: document.getElementById("resultList"),
+  videoName: document.getElementById("videoName"),
+  videoEvTag: document.getElementById("videoEvTag"),
+  videoDuration: document.getElementById("videoDuration"),
+  stage: document.getElementById("stage"),
+  stageDesc: document.getElementById("stageDesc"),
+  stageTs: document.getElementById("stageTs"),
+  eventTypeValue: document.getElementById("eventTypeValue"),
+  eventTypeSub: document.getElementById("eventTypeSub"),
+  framesBlock: document.getElementById("framesBlock"),
+  prevBtn: document.getElementById("prevBtn"),
+  nextBtn: document.getElementById("nextBtn"),
+  playBtn: document.getElementById("playBtn"),
+  timeline: document.getElementById("timeline"),
+  trackFill: document.getElementById("trackFill"),
+  playhead: document.getElementById("playhead"),
+  tlTime: document.getElementById("tlTime"),
+  tlMarkers: document.getElementById("tlMarkers"),
+  evType: document.getElementById("evType"),
+  topK: document.getElementById("topK"),
+};
+
+/* ================= 检索 ================= */
+async function doSearch() {
+  const query = (els.nlQuery.value || "").trim();
+  if (!query) { els.nlQuery.focus(); return; }
+  const payload = { query, top_k: Number(els.topK.value) };
+  els.searchBtn.disabled = true;
+  els.searchBtn.textContent = "检索中…";
+  try {
+    const resp = await fetch("/api/search/hybrid", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    const data = await resp.json();
+    state.results = data.results || [];
+    els.resultTotal.textContent = state.results.length;
+    renderResultList();
+    if (state.results.length) { selectResult(0); }
+    else { clearSelection(); }
+  } catch (err) {
+    els.resultList.innerHTML = `<div class="result-empty">检索失败：${err.message}</div>`;
+  } finally {
+    els.searchBtn.disabled = false;
+    els.searchBtn.textContent = "检索";
+  }
+}
+
+function renderResultList() {
+  if (!state.results.length) {
+    els.resultList.innerHTML = `<div class="result-empty">无匹配结果</div>`;
+    return;
+  }
+  els.resultList.innerHTML = "";
+  state.results.forEach((r, i) => {
+    const item = document.createElement("div");
+    item.className = "result-item" + (i === state.currentIndex ? " selected" : "");
+    const ev = EVENT_CN[r.matched_event_type] || "—";
+    item.innerHTML =
+      `<div class="ri-name"><span>${escapeHtml(baseName(r.video_name))}</span><span class="ri-score">${Number(r.best_score).toFixed(3)}</span></div>` +
+      `<div class="ri-meta"><span>${ev} · ${(r.matched_by || []).join("+")}</span><span>${fmt(r.start_ts)}-${fmt(r.end_ts)}</span></div>`;
+    item.addEventListener("click", () => selectResult(i));
+    els.resultList.appendChild(item);
+  });
+}
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+/* ================= 选中结果 ================= */
+function selectResult(i) {
+  state.currentIndex = i;
+  const r = state.results[i];
+  state.current = r;
+  state.frameIdx = 0;
+  stopPlay();
+
+  // 三帧快照：优先 key_snapshots；无则回退 thumbnail_frame 单帧
+  const ks = (r.key_snapshots || []).filter(Boolean);
+  state.snapshots = ks.length ? ks : (r.thumbnail_frame ? [r.thumbnail_frame] : []);
+  state.snapTs = state.snapshots.map(frameTs);
+  state.duration = Math.max(Number(r.end_ts) || 0, ...state.snapTs);
+  state.playhead = state.snapTs[0] || 0;
+
+  // 顶栏
+  els.videoName.textContent = baseName(r.video_name);
+  const ev = EVENT_CN[r.matched_event_type] || "非事件结果";
+  const pillCls = EVENT_PILL[r.matched_event_type] || "neutral";
+  els.videoEvTag.className = "pill " + pillCls;
+  els.videoEvTag.innerHTML = `<span class="dot"></span><span>${ev} ${r.matched_event_type || ""}</span>`;
+  els.videoDuration.textContent = `片段 ${fmt(r.start_ts)} - ${fmt(r.end_ts)}`;
+
+  // 右侧事件信息
+  els.eventTypeValue.textContent = ev;
+  els.eventTypeSub.textContent = `${r.matched_event_type || "—"} · score ${Number(r.best_score).toFixed(3)} · ${(r.matched_by || []).join("+")}`;
+
+  // 按钮
+  els.prevBtn.disabled = state.snapshots.length < 2;
+  els.nextBtn.disabled = state.snapshots.length < 2;
+  els.playBtn.disabled = !r.clip_url || r.clip_available === false;
+
+  renderResultList();
+  renderStage();
+  renderThumbs();
+  renderTimeline();
+}
+function clearSelection() {
+  state.current = null; state.snapshots = []; state.snapTs = [];
+  els.videoName.textContent = "—";
+  els.videoDuration.textContent = "—";
+  els.eventTypeValue.textContent = "—";
+  els.eventTypeSub.textContent = "—";
+  els.stage.innerHTML = `<div class="empty-hint">等待检索结果…</div>`;
+  els.stageDesc.textContent = "—";
+  els.stageTs.textContent = "00:00:00";
+  els.tlTime.textContent = "00:00:00 / 00:00:00";
+  els.tlMarkers.textContent = "关键帧 · 0";
+  els.timeline.querySelectorAll(".marker").forEach((m) => m.remove());
+  els.playhead.style.left = "0%";
+  els.trackFill.style.width = "0%";
+  els.prevBtn.disabled = els.nextBtn.disabled = els.playBtn.disabled = true;
+  renderThumbs();
+}
+
+/* ================= 渲染 ================= */
+function renderStage() {
+  const path = state.snapshots[state.frameIdx];
+  if (!path) {
+    els.stage.innerHTML = `<div class="empty-hint">该结果无关键帧画面</div>`;
+    els.stageDesc.textContent = "—";
+    els.stageTs.textContent = "00:00:00";
+    return;
+  }
+  const label = ["越线前", "越线中", "通过后"][state.frameIdx] || "关键帧";
+  els.stage.innerHTML = `<img src="${frameUrl(path)}" alt="关键帧">`;
+  els.stageDesc.innerHTML = `<b>${label}</b> · ${fmt(state.snapTs[state.frameIdx] || 0)}`;
+  els.stageTs.textContent = fmt(state.snapTs[state.frameIdx] || 0);
+}
+function renderThumbs() {
+  els.framesBlock.innerHTML = "";
+  const labels = ["FRAME A · 越线前", "FRAME B · 越线中", "FRAME C · 通过后"];
+  for (let i = 0; i < 3; i++) {
+    const thumb = document.createElement("div");
+    thumb.className = "thumb" + (i === state.frameIdx ? " selected" : "");
+    thumb.dataset.idx = i;
+    const path = state.snapshots[i];
+    if (path) {
+      thumb.innerHTML =
+        `<img src="${frameUrl(path)}" alt="关键帧">` +
+        `<div class="thumb-tag">${labels[i]}</div>` +
+        `<div class="thumb-ts mono">${fmt(state.snapTs[i] || 0)}</div>`;
+    } else {
+      thumb.innerHTML = `<div class="thumb-empty">${labels[i]} · 无快照</div>`;
+    }
+    thumb.addEventListener("click", () => {
+      if (state.snapshots[i]) setFrame(i);
+    });
+    els.framesBlock.appendChild(thumb);
+  }
+}
+function setFrame(i) {
+  if (!state.snapshots.length) return;
+  state.frameIdx = i;
+  state.playhead = state.snapTs[i] || 0;
+  renderStage();
+  renderThumbs();
+  renderTimeline();
+}
+function renderTimeline() {
+  els.timeline.querySelectorAll(".marker").forEach((m) => m.remove());
+  const dur = state.duration || 1;
+  const pctOf = (t) => Math.max(0, Math.min(1, t / dur)) * 100;
+  state.snapTs.forEach((t, i) => {
+    const marker = document.createElement("div");
+    marker.className = "marker" + (i === state.frameIdx ? " on" : " off");
+    marker.style.left = pctOf(t) + "%";
+    marker.innerHTML = `<span class="m-label">${"ABC"[i]}</span>`;
+    marker.addEventListener("click", (e) => { e.stopPropagation(); setFrame(i); });
+    els.timeline.appendChild(marker);
+  });
+  els.playhead.style.left = pctOf(state.playhead) + "%";
+  els.trackFill.style.width = pctOf(state.playhead) + "%";
+  els.tlTime.textContent = `${fmt(state.playhead)} / ${fmt(state.duration)}`;
+  els.tlMarkers.textContent = `关键帧 · ${state.snapshots.length}`;
+}
+
+/* ================= 时间轴拖动 ================= */
+function seekByEvent(clientX) {
+  if (!state.current || !state.duration) return;
+  const rect = els.timeline.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+  state.playhead = ratio * state.duration;
+  let best = 0, bestDist = Infinity;
+  state.snapTs.forEach((t, i) => {
+    const d = Math.abs(t - state.playhead);
+    if (d < bestDist) { bestDist = d; best = i; }
+  });
+  state.frameIdx = best;
+  renderStage(); renderThumbs(); renderTimeline();
+}
+els.timeline.addEventListener("mousedown", (e) => {
+  if (!state.current) return;
+  seekByEvent(e.clientX);
+  const move = (ev) => seekByEvent(ev.clientX);
+  const up = () => {
+    document.removeEventListener("mousemove", move);
+    document.removeEventListener("mouseup", up);
+  };
+  document.addEventListener("mousemove", move);
+  document.addEventListener("mouseup", up);
+});
+
+/* ================= 上一帧 / 下一帧 / 播放 ================= */
+els.prevBtn.addEventListener("click", () => setFrame(state.frameIdx - 1));
+els.nextBtn.addEventListener("click", () => setFrame(state.frameIdx + 1));
+
+function stopPlay() {
+  state.playing = false;
+  if (state.playTimer) { clearInterval(state.playTimer); state.playTimer = null; }
+  els.playBtn.textContent = "播放视频";
+}
+function togglePlay() {
+  const r = state.current;
+  if (!r || !r.clip_url) return;
+  if (state.playing) { stopPlay(); return; }
+  state.playing = true;
+  els.playBtn.textContent = "暂停";
+  // 中央切换为真实视频片段（后端 FFmpeg 剪辑端点）
+  const video = document.createElement("video");
+  video.controls = true;
+  video.src = r.clip_url;
+  video.addEventListener("ended", stopPlay);
+  els.stage.innerHTML = "";
+  els.stage.appendChild(video);
+  video.play().catch(() => {});
+  state.playTimer = setInterval(() => {
+    if (video.currentTime !== undefined && state.duration) {
+      state.playhead = Number(video.currentTime) + Number(r.start_ts || 0);
+      let best = 0, bestDist = Infinity;
+      state.snapTs.forEach((t, i) => {
+        const d = Math.abs(t - state.playhead);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      state.frameIdx = best;
+      renderTimeline();
+    }
+  }, 250);
+}
+els.playBtn.addEventListener("click", togglePlay);
+
+/* ================= 事件绑定 ================= */
+els.searchBtn.addEventListener("click", doSearch);
+els.nlBtn.addEventListener("click", doSearch);
+els.nlQuery.addEventListener("keydown", (e) => { if (e.key === "Enter") doSearch(); });
+
+/* 初始加载：进入页面自动检索一次，展示真实数据 */
+doSearch();
+</script>
+</body>
+</html>

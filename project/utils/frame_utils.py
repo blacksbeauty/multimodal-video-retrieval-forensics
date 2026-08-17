@@ -1,7 +1,27 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
+
+import numpy as np
+
+
+def read_image_cv(frame_path: str | Path):
+    """OpenCV 安全读图（Windows 中文路径兼容，Code Review 修复）。
+
+    ``cv2.imread`` 在 Windows 上无法打开含非 ASCII（中文）字符的文件路径
+    （内部用窄字符 fopen），返回 None。改用 ``np.fromfile + cv2.imdecode``
+    从字节流解码，彻底规避路径编码问题。读取失败返回 None（与 imread 语义一致）。
+    """
+    import cv2
+
+    try:
+        data = np.fromfile(str(frame_path), dtype=np.uint8)
+        if data.size == 0:
+            return None
+        return cv2.imdecode(data, cv2.IMREAD_COLOR)
+    except OSError:
+        return None
 
 
 def parse_frame_filename(frame_path: str | Path) -> Dict[str, object]:

@@ -1,0 +1,54 @@
+{
+  "version": "1.1",
+  "entities": ["video", "frame", "object", "track", "event", "segment"],
+  "relations": {
+    "video_has_frame": true,
+    "frame_has_object": true,
+    "object_has_track": true,
+    "track_causes_event": true,
+    "event_maps_segment": true,
+    "segment_has_embedding": true
+  },
+  "id_rules": {
+    "video_id": "{video_name_stem}_{hash8(video_path)}",
+    "track_id": "{video_id}:{n}",
+    "event_id": "{video_id}:{event_type}:{n}",
+    "segment_id": "{video_id}_seg{n:03d}",
+    "frame_ref": "timestamp + frame_index + path"
+  },
+  "layers": {
+    "source": {
+      "dir": "metadata/datasets",
+      "schema": "core.schemas:AccidentDatasetIngestResult"
+    },
+    "video": {
+      "dir": "metadata/videos",
+      "schema": "core.schemas:VideoMetadata"
+    },
+    "frame": {
+      "dir": "metadata/frames",
+      "schema": "core.schemas:FrameMetadata"
+    },
+    "detection": {
+      "dir": "metadata/detections",
+      "schema": "core.schemas:DetectionVideoMetadata"
+    },
+    "ocr": {
+      "dir": "metadata/ocr",
+      "schema": "core.schemas:OCRVideoMetadata"
+    },
+    "trajectory": {
+      "dir": "metadata/trajectories",
+      "schema": "core.schemas:TrajectoryVideoMetadata"
+    },
+    "event": {
+      "dir": "metadata/events",
+      "schema": "core.schemas:EventVideoMetadata"
+    },
+    "segment": {
+      "dir": "metadata/segments",
+      "schema": "core.schemas:SegmentVideoMetadata"
+    }
+  },
+  "$comment": "[RESOLVED] video/frame/segment 层协议此前标为 PLANNED，现已在 core/schemas.py 补齐 VideoMetadata/FrameMetadata/SegmentVideoMetadata 并接入 layers（2026-08-14）。"
+}

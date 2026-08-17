@@ -9,6 +9,7 @@ import cv2
 from config import Settings
 from core.schemas import OCRFrameMetadata, OCRTextResult, OCRVideoMetadata
 from services.ocr_metadata_store import OCRMetadataStore
+from utils.frame_utils import read_image_cv
 
 
 logger = logging.getLogger(__name__)
@@ -88,7 +89,8 @@ class OCRService:
             return []
 
         resolved_frame_path = Path(frame_path).resolve()
-        image = cv2.imread(str(resolved_frame_path))
+        # 中文路径兼容读取（Code Review 修复：cv2.imread 无法打开含中文路径的帧）
+        image = read_image_cv(resolved_frame_path)
         if image is None:
             raise ValueError(f"Failed to read frame image: {resolved_frame_path}")
 

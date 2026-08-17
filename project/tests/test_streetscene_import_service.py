@@ -18,8 +18,10 @@ class _FakeClipService:
 class _FakeIndexService:
     def __init__(self):
         self.calls = []
+        # 批量路径结束统一 save_index（P1-1 适配）
+        self.faiss_service = _FakeFaissService()
 
-    def upsert_video_records(self, video_id, frame_metadata, embeddings):
+    def upsert_video_records(self, video_id, frame_metadata, embeddings, save=True):
         self.calls.append(
             {
                 "video_id": video_id,
@@ -27,6 +29,11 @@ class _FakeIndexService:
                 "embeddings_shape": tuple(embeddings.shape),
             }
         )
+
+
+class _FakeFaissService:
+    def save_index(self):
+        return {}
 
 
 class StreetSceneImportServiceTests(unittest.TestCase):

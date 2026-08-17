@@ -4,7 +4,7 @@
   "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
   "events": [
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:2",
+      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:2",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -16,8 +16,13 @@
         "MVI_40853_d2e1e48dd2:2"
       ],
       "confidence": 0.8261433635390258,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_2.4.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_0.0.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_2.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_4.8.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_0.0.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_2.4.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_4.8.jpg"
@@ -33,42 +38,10 @@
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "car moves opposite to configured lane direction"
+      "description": "小汽车沿车道反向行驶（逆行）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:82",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 7.2,
-      "end_ts": 62.4,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:82"
-      ],
-      "confidence": 0.687431645134997,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_31.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_7.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_33.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9145751481407521,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:MVI_40853_d2e1e48dd2:160",
+      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:160",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -82,6 +55,10 @@
       "confidence": 0.8721176981925964,
       "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_13.2.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_13.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_14.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_13.2.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_14.4.jpg"
       ],
@@ -101,42 +78,10 @@
         "cross_timestamp": 13.2,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:169",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 13.2,
-      "end_ts": 62.4,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:169"
-      ],
-      "confidence": 0.6183544961039954,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_13.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_37.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.947893860176789,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:MVI_40853_d2e1e48dd2:238",
+      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:238",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -148,8 +93,12 @@
         "MVI_40853_d2e1e48dd2:238"
       ],
       "confidence": 0.801747277379036,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_20.4.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_18.0.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_18.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_19.2.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_18.0.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_19.2.jpg"
       ],
@@ -169,10 +118,10 @@
         "cross_timestamp": 18.0,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "bus crosses configured line"
+      "description": "公交车越过车道线（压线）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:MVI_40853_d2e1e48dd2:376",
+      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:376",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -184,8 +133,12 @@
         "MVI_40853_d2e1e48dd2:376"
       ],
       "confidence": 0.8172509670257568,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_28.8.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_25.2.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_25.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_28.8.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_25.2.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_28.8.jpg"
       ],
@@ -205,10 +158,10 @@
         "cross_timestamp": 25.2,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:390",
+      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:390",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -219,9 +172,14 @@
       "track_ids": [
         "MVI_40853_d2e1e48dd2:390"
       ],
-      "confidence": 0.49131113842917734,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_50.4.jpg",
+      "confidence": 0.34766238392841814,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_26.4.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_26.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_39.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_54.0.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_26.4.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_39.6.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_54.0.jpg"
@@ -233,46 +191,14 @@
           1.0,
           0.0
         ],
-        "direction_dot": -0.9922815356707362,
+        "direction_dot": -0.40978148869650044,
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "car moves opposite to configured lane direction"
+      "description": "小汽车沿车道反向行驶（逆行）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:406",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 27.6,
-      "end_ts": 56.4,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:406"
-      ],
-      "confidence": 0.7398650798790259,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_32.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_27.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_40.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_56.4.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9443866918927947,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:479",
+      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:479",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -283,9 +209,14 @@
       "track_ids": [
         "MVI_40853_d2e1e48dd2:479"
       ],
-      "confidence": 0.7094393994782592,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_40.8.jpg",
+      "confidence": 0.6956344422775425,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_32.4.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_32.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_42.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_50.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_32.4.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_42.0.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_50.4.jpg"
@@ -297,14 +228,14 @@
           1.0,
           0.0
         ],
-        "direction_dot": -0.8887502542098179,
+        "direction_dot": -0.8519971271049732,
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "car moves opposite to configured lane direction"
+      "description": "小汽车沿车道反向行驶（逆行）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:MVI_40853_d2e1e48dd2:522",
+      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:522",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -316,8 +247,13 @@
         "MVI_40853_d2e1e48dd2:522"
       ],
       "confidence": 0.4516683161258698,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_38.4.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_34.8.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_34.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_36.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_38.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_34.8.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_36.0.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_38.4.jpg"
@@ -338,138 +274,10 @@
         "cross_timestamp": 36.0,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "bus crosses configured line"
+      "description": "公交车越过车道线（压线）"
     },
     {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:586",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 39.6,
-      "end_ts": 55.2,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:586"
-      ],
-      "confidence": 0.5774356829662772,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_55.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_39.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_48.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_55.2.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "stationary",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.807741700052058,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:657",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 44.4,
-      "end_ts": 57.6,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:657"
-      ],
-      "confidence": 0.40642242854504884,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_57.6.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_44.4.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_51.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_57.6.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "stationary",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.5354519635165342,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:658",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 44.4,
-      "end_ts": 61.2,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:658"
-      ],
-      "confidence": 0.5256708066731156,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_61.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_44.4.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_52.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_61.2.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9292165313566111,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:686",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 46.8,
-      "end_ts": 62.4,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:686"
-      ],
-      "confidence": 0.4975564281948528,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_61.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_46.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_55.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9580648052924746,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:MVI_40853_d2e1e48dd2:705",
+      "event_id": "MVI_40853_d2e1e48dd2:vehicle_crosses_line:705",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40853_d2e1e48dd2",
@@ -481,11 +289,16 @@
         "MVI_40853_d2e1e48dd2:705"
       ],
       "confidence": 0.8519982364442613,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_57.6.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_51.6.jpg",
       "evidence_frames": [
         "d:/all-seeing vision/rag/project/frames/mvi_40853_51.6.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_52.8.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40853_54.0.jpg"
+      ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_51.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_54.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_52.8.jpg"
       ],
       "attributes": {
         "label": "car",
@@ -503,39 +316,8 @@
         "cross_timestamp": 52.8,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
-    },
-    {
-      "event_id": "MVI_40853_d2e1e48dd2:wrong_way_driving:MVI_40853_d2e1e48dd2:828",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40853_d2e1e48dd2",
-      "video_name": "MVI_40853.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
-      "start_ts": 58.8,
-      "end_ts": 62.4,
-      "track_ids": [
-        "MVI_40853_d2e1e48dd2:828"
-      ],
-      "confidence": 0.6712139913862375,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_58.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_61.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40853_62.4.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9721443900905189,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
+      "description": "小汽车越过车道线（压线）"
     }
-  ]
+  ],
+  "segment_built": false
 }

@@ -1,0 +1,69 @@
+{
+  "video_id": "4_d5d77ad7e3",
+  "segments": [
+    {
+      "segment_id": "4_d5d77ad7e3_seg002",
+      "video_id": "4_d5d77ad7e3",
+      "video_name": "闯红灯_视频4.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+      "time_range": {
+        "start": 0.0,
+        "end": 5.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_4_d5d77ad7e3_0.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "4_d5d77ad7e3_seg001",
+      "video_id": "4_d5d77ad7e3",
+      "video_name": "闯红灯_视频4.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+      "time_range": {
+        "start": 6.0,
+        "end": 10.0
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line",
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "4_d5d77ad7e3:vehicle_crosses_line:87",
+        "4_d5d77ad7e3:vehicle_crosses_line:130"
+      ],
+      "tracks": [
+        "4_d5d77ad7e3:130",
+        "4_d5d77ad7e3:87"
+      ],
+      "text": "小汽车越过车道线（压线）；小汽车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "4_d5d77ad7e3_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/4_d5d77ad7e3_seg002.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "4_d5d77ad7e3_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/4_d5d77ad7e3_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

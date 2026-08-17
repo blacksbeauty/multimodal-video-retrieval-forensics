@@ -53,8 +53,16 @@ class VehicleCrossesLine(EventPluginBase):
                     end_ts=track.end_ts,
                     track_ids=[track.track_id],
                     confidence=min(track.avg_confidence, 1.0),
-                    representative_frame=track.representative_frame,
+                    representative_frame=self.pick_representative_frame(
+                        evidence_frames, track.representative_frame
+                    ),
                     evidence_frames=evidence_frames,
+                    key_snapshots=self.extract_three_keyframes(
+                        points=track.points,
+                        evidence_frames=evidence_frames,
+                        line=config.get("line"),
+                        anchor_timestamp=crossing["timestamp"],
+                    ),
                     attributes={
                         "label": track.label,
                         "direction": track.direction,

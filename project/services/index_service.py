@@ -66,6 +66,7 @@ class IndexService:
         video_id: str,
         frame_metadata: List[Dict],
         embeddings: np.ndarray,
+        save: bool = True,
     ) -> None:
         if len(frame_metadata) != len(embeddings):
             raise ValueError("Frame metadata count does not match embedding count.")
@@ -80,7 +81,10 @@ class IndexService:
         # Incremental upsert: append/overwrite this video's vectors without
         # rebuilding the whole FAISS index.
         self.faiss_service.add_video(video_id, embeddings.astype(np.float32), normalized_metadata)
-        self.faiss_service.save_index()
+        # 批量路径（ingest_directory/数据集导入）传 save=False，循环结束统一
+        # save_index 一次，避免 N 次全量落盘（Code Review P1-1）。
+        if save:
+            self.faiss_service.save_index()
 
     def rebuild_index(self) -> None:
         # S7: 段级文件命名 {segment_id}.npy（必含 _seg_），rebuild 只重建帧级 bundle，
@@ -166,12 +170,15 @@ class IndexService:
         video_id: str,
         segments: List[Dict],
         embeddings: np.ndarray,
+        save: bool = True,
     ) -> None:
         """S7: 段级向量增量入索引。
 
         segments: SegmentRecord 协议 dict 列表（含 segment_id/time_range/text/video_path）。
         embeddings: 段文本编码向量矩阵（N, dim），N == len(segments)。
         与帧级 add_video 共用全局递增 id，IndexIDMap 天然无冲突。
+        注意：必须使用 append=True 追加（Code Review Must Fix：覆盖语义曾删光
+        同 video_id 的帧级向量）。批量路径可传 save=False 统一落盘（P1-1）。
         """
         if len(segments) != len(embeddings):
             raise ValueError("Segment metadata count does not match embedding count.")
@@ -191,8 +198,11 @@ class IndexService:
             return
 
         valid_embeddings = embeddings[: len(normalized_metadata)]
-        self.faiss_service.add_video(video_id, valid_embeddings.astype(np.float32), normalized_metadata)
-        self.faiss_service.save_index()
+        self.faiss_service.add_video(
+            video_id, valid_embeddings.astype(np.float32), normalized_metadata, append=True
+        )
+        if save:
+            self.faiss_service.save_index()
         logger.info(
             "Upserted %s segment vectors for video_id=%s (segment-level index)",
             len(normalized_metadata),

@@ -1,0 +1,95 @@
+{
+  "video_id": "3_ed41292ed0",
+  "video_name": "闯红灯_视频3.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频3.mp4",
+  "events": [
+    {
+      "event_id": "3_ed41292ed0:vehicle_crosses_line:57",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "3_ed41292ed0",
+      "video_name": "闯红灯_视频3.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频3.mp4",
+      "start_ts": 3.5,
+      "end_ts": 10.0,
+      "track_ids": [
+        "3_ed41292ed0:57"
+      ],
+      "confidence": 0.8327556209904807,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_10.00.jpg"
+      ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_10.00.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 9.5,
+        "crossing_mode": "vehicle_bbox"
+      },
+      "description": "小汽车越过车道线（压线）"
+    },
+    {
+      "event_id": "3_ed41292ed0:red_light_violation:57",
+      "event_type": "red_light_violation",
+      "plugin_name": "red_light_violation",
+      "video_id": "3_ed41292ed0",
+      "video_name": "闯红灯_视频3.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频3.mp4",
+      "start_ts": 8.5,
+      "end_ts": 10.0,
+      "track_ids": [
+        "3_ed41292ed0:57"
+      ],
+      "confidence": 0.5940123469532628,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_10.00.jpg"
+      ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_10.00.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "right_to_left",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 9.5,
+        "crossing_mode": "vehicle_bbox",
+        "light_state": "red",
+        "light_state_confidence": 0.2358974358974359,
+        "light_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频3_9.50.jpg"
+      },
+      "description": "小汽车在红灯状态下越过停止线"
+    }
+  ],
+  "segment_built": false
+}

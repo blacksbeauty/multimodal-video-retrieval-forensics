@@ -1,0 +1,98 @@
+{
+  "video_id": "MVI_40852_99fe671d01",
+  "segments": [
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg003",
+      "video_id": "MVI_40852_99fe671d01",
+      "video_name": "MVI_40852.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40852.avi",
+      "time_range": {
+        "start": 0.0,
+        "end": 32.4
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40852_99fe671d01_0.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg001",
+      "video_id": "MVI_40852_99fe671d01",
+      "video_name": "MVI_40852.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40852.avi",
+      "time_range": {
+        "start": 4.8,
+        "end": 26.4
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_4.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_16.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_26.4.jpg"
+      ],
+      "events": [
+        "wrong_way_driving"
+      ],
+      "event_ids": [
+        "MVI_40852_99fe671d01:wrong_way_driving:60"
+      ],
+      "tracks": [
+        "MVI_40852_99fe671d01:60"
+      ],
+      "text": "小汽车沿车道反向行驶（逆行）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg002",
+      "video_id": "MVI_40852_99fe671d01",
+      "video_name": "MVI_40852.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40852.avi",
+      "time_range": {
+        "start": 31.2,
+        "end": 32.4
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_31.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40852_32.4.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "MVI_40852_99fe671d01:vehicle_crosses_line:614"
+      ],
+      "tracks": [
+        "MVI_40852_99fe671d01:614"
+      ],
+      "text": "公交车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg003",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40852_99fe671d01_seg003.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40852_99fe671d01_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40852_99fe671d01_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40852_99fe671d01_seg002.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

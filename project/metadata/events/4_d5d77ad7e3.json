@@ -1,0 +1,89 @@
+{
+  "video_id": "4_d5d77ad7e3",
+  "video_name": "闯红灯_视频4.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+  "events": [
+    {
+      "event_id": "4_d5d77ad7e3:vehicle_crosses_line:87",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "4_d5d77ad7e3",
+      "video_name": "闯红灯_视频4.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+      "start_ts": 6.0,
+      "end_ts": 9.5,
+      "track_ids": [
+        "4_d5d77ad7e3:87"
+      ],
+      "confidence": 0.8559579402208328,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg"
+      ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 6.0,
+        "crossing_mode": "vehicle_bbox"
+      },
+      "description": "小汽车越过车道线（压线）"
+    },
+    {
+      "event_id": "4_d5d77ad7e3:vehicle_crosses_line:130",
+      "event_type": "vehicle_crosses_line",
+      "plugin_name": "vehicle_crosses_line",
+      "video_id": "4_d5d77ad7e3",
+      "video_name": "闯红灯_视频4.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+      "start_ts": 8.0,
+      "end_ts": 10.0,
+      "track_ids": [
+        "4_d5d77ad7e3:130"
+      ],
+      "confidence": 0.8349501848220825,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+      "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg"
+      ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg"
+      ],
+      "attributes": {
+        "label": "car",
+        "direction": "left_to_right",
+        "line": [
+          [
+            640.0,
+            280.0
+          ],
+          [
+            640.0,
+            720.0
+          ]
+        ],
+        "cross_timestamp": 10.0,
+        "crossing_mode": "vehicle_bbox"
+      },
+      "description": "小汽车越过车道线（压线）"
+    }
+  ],
+  "segment_built": false
+}

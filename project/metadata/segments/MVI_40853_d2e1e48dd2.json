@@ -1,0 +1,187 @@
+{
+  "video_id": "MVI_40853_d2e1e48dd2",
+  "segments": [
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg001",
+      "video_id": "MVI_40853_d2e1e48dd2",
+      "video_name": "MVI_40853.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
+      "time_range": {
+        "start": 0.0,
+        "end": 4.8
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_0.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_2.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_4.8.jpg"
+      ],
+      "events": [
+        "wrong_way_driving"
+      ],
+      "event_ids": [
+        "MVI_40853_d2e1e48dd2:wrong_way_driving:2"
+      ],
+      "tracks": [
+        "MVI_40853_d2e1e48dd2:2"
+      ],
+      "text": "小汽车沿车道反向行驶（逆行）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg005",
+      "video_id": "MVI_40853_d2e1e48dd2",
+      "video_name": "MVI_40853.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
+      "time_range": {
+        "start": 4.8,
+        "end": 9.8
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40853_d2e1e48dd2_4.8",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg002",
+      "video_id": "MVI_40853_d2e1e48dd2",
+      "video_name": "MVI_40853.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
+      "time_range": {
+        "start": 13.2,
+        "end": 15.6
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_13.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_14.4.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "MVI_40853_d2e1e48dd2:vehicle_crosses_line:160"
+      ],
+      "tracks": [
+        "MVI_40853_d2e1e48dd2:160"
+      ],
+      "text": "小汽车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg003",
+      "video_id": "MVI_40853_d2e1e48dd2",
+      "video_name": "MVI_40853.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
+      "time_range": {
+        "start": 18.0,
+        "end": 22.8
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_18.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_19.2.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "MVI_40853_d2e1e48dd2:vehicle_crosses_line:238"
+      ],
+      "tracks": [
+        "MVI_40853_d2e1e48dd2:238"
+      ],
+      "text": "公交车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg004",
+      "video_id": "MVI_40853_d2e1e48dd2",
+      "video_name": "MVI_40853.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40853.avi",
+      "time_range": {
+        "start": 25.2,
+        "end": 58.8
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_25.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_28.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_26.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_39.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_54.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_32.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_42.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_50.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_34.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_36.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_38.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_51.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40853_52.8.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line",
+        "wrong_way_driving",
+        "wrong_way_driving",
+        "vehicle_crosses_line",
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "MVI_40853_d2e1e48dd2:vehicle_crosses_line:376",
+        "MVI_40853_d2e1e48dd2:wrong_way_driving:390",
+        "MVI_40853_d2e1e48dd2:wrong_way_driving:479",
+        "MVI_40853_d2e1e48dd2:vehicle_crosses_line:522",
+        "MVI_40853_d2e1e48dd2:vehicle_crosses_line:705"
+      ],
+      "tracks": [
+        "MVI_40853_d2e1e48dd2:376",
+        "MVI_40853_d2e1e48dd2:390",
+        "MVI_40853_d2e1e48dd2:479",
+        "MVI_40853_d2e1e48dd2:522",
+        "MVI_40853_d2e1e48dd2:705"
+      ],
+      "text": "小汽车越过车道线（压线）；小汽车沿车道反向行驶（逆行）；小汽车沿车道反向行驶（逆行）；公交车越过车道线（压线）；小汽车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40853_d2e1e48dd2_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg005",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40853_d2e1e48dd2_seg005.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40853_d2e1e48dd2_seg002.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg003",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40853_d2e1e48dd2_seg003.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40853_d2e1e48dd2_seg004",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40853_d2e1e48dd2_seg004.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

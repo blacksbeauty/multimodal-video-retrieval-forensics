@@ -1,0 +1,2931 @@
+{
+  "video_id": "4_d5d77ad7e3",
+  "video_name": "闯红灯_视频4.mp4",
+  "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频4.mp4",
+  "tracks": [
+    {
+      "track_id": "4_d5d77ad7e3:1",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 2.0,
+      "duration_sec": 2.0,
+      "frame_count": 2,
+      "avg_confidence": 0.8899990916252136,
+      "max_confidence": 0.908939778804779,
+      "direction": "right_to_left",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            246.08956909179688,
+            331.09625244140625,
+            463.1796569824219,
+            434.48974609375
+          ],
+          "center_x": 354.6346130371094,
+          "center_y": 382.7929992675781,
+          "confidence": 0.8710584044456482
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            230.39134216308594,
+            347.31646728515625,
+            428.6290283203125,
+            441.028076171875
+          ],
+          "center_x": 329.5101852416992,
+          "center_y": 394.1722717285156,
+          "confidence": 0.908939778804779
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:11",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 10.0,
+      "duration_sec": 10.0,
+      "frame_count": 18,
+      "avg_confidence": 0.45521864626142716,
+      "max_confidence": 0.5525683760643005,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            435.9459533691406,
+            48.95802307128906,
+            494.4306335449219,
+            105.16551208496094
+          ],
+          "center_x": 465.18829345703125,
+          "center_y": 77.061767578125,
+          "confidence": 0.5525683760643005
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            436.3150634765625,
+            49.78308868408203,
+            492.94964599609375,
+            104.17162322998047
+          ],
+          "center_x": 464.6323547363281,
+          "center_y": 76.97735595703125,
+          "confidence": 0.5054647326469421
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            436.4836120605469,
+            50.49717712402344,
+            492.7893981933594,
+            104.47018432617188
+          ],
+          "center_x": 464.6365051269531,
+          "center_y": 77.48368072509766,
+          "confidence": 0.5295204520225525
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            436.4716491699219,
+            51.680091857910156,
+            492.2267761230469,
+            104.96583557128906
+          ],
+          "center_x": 464.3492126464844,
+          "center_y": 78.32296371459961,
+          "confidence": 0.5110670328140259
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            436.17626953125,
+            52.56743240356445,
+            491.2109069824219,
+            104.9424819946289
+          ],
+          "center_x": 463.69358825683594,
+          "center_y": 78.75495719909668,
+          "confidence": 0.45864149928092957
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            436.293212890625,
+            52.96466064453125,
+            491.26837158203125,
+            104.9796371459961
+          ],
+          "center_x": 463.7807922363281,
+          "center_y": 78.97214889526367,
+          "confidence": 0.40906181931495667
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            434.588623046875,
+            54.18046569824219,
+            491.3270263671875,
+            107.66879272460938
+          ],
+          "center_x": 462.95782470703125,
+          "center_y": 80.92462921142578,
+          "confidence": 0.4090948700904846
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            435.25848388671875,
+            56.7724494934082,
+            490.37884521484375,
+            108.3185043334961
+          ],
+          "center_x": 462.81866455078125,
+          "center_y": 82.54547691345215,
+          "confidence": 0.49243757128715515
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            435.4285888671875,
+            57.385765075683594,
+            489.9508056640625,
+            107.9113540649414
+          ],
+          "center_x": 462.689697265625,
+          "center_y": 82.6485595703125,
+          "confidence": 0.44285643100738525
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            433.9317321777344,
+            50.32460021972656,
+            494.0169372558594,
+            105.85684967041016
+          ],
+          "center_x": 463.9743347167969,
+          "center_y": 78.09072494506836,
+          "confidence": 0.4644416570663452
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            434.6551513671875,
+            49.71543502807617,
+            495.39111328125,
+            105.89573669433594
+          ],
+          "center_x": 465.02313232421875,
+          "center_y": 77.80558586120605,
+          "confidence": 0.42809879779815674
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            433.5789489746094,
+            49.45207977294922,
+            494.56634521484375,
+            105.85028839111328
+          ],
+          "center_x": 464.07264709472656,
+          "center_y": 77.65118408203125,
+          "confidence": 0.3370206356048584
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            434.37322998046875,
+            50.91437911987305,
+            495.7752990722656,
+            107.98095703125
+          ],
+          "center_x": 465.0742645263672,
+          "center_y": 79.44766807556152,
+          "confidence": 0.35147619247436523
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            434.2467956542969,
+            51.50439453125,
+            496.34765625,
+            109.53926086425781
+          ],
+          "center_x": 465.29722595214844,
+          "center_y": 80.5218276977539,
+          "confidence": 0.4684942960739136
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            433.7879943847656,
+            49.81325149536133,
+            496.51226806640625,
+            108.76913452148438
+          ],
+          "center_x": 465.15013122558594,
+          "center_y": 79.29119300842285,
+          "confidence": 0.45227575302124023
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            433.4412841796875,
+            49.80643844604492,
+            495.64227294921875,
+            108.40553283691406
+          ],
+          "center_x": 464.5417785644531,
+          "center_y": 79.10598564147949,
+          "confidence": 0.5350695252418518
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            433.69598388671875,
+            50.04433059692383,
+            494.8102722167969,
+            107.71694946289062
+          ],
+          "center_x": 464.2531280517578,
+          "center_y": 78.88064002990723,
+          "confidence": 0.4413834810256958
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            434.4076843261719,
+            50.64384841918945,
+            495.10113525390625,
+            108.02861785888672
+          ],
+          "center_x": 464.75440979003906,
+          "center_y": 79.33623313903809,
+          "confidence": 0.4049625098705292
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:12",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 4.0,
+      "duration_sec": 4.0,
+      "frame_count": 9,
+      "avg_confidence": 0.4457561406824324,
+      "max_confidence": 0.5651815533638,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            461.799560546875,
+            8.669410705566406,
+            514.325927734375,
+            53.94037628173828
+          ],
+          "center_x": 488.062744140625,
+          "center_y": 31.304893493652344,
+          "confidence": 0.5386238694190979
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            458.1387634277344,
+            9.851410865783691,
+            512.9479370117188,
+            57.111122131347656
+          ],
+          "center_x": 485.54335021972656,
+          "center_y": 33.481266498565674,
+          "confidence": 0.5443705916404724
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            457.3898620605469,
+            12.140035629272461,
+            511.6076965332031,
+            58.901702880859375
+          ],
+          "center_x": 484.498779296875,
+          "center_y": 35.52086925506592,
+          "confidence": 0.5651815533638
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            457.5480041503906,
+            13.450675010681152,
+            512.09716796875,
+            60.5813102722168
+          ],
+          "center_x": 484.8225860595703,
+          "center_y": 37.015992641448975,
+          "confidence": 0.5512203574180603
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            456.477783203125,
+            14.54586410522461,
+            511.1517333984375,
+            61.86355209350586
+          ],
+          "center_x": 483.81475830078125,
+          "center_y": 38.204708099365234,
+          "confidence": 0.40545353293418884
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            455.281982421875,
+            16.645994186401367,
+            509.2696533203125,
+            63.47553634643555
+          ],
+          "center_x": 482.27581787109375,
+          "center_y": 40.06076526641846,
+          "confidence": 0.3413446545600891
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            454.3860778808594,
+            17.56241798400879,
+            508.5823974609375,
+            64.65734100341797
+          ],
+          "center_x": 481.48423767089844,
+          "center_y": 41.10987949371338,
+          "confidence": 0.4686909317970276
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            452.25347900390625,
+            21.336036682128906,
+            506.5993347167969,
+            68.58936309814453
+          ],
+          "center_x": 479.42640686035156,
+          "center_y": 44.96269989013672,
+          "confidence": 0.26876601576805115
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            449.57574462890625,
+            24.680301666259766,
+            503.6414489746094,
+            71.67188262939453
+          ],
+          "center_x": 476.6085968017578,
+          "center_y": 48.17609214782715,
+          "confidence": 0.3281537592411041
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:2",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 6.5,
+      "duration_sec": 6.5,
+      "frame_count": 14,
+      "avg_confidence": 0.7636310585907528,
+      "max_confidence": 0.8665007948875427,
+      "direction": "top_to_bottom",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            403.93646240234375,
+            94.04852294921875,
+            473.00848388671875,
+            158.267333984375
+          ],
+          "center_x": 438.47247314453125,
+          "center_y": 126.15792846679688,
+          "confidence": 0.8637791275978088
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            404.78985595703125,
+            94.8780746459961,
+            472.5912170410156,
+            157.89923095703125
+          ],
+          "center_x": 438.69053649902344,
+          "center_y": 126.38865280151367,
+          "confidence": 0.8421958088874817
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            404.819091796875,
+            95.34872436523438,
+            471.69293212890625,
+            157.44810485839844
+          ],
+          "center_x": 438.2560119628906,
+          "center_y": 126.3984146118164,
+          "confidence": 0.8469123244285583
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            404.6861572265625,
+            95.21295928955078,
+            471.4894104003906,
+            157.16757202148438
+          ],
+          "center_x": 438.08778381347656,
+          "center_y": 126.19026565551758,
+          "confidence": 0.8467247486114502
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            404.5197448730469,
+            94.94645690917969,
+            471.3954772949219,
+            156.889404296875
+          ],
+          "center_x": 437.9576110839844,
+          "center_y": 125.91793060302734,
+          "confidence": 0.8665007948875427
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            404.5908508300781,
+            95.270751953125,
+            471.5603332519531,
+            157.19187927246094
+          ],
+          "center_x": 438.0755920410156,
+          "center_y": 126.23131561279297,
+          "confidence": 0.860226035118103
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            404.6610412597656,
+            95.73815155029297,
+            471.259521484375,
+            157.21890258789062
+          ],
+          "center_x": 437.9602813720703,
+          "center_y": 126.4785270690918,
+          "confidence": 0.8507331013679504
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            404.5751953125,
+            95.96317291259766,
+            471.12921142578125,
+            157.28799438476562
+          ],
+          "center_x": 437.8522033691406,
+          "center_y": 126.62558364868164,
+          "confidence": 0.8565459251403809
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            404.2882385253906,
+            96.17083740234375,
+            471.2850646972656,
+            157.84873962402344
+          ],
+          "center_x": 437.7866516113281,
+          "center_y": 127.0097885131836,
+          "confidence": 0.8187252283096313
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            402.888671875,
+            97.035888671875,
+            471.6827392578125,
+            160.38973999023438
+          ],
+          "center_x": 437.28570556640625,
+          "center_y": 128.7128143310547,
+          "confidence": 0.728117823600769
+        },
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            399.8052062988281,
+            96.58197784423828,
+            476.2674865722656,
+            167.6269989013672
+          ],
+          "center_x": 438.0363464355469,
+          "center_y": 132.10448837280273,
+          "confidence": 0.6020012497901917
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            399.9434509277344,
+            111.74819946289062,
+            473.35382080078125,
+            179.84214782714844
+          ],
+          "center_x": 436.6486358642578,
+          "center_y": 145.79517364501953,
+          "confidence": 0.505269467830658
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            393.0713806152344,
+            131.3867645263672,
+            466.3782043457031,
+            198.8263397216797
+          ],
+          "center_x": 429.72479248046875,
+          "center_y": 165.10655212402344,
+          "confidence": 0.5510386824607849
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            373.4128112792969,
+            147.59503173828125,
+            455.5751647949219,
+            223.1582794189453
+          ],
+          "center_x": 414.4939880371094,
+          "center_y": 185.37665557861328,
+          "confidence": 0.6520645022392273
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:3",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 10.0,
+      "duration_sec": 10.0,
+      "frame_count": 21,
+      "avg_confidence": 0.8294825298445565,
+      "max_confidence": 0.8511918187141418,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            492.71728515625,
+            246.46014404296875,
+            702.858642578125,
+            328.54583740234375
+          ],
+          "center_x": 597.7879638671875,
+          "center_y": 287.50299072265625,
+          "confidence": 0.8453148007392883
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            491.83184814453125,
+            246.33456420898438,
+            702.5635986328125,
+            328.65966796875
+          ],
+          "center_x": 597.1977233886719,
+          "center_y": 287.4971160888672,
+          "confidence": 0.8505415320396423
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            491.9017333984375,
+            246.40428161621094,
+            702.7286376953125,
+            328.7793273925781
+          ],
+          "center_x": 597.315185546875,
+          "center_y": 287.59180450439453,
+          "confidence": 0.8400411605834961
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            492.3697814941406,
+            246.36729431152344,
+            702.8782348632812,
+            328.6247253417969
+          ],
+          "center_x": 597.6240081787109,
+          "center_y": 287.49600982666016,
+          "confidence": 0.8464888334274292
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            492.6432800292969,
+            246.3614501953125,
+            702.7723388671875,
+            328.4745788574219
+          ],
+          "center_x": 597.7078094482422,
+          "center_y": 287.4180145263672,
+          "confidence": 0.8460751175880432
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            491.9168395996094,
+            246.90478515625,
+            701.6866455078125,
+            328.8355712890625
+          ],
+          "center_x": 596.8017425537109,
+          "center_y": 287.87017822265625,
+          "confidence": 0.8511918187141418
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            492.0622863769531,
+            246.47622680664062,
+            702.7091674804688,
+            328.79034423828125
+          ],
+          "center_x": 597.3857269287109,
+          "center_y": 287.63328552246094,
+          "confidence": 0.8495610952377319
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            492.6523132324219,
+            246.5009307861328,
+            702.619384765625,
+            328.5465393066406
+          ],
+          "center_x": 597.6358489990234,
+          "center_y": 287.5237350463867,
+          "confidence": 0.8378565311431885
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            492.6153564453125,
+            246.2164764404297,
+            703.0045776367188,
+            328.4474792480469
+          ],
+          "center_x": 597.8099670410156,
+          "center_y": 287.3319778442383,
+          "confidence": 0.8299534916877747
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            492.57421875,
+            246.12229919433594,
+            702.88623046875,
+            328.3569030761719
+          ],
+          "center_x": 597.730224609375,
+          "center_y": 287.2396011352539,
+          "confidence": 0.836870551109314
+        },
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            492.64178466796875,
+            246.19471740722656,
+            702.75341796875,
+            328.36798095703125
+          ],
+          "center_x": 597.6976013183594,
+          "center_y": 287.2813491821289,
+          "confidence": 0.8197389245033264
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            492.7613830566406,
+            246.2626495361328,
+            703.0556640625,
+            328.5463562011719
+          ],
+          "center_x": 597.9085235595703,
+          "center_y": 287.40450286865234,
+          "confidence": 0.8142399787902832
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            492.51141357421875,
+            246.11886596679688,
+            702.9954833984375,
+            328.5484313964844
+          ],
+          "center_x": 597.7534484863281,
+          "center_y": 287.3336486816406,
+          "confidence": 0.8026614189147949
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            492.2786560058594,
+            246.18603515625,
+            703.3294677734375,
+            328.93505859375
+          ],
+          "center_x": 597.8040618896484,
+          "center_y": 287.560546875,
+          "confidence": 0.7607729434967041
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            492.2871398925781,
+            246.03475952148438,
+            703.1808471679688,
+            328.79022216796875
+          ],
+          "center_x": 597.7339935302734,
+          "center_y": 287.41249084472656,
+          "confidence": 0.8171292543411255
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            492.7192077636719,
+            246.1574249267578,
+            702.7764282226562,
+            328.58349609375
+          ],
+          "center_x": 597.7478179931641,
+          "center_y": 287.3704605102539,
+          "confidence": 0.8297711610794067
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            492.39288330078125,
+            245.88201904296875,
+            703.104248046875,
+            328.6171569824219
+          ],
+          "center_x": 597.7485656738281,
+          "center_y": 287.2495880126953,
+          "confidence": 0.836114764213562
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            492.62091064453125,
+            246.04164123535156,
+            702.5826416015625,
+            328.4561767578125
+          ],
+          "center_x": 597.6017761230469,
+          "center_y": 287.24890899658203,
+          "confidence": 0.8504026532173157
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            492.1379699707031,
+            245.77096557617188,
+            704.3405151367188,
+            329.1752624511719
+          ],
+          "center_x": 598.2392425537109,
+          "center_y": 287.4731140136719,
+          "confidence": 0.8461230993270874
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            493.36248779296875,
+            245.3878936767578,
+            702.4660034179688,
+            327.4766845703125
+          ],
+          "center_x": 597.9142456054688,
+          "center_y": 286.43228912353516,
+          "confidence": 0.7995225191116333
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            492.773681640625,
+            245.73355102539062,
+            701.9797973632812,
+            327.85260009765625
+          ],
+          "center_x": 597.3767395019531,
+          "center_y": 286.79307556152344,
+          "confidence": 0.808761477470398
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:5",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.7819808721542358,
+      "max_confidence": 0.7819808721542358,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            859.7889404296875,
+            175.71185302734375,
+            999.7308349609375,
+            249.74951171875
+          ],
+          "center_x": 929.7598876953125,
+          "center_y": 212.73068237304688,
+          "confidence": 0.7819808721542358
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:7",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.6907088160514832,
+      "max_confidence": 0.6907088160514832,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            1159.519287109375,
+            306.8700866699219,
+            1279.658447265625,
+            399.7402038574219
+          ],
+          "center_x": 1219.5888671875,
+          "center_y": 353.3051452636719,
+          "confidence": 0.6907088160514832
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:8",
+      "label": "car",
+      "start_ts": 0.0,
+      "end_ts": 10.0,
+      "duration_sec": 10.0,
+      "frame_count": 21,
+      "avg_confidence": 0.5814040686403003,
+      "max_confidence": 0.7449250221252441,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            519.0687866210938,
+            84.89730834960938,
+            583.8832397460938,
+            153.91445922851562
+          ],
+          "center_x": 551.4760131835938,
+          "center_y": 119.4058837890625,
+          "confidence": 0.6587961316108704
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            517.3786010742188,
+            85.01944732666016,
+            583.6985473632812,
+            155.66770935058594
+          ],
+          "center_x": 550.53857421875,
+          "center_y": 120.34357833862305,
+          "confidence": 0.6886862516403198
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            517.8781127929688,
+            84.82704162597656,
+            583.8901977539062,
+            155.14137268066406
+          ],
+          "center_x": 550.8841552734375,
+          "center_y": 119.98420715332031,
+          "confidence": 0.7124919295310974
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            517.2200927734375,
+            85.04283905029297,
+            583.3403930664062,
+            155.5155487060547
+          ],
+          "center_x": 550.2802429199219,
+          "center_y": 120.27919387817383,
+          "confidence": 0.7141897082328796
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            518.1909790039062,
+            85.44713592529297,
+            583.1263427734375,
+            154.52301025390625
+          ],
+          "center_x": 550.6586608886719,
+          "center_y": 119.98507308959961,
+          "confidence": 0.7197368144989014
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            517.9601440429688,
+            85.6985092163086,
+            583.0243530273438,
+            154.8612518310547
+          ],
+          "center_x": 550.4922485351562,
+          "center_y": 120.27988052368164,
+          "confidence": 0.6515522599220276
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            518.1752319335938,
+            86.44813537597656,
+            582.8952026367188,
+            155.1094970703125
+          ],
+          "center_x": 550.5352172851562,
+          "center_y": 120.77881622314453,
+          "confidence": 0.703902542591095
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            517.6337280273438,
+            86.80876922607422,
+            583.1167602539062,
+            156.33531188964844
+          ],
+          "center_x": 550.375244140625,
+          "center_y": 121.57204055786133,
+          "confidence": 0.7377177476882935
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            517.0610961914062,
+            87.31271362304688,
+            583.1962280273438,
+            157.57781982421875
+          ],
+          "center_x": 550.128662109375,
+          "center_y": 122.44526672363281,
+          "confidence": 0.7449250221252441
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            517.5537109375,
+            87.8885726928711,
+            583.1061401367188,
+            157.38694763183594
+          ],
+          "center_x": 550.3299255371094,
+          "center_y": 122.63776016235352,
+          "confidence": 0.7136338353157043
+        },
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            517.5823364257812,
+            88.08614349365234,
+            582.972412109375,
+            157.47256469726562
+          ],
+          "center_x": 550.2773742675781,
+          "center_y": 122.77935409545898,
+          "confidence": 0.6469613313674927
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            517.7328491210938,
+            88.73414611816406,
+            582.5562744140625,
+            157.52346801757812
+          ],
+          "center_x": 550.1445617675781,
+          "center_y": 123.1288070678711,
+          "confidence": 0.5539585947990417
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            517.9686889648438,
+            89.44263458251953,
+            582.1597900390625,
+            157.48057556152344
+          ],
+          "center_x": 550.0642395019531,
+          "center_y": 123.46160507202148,
+          "confidence": 0.613362729549408
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            517.2885131835938,
+            89.15648651123047,
+            581.7052612304688,
+            157.5373077392578
+          ],
+          "center_x": 549.4968872070312,
+          "center_y": 123.34689712524414,
+          "confidence": 0.5487576723098755
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            517.3474731445312,
+            88.83882904052734,
+            581.3731689453125,
+            156.9309844970703
+          ],
+          "center_x": 549.3603210449219,
+          "center_y": 122.88490676879883,
+          "confidence": 0.3473694920539856
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            518.0516357421875,
+            90.53473663330078,
+            580.2337036132812,
+            156.4973907470703
+          ],
+          "center_x": 549.1426696777344,
+          "center_y": 123.51606369018555,
+          "confidence": 0.42694467306137085
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            517.53857421875,
+            91.7328872680664,
+            579.2952880859375,
+            156.78933715820312
+          ],
+          "center_x": 548.4169311523438,
+          "center_y": 124.26111221313477,
+          "confidence": 0.4003664553165436
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            517.5221557617188,
+            92.10919952392578,
+            579.1634521484375,
+            156.46929931640625
+          ],
+          "center_x": 548.3428039550781,
+          "center_y": 124.28924942016602,
+          "confidence": 0.29897066950798035
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            517.3788452148438,
+            92.7269515991211,
+            579.1547241210938,
+            156.82058715820312
+          ],
+          "center_x": 548.2667846679688,
+          "center_y": 124.77376937866211,
+          "confidence": 0.39722153544425964
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            517.0852661132812,
+            91.8940658569336,
+            580.1299438476562,
+            157.10520935058594
+          ],
+          "center_x": 548.6076049804688,
+          "center_y": 124.49963760375977,
+          "confidence": 0.44888362288475037
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            517.2044677734375,
+            92.6946792602539,
+            579.5657958984375,
+            157.05374145507812
+          ],
+          "center_x": 548.3851318359375,
+          "center_y": 124.87421035766602,
+          "confidence": 0.48105642199516296
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:17",
+      "label": "car",
+      "start_ts": 1.0,
+      "end_ts": 4.5,
+      "duration_sec": 3.5,
+      "frame_count": 8,
+      "avg_confidence": 0.4949522316455841,
+      "max_confidence": 0.5407865047454834,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+      "points": [
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            551.5989990234375,
+            0.30674782395362854,
+            605.565673828125,
+            24.260669708251953
+          ],
+          "center_x": 578.5823364257812,
+          "center_y": 12.28370876610279,
+          "confidence": 0.4780234694480896
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            549.41357421875,
+            0.843417227268219,
+            608.4413452148438,
+            27.16982078552246
+          ],
+          "center_x": 578.9274597167969,
+          "center_y": 14.00661900639534,
+          "confidence": 0.5017095804214478
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            546.4964599609375,
+            1.2367291450500488,
+            610.7650146484375,
+            30.13555908203125
+          ],
+          "center_x": 578.6307373046875,
+          "center_y": 15.68614411354065,
+          "confidence": 0.4523596465587616
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            542.3795776367188,
+            1.9524834156036377,
+            614.092529296875,
+            34.575565338134766
+          ],
+          "center_x": 578.2360534667969,
+          "center_y": 18.2640243768692,
+          "confidence": 0.42976686358451843
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            539.295654296875,
+            2.3734068870544434,
+            617.6845092773438,
+            38.66167068481445
+          ],
+          "center_x": 578.4900817871094,
+          "center_y": 20.51753878593445,
+          "confidence": 0.5290170907974243
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            534.9541015625,
+            1.3184982538223267,
+            623.5498046875,
+            43.347476959228516
+          ],
+          "center_x": 579.251953125,
+          "center_y": 22.33298760652542,
+          "confidence": 0.5407865047454834
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            530.0914306640625,
+            1.629456639289856,
+            629.1661376953125,
+            50.045963287353516
+          ],
+          "center_x": 579.6287841796875,
+          "center_y": 25.837709963321686,
+          "confidence": 0.5054969787597656
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            526.3239135742188,
+            4.670526027679443,
+            631.4071655273438,
+            57.803253173828125
+          ],
+          "center_x": 578.8655395507812,
+          "center_y": 31.236889600753784,
+          "confidence": 0.5224577188491821
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:50",
+      "label": "car",
+      "start_ts": 3.5,
+      "end_ts": 4.5,
+      "duration_sec": 1.0,
+      "frame_count": 2,
+      "avg_confidence": 0.7775129675865173,
+      "max_confidence": 0.8760119676589966,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+      "points": [
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            37.802650451660156,
+            369.31103515625,
+            128.7433624267578,
+            482.0749816894531
+          ],
+          "center_x": 83.27300643920898,
+          "center_y": 425.69300842285156,
+          "confidence": 0.8760119676589966
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            34.65449142456055,
+            352.37530517578125,
+            98.50796508789062,
+            430.6098327636719
+          ],
+          "center_x": 66.58122825622559,
+          "center_y": 391.49256896972656,
+          "confidence": 0.6790139675140381
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:83",
+      "label": "car",
+      "start_ts": 5.5,
+      "end_ts": 7.0,
+      "duration_sec": 1.5,
+      "frame_count": 4,
+      "avg_confidence": 0.451068677008152,
+      "max_confidence": 0.5714865922927856,
+      "direction": "top_to_bottom",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+      "points": [
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            550.4606323242188,
+            23.841291427612305,
+            601.6204223632812,
+            74.93458557128906
+          ],
+          "center_x": 576.04052734375,
+          "center_y": 49.387938499450684,
+          "confidence": 0.47746944427490234
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            546.3046264648438,
+            30.259021759033203,
+            601.806884765625,
+            85.63372802734375
+          ],
+          "center_x": 574.0557556152344,
+          "center_y": 57.94637489318848,
+          "confidence": 0.3810001015663147
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            543.234619140625,
+            37.81144332885742,
+            600.533935546875,
+            94.96280670166016
+          ],
+          "center_x": 571.88427734375,
+          "center_y": 66.38712501525879,
+          "confidence": 0.5714865922927856
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            540.276123046875,
+            45.01727294921875,
+            597.4994506835938,
+            101.91873168945312
+          ],
+          "center_x": 568.8877868652344,
+          "center_y": 73.46800231933594,
+          "confidence": 0.37431856989860535
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:87",
+      "label": "car",
+      "start_ts": 6.0,
+      "end_ts": 9.5,
+      "duration_sec": 3.5,
+      "frame_count": 8,
+      "avg_confidence": 0.8559579402208328,
+      "max_confidence": 0.8951748013496399,
+      "direction": "left_to_right",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+      "points": [
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            520.8140869140625,
+            378.26348876953125,
+            764.0189208984375,
+            487.69049072265625
+          ],
+          "center_x": 642.41650390625,
+          "center_y": 432.97698974609375,
+          "confidence": 0.8951748013496399
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            619.230712890625,
+            384.5917053222656,
+            842.9154663085938,
+            485.07122802734375
+          ],
+          "center_x": 731.0730895996094,
+          "center_y": 434.8314666748047,
+          "confidence": 0.831955075263977
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            713.9718627929688,
+            373.8870849609375,
+            951.1528930664062,
+            480.5989074707031
+          ],
+          "center_x": 832.5623779296875,
+          "center_y": 427.2429962158203,
+          "confidence": 0.823634922504425
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            802.84814453125,
+            367.20867919921875,
+            1042.360595703125,
+            475.3248291015625
+          ],
+          "center_x": 922.6043701171875,
+          "center_y": 421.2667541503906,
+          "confidence": 0.8549701571464539
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            886.4697265625,
+            361.7275390625,
+            1124.079345703125,
+            469.5325927734375
+          ],
+          "center_x": 1005.2745361328125,
+          "center_y": 415.63006591796875,
+          "confidence": 0.8739717602729797
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            966.862060546875,
+            356.0343933105469,
+            1200.6944580078125,
+            462.89508056640625
+          ],
+          "center_x": 1083.7782592773438,
+          "center_y": 409.46473693847656,
+          "confidence": 0.8684665560722351
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            1048.040771484375,
+            352.5615539550781,
+            1269.9853515625,
+            454.67535400390625
+          ],
+          "center_x": 1159.0130615234375,
+          "center_y": 403.6184539794922,
+          "confidence": 0.8536485433578491
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            1119.2860107421875,
+            351.48681640625,
+            1321.2872314453125,
+            446.5256652832031
+          ],
+          "center_x": 1220.28662109375,
+          "center_y": 399.00624084472656,
+          "confidence": 0.8458417057991028
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:89",
+      "label": "car",
+      "start_ts": 6.0,
+      "end_ts": 9.0,
+      "duration_sec": 3.0,
+      "frame_count": 6,
+      "avg_confidence": 0.5264467845360438,
+      "max_confidence": 0.8115763068199158,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+      "points": [
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            759.7991333007812,
+            117.54427337646484,
+            849.5827026367188,
+            178.61993408203125
+          ],
+          "center_x": 804.69091796875,
+          "center_y": 148.08210372924805,
+          "confidence": 0.8115763068199158
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            746.9824829101562,
+            107.96757507324219,
+            833.3446044921875,
+            166.7860107421875
+          ],
+          "center_x": 790.1635437011719,
+          "center_y": 137.37679290771484,
+          "confidence": 0.5889244675636292
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            739.25830078125,
+            97.14178466796875,
+            821.6209106445312,
+            153.3683319091797
+          ],
+          "center_x": 780.4396057128906,
+          "center_y": 125.25505828857422,
+          "confidence": 0.4208873510360718
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            725.5341796875,
+            84.16474151611328,
+            808.9945068359375,
+            141.41348266601562
+          ],
+          "center_x": 767.2643432617188,
+          "center_y": 112.78911209106445,
+          "confidence": 0.49559181928634644
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            720.8077392578125,
+            73.0488052368164,
+            795.8057861328125,
+            124.86715698242188
+          ],
+          "center_x": 758.3067626953125,
+          "center_y": 98.95798110961914,
+          "confidence": 0.37038785219192505
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            715.77880859375,
+            48.11890411376953,
+            785.254638671875,
+            96.60921478271484
+          ],
+          "center_x": 750.5167236328125,
+          "center_y": 72.36405944824219,
+          "confidence": 0.47131291031837463
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:108",
+      "label": "car",
+      "start_ts": 6.5,
+      "end_ts": 10.0,
+      "duration_sec": 3.5,
+      "frame_count": 8,
+      "avg_confidence": 0.8045823946595192,
+      "max_confidence": 0.8578647971153259,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+      "points": [
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            405.5338439941406,
+            95.42317962646484,
+            472.29876708984375,
+            156.7788543701172
+          ],
+          "center_x": 438.9163055419922,
+          "center_y": 126.10101699829102,
+          "confidence": 0.7234328985214233
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            404.6722717285156,
+            95.8508529663086,
+            472.155517578125,
+            157.85659790039062
+          ],
+          "center_x": 438.4138946533203,
+          "center_y": 126.85372543334961,
+          "confidence": 0.7711962461471558
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            404.61737060546875,
+            96.5687255859375,
+            471.8703918457031,
+            158.35020446777344
+          ],
+          "center_x": 438.24388122558594,
+          "center_y": 127.45946502685547,
+          "confidence": 0.7866029739379883
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            404.57635498046875,
+            97.12782287597656,
+            471.30999755859375,
+            158.4078826904297
+          ],
+          "center_x": 437.94317626953125,
+          "center_y": 127.76785278320312,
+          "confidence": 0.8119852542877197
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            404.1004333496094,
+            97.08687591552734,
+            470.7266845703125,
+            158.20408630371094
+          ],
+          "center_x": 437.41355895996094,
+          "center_y": 127.64548110961914,
+          "confidence": 0.8441017270088196
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            404.1287841796875,
+            96.57360076904297,
+            471.3876647949219,
+            158.1980743408203
+          ],
+          "center_x": 437.7582244873047,
+          "center_y": 127.38583755493164,
+          "confidence": 0.8064121603965759
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            404.03228759765625,
+            96.39112854003906,
+            471.58123779296875,
+            158.2090301513672
+          ],
+          "center_x": 437.8067626953125,
+          "center_y": 127.30007934570312,
+          "confidence": 0.8578647971153259
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            404.47552490234375,
+            96.82811737060547,
+            471.79925537109375,
+            158.35015869140625
+          ],
+          "center_x": 438.13739013671875,
+          "center_y": 127.58913803100586,
+          "confidence": 0.835063099861145
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:130",
+      "label": "car",
+      "start_ts": 8.0,
+      "end_ts": 10.0,
+      "duration_sec": 2.0,
+      "frame_count": 5,
+      "avg_confidence": 0.8349501848220825,
+      "max_confidence": 0.9248761534690857,
+      "direction": "left_to_right",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+      "points": [
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            315.6058349609375,
+            226.05035400390625,
+            422.07586669921875,
+            325.9617919921875
+          ],
+          "center_x": 368.8408508300781,
+          "center_y": 276.0060729980469,
+          "confidence": 0.6494469046592712
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            336.0497741699219,
+            253.4121856689453,
+            445.0927429199219,
+            355.2317199707031
+          ],
+          "center_x": 390.5712585449219,
+          "center_y": 304.3219528198242,
+          "confidence": 0.8403367400169373
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            391.9833984375,
+            282.97540283203125,
+            506.8075256347656,
+            388.2744445800781
+          ],
+          "center_x": 449.3954620361328,
+          "center_y": 335.6249237060547,
+          "confidence": 0.8660428524017334
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            479.32098388671875,
+            303.06402587890625,
+            600.1198120117188,
+            410.52618408203125
+          ],
+          "center_x": 539.7203979492188,
+          "center_y": 356.79510498046875,
+          "confidence": 0.894048273563385
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            592.6683959960938,
+            316.31231689453125,
+            716.1861572265625,
+            421.88916015625
+          ],
+          "center_x": 654.4272766113281,
+          "center_y": 369.1007385253906,
+          "confidence": 0.9248761534690857
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:131",
+      "label": "car",
+      "start_ts": 8.0,
+      "end_ts": 8.5,
+      "duration_sec": 0.5,
+      "frame_count": 2,
+      "avg_confidence": 0.7285957038402557,
+      "max_confidence": 0.7510448694229126,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+      "points": [
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            695.343017578125,
+            609.6830444335938,
+            920.839111328125,
+            719.5477905273438
+          ],
+          "center_x": 808.091064453125,
+          "center_y": 664.6154174804688,
+          "confidence": 0.7510448694229126
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            662.8271484375,
+            568.4895629882812,
+            927.1790161132812,
+            698.6430053710938
+          ],
+          "center_x": 795.0030822753906,
+          "center_y": 633.5662841796875,
+          "confidence": 0.7061465382575989
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:163",
+      "label": "car",
+      "start_ts": 9.5,
+      "end_ts": 10.0,
+      "duration_sec": 0.5,
+      "frame_count": 2,
+      "avg_confidence": 0.8060002624988556,
+      "max_confidence": 0.8200887441635132,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+      "points": [
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            710.2183837890625,
+            487.36334228515625,
+            830.53271484375,
+            607.8138427734375
+          ],
+          "center_x": 770.3755493164062,
+          "center_y": 547.5885925292969,
+          "confidence": 0.8200887441635132
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            703.2207641601562,
+            460.7041320800781,
+            820.9733276367188,
+            578.3814697265625
+          ],
+          "center_x": 762.0970458984375,
+          "center_y": 519.5428009033203,
+          "confidence": 0.791911780834198
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:184",
+      "label": "car",
+      "start_ts": 10.0,
+      "end_ts": 10.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.3633021414279938,
+      "max_confidence": 0.3633021414279938,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+      "points": [
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            527.669921875,
+            55.87617492675781,
+            594.8530883789062,
+            118.62722778320312
+          ],
+          "center_x": 561.2615051269531,
+          "center_y": 87.25170135498047,
+          "confidence": 0.3633021414279938
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:14",
+      "label": "motorcycle",
+      "start_ts": 0.0,
+      "end_ts": 0.0,
+      "duration_sec": 0.0,
+      "frame_count": 1,
+      "avg_confidence": 0.2940782308578491,
+      "max_confidence": 0.2940782308578491,
+      "direction": "unknown",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            286.17340087890625,
+            189.8631591796875,
+            343.53363037109375,
+            257.36395263671875
+          ],
+          "center_x": 314.853515625,
+          "center_y": 223.61355590820312,
+          "confidence": 0.2940782308578491
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:4",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 4.5,
+      "duration_sec": 4.5,
+      "frame_count": 10,
+      "avg_confidence": 0.739789342880249,
+      "max_confidence": 0.8411234021186829,
+      "direction": "top_to_bottom",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            47.60972595214844,
+            453.271728515625,
+            90.83110046386719,
+            555.26806640625
+          ],
+          "center_x": 69.22041320800781,
+          "center_y": 504.2698974609375,
+          "confidence": 0.8202798962593079
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            55.66814041137695,
+            463.9252624511719,
+            96.5247573852539,
+            560.197509765625
+          ],
+          "center_x": 76.09644889831543,
+          "center_y": 512.0613861083984,
+          "confidence": 0.8109486103057861
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            57.42485046386719,
+            475.4541015625,
+            101.54235076904297,
+            579.3004760742188
+          ],
+          "center_x": 79.48360061645508,
+          "center_y": 527.3772888183594,
+          "confidence": 0.8411234021186829
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            62.274166107177734,
+            489.3633117675781,
+            106.93940734863281,
+            594.349365234375
+          ],
+          "center_x": 84.60678672790527,
+          "center_y": 541.8563385009766,
+          "confidence": 0.7965359687805176
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            60.43234634399414,
+            505.2303466796875,
+            105.21446228027344,
+            610.0404052734375
+          ],
+          "center_x": 82.82340431213379,
+          "center_y": 557.6353759765625,
+          "confidence": 0.8077512979507446
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            51.41679763793945,
+            521.6287841796875,
+            96.09891510009766,
+            626.4963989257812
+          ],
+          "center_x": 73.75785636901855,
+          "center_y": 574.0625915527344,
+          "confidence": 0.6794024109840393
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            38.4859619140625,
+            538.726806640625,
+            83.72135925292969,
+            645.7108154296875
+          ],
+          "center_x": 61.103660583496094,
+          "center_y": 592.2188110351562,
+          "confidence": 0.7019268274307251
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            25.215221405029297,
+            556.769775390625,
+            71.16877746582031,
+            666.7727661132812
+          ],
+          "center_x": 48.191999435424805,
+          "center_y": 611.7712707519531,
+          "confidence": 0.7144162654876709
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            9.120635032653809,
+            572.7671508789062,
+            54.253807067871094,
+            681.287109375
+          ],
+          "center_x": 31.68722105026245,
+          "center_y": 627.0271301269531,
+          "confidence": 0.6884980797767639
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            -5.959849834442139,
+            588.2459106445312,
+            40.84727096557617,
+            704.6963500976562
+          ],
+          "center_x": 17.443710565567017,
+          "center_y": 646.4711303710938,
+          "confidence": 0.537010669708252
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:9",
+      "label": "person",
+      "start_ts": 0.0,
+      "end_ts": 9.0,
+      "duration_sec": 9.0,
+      "frame_count": 19,
+      "avg_confidence": 0.5626608980329413,
+      "max_confidence": 0.7327525019645691,
+      "direction": "bottom_to_top",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            112.7198486328125,
+            164.54690551757812,
+            137.0862579345703,
+            237.90219116210938
+          ],
+          "center_x": 124.9030532836914,
+          "center_y": 201.22454833984375,
+          "confidence": 0.6231671571731567
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            112.87483215332031,
+            164.27194213867188,
+            137.1568145751953,
+            237.3494873046875
+          ],
+          "center_x": 125.01582336425781,
+          "center_y": 200.8107147216797,
+          "confidence": 0.597150981426239
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            113.05734252929688,
+            163.78610229492188,
+            137.6923370361328,
+            237.8394775390625
+          ],
+          "center_x": 125.37483978271484,
+          "center_y": 200.8127899169922,
+          "confidence": 0.5874828696250916
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            113.27181243896484,
+            163.63465881347656,
+            138.1878204345703,
+            238.4097442626953
+          ],
+          "center_x": 125.72981643676758,
+          "center_y": 201.02220153808594,
+          "confidence": 0.5417702198028564
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            113.3848876953125,
+            163.7624053955078,
+            138.39259338378906,
+            238.74143981933594
+          ],
+          "center_x": 125.88874053955078,
+          "center_y": 201.25192260742188,
+          "confidence": 0.5971522331237793
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            112.73823547363281,
+            164.48043823242188,
+            137.1779022216797,
+            237.80763244628906
+          ],
+          "center_x": 124.95806884765625,
+          "center_y": 201.14403533935547,
+          "confidence": 0.6031337976455688
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            112.6795654296875,
+            164.28579711914062,
+            136.96697998046875,
+            237.31935119628906
+          ],
+          "center_x": 124.82327270507812,
+          "center_y": 200.80257415771484,
+          "confidence": 0.6020166277885437
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            113.38653564453125,
+            163.87445068359375,
+            138.15269470214844,
+            238.1100311279297
+          ],
+          "center_x": 125.76961517333984,
+          "center_y": 200.99224090576172,
+          "confidence": 0.584351122379303
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            113.5643310546875,
+            163.39891052246094,
+            138.44302368164062,
+            237.73333740234375
+          ],
+          "center_x": 126.00367736816406,
+          "center_y": 200.56612396240234,
+          "confidence": 0.5052173733711243
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            116.66043090820312,
+            161.6274871826172,
+            141.62445068359375,
+            234.9095458984375
+          ],
+          "center_x": 129.14244079589844,
+          "center_y": 198.26851654052734,
+          "confidence": 0.5587432384490967
+        },
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            117.95925903320312,
+            161.19175720214844,
+            142.66610717773438,
+            233.57521057128906
+          ],
+          "center_x": 130.31268310546875,
+          "center_y": 197.38348388671875,
+          "confidence": 0.5960583090782166
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            123.840087890625,
+            162.5084991455078,
+            146.69210815429688,
+            230.03501892089844
+          ],
+          "center_x": 135.26609802246094,
+          "center_y": 196.27175903320312,
+          "confidence": 0.4612255096435547
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            127.27498626708984,
+            160.84288024902344,
+            149.92323303222656,
+            227.2703094482422
+          ],
+          "center_x": 138.5991096496582,
+          "center_y": 194.0565948486328,
+          "confidence": 0.6257997155189514
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            129.12664794921875,
+            155.5070037841797,
+            152.44480895996094,
+            224.2235870361328
+          ],
+          "center_x": 140.78572845458984,
+          "center_y": 189.86529541015625,
+          "confidence": 0.6893106698989868
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            131.29547119140625,
+            152.00697326660156,
+            154.9098663330078,
+            221.5457763671875
+          ],
+          "center_x": 143.10266876220703,
+          "center_y": 186.77637481689453,
+          "confidence": 0.646638810634613
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            134.8667755126953,
+            145.8740234375,
+            158.74664306640625,
+            216.3357696533203
+          ],
+          "center_x": 146.80670928955078,
+          "center_y": 181.10489654541016,
+          "confidence": 0.7327525019645691
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            138.86244201660156,
+            140.17425537109375,
+            161.9210662841797,
+            208.4186553955078
+          ],
+          "center_x": 150.39175415039062,
+          "center_y": 174.29645538330078,
+          "confidence": 0.45587772130966187
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            143.90492248535156,
+            135.52198791503906,
+            166.80491638183594,
+            203.56875610351562
+          ],
+          "center_x": 155.35491943359375,
+          "center_y": 169.54537200927734,
+          "confidence": 0.3557325005531311
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            147.52537536621094,
+            129.7938690185547,
+            171.47201538085938,
+            200.8358154296875
+          ],
+          "center_x": 159.49869537353516,
+          "center_y": 165.3148422241211,
+          "confidence": 0.3269757032394409
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:10",
+      "label": "traffic light",
+      "start_ts": 0.0,
+      "end_ts": 1.5,
+      "duration_sec": 1.5,
+      "frame_count": 4,
+      "avg_confidence": 0.4393828362226486,
+      "max_confidence": 0.5550015568733215,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            747.86279296875,
+            0.0,
+            772.827880859375,
+            50.17017364501953
+          ],
+          "center_x": 760.3453369140625,
+          "center_y": 25.085086822509766,
+          "confidence": 0.5550015568733215
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            748.091552734375,
+            0.0,
+            773.116455078125,
+            50.28712463378906
+          ],
+          "center_x": 760.60400390625,
+          "center_y": 25.14356231689453,
+          "confidence": 0.3574490249156952
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            748.3070678710938,
+            0.0,
+            773.245361328125,
+            50.12612533569336
+          ],
+          "center_x": 760.7762145996094,
+          "center_y": 25.06306266784668,
+          "confidence": 0.4582217037677765
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            748.4647827148438,
+            0.0,
+            773.1533813476562,
+            49.67723846435547
+          ],
+          "center_x": 760.80908203125,
+          "center_y": 24.838619232177734,
+          "confidence": 0.38685905933380127
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:13",
+      "label": "traffic light",
+      "start_ts": 0.0,
+      "end_ts": 1.0,
+      "duration_sec": 1.0,
+      "frame_count": 2,
+      "avg_confidence": 0.2974264472723007,
+      "max_confidence": 0.31069451570510864,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            813.4920043945312,
+            9.434967041015625,
+            837.0726928710938,
+            39.011322021484375
+          ],
+          "center_x": 825.2823486328125,
+          "center_y": 24.22314453125,
+          "confidence": 0.31069451570510864
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            813.9588623046875,
+            9.8031644821167,
+            836.2645263671875,
+            37.75619125366211
+          ],
+          "center_x": 825.1116943359375,
+          "center_y": 23.779677867889404,
+          "confidence": 0.2841583788394928
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:6",
+      "label": "traffic light",
+      "start_ts": 0.0,
+      "end_ts": 10.0,
+      "duration_sec": 10.0,
+      "frame_count": 21,
+      "avg_confidence": 0.563162944146565,
+      "max_confidence": 0.7276976704597473,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+      "points": [
+        {
+          "timestamp": 0.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.00.jpg",
+          "bbox": [
+            868.675048828125,
+            0.5642852783203125,
+            891.9716796875,
+            55.30793762207031
+          ],
+          "center_x": 880.3233642578125,
+          "center_y": 27.936111450195312,
+          "confidence": 0.7089023590087891
+        },
+        {
+          "timestamp": 0.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_0.50.jpg",
+          "bbox": [
+            868.6990966796875,
+            0.5204042792320251,
+            891.9714965820312,
+            55.20778274536133
+          ],
+          "center_x": 880.3352966308594,
+          "center_y": 27.864093512296677,
+          "confidence": 0.6321357488632202
+        },
+        {
+          "timestamp": 1.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.00.jpg",
+          "bbox": [
+            868.5874633789062,
+            0.4941171705722809,
+            891.9135131835938,
+            55.32832336425781
+          ],
+          "center_x": 880.25048828125,
+          "center_y": 27.911220267415047,
+          "confidence": 0.6539214849472046
+        },
+        {
+          "timestamp": 1.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_1.50.jpg",
+          "bbox": [
+            868.51416015625,
+            0.40392473340034485,
+            891.8456420898438,
+            55.27873611450195
+          ],
+          "center_x": 880.1799011230469,
+          "center_y": 27.84133042395115,
+          "confidence": 0.5710155367851257
+        },
+        {
+          "timestamp": 2.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.00.jpg",
+          "bbox": [
+            868.5160522460938,
+            0.4418775737285614,
+            891.7893676757812,
+            55.14118957519531
+          ],
+          "center_x": 880.1527099609375,
+          "center_y": 27.791533574461937,
+          "confidence": 0.5406611561775208
+        },
+        {
+          "timestamp": 2.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_2.50.jpg",
+          "bbox": [
+            868.6331176757812,
+            0.634708046913147,
+            891.9105224609375,
+            55.288265228271484
+          ],
+          "center_x": 880.2718200683594,
+          "center_y": 27.961486637592316,
+          "confidence": 0.7276976704597473
+        },
+        {
+          "timestamp": 3.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.00.jpg",
+          "bbox": [
+            868.587646484375,
+            0.4918472170829773,
+            891.9187622070312,
+            55.249385833740234
+          ],
+          "center_x": 880.2532043457031,
+          "center_y": 27.870616525411606,
+          "confidence": 0.5357049107551575
+        },
+        {
+          "timestamp": 3.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_3.50.jpg",
+          "bbox": [
+            868.5655517578125,
+            0.49767425656318665,
+            891.8890991210938,
+            55.2784309387207
+          ],
+          "center_x": 880.2273254394531,
+          "center_y": 27.888052597641945,
+          "confidence": 0.6156948208808899
+        },
+        {
+          "timestamp": 4.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.00.jpg",
+          "bbox": [
+            868.0836181640625,
+            0.17133553326129913,
+            891.9152221679688,
+            55.901702880859375
+          ],
+          "center_x": 879.9994201660156,
+          "center_y": 28.036519207060337,
+          "confidence": 0.662038266658783
+        },
+        {
+          "timestamp": 4.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_4.50.jpg",
+          "bbox": [
+            867.8240356445312,
+            0.03870629519224167,
+            891.8661499023438,
+            56.02811813354492
+          ],
+          "center_x": 879.8450927734375,
+          "center_y": 28.03341221436858,
+          "confidence": 0.6812127828598022
+        },
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            867.6854248046875,
+            0.034283485263586044,
+            891.8240356445312,
+            56.05344772338867
+          ],
+          "center_x": 879.7547302246094,
+          "center_y": 28.04386560432613,
+          "confidence": 0.6799787878990173
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            867.6071166992188,
+            -0.0074829519726336,
+            891.7872924804688,
+            55.945098876953125
+          ],
+          "center_x": 879.6972045898438,
+          "center_y": 27.968807962490246,
+          "confidence": 0.631924033164978
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            867.4952392578125,
+            -0.0064090546220541,
+            891.7781982421875,
+            55.93142318725586
+          ],
+          "center_x": 879.63671875,
+          "center_y": 27.962507066316903,
+          "confidence": 0.6358389258384705
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            867.3814086914062,
+            -0.008867236785590649,
+            891.6321411132812,
+            55.74237060546875
+          ],
+          "center_x": 879.5067749023438,
+          "center_y": 27.86675168434158,
+          "confidence": 0.6072738170623779
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            867.97216796875,
+            0.5341443419456482,
+            891.912353515625,
+            55.604244232177734
+          ],
+          "center_x": 879.9422607421875,
+          "center_y": 28.06919428706169,
+          "confidence": 0.5147501230239868
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            868.2604370117188,
+            0.6424317955970764,
+            892.1171875,
+            55.55515670776367
+          ],
+          "center_x": 880.1888122558594,
+          "center_y": 28.098794251680374,
+          "confidence": 0.5122421383857727
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            868.3347778320312,
+            0.7064980268478394,
+            892.0686645507812,
+            55.3751220703125
+          ],
+          "center_x": 880.2017211914062,
+          "center_y": 28.04081004858017,
+          "confidence": 0.45595216751098633
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            868.4953002929688,
+            0.6994988322257996,
+            892.2001342773438,
+            55.33013153076172
+          ],
+          "center_x": 880.3477172851562,
+          "center_y": 28.01481518149376,
+          "confidence": 0.32819926738739014
+        },
+        {
+          "timestamp": 9.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.00.jpg",
+          "bbox": [
+            868.4497680664062,
+            0.6742889285087585,
+            892.0986328125,
+            55.22120666503906
+          ],
+          "center_x": 880.2742004394531,
+          "center_y": 27.94774779677391,
+          "confidence": 0.31371966004371643
+        },
+        {
+          "timestamp": 9.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_9.50.jpg",
+          "bbox": [
+            868.4600219726562,
+            0.6173086166381836,
+            892.169677734375,
+            55.313785552978516
+          ],
+          "center_x": 880.3148498535156,
+          "center_y": 27.96554708480835,
+          "confidence": 0.44136500358581543
+        },
+        {
+          "timestamp": 10.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_10.00.jpg",
+          "bbox": [
+            868.3433227539062,
+            0.6310328841209412,
+            891.9840698242188,
+            55.276947021484375
+          ],
+          "center_x": 880.1636962890625,
+          "center_y": 27.953989952802658,
+          "confidence": 0.37619316577911377
+        }
+      ]
+    },
+    {
+      "track_id": "4_d5d77ad7e3:72",
+      "label": "traffic light",
+      "start_ts": 5.0,
+      "end_ts": 8.5,
+      "duration_sec": 3.5,
+      "frame_count": 8,
+      "avg_confidence": 0.4407893344759941,
+      "max_confidence": 0.5285295844078064,
+      "direction": "stationary",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+      "points": [
+        {
+          "timestamp": 5.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.00.jpg",
+          "bbox": [
+            747.391845703125,
+            0.0,
+            773.3421630859375,
+            52.42055130004883
+          ],
+          "center_x": 760.3670043945312,
+          "center_y": 26.210275650024414,
+          "confidence": 0.41947034001350403
+        },
+        {
+          "timestamp": 5.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_5.50.jpg",
+          "bbox": [
+            747.7980346679688,
+            0.0,
+            773.566650390625,
+            52.06578826904297
+          ],
+          "center_x": 760.6823425292969,
+          "center_y": 26.032894134521484,
+          "confidence": 0.44760385155677795
+        },
+        {
+          "timestamp": 6.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.00.jpg",
+          "bbox": [
+            748.0452270507812,
+            0.0,
+            773.314453125,
+            51.09273147583008
+          ],
+          "center_x": 760.6798400878906,
+          "center_y": 25.54636573791504,
+          "confidence": 0.4158317446708679
+        },
+        {
+          "timestamp": 6.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_6.50.jpg",
+          "bbox": [
+            747.9716796875,
+            0.0,
+            773.1231079101562,
+            50.89263153076172
+          ],
+          "center_x": 760.5473937988281,
+          "center_y": 25.44631576538086,
+          "confidence": 0.44028720259666443
+        },
+        {
+          "timestamp": 7.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.00.jpg",
+          "bbox": [
+            748.0835571289062,
+            0.0,
+            772.8912353515625,
+            50.22156524658203
+          ],
+          "center_x": 760.4873962402344,
+          "center_y": 25.110782623291016,
+          "confidence": 0.45878899097442627
+        },
+        {
+          "timestamp": 7.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_7.50.jpg",
+          "bbox": [
+            748.1727294921875,
+            0.0,
+            773.0198974609375,
+            50.380001068115234
+          ],
+          "center_x": 760.5963134765625,
+          "center_y": 25.190000534057617,
+          "confidence": 0.47349265217781067
+        },
+        {
+          "timestamp": 8.0,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.00.jpg",
+          "bbox": [
+            748.2736206054688,
+            0.0,
+            772.8724365234375,
+            50.00066375732422
+          ],
+          "center_x": 760.5730285644531,
+          "center_y": 25.00033187866211,
+          "confidence": 0.5285295844078064
+        },
+        {
+          "timestamp": 8.5,
+          "frame_path": "d:/all-seeing vision/rag/project/frames/闯红灯_视频4_8.50.jpg",
+          "bbox": [
+            748.1241455078125,
+            0.0,
+            772.4383544921875,
+            49.563472747802734
+          ],
+          "center_x": 760.28125,
+          "center_y": 24.781736373901367,
+          "confidence": 0.3423103094100952
+        }
+      ]
+    }
+  ]
+}

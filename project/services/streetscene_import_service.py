@@ -62,6 +62,8 @@ class StreetSceneImportService:
                     frame_step=frame_step,
                     clip_service=clip_service,
                     index_service=index_service,
+                    # 批量：循环内不落盘，结束统一 save（P1-1）
+                    save_index=False,
                 )
                 results.append(result)
                 source_map[result["video_name"]] = {
@@ -73,6 +75,8 @@ class StreetSceneImportService:
                 logger.exception("Failed to import StreetScene sequence: %s", sequence_dir)
                 errors.append(f"{sequence_dir.name}: {exc}")
 
+        if results:
+            index_service.faiss_service.save_index()
         self._save_source_map(source_map)
         return {
             "total_sequences": len(selected_sequences),
@@ -114,8 +118,12 @@ class StreetSceneImportService:
         frame_step: int,
         clip_service,
         index_service,
+        save_index: bool = True,
     ) -> Dict[str, object]:
-        """Import one StreetScene sequence into frame assets and CLIP index entries."""
+        """Import one StreetScene sequence into frame assets and CLIP index entries.
+
+        批量路径（ingest）传 save_index=False，循环结束统一落盘（P1-1）。
+        """
         video_name = self._build_video_name(split_name, sequence_dir.name)
         video_id = build_asset_id(sequence_dir)
         frame_metadata = self.build_frame_metadata(sequence_dir, video_name=video_name, frame_step=frame_step)
@@ -124,7 +132,12 @@ class StreetSceneImportService:
 
         imported_paths = [Path(item["frame_path"]) for item in frame_metadata]
         embeddings = clip_service.encode_image_paths(imported_paths)
-        index_service.upsert_video_records(video_id=video_id, frame_metadata=frame_metadata, embeddings=embeddings)
+        index_service.upsert_video_records(
+            video_id=video_id,
+            frame_metadata=frame_metadata,
+            embeddings=embeddings,
+            save=save_index,
+        )
 
         logger.info(
             "Imported StreetScene sequence=%s split=%s frames=%s video_id=%s",

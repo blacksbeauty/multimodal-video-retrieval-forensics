@@ -124,6 +124,8 @@ class ResultAggregationService:
             "event_id": str(item.get("event_id", "")),
             "thumbnail_frame": str(item.get("thumbnail_frame", item.get("frame_path", ""))),
             "frame_id": str(item.get("frame_id", "")),
+            # 取证三帧快照透传（非事件通道结果为空列表）
+            "key_snapshots": list(item.get("key_snapshots") or []),
             # S7: 段级字段透传（帧级结果为空字符串）
             "segment_id": str(item.get("segment_id", "")),
             "timestamp_seconds": timestamp_seconds,

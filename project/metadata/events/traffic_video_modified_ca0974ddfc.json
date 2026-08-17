@@ -4,7 +4,7 @@
   "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
   "events": [
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:2",
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:2",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -16,8 +16,13 @@
         "traffic_video_modified_ca0974ddfc:2"
       ],
       "confidence": 0.7490410967306658,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg"
@@ -38,74 +43,10 @@
         "cross_timestamp": 8.0,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:2",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "traffic_video_modified_ca0974ddfc",
-      "video_name": "traffic_video_modified.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
-      "start_ts": 0.0,
-      "end_ts": 14.8,
-      "track_ids": [
-        "traffic_video_modified_ca0974ddfc:2"
-      ],
-      "confidence": 0.747532738226637,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_0.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9959725614238998,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:18",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "traffic_video_modified_ca0974ddfc",
-      "video_name": "traffic_video_modified.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
-      "start_ts": 4.6,
-      "end_ts": 12.5,
-      "track_ids": [
-        "traffic_video_modified_ca0974ddfc:18"
-      ],
-      "confidence": 0.7687271415719175,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_4.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9945998287948782,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:42",
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:42",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -117,8 +58,12 @@
         "traffic_video_modified_ca0974ddfc:42"
       ],
       "confidence": 0.7795906364917755,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg"
       ],
@@ -138,10 +83,10 @@
         "cross_timestamp": 10.3,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "bus crosses configured line"
+      "description": "公交车越过车道线（压线）"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:42",
+      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:42",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -152,9 +97,14 @@
       "track_ids": [
         "traffic_video_modified_ca0974ddfc:42"
       ],
-      "confidence": 0.731759798319123,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+      "confidence": 0.7777122747179807,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_13.7.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_13.7.jpg"
@@ -166,14 +116,14 @@
           1.0,
           0.0
         ],
-        "direction_dot": -0.8772924251940855,
+        "direction_dot": -0.9951811587110702,
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "bus moves opposite to configured lane direction"
+      "description": "公交车沿车道反向行驶（逆行）"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:red_light_violation:traffic_video_modified_ca0974ddfc:57",
+      "event_id": "traffic_video_modified_ca0974ddfc:red_light_violation:57",
       "event_type": "red_light_violation",
       "plugin_name": "red_light_violation",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -185,8 +135,12 @@
         "traffic_video_modified_ca0974ddfc:57"
       ],
       "confidence": 0.878225739300251,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg"
       ],
@@ -209,10 +163,10 @@
         "light_state_confidence": 1.0,
         "light_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg"
       },
-      "description": "car crossed stop line during red light"
+      "description": "小汽车在红灯状态下越过停止线"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:57",
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:57",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -224,8 +178,12 @@
         "traffic_video_modified_ca0974ddfc:57"
       ],
       "confidence": 0.7970428988337517,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg"
       ],
@@ -245,42 +203,10 @@
         "cross_timestamp": 14.8,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:57",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "traffic_video_modified_ca0974ddfc",
-      "video_name": "traffic_video_modified.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
-      "start_ts": 14.8,
-      "end_ts": 25.1,
-      "track_ids": [
-        "traffic_video_modified_ca0974ddfc:57"
-      ],
-      "confidence": 0.7962824825368671,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_18.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_21.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9980919062248786,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:traffic_video_modified_ca0974ddfc:61",
+      "event_id": "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:61",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -294,6 +220,10 @@
       "confidence": 0.7682068943977356,
       "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg"
       ],
@@ -313,10 +243,10 @@
         "cross_timestamp": 17.1,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:61",
+      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:61",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "traffic_video_modified_ca0974ddfc",
@@ -334,6 +264,11 @@
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
         "d:/all-seeing vision/rag/project/frames/traffic_video_modified_20.5.jpg"
       ],
+      "key_snapshots": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_20.5.jpg"
+      ],
       "attributes": {
         "label": "car",
         "direction": "right_to_left",
@@ -345,39 +280,8 @@
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "traffic_video_modified_ca0974ddfc:wrong_way_driving:traffic_video_modified_ca0974ddfc:76",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "traffic_video_modified_ca0974ddfc",
-      "video_name": "traffic_video_modified.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
-      "start_ts": 22.8,
-      "end_ts": 26.2,
-      "track_ids": [
-        "traffic_video_modified_ca0974ddfc:76"
-      ],
-      "confidence": 0.6773537598857038,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_22.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_25.1.jpg",
-        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_26.2.jpg"
-      ],
-      "attributes": {
-        "label": "truck",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9999354282687466,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "truck moves opposite to configured lane direction"
+      "description": "小汽车沿车道反向行驶（逆行）"
     }
-  ]
+  ],
+  "segment_built": false
 }

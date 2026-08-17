@@ -59,9 +59,9 @@
 
 ### 多路径动态检索路由
 
-`HybridSearchService` 根据查询意图动态分配检索路径和权重。`event` 类型查询直接走事件检索，跳过 CLIP 和检测通道；`composite` 类型查询则五路并行检索后融合。
+`HybridSearchService` 根据查询意图动态分配检索路径和权重（`generate_dynamic_weights`）。所有通道（CLIP / Detection / Trajectory / Event / OCR）总是并行运行，再按意图权重融合：`event` 意图下 Event 通道权重最高（0.6~0.65），`object`/`attribute` 意图下 CLIP 与 Detection 主导。
 
-当前权重配置示例（event 意图）：
+当前权重配置示例（高置信 event 意图，无视觉属性）：
 
 | 通道 | 权重 |
 | --- | --- |
@@ -70,6 +70,8 @@
 | Trajectory | 0.15 |
 | Event | 0.65 |
 | OCR | 0.05 |
+
+权重随意图动态变化：带颜色/车型属性的 event 查询会提升 CLIP 权重（0.35），普通目标查询则以 CLIP（0.50）与 Detection（0.25）为主。
 
 ### 结果融合与排序
 
@@ -132,6 +134,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### CN-CLIP 依赖安装（Windows 必读）
+
+系统默认语义编码后端为 **CN-CLIP**（`config.py` 中 `clip_backend: str = "cnclip"`），中文查询（如"白色汽车""闯红灯"）依赖它。PyPI 上的 `cn-clip` 包在 Windows 上因 `lmdb==1.3.0` 源码构建失败（需要 `patch-ng` 且无预编译 wheel）**无法通过 `pip install` 安装**，需手动部署官方源码：
+
+```bash
+# 1. 下载官方源码（master 分支）
+curl -L -o Chinese-CLIP.zip "https://codeload.github.com/OFA-Sys/Chinese-CLIP/zip/refs/heads/master"
+unzip Chinese-CLIP.zip
+
+# 2. 将纯 Python 的 cn_clip 包放入 site-packages
+#    （Windows 示例，路径以你的 Python 环境为准）
+cp -r Chinese-CLIP-master/cn_clip D:/software/python311/Lib/site-packages/cn_clip
+
+# 3. 验证
+python -c "import cn_clip.clip; from cn_clip.clip import load_from_name; print('cn_clip OK')"
+```
+
+> 提示：cn_clip 运行时实际不依赖 lmdb（lmdb 仅用于离线特征缓存），手动部署纯 Python 包即可正常工作。模型权重 `clip_cn_vit-b-16.pt` 放在 `ckpts/` 目录（`config.py` 中 `cnclip_download_root`），加载时自动命中本地文件，无需联网下载。
+
 ### 最小化运行
 
 ```bash
@@ -180,19 +201,68 @@ for result in resp.json()["results"]:
 
 ### API 端点概览
 
-| 端点 | 方法 | 说明 |
+全部业务端点挂在 `/api` 前缀下，可用浏览器访问 `/docs`（Swagger UI）在线调试。
+
+#### 检索 / 资源类
+
+| 方法 | 端点 | 功能 | 主要参数 | 返回 |
+| --- | --- | --- | --- | --- |
+| GET | `/api/health` | 服务健康检查 + 通道可用性 | 无 | JSON |
+| GET | `/api/index/stats` | FAISS 索引统计（帧/视频数） | 无 | JSON |
+| POST | `/api/search` | 纯 CLIP 语义检索 | `query`, `top_k` | JSON |
+| POST | `/api/search/hybrid` | 多模态混合检索（主入口，5 通道融合） | `query`, `top_k` | JSON（含 `clip_url`） |
+| GET | `/api/search/download_clip` | 视频片段下载（FFmpeg 无损剪辑，并发受限 429） | `video_path`, `start_ts`, `end_ts`, `output_name` | MP4 文件流 |
+| POST | `/api/detection/search` | 检测标签检索 | `query`, `top_k` | JSON |
+| POST | `/api/trajectory/search` | 轨迹检索 | `query`, `direction`, `min_duration_sec`, `top_k` | JSON |
+| POST | `/api/event/search` | 事件类型检索（逆行/闯红灯/压线） | `query`, `top_k` | JSON |
+| POST | `/api/ocr/search` | OCR 文本检索 | `query`, `top_k` | JSON |
+
+#### 摄入 / 处理类
+
+| 方法 | 端点 | 功能 | 主要参数 | 返回 |
+| --- | --- | --- | --- | --- |
+| POST | `/api/videos/ingest` | 摄入单个视频（抽帧→编码→建索引） | `video_path`, `frame_interval` | JSON |
+| POST | `/api/videos/ingest-directory` | 批量摄入视频目录 | `directory`, `frame_interval` | JSON |
+| POST | `/api/datasets/streetscene/ingest` | StreetScene 数据集导入 | `dataset_root`, `split`, `max_sequences`, `frame_step` | JSON |
+| POST | `/api/datasets/accident/ingest` | CARLA 事故数据集导入 | `dataset_root`, `scenario_names`, `max_scenarios`, `frame_step` | JSON |
+| POST | `/api/detection/ingest-directory` | 批量生成 YOLO 检测元数据 | `frames_dir` | JSON |
+| POST | `/api/tracking/ingest-directory` | 从检测元数据生成 ByteTrack 轨迹 | `metadata_dir` | JSON |
+| POST | `/api/event/ingest-directory` | 从检测+轨迹生成事件元数据 | `detection_metadata_dir`, `trajectory_metadata_dir`, `plugin_names` | JSON |
+| POST | `/api/ocr/ingest-directory` | 批量生成 PaddleOCR 元数据 | `frames_dir` | JSON |
+
+#### 网页路由（非 API）
+
+| 方法 | 路径 | 功能 |
 | --- | --- | --- |
-| `/api/videos/ingest` | POST | 摄入单个视频，自动提取帧、编码、建索引 |
-| `/api/videos/ingest-directory` | POST | 批量摄入目录下所有视频 |
-| `/api/search/hybrid` | GET | 多模态混合检索（主入口） |
-| `/api/search/clip` | GET | 纯 CLIP 语义检索 |
-| `/api/detection/search` | GET | 检测标签检索 |
-| `/api/trajectory/search` | GET | 轨迹方向检索 |
-| `/api/event/search` | GET | 事件类型检索 |
-| `/api/ocr/search` | GET | OCR 文本检索 |
-| `/api/detection/ingest-directory` | POST | 批量生成检测元数据 |
-| `/api/tracking/generate` | POST | 从检测元数据生成轨迹 |
-| `/api/event/generate` | POST | 从检测+轨迹生成事件元数据 |
+| GET | `/` | 检索控制台页面（HTML） |
+| POST | `/search` | 页面搜索（兼容入口） |
+
+> 摄入流水线：`videos/ingest → detection/ingest-directory → tracking/ingest-directory → event/ingest-directory`；
+> 检索主入口：`POST /api/search/hybrid`（返回段级结果，每项含 `clip_url` 可直接作为 `<video>` 的 src 播放）。
+
+### 视频片段下载 `GET /api/search/download_clip`
+
+对检索结果中的视频片段做无损剪辑（FFmpeg `-c copy` 流拷贝，不重编码），直接返回 MP4 文件流：
+
+| 参数 | 类型 | 说明 |
+| --- | --- | --- |
+| `video_path` | str | 源视频路径（必须存在） |
+| `start_ts` | float | 片段开始时间（秒） |
+| `end_ts` | float | 片段结束时间（秒），**必须大于 `start_ts`** |
+| `output_name` | str? | 下载文件名的 stem（可选，默认取源视频名） |
+
+限制与错误码（阈值见 `config.py` 剪辑配置）：
+
+| 条件 | 响应 |
+| --- | --- |
+| `end_ts <= start_ts` | `400 Invalid clip range` |
+| 片段时长 > `clip_max_duration_sec`（默认 60s） | `400` |
+| 源视频不存在 | `404` |
+| ffmpeg 超过 `clip_ffmpeg_timeout_sec`（默认 10s）未完成 | `504` |
+| 同时运行的剪辑数已达 `clip_max_concurrent`（默认 2） | `429 Too many concurrent clip requests` |
+| 其他 ffmpeg 失败 | `500` |
+
+> 端点以同步方式运行于 FastAPI 线程池，ffmpeg 子进程不会阻塞事件循环；并发剪辑由信号量限制，防止恶意请求同时拉起大量 ffmpeg 打满 CPU。临时片段存放于 `/dev/shm`（或系统临时目录），响应发送后异步清理。
 
 ### 启用交通感知过滤
 

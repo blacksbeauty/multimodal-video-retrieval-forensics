@@ -39,7 +39,19 @@ class VideoService:
             f"Video not found: {raw_path}. Place it under {self.settings.videos_dir} or use an absolute path."
         )
 
-    def ingest_video(self, video_path: str, frame_interval: int, clip_service, index_service) -> Dict:
+    def ingest_video(
+        self,
+        video_path: str,
+        frame_interval: int,
+        clip_service,
+        index_service,
+        save_index: bool = True,
+    ) -> Dict:
+        """单视频摄取（抽帧+CLIP+FAISS 增量索引）。
+
+        批量调用方（ingest_directory/数据集导入）传 save_index=False，
+        在循环外统一 save_index 一次，避免 N 次全量落盘（Code Review P1-1）。
+        """
         if frame_interval < 1:
             raise ValueError("frame_interval must be greater than or equal to 1.")
 
@@ -82,7 +94,7 @@ class VideoService:
             )
 
         embeddings = clip_service.encode_image_paths(extracted_paths)
-        index_service.upsert_video_records(video_id, frame_metadata, embeddings)
+        index_service.upsert_video_records(video_id, frame_metadata, embeddings, save=save_index)
 
         logger.info(
             "Completed video ingest path=%s extracted_frames=%s",
@@ -115,11 +127,16 @@ class VideoService:
                         frame_interval=frame_interval,
                         clip_service=clip_service,
                         index_service=index_service,
+                        # 批量：循环内不落盘，结束统一 save（P1-1）
+                        save_index=False,
                     )
                 )
             except Exception as exc:
                 logger.exception("Failed to ingest video during batch processing: %s", video_path)
                 errors.append(f"{video_path.name}: {exc}")
+
+        if results:
+            index_service.faiss_service.save_index()
 
         if not results and errors:
             raise ValueError(

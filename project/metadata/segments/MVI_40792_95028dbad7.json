@@ -1,0 +1,65 @@
+{
+  "video_id": "MVI_40792_95028dbad7",
+  "segments": [
+    {
+      "segment_id": "MVI_40792_95028dbad7_seg002",
+      "video_id": "MVI_40792_95028dbad7",
+      "video_name": "MVI_40792.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40792.avi",
+      "time_range": {
+        "start": 0.0,
+        "end": 5.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40792_95028dbad7_0.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40792_95028dbad7_seg001",
+      "video_id": "MVI_40792_95028dbad7",
+      "video_name": "MVI_40792.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40792.avi",
+      "time_range": {
+        "start": 6.0,
+        "end": 72.0
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40792_12.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40792_13.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40792_14.4.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "MVI_40792_95028dbad7:vehicle_crosses_line:45"
+      ],
+      "tracks": [
+        "MVI_40792_95028dbad7:45"
+      ],
+      "text": "小汽车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "MVI_40792_95028dbad7_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40792_95028dbad7_seg002.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40792_95028dbad7_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40792_95028dbad7_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

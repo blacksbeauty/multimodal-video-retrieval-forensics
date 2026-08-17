@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Dict, List, Sequence
 
@@ -81,11 +82,18 @@ class FaissIndexService:
         video_id: str,
         embeddings: np.ndarray,
         metadata: Sequence[dict],
+        append: bool = False,
     ) -> dict:
         """增量新增（或覆盖）单个视频的全部向量。
 
-        覆盖语义：若 video_id 已存在，先移除其旧 id（IndexIDMap.remove_ids），
-        再追加新向量——索引其余部分不受影响。
+        覆盖语义（append=False，默认）：若 video_id 已存在，先移除其旧 id
+        （IndexIDMap.remove_ids），再追加新向量——索引其余部分不受影响。
+
+        追加语义（append=True）：不删除该视频已有 id，仅分配新 id 追加，
+        mapping 条目合并（用于同一 video_id 的帧级+段级两批向量共存；
+        Code Review Must Fix：upsert_segment_records 曾误用覆盖语义
+        导致段级写入删光同视频的帧级向量）。
+
         约束：向量维度必须与索引一致（不一致抛 ValueError）；空向量拒绝写入。
         """
         matrix = self._normalize_embeddings(embeddings)
@@ -102,9 +110,9 @@ class FaissIndexService:
                 f"Embedding dim {matrix.shape[1]} does not match index dim {self.index.d}."
             )
 
-        # Overwrite: drop the previous ids of this video.
+        # 覆盖模式：先删除该 video_id 的旧 id；追加模式保留（帧级+段级共存）。
         existing = self.mapping.get(video_id)
-        if existing and existing.get("ids"):
+        if existing and existing.get("ids") and not append:
             self.index.remove_ids(np.asarray(existing["ids"], dtype=np.int64))
             for old_id in existing["ids"]:
                 self.metadata.pop(int(old_id), None)
@@ -117,13 +125,19 @@ class FaissIndexService:
         self.index.add_with_ids(matrix, ids)
         for external_id, item in zip(ids.tolist(), meta_list):
             self.metadata[int(external_id)] = dict(item)
-        self.mapping[video_id] = {"ids": ids.tolist(), "count": count}
+
+        if append and existing and existing.get("ids"):
+            existing["ids"].extend(ids.tolist())
+            existing["count"] = len(existing["ids"])
+        else:
+            self.mapping[video_id] = {"ids": ids.tolist(), "count": count}
 
         logger.info(
-            "Incrementally added video_id=%s vectors=%s total=%s (no full rebuild)",
+            "Incrementally added video_id=%s vectors=%s total=%s append=%s",
             video_id,
             count,
             self.index.ntotal,
+            append,
         )
         return {"video_id": video_id, "added": count}
 
@@ -195,15 +209,25 @@ class FaissIndexService:
         resolved_metadata_path.parent.mkdir(parents=True, exist_ok=True)
         resolved_mapping_path.parent.mkdir(parents=True, exist_ok=True)
 
-        faiss.write_index(self.index, str(resolved_index_path))
-        resolved_metadata_path.write_text(
+        # tmp 文件（同一目录保证 os.replace 原子性）
+        tmp_index_path = resolved_index_path.with_name(f"{resolved_index_path.name}.{os.getpid()}.tmp")
+        tmp_metadata_path = resolved_metadata_path.with_name(f"{resolved_metadata_path.name}.{os.getpid()}.tmp")
+        tmp_mapping_path = resolved_mapping_path.with_name(f"{resolved_mapping_path.name}.{os.getpid()}.tmp")
+
+        faiss.write_index(self.index, str(tmp_index_path))
+        tmp_metadata_path.write_text(
             json.dumps(self.metadata, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        resolved_mapping_path.write_text(
+        tmp_mapping_path.write_text(
             json.dumps(self.mapping, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
+        # 原子替换（Code Review P1-2）：先写完整 tmp 再 os.replace，
+        # 避免进程崩溃时留下 三个文件新旧不一致 的中间态。
+        os.replace(tmp_index_path, resolved_index_path)
+        os.replace(tmp_metadata_path, resolved_metadata_path)
+        os.replace(tmp_mapping_path, resolved_mapping_path)
         logger.info(
             "Saved FAISS index vectors=%s videos=%s",
             self.index.ntotal,

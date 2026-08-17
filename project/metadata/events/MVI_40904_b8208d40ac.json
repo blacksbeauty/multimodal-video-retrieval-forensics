@@ -4,263 +4,7 @@
   "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
   "events": [
     {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:15",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 0.0,
-      "end_ts": 6.0,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:15"
-      ],
-      "confidence": 0.7549758173595466,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_4.8.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_0.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_3.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_6.0.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.873997772934884,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:4",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 0.0,
-      "end_ts": 6.0,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:4"
-      ],
-      "confidence": 0.716364176220316,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_3.6.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_0.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_3.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_6.0.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "stationary",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.6887401105287656,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:3",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 0.0,
-      "end_ts": 14.4,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:3"
-      ],
-      "confidence": 0.7813981431229069,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_8.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_0.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_7.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_14.4.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9927819602854574,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:36",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 4.8,
-      "end_ts": 14.4,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:36"
-      ],
-      "confidence": 0.5790733181090976,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_4.8.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_4.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_10.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_14.4.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9329988089779272,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:129",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 15.6,
-      "end_ts": 28.8,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:129"
-      ],
-      "confidence": 0.6097984297931877,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_15.6.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_15.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_28.8.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.9962381246798218,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:171",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 19.2,
-      "end_ts": 50.4,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:171"
-      ],
-      "confidence": 0.7892461568380548,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_31.2.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_19.2.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_50.4.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.999792013138814,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:186",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 20.4,
-      "end_ts": 22.8,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:186"
-      ],
-      "confidence": 0.6371988533707508,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_20.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_20.4.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_21.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg"
-      ],
-      "attributes": {
-        "label": "car",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.8822517833210822,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:211",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 22.8,
-      "end_ts": 31.2,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:211"
-      ],
-      "confidence": 0.6622690067562629,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_24.0.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_27.6.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_31.2.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.8736118203920102,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:vehicle_crosses_line:MVI_40904_b8208d40ac:204",
+      "event_id": "MVI_40904_b8208d40ac:vehicle_crosses_line:204",
       "event_type": "vehicle_crosses_line",
       "plugin_name": "vehicle_crosses_line",
       "video_id": "MVI_40904_b8208d40ac",
@@ -272,8 +16,13 @@
         "MVI_40904_b8208d40ac:204"
       ],
       "confidence": 0.8793299297491709,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_33.6.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_33.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_36.0.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40904_33.6.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40904_36.0.jpg"
@@ -294,10 +43,10 @@
         "cross_timestamp": 34.8,
         "crossing_mode": "vehicle_bbox"
       },
-      "description": "car crosses configured line"
+      "description": "小汽车越过车道线（压线）"
     },
     {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:204",
+      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:204",
       "event_type": "wrong_way_driving",
       "plugin_name": "wrong_way_driving",
       "video_id": "MVI_40904_b8208d40ac",
@@ -308,9 +57,14 @@
       "track_ids": [
         "MVI_40904_b8208d40ac:204"
       ],
-      "confidence": 0.8793081530609519,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
+      "confidence": 0.8792775005862402,
+      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
       "evidence_frames": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_37.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_50.4.jpg"
+      ],
+      "key_snapshots": [
         "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40904_37.2.jpg",
         "d:/all-seeing vision/rag/project/frames/mvi_40904_50.4.jpg"
@@ -322,43 +76,12 @@
           1.0,
           0.0
         ],
-        "direction_dot": -0.999950469812337,
+        "direction_dot": -0.9998807520109189,
         "roi_ratio": 1.0,
         "min_displacement_px": 20.0
       },
-      "description": "car moves opposite to configured lane direction"
-    },
-    {
-      "event_id": "MVI_40904_b8208d40ac:wrong_way_driving:MVI_40904_b8208d40ac:363",
-      "event_type": "wrong_way_driving",
-      "plugin_name": "wrong_way_driving",
-      "video_id": "MVI_40904_b8208d40ac",
-      "video_name": "MVI_40904.mp4",
-      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
-      "start_ts": 38.4,
-      "end_ts": 44.4,
-      "track_ids": [
-        "MVI_40904_b8208d40ac:363"
-      ],
-      "confidence": 0.6925153082549491,
-      "representative_frame": "d:/all-seeing vision/rag/project/frames/mvi_40904_44.4.jpg",
-      "evidence_frames": [
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_38.4.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_42.0.jpg",
-        "d:/all-seeing vision/rag/project/frames/mvi_40904_44.4.jpg"
-      ],
-      "attributes": {
-        "label": "bus",
-        "direction": "right_to_left",
-        "allowed_direction": [
-          1.0,
-          0.0
-        ],
-        "direction_dot": -0.85682966434007,
-        "roi_ratio": 1.0,
-        "min_displacement_px": 20.0
-      },
-      "description": "bus moves opposite to configured lane direction"
+      "description": "小汽车沿车道反向行驶（逆行）"
     }
-  ]
+  ],
+  "segment_built": false
 }

@@ -36,6 +36,32 @@ def segments_intersect(first: Sequence[float], second: Sequence[float], third: S
     )
 
 
+def closest_point_on_segment(
+    px: float, py: float, x1: float, y1: float, x2: float, y2: float
+) -> tuple[float, float]:
+    """返回点 (px, py) 在线段 (x1,y1)-(x2,y2) 上的最近投影点坐标。
+
+    三帧取证快照（extract_three_keyframes）用它判定车辆质心相对停止线的
+    上下位置（以投影点 y 为界，兼容竖直/倾斜线段）。
+    """
+    dx = float(x2) - float(x1)
+    dy = float(y2) - float(y1)
+    length_sq = dx * dx + dy * dy
+    if length_sq <= 1e-12:  # 退化线段（两点重合）
+        return float(x1), float(y1)
+    t = ((float(px) - float(x1)) * dx + (float(py) - float(y1)) * dy) / length_sq
+    t = max(0.0, min(1.0, t))
+    return float(x1) + t * dx, float(y1) + t * dy
+
+
+def point_to_segment_distance(
+    px: float, py: float, x1: float, y1: float, x2: float, y2: float
+) -> float:
+    """返回点 (px, py) 到线段 (x1,y1)-(x2,y2) 的最短距离（欧氏）。"""
+    cx, cy = closest_point_on_segment(px, py, x1, y1, x2, y2)
+    return hypot(float(px) - cx, float(py) - cy)
+
+
 def point_in_bbox(point: Sequence[float], bbox: Sequence[float], epsilon: float = 1e-6) -> bool:
     if len(bbox) != 4:
         return False

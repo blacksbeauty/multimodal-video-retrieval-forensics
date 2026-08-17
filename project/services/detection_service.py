@@ -10,6 +10,7 @@ import cv2
 
 from config import Settings
 from core.schemas import DetectionFrameMetadata, DetectionItem, DetectionVideoMetadata
+from utils.frame_utils import read_image_cv
 from utils.path_utils import build_asset_id, normalize_path
 
 
@@ -73,7 +74,8 @@ class DetectionService:
 
         resolved_frame_path = Path(frame_path).expanduser().resolve()
         metadata_frame_path = self._resolve_metadata_frame_path(resolved_frame_path)
-        image = cv2.imread(str(resolved_frame_path))
+        # 中文路径兼容读取（Code Review 修复：cv2.imread 无法打开含中文路径的帧）
+        image = read_image_cv(resolved_frame_path)
         if image is None:
             logger.warning("Skipping unreadable frame during detection: %s", resolved_frame_path)
             return None

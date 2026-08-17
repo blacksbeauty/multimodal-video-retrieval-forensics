@@ -98,7 +98,17 @@ def _build_template_context(
 
 
 @page_router.get("/", response_class=HTMLResponse, include_in_schema=False)
+async def index_page() -> HTMLResponse:
+    """主页：取证三帧快照检索界面（真实接入 /api/search/hybrid，同源访问）。"""
+    page_path = Path(__file__).resolve().parent.parent / "web" / "key_snapshots_demo.html"
+    if not page_path.exists():
+        raise HTTPException(status_code=404, detail="key_snapshots page not found")
+    return HTMLResponse(page_path.read_text(encoding="utf-8"))
+
+
+@page_router.get("/search", response_class=HTMLResponse, include_in_schema=False)
 async def search_page(request: Request) -> HTMLResponse:
+    """兼容页：原检索主页（templates/search.html），迁移到 /search。"""
     return templates.TemplateResponse(
         request=request,
         name="search.html",
@@ -116,6 +126,15 @@ def video_probe_page() -> HTMLResponse:
     """
     probe_path = Path(__file__).resolve().parent.parent / "video_probe.html"
     return HTMLResponse(probe_path.read_text(encoding="utf-8"))
+
+
+@page_router.get("/key-snapshots", response_class=HTMLResponse, include_in_schema=False)
+def key_snapshots_page() -> HTMLResponse:
+    """取证三帧快照检索界面（真实接入 /api/search/hybrid，同源访问无 CORS 问题）。"""
+    page_path = Path(__file__).resolve().parent.parent / "web" / "key_snapshots_demo.html"
+    if not page_path.exists():
+        raise HTTPException(status_code=404, detail="key_snapshots page not found")
+    return HTMLResponse(page_path.read_text(encoding="utf-8"))
 
 
 @router.get("/health", response_model=HealthResponse)

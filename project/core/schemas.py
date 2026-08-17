@@ -204,6 +204,11 @@ class HybridSegmentResult(BaseModel):
     )
     thumbnail_frame: str = Field(..., description="Representative frame path for the segment.")
     frame_id: str = Field(..., description="Stable frame identifier for the representative frame.")
+    # 取证三帧快照 [越线前, 越线中, 通过后]（来自事件 key_snapshots，非事件结果为空）。
+    key_snapshots: List[str] = Field(
+        default_factory=list,
+        description="Forensic three-frame snapshot paths [before, crossing, after], empty for non-event results.",
+    )
     clip_url: str = Field(
         default="",
         description="Endpoint URL to download the playable MP4 clip for this segment "
@@ -571,6 +576,11 @@ class EventMetadata(BaseModel):
         default_factory=list,
         description="Frame paths that support the event decision.",
     )
+    # 取证三帧快照 [越线前, 越线中, 通过后] 的帧路径（extract_three_keyframes 产出）。
+    key_snapshots: List[str] = Field(
+        default_factory=list,
+        description="Forensic three-frame snapshots [before, crossing, after] of the stop line.",
+    )
     attributes: dict[str, Any] = Field(
         default_factory=dict,
         description="Plugin-specific structured attributes.",
@@ -664,6 +674,11 @@ class EventSearchResult(BaseModel):
     )
     confidence: float = Field(..., description="Event confidence.")
     representative_frame: str = Field(..., description="Representative event frame.")
+    # 取证三帧快照 [越线前, 越线中, 通过后]（extract_three_keyframes 产出）。
+    key_snapshots: List[str] = Field(
+        default_factory=list,
+        description="Forensic three-frame snapshot paths [before, crossing, after].",
+    )
     description: str = Field(default="", description="Human-readable event summary.")
     attributes: dict[str, Any] = Field(
         default_factory=dict,

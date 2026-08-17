@@ -90,8 +90,16 @@ class WrongWayDriving(EventPluginBase):
                     end_ts=track.end_ts,
                     track_ids=[track.track_id],
                     confidence=min(1.0, float(track.avg_confidence) * (1.0 + min(abs(direction_dot), 1.0)) / 2.0),
-                    representative_frame=track.representative_frame,
+                    representative_frame=self.pick_representative_frame(
+                        evidence_frames, track.representative_frame
+                    ),
                     evidence_frames=evidence_frames,
+                    key_snapshots=self.extract_three_keyframes(
+                        points=track.points,
+                        evidence_frames=evidence_frames,
+                        line=config.get("line"),
+                        anchor_timestamp=None,  # 逆行无"越线时刻"，走证据帧时间中位锚点
+                    ),
                     attributes={
                         "label": track.label,
                         "direction": track.direction,

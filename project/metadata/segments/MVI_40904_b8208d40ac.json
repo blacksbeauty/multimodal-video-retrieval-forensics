@@ -1,0 +1,142 @@
+{
+  "video_id": "MVI_40904_b8208d40ac",
+  "segments": [
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg002",
+      "video_id": "MVI_40904_b8208d40ac",
+      "video_name": "MVI_40904.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
+      "time_range": {
+        "start": 0.0,
+        "end": 5.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40904_b8208d40ac_0.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg003",
+      "video_id": "MVI_40904_b8208d40ac",
+      "video_name": "MVI_40904.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
+      "time_range": {
+        "start": 5.0,
+        "end": 10.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40904_b8208d40ac_5.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg004",
+      "video_id": "MVI_40904_b8208d40ac",
+      "video_name": "MVI_40904.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
+      "time_range": {
+        "start": 10.0,
+        "end": 15.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40904_b8208d40ac_10.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg005",
+      "video_id": "MVI_40904_b8208d40ac",
+      "video_name": "MVI_40904.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
+      "time_range": {
+        "start": 15.0,
+        "end": 20.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_MVI_40904_b8208d40ac_15.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg001",
+      "video_id": "MVI_40904_b8208d40ac",
+      "video_name": "MVI_40904.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/mvi_40904.avi",
+      "time_range": {
+        "start": 22.8,
+        "end": 50.4
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_33.6.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_34.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_36.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_22.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_37.2.jpg",
+        "d:/all-seeing vision/rag/project/frames/mvi_40904_50.4.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line",
+        "wrong_way_driving"
+      ],
+      "event_ids": [
+        "MVI_40904_b8208d40ac:vehicle_crosses_line:204",
+        "MVI_40904_b8208d40ac:wrong_way_driving:204"
+      ],
+      "tracks": [
+        "MVI_40904_b8208d40ac:204"
+      ],
+      "text": "小汽车越过车道线（压线）；小汽车沿车道反向行驶（逆行）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40904_b8208d40ac_seg002.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg003",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40904_b8208d40ac_seg003.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg004",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40904_b8208d40ac_seg004.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg005",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40904_b8208d40ac_seg005.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "MVI_40904_b8208d40ac_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/MVI_40904_b8208d40ac_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

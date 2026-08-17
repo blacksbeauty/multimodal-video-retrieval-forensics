@@ -95,6 +95,8 @@ class AccidentDatasetImportService:
                     frame_step=frame_step,
                     clip_service=clip_service,
                     index_service=index_service,
+                    # 批量：循环内不落盘，结束统一 save（P1-1）
+                    save_index=False,
                 )
                 results.append(result)
                 source_map[result["video_name"]] = {
@@ -107,6 +109,8 @@ class AccidentDatasetImportService:
                 logger.exception("Failed to import accident scenario: %s", scenario_dir)
                 errors.append(f"{scenario_dir.name}: {exc}")
 
+        if results:
+            index_service.faiss_service.save_index()
         self._save_source_map(source_map)
         return {
             "total_scenarios": len(selected_scenarios),
@@ -139,8 +143,12 @@ class AccidentDatasetImportService:
         frame_step: int,
         clip_service,
         index_service,
+        save_index: bool = True,
     ) -> Dict[str, object]:
-        """Import one accident scenario into frame assets and CLIP index entries."""
+        """Import one accident scenario into frame assets and CLIP index entries.
+
+        批量路径（ingest_directory）传 save_index=False，循环结束统一落盘（P1-1）。
+        """
         video_name = self._build_video_name(scenario_dir.name)
         video_id = build_asset_id(scenario_dir)
         frame_metadata = self.build_frame_metadata(
@@ -157,6 +165,7 @@ class AccidentDatasetImportService:
             video_id=video_id,
             frame_metadata=frame_metadata,
             embeddings=embeddings,
+            save=save_index,
         )
 
         scenario_meta = self.parse_meta_file(dataset_root / self.META_SUBDIR / f"{scenario_dir.name}.txt")

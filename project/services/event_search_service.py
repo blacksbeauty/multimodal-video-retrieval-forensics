@@ -60,6 +60,7 @@ class EventSearchService:
                         track_ids=event.track_ids,
                         confidence=event.confidence,
                         representative_frame=event.representative_frame,
+                        key_snapshots=event.key_snapshots,
                         description=event.description,
                         attributes=event.attributes,
                     )
@@ -90,6 +91,7 @@ class EventSearchService:
                 "matched_label": str(result.attributes.get("label", "")),
                 "track_id": result.track_ids[0] if result.track_ids else "",
                 "event_id": result.event_id,
+                "key_snapshots": list(result.key_snapshots),
             }
             for result in raw_results
         ]

@@ -266,6 +266,10 @@ class HybridSearchService:
             for field_name in ("matched_event_type", "event_id", "matched_label", "track_id"):
                 if item.get(field_name) and not existing.get(field_name):
                     existing[field_name] = item[field_name]
+            # 取证三帧快照：合并分支需透传（existing 若由 clip 等无快照通道先创建，
+            # 不会带 key_snapshots；否则事件快照会在融合时丢失）。
+            if item.get("key_snapshots") and not existing.get("key_snapshots"):
+                existing["key_snapshots"] = list(item["key_snapshots"])
 
         for item in ocr_results:
             key = self._result_key(item)

@@ -172,5 +172,151 @@ class TrafficEventPluginTests(unittest.TestCase):
         self.assertIn("red_light_violation", service.parse_query_intent("车辆闯红灯").event_types)
 
 
+class KeyFrameSnapshotTests(unittest.TestCase):
+    """extract_three_keyframes 取证三帧快照测试（越线前/中/后）。"""
+
+    def _points(self) -> list:
+        from core.schemas import TrajectoryPoint
+
+        # 轨迹：ts=0 在停止线上方 → ts=1 贴线（线上）→ ts=2 在停止线下方
+        return [
+            TrajectoryPoint(
+                timestamp=0.0, frame_path="frames/traffic_0.jpg",
+                bbox=[0.0, 0.0, 4.0, 4.0], center_x=2.0, center_y=2.0, confidence=0.9,
+            ),
+            TrajectoryPoint(
+                timestamp=1.0, frame_path="frames/traffic_1.jpg",
+                bbox=[4.0, 6.0, 6.0, 8.0], center_x=5.0, center_y=7.0, confidence=0.9,
+            ),
+            TrajectoryPoint(
+                timestamp=2.0, frame_path="frames/traffic_2.jpg",
+                bbox=[7.0, 11.0, 9.0, 13.0], center_x=8.0, center_y=12.0, confidence=0.9,
+            ),
+        ]
+
+    def test_three_keyframes_before_crossing_after(self) -> None:
+        plugin = VehicleCrossesLine()
+        line = [[5.0, 5.0], [5.0, 10.0]]  # 竖直线段 x=5, y∈[5,10]
+        evidence = ["frames/traffic_0.jpg", "frames/traffic_1.jpg", "frames/traffic_2.jpg"]
+
+        snapshots = plugin.extract_three_keyframes(
+            points=self._points(), evidence_frames=evidence, line=line, anchor_timestamp=1.0,
+        )
+        # A=越线前(上方最近) / B=越线中(贴线) / C=通过后(下方最近)
+        self.assertEqual(
+            snapshots,
+            ["frames/traffic_0.jpg", "frames/traffic_1.jpg", "frames/traffic_2.jpg"],
+        )
+
+    def test_three_keyframes_without_line_uses_even_spacing(self) -> None:
+        plugin = VehicleCrossesLine()
+        evidence = [f"frames/traffic_{index}.jpg" for index in range(5)]
+
+        snapshots = plugin.extract_three_keyframes(points=[], evidence_frames=evidence, line=None)
+        # 无停止线：按证据帧时间均匀取首/中/尾
+        self.assertEqual(
+            snapshots,
+            ["frames/traffic_0.jpg", "frames/traffic_2.jpg", "frames/traffic_4.jpg"],
+        )
+
+    def test_three_keyframes_empty_evidence_returns_empty(self) -> None:
+        plugin = VehicleCrossesLine()
+        self.assertEqual(
+            plugin.extract_three_keyframes(points=[], evidence_frames=[], line=[[0, 0], [1, 1]]),
+            [],
+        )
+
+    def test_three_keyframes_deduplicates_and_completes(self) -> None:
+        plugin = VehicleCrossesLine()
+        # 全部点都在线上方（无 B/C 候选）→ 兜底：B 取证据中位、C 取证据最大
+        from core.schemas import TrajectoryPoint
+
+        points = [
+            TrajectoryPoint(
+                timestamp=0.0, frame_path="frames/traffic_0.jpg",
+                bbox=[0.0, 0.0, 2.0, 2.0], center_x=1.0, center_y=1.0, confidence=0.9,
+            ),
+            TrajectoryPoint(
+                timestamp=2.0, frame_path="frames/traffic_2.jpg",
+                bbox=[0.0, 0.0, 2.0, 2.0], center_x=1.0, center_y=1.0, confidence=0.9,
+            ),
+        ]
+        evidence = [f"frames/traffic_{index}.jpg" for index in range(5)]
+        snapshots = plugin.extract_three_keyframes(
+            points=points, evidence_frames=evidence, line=[[5.0, 5.0], [5.0, 10.0]], anchor_timestamp=3.0,
+        )
+        # A=上方最近帧；B/C 无候选 → evidence 中位/最大；去重后补足到 3 帧
+        self.assertEqual(len(snapshots), 3)
+        self.assertEqual(len(set(snapshots)), 3)
+
+    def test_plugin_event_contains_key_snapshots(self) -> None:
+        plugin = VehicleCrossesLine()
+        trajectories = _trajectories(
+            [
+                (6.0, 5.0, [4.0, 2.0, 8.0, 8.0]),
+                (6.0, 5.0, [4.0, 2.0, 8.0, 8.0]),
+                (10.0, 12.0, [8.0, 9.0, 12.0, 15.0]),
+            ]
+        )
+
+        events = plugin.execute(
+            "video-1",
+            _detections(),
+            trajectories,
+            {"line": [[5.0, 0.0], [5.0, 10.0]], "allowed_labels": ["car"], "min_displacement_px": 0.0},
+        )
+        self.assertEqual(len(events), 1)
+        snapshots = events[0].key_snapshots
+        # 快照帧应属于"事件证据帧 ∪ 轨迹点帧"（Frame_C 可取自轨迹点、未必在 evidence 内）
+        valid_frames = set(events[0].evidence_frames)
+        for track in trajectories.tracks:
+            valid_frames.update(point.frame_path for point in track.points)
+        self.assertLessEqual(len(snapshots), 3)
+        self.assertTrue(all(path in valid_frames for path in snapshots))
+
+
+class RedLightClassifyTests(unittest.TestCase):
+    """_classify_traffic_light_state 判色鲁棒性（整图比例 + 亮度重心，远距小灯可判）。"""
+
+    def _make_lamp_image(self, color_bgr, y_center):
+        import cv2
+        import numpy as np
+
+        image = np.full((80, 40, 3), 60, dtype=np.uint8)  # 深灰背景（非亮灯）
+        cv2.circle(image, (20, y_center), 5, tuple(color_bgr), -1)
+        return image
+
+    def _classify(self, color_bgr, y_center, min_state_score=0.005):
+        import cv2
+        import tempfile
+        from pathlib import Path
+
+        plugin = RedLightViolation()
+        image = self._make_lamp_image(color_bgr, y_center)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "lamp.png"
+            cv2.imwrite(str(path), image)
+            return plugin._classify_traffic_light_state(str(path), [0, 0, 40, 80], min_state_score)
+
+    def test_red_lamp_at_top(self):
+        result = self._classify((0, 0, 255), y_center=12)
+        self.assertIsNotNone(result)
+        self.assertEqual(result["state"], "red")
+
+    def test_green_lamp_at_bottom(self):
+        result = self._classify((0, 255, 0), y_center=68)
+        self.assertIsNotNone(result)
+        self.assertEqual(result["state"], "green")
+
+    def test_yellow_lamp_at_middle(self):
+        result = self._classify((0, 255, 255), y_center=40)
+        self.assertIsNotNone(result)
+        self.assertEqual(result["state"], "yellow")
+
+    def test_dark_region_returns_none(self):
+        result = self._classify((30, 30, 30), y_center=40)
+        self.assertIsNone(result)
+
+
 if __name__ == "__main__":
     unittest.main()

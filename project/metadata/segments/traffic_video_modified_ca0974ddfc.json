@@ -1,0 +1,117 @@
+{
+  "video_id": "traffic_video_modified_ca0974ddfc",
+  "segments": [
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg001",
+      "video_id": "traffic_video_modified_ca0974ddfc",
+      "video_name": "traffic_video_modified.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+      "time_range": {
+        "start": 0.0,
+        "end": 14.8
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_5.7.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_8.0.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_9.1.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_10.3.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_11.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_12.5.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_13.7.jpg"
+      ],
+      "events": [
+        "vehicle_crosses_line",
+        "vehicle_crosses_line",
+        "wrong_way_driving"
+      ],
+      "event_ids": [
+        "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:2",
+        "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:42",
+        "traffic_video_modified_ca0974ddfc:wrong_way_driving:42"
+      ],
+      "tracks": [
+        "traffic_video_modified_ca0974ddfc:2",
+        "traffic_video_modified_ca0974ddfc:42"
+      ],
+      "text": "小汽车越过车道线（压线）；公交车越过车道线（压线）；公交车沿车道反向行驶（逆行）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg003",
+      "video_id": "traffic_video_modified_ca0974ddfc",
+      "video_name": "traffic_video_modified.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+      "time_range": {
+        "start": 0.0,
+        "end": 25.1
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_traffic_video_modified_ca0974ddfc_0.0",
+      "text_source": "时间窗兜底"
+    },
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg002",
+      "video_id": "traffic_video_modified_ca0974ddfc",
+      "video_name": "traffic_video_modified.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/traffic_video_modified.mp4",
+      "time_range": {
+        "start": 14.8,
+        "end": 25.1
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_14.8.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_15.9.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_17.1.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_19.4.jpg",
+        "d:/all-seeing vision/rag/project/frames/traffic_video_modified_20.5.jpg"
+      ],
+      "events": [
+        "red_light_violation",
+        "vehicle_crosses_line",
+        "vehicle_crosses_line",
+        "wrong_way_driving"
+      ],
+      "event_ids": [
+        "traffic_video_modified_ca0974ddfc:red_light_violation:57",
+        "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:57",
+        "traffic_video_modified_ca0974ddfc:vehicle_crosses_line:61",
+        "traffic_video_modified_ca0974ddfc:wrong_way_driving:61"
+      ],
+      "tracks": [
+        "traffic_video_modified_ca0974ddfc:57",
+        "traffic_video_modified_ca0974ddfc:61"
+      ],
+      "text": "小汽车在红灯状态下越过停止线；小汽车越过车道线（压线）；小汽车越过车道线（压线）；小汽车沿车道反向行驶（逆行）",
+      "text_source": "事件描述模板"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/traffic_video_modified_ca0974ddfc_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg003",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/traffic_video_modified_ca0974ddfc_seg003.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    },
+    {
+      "segment_id": "traffic_video_modified_ca0974ddfc_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/traffic_video_modified_ca0974ddfc_seg002.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    }
+  ]
+}

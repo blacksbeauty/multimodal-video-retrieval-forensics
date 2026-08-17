@@ -1,0 +1,72 @@
+{
+  "video_id": "2_8b60c89a9e",
+  "segments": [
+    {
+      "segment_id": "2_8b60c89a9e_seg001",
+      "video_id": "2_8b60c89a9e",
+      "video_name": "闯红灯_视频2.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频2.mp4",
+      "time_range": {
+        "start": 0.0,
+        "end": 9.0
+      },
+      "frame_paths": [
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频2_0.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频2_3.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频2_6.00.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频2_4.50.jpg",
+        "d:/all-seeing vision/rag/project/frames/闯红灯_视频2_5.00.jpg"
+      ],
+      "events": [
+        "wrong_way_driving",
+        "red_light_violation",
+        "vehicle_crosses_line"
+      ],
+      "event_ids": [
+        "2_8b60c89a9e:wrong_way_driving:6",
+        "2_8b60c89a9e:red_light_violation:35",
+        "2_8b60c89a9e:vehicle_crosses_line:35"
+      ],
+      "tracks": [
+        "2_8b60c89a9e:35",
+        "2_8b60c89a9e:6"
+      ],
+      "text": "小汽车沿车道反向行驶（逆行）；小汽车在红灯状态下越过停止线；小汽车越过车道线（压线）",
+      "text_source": "事件描述模板"
+    },
+    {
+      "segment_id": "2_8b60c89a9e_seg002",
+      "video_id": "2_8b60c89a9e",
+      "video_name": "闯红灯_视频2.mp4",
+      "video_path": "d:/all-seeing vision/rag/project/videos/闯红灯_视频2.mp4",
+      "time_range": {
+        "start": 0.0,
+        "end": 9.0
+      },
+      "frame_paths": [],
+      "events": [],
+      "event_ids": [],
+      "tracks": [],
+      "text": "视频片段_2_8b60c89a9e_0.0",
+      "text_source": "时间窗兜底"
+    }
+  ],
+  "embeddings": [
+    {
+      "segment_id": "2_8b60c89a9e_seg001",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/2_8b60c89a9e_seg001.npy",
+      "text_source": "事件描述模板",
+      "created_at": ""
+    },
+    {
+      "segment_id": "2_8b60c89a9e_seg002",
+      "model": "CN-CLIP",
+      "dimension": 512,
+      "path": "embeddings/2_8b60c89a9e_seg002.npy",
+      "text_source": "时间窗兜底",
+      "created_at": ""
+    }
+  ]
+}
